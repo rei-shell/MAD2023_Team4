@@ -13,7 +13,7 @@
   
 
 # App Descriptions: 
-This app will hopefully inspires you to have a wonderful meal cooked by you. It contains various recipes, such as chinese, korean, western and more, for you to decide what you would like to have. Most recipes will only need 15 to 20 mins for you to enjoy you wonderful meal. If you have a doubt in choosing, we provide you a random generator to help you choose according to your desired choose of cuisine. 
+This app will hopefully inspire you to make every meal a wonderful and memorable one. It contains various recipes ranging from chinese to western and many more, allowing you to decide from the huge array of recipes provided. Most recipes will only require 15 to 20 mins to create a scrumptious meal . Moreover, if you face difficulties deciding on which recipe to pick, our application provides you a random generator to pick your desired choice of cuisine. Definitely, not only will you be able to access the many amazing recipes shared by other users, you would also be able too share your amazing recipe, allowing others to learn and create a scrumptious meal too! This application is not only catered to those who have experience in cooking, but is also catered to those who just started having interest in cooking, as through our application you will be able to start from learning the basics like creating a simple dish to learning how to create a dish with higher difficulty.
 
 
 # App Features: 
