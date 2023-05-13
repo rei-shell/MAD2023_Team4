@@ -13,7 +13,7 @@
   
 
 # App Descriptions: 
-It will be a app based on
+This app will hopefully inspires you to have a wonderful meal cooked by you. It contains various recipes, such as chinese, korean, western and more, for you to decide what you would like to have. Most recipes will only need 15 to 20 mins for you to enjoy you wonderful meal. If you have a doubt in choosing, we provide you a random generator to help you choose according to your desired choose of cuisine. 
 
 
 # App Features: 
