@@ -37,8 +37,8 @@ This app will hopefully inspire you to make every meal a wonderful and memorable
     <li> Rating</li>
     <ul><li> This allows user to rate the recipe from 1 being the best to 5 being the worst.</li></ul>
     <li> Reviews</li>
-    <ul><li> This allows user to review on the recipe they were viewing or recreating. They could review that the recipe is good and easy or the recipe is long and not worth cooking for or many other different more reviews.</li></ul>
-    <li> Upload Recipe</li>
+    <ul><li> This allows user to review on the recipe they were viewing or recreating. They could review that the recipe is good and easy or the recipe is long and not worth cooking for or many other different more reviews.</li></ul></ul>
+      <li> Upload Recipe</li>
     <ul><li> This allows user to share their signature dish to the world and let others have a try on that dish.</li></ul>
     <li> Food Recipe Options</li>
     <ul><li> This allows user to choose their desire recipe that they wanna eat or try cooking. Our options of cuisine has a wide variety that known around the world. </li></ul>
