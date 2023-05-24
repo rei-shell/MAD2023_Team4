@@ -28,27 +28,26 @@ This app will hopefully inspire you to make every meal a wonderful and memorable
     <ul> 
     <li> This allows the user to login and logout of the app. After logging in to the app, the user will be able to rate, review, view user profile and create recipe</li>
     </ul>
+    <li> User Profile</li>
+    <ul><li> This allows the user to view their profile and edit the profile information or add information to their profile.</li></ul><br>
+    <li> View History</li>
+    <ul><li> This allows user to view back their viewed recipe just in case they wanna try that recipe again but could not find in the wide variety of recipe options.</li></ul>
+    <li> Food Recipe Options</li>
+    <ul><li> This allows user to choose their desire recipe that they wanna eat or try cooking. Our options of cuisine has a wide variety that known around the world. </li></ul><br>
+    <li> Interactive Search</li>
+    <ul><li> This allows the user to search their desired food with a specific naming of the dish. </li></ul>
     <li> Filter Input</li>
     <ul>
     <li> This allows the user to filter the many different cuisine the app have, such as chinese, western, dessert and many more.</li>
     </ul>
+    <li> Upload Recipe</li>
+    <ul><li> This allows user to share their signature dish to the world and let others have a try on that dish.</li></ul><br>
     <li> Rating & Reviews</li>
     <ul>
     <li> Rating</li>
     <ul><li> This allows user to rate the recipe from 1 being the best to 5 being the worst.</li></ul>
     <li> Reviews</li>
-    <ul><li> This allows user to review on the recipe they were viewing or recreating. They could review that the recipe is good and easy or the recipe is long and not worth cooking for or many other different more reviews.</li></ul></ul>
-      <li> Upload Recipe</li>
-    <ul><li> This allows user to share their signature dish to the world and let others have a try on that dish.</li></ul>
-    <li> Food Recipe Options</li>
-    <ul><li> This allows user to choose their desire recipe that they wanna eat or try cooking. Our options of cuisine has a wide variety that known around the world. </li></ul>
-    <li> View History</li>
-    <ul><li> This allows user to view back their viewed recipe just in case they wanna try that recipe again but could not find in the wide variety of recipe options.</li></ul>
-    <li> User Profile</li>
-    <ul><li> This allows the user to view their profile and edit the profile information or add information to their profile.</li></ul>
-    <li> Interactive Search</li>
-    <ul><li> This allows the user to search their desired food with a specific naming of the dish. </li></ul>
-    </ul>
+    <ul><li> This allows user to review on the recipe they were viewing or recreating. They could review that the recipe is good and easy or the recipe is long and not worth cooking for or many other different more reviews.</li></ul></ul><br>
 </p></li>
 <li>
 <p> Stage 2:
