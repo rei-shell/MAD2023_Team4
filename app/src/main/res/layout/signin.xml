@@ -154,7 +154,7 @@
             android:layout_alignTop="@id/rectimage"
             android:layout_marginTop="420dp"
             android:layout_marginStart="25dp"/>
-        
+
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
