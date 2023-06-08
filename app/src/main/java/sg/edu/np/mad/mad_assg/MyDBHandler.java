@@ -13,7 +13,6 @@ public class MyDBHandler extends SQLiteOpenHelper {
     public static String ACCOUNTS = "Accounts";
     public static String COLUMN_USERNAME = "UserName";
     public static String COLUMN_PASSWORD = "Password";
-
     public static String COLUMN_EMAIL = "Email";
 
     public MyDBHandler(Context context, String name, SQLiteDatabase.CursorFactory factory, int version){
@@ -36,6 +35,7 @@ public class MyDBHandler extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put(COLUMN_USERNAME, userDate.getUsername());
         values.put(COLUMN_PASSWORD, userDate.getPassword());
+
         values.put(COLUMN_EMAIL, userDate.getEmail());
 
         SQLiteDatabase db = this.getWritableDatabase();

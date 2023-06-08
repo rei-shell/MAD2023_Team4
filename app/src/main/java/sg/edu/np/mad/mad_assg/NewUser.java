@@ -9,24 +9,18 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class NewUser extends AppCompatActivity {
 
-
+    /* public String GLOBAL_PREFS = "myPrefs";
+     public String MY_USERNAME = "MyUserName";
+     public String MY_PASSWORD = "MyPassword";
+     SharedPreferences sharedPreferences;*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.signin);
-    }
-
-   /* public String GLOBAL_PREFS = "myPrefs";
-    public String MY_USERNAME = "MyUserName";
-    public String MY_PASSWORD = "MyPassword";
-    SharedPreferences sharedPreferences;*/
-
-    @Override
-    protected void onStart(){
-        super.onStart();
         EditText etUsername = findViewById(R.id.usernametxt);
         EditText etEmail = findViewById(R.id.emailtxt);
         EditText etPassword = findViewById(R.id.passwordtxt);
@@ -53,9 +47,18 @@ public class NewUser extends AppCompatActivity {
                     String dbPassword = etPassword.getText().toString();
                     String dbEmail = etEmail.getText().toString();
                     String dbRePwd = etreenterPassword.getText().toString();
-                    UserData dbUserData = new UserData(dbUsername, dbEmail, dbPassword, dbRePwd);
-                    dbHandler.addUser(dbUserData);
+                    if (dbPassword == dbRePwd)
+                    {
+                        UserData dbUserData = new UserData(dbUsername, dbEmail, dbPassword, dbRePwd);
+                        dbHandler.addUser(dbUserData);
+                        Intent intent = new Intent(NewUser.this, MainActivity.class);
+                        startActivity(intent);
+                    }
+                    else{
+                        Toast.makeText(NewUser.this, "Password not tally", Toast.LENGTH_SHORT).show();
+                        }
                 }
+
             }
         });
 

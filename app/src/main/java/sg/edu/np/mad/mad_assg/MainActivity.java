@@ -6,36 +6,30 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView newUser;
-
-    private TextView oldUser;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.startpage);
 
-        newUser = findViewById(R.id.SignUp);
-        newUser.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,NewUser.class);
-                startActivity(intent);
-
-            }
+        Button newUser = (Button) findViewById(R.id.SignUp);
+        newUser.setOnClickListener(view -> {
+            Intent signin = new Intent(MainActivity.this, NewUser.class);
+            startActivity(signin);
         });
 
-        oldUser = findViewById(R.id.Login);
-        oldUser.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Login.class);
-                startActivity(intent);
-            }
+
+        Button oldUser = (Button) findViewById(R.id.Login);
+        oldUser.setOnClickListener(view -> {
+            Intent login = new Intent(MainActivity.this, Login.class);
+            startActivity(login);
         });
 
     }
+
+
 }

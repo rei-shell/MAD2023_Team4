@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">Rexipe</string>
+    <style name="Base.Theme.MAD_Assg" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
+    </style>
+    <style name="Theme.MAD_Assg" parent="Base.Theme.MAD_Assg"/>
+</resources>
