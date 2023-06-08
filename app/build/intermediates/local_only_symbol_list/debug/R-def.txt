@@ -18,11 +18,13 @@ id appicon
 id bottomNavigationView
 id email
 id emailtxt
+id emailwarning
 id flFragment
 id home
 id loginbtn
 id password
 id passwordtxt
+id passwordwarning
 id person
 id rectimage
 id reenterpwd

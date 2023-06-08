@@ -16,10 +16,6 @@
         "source": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-main-30:\\mipmap-mdpi\\world.png"
     },
     {
-        "merged": "sg.edu.np.mad.mad_assg.app-merged_res-28:/layout_startpage.xml.flat",
-        "source": "sg.edu.np.mad.mad_assg.app-main-30:/layout/startpage.xml"
-    },
-    {
         "merged": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-merged_res-28:\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
         "source": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-main-30:\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
     },
@@ -32,12 +28,12 @@
         "source": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-main-30:\\mipmap-xhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-merged_res-28:\\layout_splashscreen.xml.flat",
-        "source": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-main-30:\\layout\\splashscreen.xml"
-    },
-    {
         "merged": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-merged_res-28:\\mipmap-xxxhdpi_google.png.flat",
         "source": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-main-30:\\mipmap-xxxhdpi\\google.png"
+    },
+    {
+        "merged": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-merged_res-28:\\layout_splashscreen.xml.flat",
+        "source": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-main-30:\\layout\\splashscreen.xml"
     },
     {
         "merged": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-merged_res-28:\\mipmap-xxxhdpi_user.png.flat",
@@ -134,6 +130,10 @@
     {
         "merged": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-merged_res-28:\\mipmap-xxhdpi_user.png.flat",
         "source": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-main-30:\\mipmap-xxhdpi\\user.png"
+    },
+    {
+        "merged": "sg.edu.np.mad.mad_assg.app-merged_res-28:/layout_signin.xml.flat",
+        "source": "sg.edu.np.mad.mad_assg.app-main-30:/layout/signin.xml"
     },
     {
         "merged": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-merged_res-28:\\menu_bottom_nav.xml.flat",

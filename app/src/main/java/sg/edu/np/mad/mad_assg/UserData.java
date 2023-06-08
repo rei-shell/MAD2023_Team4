@@ -5,18 +5,15 @@ public class UserData {
     private String username;
     private String password;
     private String email;
-    private String repwd;
-
-    public UserData(String username, String password, String email, String repwd) {
-        this.username = username;
-        this.password = password;
-        this.email = email;
-        this.repwd = repwd;
-    }
 
     public UserData() {
     }
 
+    public UserData(String username, String password, String email) {
+        this.username = username;
+        this.password = password;
+        this.email = email;
+    }
 
     public String getUsername() {
         return username;
