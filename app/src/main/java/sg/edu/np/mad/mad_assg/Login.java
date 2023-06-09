@@ -12,11 +12,11 @@ import android.widget.Toast;
 
 
 public class Login extends AppCompatActivity {
-
+/*
     public String GLOBAL_PREFS = "myPrefs";
     public String MY_USERNAME = "MyUserName";
     public String MY_PASSWORD = "MyPassword";
-    SharedPreferences sharedPreferences;
+    SharedPreferences sharedPreferences;*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +40,7 @@ public class Login extends AppCompatActivity {
     };
     MyDBHandler dbHandler = new MyDBHandler(this,null,null,1);
     public boolean isValidCredential(String username, String password){
-        sharedPreferences = getSharedPreferences(GLOBAL_PREFS, MODE_PRIVATE);
+        /*sharedPreferences = getSharedPreferences(GLOBAL_PREFS, MODE_PRIVATE);
         String sharedUsername = sharedPreferences.getString(MY_USERNAME, "");
         String sharedPassword = sharedPreferences.getString(MY_PASSWORD,"");
 
@@ -48,14 +48,12 @@ public class Login extends AppCompatActivity {
             return true;
         }
         return false;
-        /*
-
-
+        */
         UserData dbData = dbHandler.findUser(username);
         if (dbData.getUsername().equals(username) && dbData.getPassword().equals(password)){
             return true;
         }
-        return false;*/
+        return false;
 
     }
 }

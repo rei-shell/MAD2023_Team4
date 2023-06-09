@@ -131,9 +131,10 @@
             android:layout_height="wrap_content"
             android:textSize="13sp"
             android:textColor="#550000"
-            android:layout_marginStart="30dp"
-            android:layout_alignStart="@id/rectimage"
-            android:layout_marginTop="350dp"
+
+            android:layout_marginTop="40dp"
+            android:layout_alignStart="@id/emailtxt"
+            android:layout_alignTop="@id/emailtxt"
             android:layout_alignEnd="@id/emailtxt"/>
 
         <EditText
@@ -155,9 +156,9 @@
             android:layout_height="wrap_content"
             android:textSize="13sp"
             android:textColor="#550000"
-            android:layout_marginStart="30dp"
-            android:layout_alignStart="@id/rectimage"
-            android:layout_marginTop="450dp"
+            android:layout_marginTop="40dp"
+            android:layout_alignStart="@id/passwordtxt"
+            android:layout_alignTop="@id/passwordtxt"
             android:layout_alignEnd="@id/passwordtxt"/>
 
         <EditText

@@ -9,8 +9,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class MyDBHandler extends SQLiteOpenHelper {
 
     public static int DATABASE_VERSION = 1;
-    public static String DATABASE_NAME = "accounts.db";
-    public static String ACCOUNTS = "Accounts";
+    public static String DATABASE_NAME = "account.db";
+    public static String ACCOUNTS = "User";
     public static String COLUMN_USERNAME = "UserName";
     public static String COLUMN_PASSWORD = "Password";
     public static String COLUMN_EMAIL = "Email";
@@ -21,7 +21,7 @@ public class MyDBHandler extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db){
-        String CREATE_ACCOUNTS_TABLE = "CREATE TABLE " + ACCOUNTS + "(" + COLUMN_USERNAME + "TEXT," + COLUMN_PASSWORD + " TEXT," + COLUMN_EMAIL + " TEXT)";
+        String CREATE_ACCOUNTS_TABLE = "CREATE TABLE " + ACCOUNTS + "(" + COLUMN_USERNAME + " TEXT," + COLUMN_PASSWORD + " TEXT," + COLUMN_EMAIL + " TEXT)";
         db.execSQL(CREATE_ACCOUNTS_TABLE);
     }
 
@@ -35,7 +35,6 @@ public class MyDBHandler extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put(COLUMN_USERNAME, userDate.getUsername());
         values.put(COLUMN_PASSWORD, userDate.getPassword());
-
         values.put(COLUMN_EMAIL, userDate.getEmail());
 
         SQLiteDatabase db = this.getWritableDatabase();
@@ -62,4 +61,6 @@ public class MyDBHandler extends SQLiteOpenHelper {
         db.close();
         return queryResult;
     }
+
+
 }

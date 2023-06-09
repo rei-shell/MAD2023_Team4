@@ -4,7 +4,7 @@ package sg.edu.np.mad.mad_assg;
 public class UserData {
     private String username;
     private String password;
-    private String email;
+    private static String email;
 
     public UserData() {
     }
@@ -29,7 +29,7 @@ public class UserData {
         this.password = password;
     }
 
-    public String getEmail() { return email; }
+    public static String getEmail() { return email; }
 
     public void setEmail(String email) { this.email = email;}
 }

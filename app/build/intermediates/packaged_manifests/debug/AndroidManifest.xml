@@ -26,6 +26,12 @@
         android:testOnly="true"
         android:theme="@style/Theme.MAD_Assg" >
         <activity
+            android:name="sg.edu.np.mad.mad_assg.HomePage"
+            android:exported="false" />
+        <activity android:name="sg.edu.np.mad.mad_assg.MainActivity" />
+        <activity android:name="sg.edu.np.mad.mad_assg.Login" />
+        <activity android:name="sg.edu.np.mad.mad_assg.NewUser" />
+        <activity
             android:name="sg.edu.np.mad.mad_assg.SplashScreen"
             android:exported="true" >
             <intent-filter>
@@ -34,10 +40,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="sg.edu.np.mad.mad_assg.MainActivity" />
-        <activity android:name="sg.edu.np.mad.mad_assg.Login" />
-        <activity android:name="sg.edu.np.mad.mad_assg.NewUser" />
-        <activity android:name="sg.edu.np.mad.mad_assg.HomePage" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"
