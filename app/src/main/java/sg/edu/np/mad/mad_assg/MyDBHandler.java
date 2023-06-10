@@ -1,5 +1,6 @@
 package sg.edu.np.mad.mad_assg;
 
+
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -42,25 +43,68 @@ public class MyDBHandler extends SQLiteOpenHelper {
         db.close();
     }
 
-    public UserData findUser(String username){
-        String query = "SELECT * FROM " + ACCOUNTS + " WHERE " + COLUMN_USERNAME + "= \"" + username + " \"";
-
-        SQLiteDatabase db = this.getWritableDatabase();
-        Cursor cursor = db.rawQuery(query,null);
-        UserData queryResult = new UserData();
-
-        if (cursor.moveToFirst()){
-            queryResult.setUsername(cursor.getColumnName(0));
-            queryResult.setPassword(cursor.getColumnName(1));
-            queryResult.setEmail(cursor.getColumnName(2));
-            cursor.close();
+    //registration check function
+    public boolean user_IsUsernameFree(String userName)
+    {
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM USER WHERE userName = '" + userName + "'", null);
+        if (cursor != null)
+        {
+            while (cursor.moveToNext()) {
+                return false;
+            }
         }
-        else{
-            queryResult=null;
-        }
+        cursor.close();
         db.close();
-        return queryResult;
+        return true;
     }
 
+    //registration check function
+    public boolean user_IsEmailFree(String email)
+    {
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM USER WHERE email = '" + email + "'", null);
+        if (cursor != null)
+        {
+            while (cursor.moveToNext()) {
+                return false;
+            }
+        }
+        cursor.close();
+        db.close();
+        return true;
+    }
+
+    //login function
+    public boolean user_Login(String userName, String password)
+    {
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM USER WHERE userID = '" + userName + "' AND password = '"+password+"'", null);
+        if (cursor != null)
+        {
+            while (cursor.moveToNext()) {
+                return true;
+            }
+        }
+        cursor.close();
+        db.close();
+        return false;
+    }
+
+    public CharSequence getUser(String username){
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM " + ACCOUNTS + " WHERE " + COLUMN_USERNAME + "= \"" + username + " \"", null);
+        if (cursor != null)
+        {
+            while (cursor.moveToNext()) {
+
+            }
+        }
+        cursor.close();
+        db.close();
+
+        return null;
+    }
 
 }
