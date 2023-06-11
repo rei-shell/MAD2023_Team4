@@ -47,7 +47,7 @@ public class MyDBHandler extends SQLiteOpenHelper {
     public boolean user_IsUsernameFree(String userName)
     {
         SQLiteDatabase db = getReadableDatabase();
-        Cursor cursor = db.rawQuery("SELECT * FROM USER WHERE userName = '" + userName + "'", null);
+        Cursor cursor = db.rawQuery("SELECT * FROM " + ACCOUNTS + " WHERE " + COLUMN_USERNAME + "= \"" + userName + " \"", null);
         if (cursor != null)
         {
             while (cursor.moveToNext()) {
@@ -63,7 +63,7 @@ public class MyDBHandler extends SQLiteOpenHelper {
     public boolean user_IsEmailFree(String email)
     {
         SQLiteDatabase db = getReadableDatabase();
-        Cursor cursor = db.rawQuery("SELECT * FROM USER WHERE email = '" + email + "'", null);
+        Cursor cursor = db.rawQuery("SELECT * FROM " + ACCOUNTS + " WHERE " + COLUMN_EMAIL + "= \"" + email + " \"", null);
         if (cursor != null)
         {
             while (cursor.moveToNext()) {
@@ -79,7 +79,7 @@ public class MyDBHandler extends SQLiteOpenHelper {
     public boolean user_Login(String userName, String password)
     {
         SQLiteDatabase db = getReadableDatabase();
-        Cursor cursor = db.rawQuery("SELECT * FROM USER WHERE userID = '" + userName + "' AND password = '"+password+"'", null);
+        Cursor cursor = db.rawQuery("SELECT * FROM " + ACCOUNTS + " WHERE " + COLUMN_USERNAME +  "= \"" + userName + " \" " + " AND " + COLUMN_PASSWORD + "= \"" + password + " \" ", null);
         if (cursor != null)
         {
             while (cursor.moveToNext()) {
@@ -89,22 +89,6 @@ public class MyDBHandler extends SQLiteOpenHelper {
         cursor.close();
         db.close();
         return false;
-    }
-
-    public CharSequence getUser(String username){
-
-        SQLiteDatabase db = this.getWritableDatabase();
-        Cursor cursor = db.rawQuery("SELECT * FROM " + ACCOUNTS + " WHERE " + COLUMN_USERNAME + "= \"" + username + " \"", null);
-        if (cursor != null)
-        {
-            while (cursor.moveToNext()) {
-
-            }
-        }
-        cursor.close();
-        db.close();
-
-        return null;
     }
 
 }

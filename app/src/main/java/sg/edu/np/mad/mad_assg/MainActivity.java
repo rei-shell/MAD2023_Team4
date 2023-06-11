@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
+
         int id = item.getItemId();
 
         FragmentManager manager = getSupportFragmentManager();
@@ -46,9 +47,8 @@ public class MainActivity extends AppCompatActivity {
 
         else if (id == R.id.person) {
             //change to User page
-            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.bottomNavigationView, new Userpage());
-            fragmentTransaction.commit();
+            Userpage userpage = new Userpage();
+            manager.beginTransaction().replace(R.id.flFragment, userpage, userpage.getTag()).addToBackStack(null).commit();
         }
         return true;
 

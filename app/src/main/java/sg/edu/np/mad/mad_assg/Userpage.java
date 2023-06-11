@@ -25,21 +25,21 @@ public class Userpage extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        //set userid
-        String userid = getActivity().getIntent().getExtras().getString("username");
-        user = (TextView) user.findViewById(R.id.userid);
-        user2 = (TextView) user.findViewById(R.id.userName);
-        user.setText(userid);
-        user2.setText(userid);
-
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_userpage, container, false);
+        final View view = inflater.inflate(R.layout.fragment_userpage, container, false);
 
+
+        //set userid
+        String userid = getActivity().getIntent().getExtras().getString("username");
+        user = (TextView) user.findViewById(R.id.userid);
+        user2 = (TextView) user.findViewById(R.id.userName);
+        user.setText(userid);
+        user2.setText(userid);
 
         return view;
     }

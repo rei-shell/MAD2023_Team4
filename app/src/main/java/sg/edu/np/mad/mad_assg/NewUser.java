@@ -2,6 +2,7 @@ package sg.edu.np.mad.mad_assg;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -33,6 +34,7 @@ public class NewUser extends AppCompatActivity {
 
         TextView pwdwarnihng = findViewById(R.id.passwordwarning);
         TextView emailwarning = findViewById(R.id.emailwarning);
+        TextView confirmpwdwarning = findViewById(R.id.confirmpwdwarning);
 
         Button signin = findViewById(R.id.signinbtn);
 
@@ -53,7 +55,7 @@ public class NewUser extends AppCompatActivity {
                                 if (dbPassword.equals(dbConfirmPwd)) {  //check password and confirm password is same
                                     if (isValidUserName(dbUserName)) {  //check if username have been registered
                                         dbHandler.addUser(dbUserData);
-                                        Intent intent = new Intent(NewUser.this, MainActivity.class);
+                                        Intent intent = new Intent(NewUser.this, Login.class);
                                         Toast.makeText(NewUser.this, "Account Created!", Toast.LENGTH_SHORT).show();
                                         startActivity(intent);
                                     } else {
@@ -61,9 +63,10 @@ public class NewUser extends AppCompatActivity {
                                     }
                                 } else {
                                     pwdwarnihng.setText("Password mismatch!");
+                                    confirmpwdwarning.setText("Password mismatch!");
                                 }
                             } else {
-                                pwdwarnihng.setText("Must contain 1 letter, 1 uppercase, 1 lowercase, 1 special character, at least 4 character long!");
+                                confirmpwdwarning.setText("Must contain 1 letter, 1 uppercase, 1 lowercase, 1 special character, at least 4 character long!");
                             }
                         } else {
                             pwdwarnihng.setText("Must contain 1 letter, 1 uppercase, 1 lowercase, 1 special character, at least 4 character long!");
@@ -118,6 +121,7 @@ public class NewUser extends AppCompatActivity {
             }
             return false;
         }
+        /*
     @Override
     public boolean onOptionsItemSelected(android.view.MenuItem item) {
         switch (item.getItemId()) {
@@ -127,7 +131,7 @@ public class NewUser extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
+    }*/
 }
 /*
 
