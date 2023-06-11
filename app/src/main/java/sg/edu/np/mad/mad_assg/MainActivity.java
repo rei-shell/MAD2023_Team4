@@ -35,12 +35,16 @@ public class MainActivity extends AppCompatActivity {
             FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.bottomNavigationView, new HomePage());
             fragmentTransaction.commit();
-        } else if (id == R.id.search) {
+        }
+
+        else if (id == R.id.search) {
             //change to search page
             FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.bottomNavigationView, new Search());
             fragmentTransaction.commit();
-        } else if (id == R.id.person) {
+        }
+
+        else if (id == R.id.person) {
             //change to User page
             FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.bottomNavigationView, new Userpage());

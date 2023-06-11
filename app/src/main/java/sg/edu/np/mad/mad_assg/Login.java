@@ -35,18 +35,7 @@ public class Login extends AppCompatActivity {
                 if (dbHandler.user_Login(username, password)) {
                     Intent intent = new Intent(Login.this, HomePage.class);
                     startActivity(intent);
-                    SharedPreferences pref = getSharedPreferences("Login", Activity.MODE_PRIVATE);
-                    SharedPreferences.Editor editor = pref.edit();
-                    editor.putString("userID", username);
-                    editor.commit();
-                    // short delay before departing to main page (1.5s)
-                    final Handler handler = new Handler();
-                    handler.postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            finish();
-                        }
-                    }, 1500);
+                    intent.putExtra("username", username);
                 }
                 else {
                     Toast.makeText(Login.this, "Invaild Username/Password!", Toast.LENGTH_SHORT).show();
