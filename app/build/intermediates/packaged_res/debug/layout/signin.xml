@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/gradient">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="parent">
+
+        <ImageView
+            android:id="@+id/rectimage"
+            android:layout_width="350dp"
+            android:layout_height="600dp"
+            android:layout_centerInParent="true"
+            android:contentDescription="background"
+            android:src="@drawable/rectangle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kalam_bold"
+            android:text="Sign In"
+            android:id="@+id/signin"
+            android:textSize="40sp"
+            android:textColor="@color/black"
+            android:layout_centerHorizontal="true"
+            android:layout_alignTop="@id/rectimage"
+            android:layout_marginTop="15dp"
+            />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Username"
+            android:textSize="30sp"
+            android:fontFamily="@font/kalam_regular"
+            android:textColor="@color/black"
+            android:layout_alignStart="@id/rectimage"
+            android:layout_alignTop="@id/rectimage"
+            android:layout_marginTop="85dp"
+            android:layout_marginStart="25dp"/>
+
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email Address"
+            android:textSize="30sp"
+            android:fontFamily="@font/kalam_regular"
+            android:textColor="@color/black"
+            android:layout_alignStart="@id/rectimage"
+            android:layout_alignTop="@id/rectimage"
+            android:layout_marginTop="180dp"
+            android:layout_marginStart="25dp"/>
+
+        <TextView
+            android:id="@+id/password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:textSize="30sp"
+            android:fontFamily="@font/kalam_regular"
+            android:textColor="@color/black"
+            android:layout_alignStart="@id/rectimage"
+            android:layout_alignTop="@id/rectimage"
+            android:layout_marginTop="280dp"
+            android:layout_marginStart="25dp"/>
+
+        <TextView
+            android:id="@+id/reenterpwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/rectimage"
+            android:layout_alignTop="@id/passwordwarning"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/kalam_regular"
+            android:text="Re-enter Password"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign In"
+            android:id="@+id/signinbtn"
+            android:textSize="20sp"
+            android:fontFamily="@font/kalam_regular"
+            android:textColor="@color/black"
+            android:layout_centerHorizontal="true"
+            android:layout_alignBottom="@id/rectimage"
+            android:layout_marginBottom="25dp"
+            />
+
+        <EditText
+            android:id="@+id/usernametxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:fontFamily="@font/kalam_regular"
+            android:textColor="@color/black"
+            android:layout_alignStart="@id/rectimage"
+            android:layout_alignTop="@id/rectimage"
+            android:layout_marginTop="120dp"
+            android:layout_marginStart="25dp"/>
+
+        <EditText
+            android:id="@+id/emailtxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:fontFamily="@font/kalam_regular"
+            android:textColor="@color/black"
+            android:layout_alignStart="@id/rectimage"
+            android:layout_alignTop="@id/rectimage"
+            android:layout_marginTop="220dp"
+            android:layout_marginStart="25dp"/>
+
+        <TextView
+            android:id="@+id/emailwarning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:textColor="#550000"
+
+            android:layout_marginTop="40dp"
+            android:layout_alignStart="@id/emailtxt"
+            android:layout_alignTop="@id/emailtxt"
+            android:layout_alignEnd="@id/emailtxt"/>
+
+        <EditText
+            android:id="@+id/passwordtxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:fontFamily="@font/kalam_regular"
+            android:textColor="@color/black"
+            android:layout_alignStart="@id/rectimage"
+            android:layout_alignTop="@id/rectimage"
+            android:layout_marginTop="320dp"
+            android:layout_marginStart="25dp"/>
+
+        <TextView
+            android:id="@+id/passwordwarning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:textColor="#550000"
+            android:layout_marginTop="40dp"
+            android:layout_alignStart="@id/passwordtxt"
+            android:layout_alignTop="@id/passwordtxt"
+            android:layout_alignEnd="@id/passwordtxt"/>
+
+        <EditText
+            android:id="@+id/repwdtxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textVisiblePassword"
+            android:fontFamily="@font/kalam_regular"
+            android:textColor="@color/black"
+            android:layout_alignStart="@id/rectimage"
+            android:layout_alignTop="@id/rectimage"
+            android:ems="10"
+            android:layout_marginTop="425dp"
+            android:layout_marginStart="25dp"/>
+
+        <TextView
+            android:id="@+id/confirmpwdwarning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:textColor="#550000"
+            android:layout_marginTop="40dp"
+            android:layout_alignStart="@id/repwdtxt"
+            android:layout_alignTop="@id/repwdtxt"
+            android:layout_alignEnd="@id/repwdtxt"/>
+
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
