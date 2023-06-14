@@ -2502,11 +2502,16 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable outline_account_circle_24
+drawable outline_home_24
+drawable outline_person_24
+drawable outline_search_24
 drawable rectangle
 drawable test_custom_background
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable world
 font kalam_bold
 font kalam_light
 font kalam_regular
@@ -2515,7 +2520,11 @@ id ALT
 id BOTTOM_END
 id BOTTOM_START
 id CTRL
+id Explore
 id FUNCTION
+id GridView_explore
+id GridView_new
+id GridView_reco
 id Login
 id META
 id NO_DEBUG
@@ -2609,7 +2618,7 @@ id beginning
 id bestChoice
 id blocking
 id bottom
-id bottomNavigationView
+id bottom_navigation
 id bounce
 id bounceBoth
 id bounceEnd
@@ -2618,6 +2627,7 @@ id buttonPanel
 id cache_measures
 id callMeasure
 id cancel_button
+id cardview_id
 id carryVelocity
 id center
 id center_horizontal
@@ -2857,8 +2867,12 @@ id progress_circular
 id progress_horizontal
 id radio
 id ratio
+id recipe_image_id
+id recipe_text
+id recommendation
 id rectangles
 id rectimage
+id recyclerView_id
 id reenterpwd
 id rememberme
 id repwdtxt
@@ -2931,6 +2945,7 @@ id staticLayout
 id staticPostLayout
 id stop
 id stretch
+id stuff
 id submenuarrow
 id submit_area
 id supportScrollUp
@@ -2989,6 +3004,7 @@ id unchecked
 id uniform
 id unlabeled
 id up
+id update
 id useLogo
 id userName
 id userdetails
@@ -3005,12 +3021,14 @@ id view_tree_lifecycle_owner
 id view_tree_on_back_pressed_dispatcher_owner
 id view_tree_saved_state_registry_owner
 id view_tree_view_model_store_owner
+id viewall
+id viewall1
+id viewall2
 id visible
 id visible_removing_fragment_view_tag
 id west
 id withText
 id withinBounds
-id world
 id wrap
 id wrap_content
 id wrap_content_constrained
@@ -3102,6 +3120,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout cardview_recipe
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -3121,7 +3140,7 @@ layout design_text_input_start_icon
 layout fragment_home_page
 layout fragment_search
 layout fragment_userpage
-layout homepage
+layout homepage_main
 layout login
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
@@ -3254,7 +3273,6 @@ string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string item_view_role_description
-string large_text
 string m3_ref_typeface_brand_display_regular
 string m3_ref_typeface_brand_medium
 string m3_ref_typeface_brand_regular

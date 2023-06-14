@@ -20,18 +20,16 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:debuggable="true"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher_round"
+        android:icon="@mipmap/ic_launcher"
         android:label="Rexipe"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.MAD_Assg" >
         <activity android:name="sg.edu.np.mad.mad_assg.MainActivity" />
-        <activity
-            android:name="sg.edu.np.mad.mad_assg.Login"
-            android:exported="false" />
+        <activity android:name="sg.edu.np.mad.mad_assg.Login" />
         <activity android:name="sg.edu.np.mad.mad_assg.NewUser" />
         <activity android:name="sg.edu.np.mad.mad_assg.StartPage" />
-        <activity android:name="sg.edu.np.mad.mad_assg.Userpage" />
         <activity
             android:name="sg.edu.np.mad.mad_assg.SplashScreen"
             android:exported="true" >

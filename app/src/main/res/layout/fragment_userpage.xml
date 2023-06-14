@@ -5,21 +5,21 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:grid="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/gradient">
+    android:background="@drawable/gradient"
+    android:id="@+id/flFragment"
+    android:visibility="visible">
 
-    <FrameLayout
-        android:id="@+id/flFragment"
+    <!--<FrameLayout
+
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:visibility="visible"
+
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" >
-
-
-    </FrameLayout>
+    </FrameLayout>-->
 
     <com.google.android.material.navigation.NavigationView
         android:layout_width="match_parent"
@@ -81,7 +81,7 @@
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
             android:layout_weight="1"
-            tools:srcCompat="@tools:sample/avatars" />
+            android:src="@drawable/outline_person_24" />
 
         <TextView
             android:id="@+id/userName"
@@ -161,7 +161,7 @@
         </GridLayout>
 
     </ScrollView>
-    <com.google.android.material.bottomnavigation.BottomNavigationView
+    <!--<com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="70dp"
@@ -170,7 +170,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_nav"/>
+        app:menu="@menu/bottom_nav"/>-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

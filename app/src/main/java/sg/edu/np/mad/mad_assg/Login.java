@@ -42,7 +42,8 @@ public class Login extends AppCompatActivity {
                 }
                 else {
                     Toast.makeText(Login.this, "Invaild Username/Password!", Toast.LENGTH_SHORT).show();
-
+                    Intent intent = new Intent(Login.this, MainActivity.class);
+                    startActivity(intent);
                 }
             }
 
