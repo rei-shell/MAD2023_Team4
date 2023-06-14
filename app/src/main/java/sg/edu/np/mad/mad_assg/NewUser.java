@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -38,6 +39,16 @@ public class NewUser extends AppCompatActivity {
 
         Button signin = findViewById(R.id.signinbtn);
 
+        ImageView backbtn = findViewById(R.id.backbtn1);
+
+        backbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(NewUser.this, StartPage.class);
+                startActivity(intent);
+            }
+        });
+
         signin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -50,7 +61,7 @@ public class NewUser extends AppCompatActivity {
                 UserData dbUserData = new UserData(dbUserName, dbPassword, dbEmail);
                 if (isValidEmailType(dbEmail)) {                        //check email format
                     if (isValidEmail(dbEmail)) {                        //check if email have been registered
-                    if (isValidPassword(dbPassword)) {                  //check password format
+                        if (isValidPassword(dbPassword)) {              //check password format
                             if (isValidPassword(dbConfirmPwd)) {        //check password format
                                 if (dbPassword.equals(dbConfirmPwd)) {  //check password and confirm password is same
                                     if (isValidUserName(dbUserName)) {  //check if username have been registered
@@ -107,19 +118,11 @@ public class NewUser extends AppCompatActivity {
         }
 
         private boolean isValidUserName (String username){
-            if (dbHandler.user_IsUsernameFree(username)) {
-                return true;
-
-            }
-            return false;
+            return dbHandler.user_IsUsernameFree(username);
         }
 
         private boolean isValidEmail (String email){
-            if (dbHandler.user_IsEmailFree(email)) {
-                return true;
-
-            }
-            return false;
+            return dbHandler.user_IsEmailFree(email);
         }
         /*
     @Override

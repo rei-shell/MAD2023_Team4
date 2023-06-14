@@ -2506,11 +2506,13 @@ drawable outline_account_circle_24
 drawable outline_home_24
 drawable outline_person_24
 drawable outline_search_24
+drawable outline_settings_24
 drawable rectangle
 drawable test_custom_background
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable twotone_arrow_back_24
 drawable world
 font kalam_bold
 font kalam_light
@@ -2611,6 +2613,8 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
+id backbtn
+id backbtn1
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -2854,6 +2858,7 @@ id parent_matrix
 id password
 id password_toggle
 id passwordtxt
+id passwordtxtlogin
 id passwordwarning
 id path
 id pathRelative
@@ -3012,6 +3017,7 @@ id userid
 id userlike
 id username
 id usernametxt
+id usernametxtlogin
 id userpic
 id userpost
 id vertical_only

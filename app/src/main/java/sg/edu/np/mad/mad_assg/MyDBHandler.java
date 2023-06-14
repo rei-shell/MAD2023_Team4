@@ -76,7 +76,7 @@ public class MyDBHandler extends SQLiteOpenHelper {
     }
 
     //login function
-    public boolean user_Login(String userName, String password)
+   /* public boolean user_Login(String userName, String password)
     {
         SQLiteDatabase db = getReadableDatabase();
         Cursor cursor = db.rawQuery("SELECT * FROM " + ACCOUNTS + " WHERE " + COLUMN_USERNAME +  "= \"" + userName + " \" " + " AND " + COLUMN_PASSWORD + "= \"" + password + " \" ", null);
@@ -89,6 +89,36 @@ public class MyDBHandler extends SQLiteOpenHelper {
         cursor.close();
         db.close();
         return false;
+    }*/
+
+    public boolean user_checkPassword(String password)
+    {
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM " + ACCOUNTS + " WHERE " + COLUMN_PASSWORD + "= \"" + password + " \"", null);
+        if (cursor != null)
+        {
+            while (cursor.moveToNext()) {
+                return false;
+            }
+        }
+        cursor.close();
+        db.close();
+        return true;
+    }
+
+    public boolean user_checkUsername(String userName)
+    {
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM " + ACCOUNTS + " WHERE " + COLUMN_USERNAME + "= \"" + userName + " \"", null);
+        if (cursor != null)
+        {
+            while (cursor.moveToNext()) {
+                return false;
+            }
+        }
+        cursor.close();
+        db.close();
+        return true;
     }
 
 }

@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 
@@ -27,8 +28,19 @@ public class Login extends AppCompatActivity {
 
 
         Button loginButton = findViewById(R.id.loginbtn);
-        EditText etUsername = findViewById(R.id.usernametxt);
-        EditText etPassword = findViewById(R.id.passwordtxt);
+
+        EditText etUsername = findViewById(R.id.usernametxtlogin);
+        EditText etPassword = findViewById(R.id.passwordtxtlogin);
+
+        ImageView backbtn = findViewById(R.id.backbtn);
+
+        backbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Login.this, StartPage.class);
+                startActivity(intent);
+            }
+        });
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,23 +48,36 @@ public class Login extends AppCompatActivity {
 
                 String username = etUsername.getText().toString();
                 String password = etPassword.getText().toString();
-                if (login(username, password)){
-                    Intent intent = new Intent(Login.this, MainActivity.class);
-                    startActivity(intent);
+
+                if ((userUsername(username)) && (userPassword(password))) {
+                        Toast.makeText(Login.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(Login.this, MainActivity.class);
+                        startActivity(intent);
+                    } else{
+                        Toast.makeText(Login.this, "Invaild UserName/Password!", Toast.LENGTH_SHORT).show();
+                    }
                 }
-                else {
-                    Toast.makeText(Login.this, "Invaild Username/Password!", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(Login.this, MainActivity.class);
-                    startActivity(intent);
-                }
-            }
+
+
 
         });
     };
-    public boolean login(String username, String password){
-        return dbHandler.user_Login(username, password);
+
+    private boolean userUsername (String username){
+        return dbHandler.user_checkUsername(username);
     }
+
+    private boolean userPassword (String password){
+        return dbHandler.user_checkPassword(password);
+    }
+
 /*
+public boolean login(String username, String password){
+
+        if (dbHandler.user_Login(username, password)){
+            return true;
+        } return false;
+    }
     public boolean isValidCredential(String username, String password){
         /*sharedPreferences = getSharedPreferences(GLOBAL_PREFS, MODE_PRIVATE);
         String sharedUsername = sharedPreferences.getString(MY_USERNAME, "");

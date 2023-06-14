@@ -2505,11 +2505,13 @@ int drawable outline_account_circle_24 0x7f0700a6
 int drawable outline_home_24 0x7f0700a7
 int drawable outline_person_24 0x7f0700a9
 int drawable outline_search_24 0x7f0700a8
+int drawable outline_settings_24 0x7f0700aa
 int drawable rectangle 0x7f07009b
 int drawable test_custom_background 0x7f07009c
 int drawable test_level_drawable 0x7f07009d
 int drawable tooltip_frame_dark 0x7f07009e
 int drawable tooltip_frame_light 0x7f07009f
+int drawable twotone_arrow_back_24 0x7f0700ab
 int drawable world 0x7f0700a5
 int font kalam_bold 0x7f080000
 int font kalam_light 0x7f080001
@@ -2610,6 +2612,8 @@ int id auto 0x7f090057
 int id autoComplete 0x7f090058
 int id autoCompleteToEnd 0x7f090059
 int id autoCompleteToStart 0x7f09005a
+int id backbtn 0x7f09020b
+int id backbtn1 0x7f09020c
 int id barrier 0x7f09005b
 int id baseline 0x7f09005c
 int id beginOnFirstDraw 0x7f09005d
@@ -2853,6 +2857,7 @@ int id parent_matrix 0x7f090147
 int id password 0x7f090148
 int id password_toggle 0x7f090149
 int id passwordtxt 0x7f09014a
+int id passwordtxtlogin 0x7f09020d
 int id passwordwarning 0x7f0901f1
 int id path 0x7f09014b
 int id pathRelative 0x7f09014c
@@ -3011,6 +3016,7 @@ int id userid 0x7f0901f7
 int id userlike 0x7f0901f8
 int id username 0x7f0901db
 int id usernametxt 0x7f0901dc
+int id usernametxtlogin 0x7f09020e
 int id userpic 0x7f0901f9
 int id userpost 0x7f0901fa
 int id vertical_only 0x7f0901dd

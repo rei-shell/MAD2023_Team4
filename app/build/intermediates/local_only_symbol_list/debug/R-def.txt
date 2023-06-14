@@ -13,7 +13,9 @@ drawable outline_account_circle_24
 drawable outline_home_24
 drawable outline_person_24
 drawable outline_search_24
+drawable outline_settings_24
 drawable rectangle
+drawable twotone_arrow_back_24
 drawable world
 font kalam_bold
 font kalam_light
@@ -27,6 +29,8 @@ id Login
 id SignUp
 id activity_main
 id appicon
+id backbtn
+id backbtn1
 id bottom_navigation
 id cardview_id
 id confirmpwdwarning
@@ -39,6 +43,7 @@ id home
 id loginbtn
 id password
 id passwordtxt
+id passwordtxtlogin
 id passwordwarning
 id person
 id recipe_image_id
@@ -63,6 +68,7 @@ id userid
 id userlike
 id username
 id usernametxt
+id usernametxtlogin
 id userpic
 id userpost
 id viewall
