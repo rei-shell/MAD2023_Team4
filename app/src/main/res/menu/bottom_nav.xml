@@ -2,20 +2,20 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/home"
-        android:icon="@mipmap/home"
+        android:icon="@drawable/home"
         android:title="Home"/>
     <item
         android:title="Search"
         android:id="@+id/search"
-        android:icon="@mipmap/search"/>
+        android:icon="@drawable/search"/>
     <item
         android:title="Community"
         android:id="@+id/world"
-        android:icon="@mipmap/world"/>
+        android:icon="@drawable/world"/>
     <item
         android:title="Account"
         android:id="@+id/person"
-        android:icon="@mipmap/user"/>
+        android:icon="@drawable/user"/>
 
 
 </menu>
