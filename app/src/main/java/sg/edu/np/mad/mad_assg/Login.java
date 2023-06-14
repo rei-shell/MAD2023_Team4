@@ -36,19 +36,21 @@ public class Login extends AppCompatActivity {
 
                 String username = etUsername.getText().toString();
                 String password = etPassword.getText().toString();
-                if (dbHandler.user_Login(username, password)){
+                if (login(username, password)){
                     Intent intent = new Intent(Login.this, MainActivity.class);
                     startActivity(intent);
                 }
                 else {
                     Toast.makeText(Login.this, "Invaild Username/Password!", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(Login.this, MainActivity.class);
-                    startActivity(intent);
+
                 }
             }
 
         });
     };
+    public boolean login(String username, String password){
+        return dbHandler.user_Login(username, password);
+    }
 /*
     public boolean isValidCredential(String username, String password){
         /*sharedPreferences = getSharedPreferences(GLOBAL_PREFS, MODE_PRIVATE);
