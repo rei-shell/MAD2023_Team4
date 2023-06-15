@@ -8,6 +8,11 @@ import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+
+import java.util.ArrayList;
+
+public class MainActivity extends AppCompatActivity {
+
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
@@ -78,6 +83,8 @@ public class MainActivity extends AppCompatActivity {
     DrawerLayout drawer;
     NavigationView navigationView;
 
+
+    ArrayList<String> myList = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -144,7 +151,13 @@ public class MainActivity extends AppCompatActivity {
         super.onDestroy();
     }
 
+
 }
+
+        myList.add("");
+    }
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
