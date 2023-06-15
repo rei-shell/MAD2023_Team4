@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:icon="@mipmap/home"
+        android:title="Home"/>
+    <item
+        android:title="Search"
+        android:id="@+id/search"
+        android:icon="@mipmap/search"/>
+    <item
+        android:title="Community"
+        android:id="@+id/world"
+        android:icon="@mipmap/world"/>
+    <item
+        android:title="Account"
+        android:id="@+id/person"
+        android:icon="@mipmap/user"/>
+
+
+</menu>

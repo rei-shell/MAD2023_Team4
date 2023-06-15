@@ -16,7 +16,7 @@
         <ImageView
             android:id="@+id/rectimage"
             android:layout_width="350dp"
-            android:layout_height="550dp"
+            android:layout_height="600dp"
             android:layout_centerInParent="true"
             android:contentDescription="background"
             android:src="@drawable/rectangle" />
@@ -77,14 +77,14 @@
             android:id="@+id/reenterpwd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Re-enter Password"
-            android:textSize="30sp"
-            android:fontFamily="@font/kalam_regular"
-            android:textColor="@color/black"
             android:layout_alignStart="@id/rectimage"
-            android:layout_alignTop="@id/rectimage"
-            android:layout_marginTop="380dp"
-            android:layout_marginStart="25dp"/>
+            android:layout_alignTop="@id/passwordwarning"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/kalam_regular"
+            android:text="Re-enter Password"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
 
         <Button
             android:layout_width="wrap_content"
@@ -105,7 +105,6 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="text"
-            android:text="xuan_2"
             android:fontFamily="@font/kalam_regular"
             android:textColor="@color/black"
             android:layout_alignStart="@id/rectimage"
@@ -119,7 +118,6 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textEmailAddress"
-            android:text="abc@gmail.com"
             android:fontFamily="@font/kalam_regular"
             android:textColor="@color/black"
             android:layout_alignStart="@id/rectimage"
@@ -127,13 +125,24 @@
             android:layout_marginTop="220dp"
             android:layout_marginStart="25dp"/>
 
+        <TextView
+            android:id="@+id/emailwarning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:textColor="#550000"
+
+            android:layout_marginTop="40dp"
+            android:layout_alignStart="@id/emailtxt"
+            android:layout_alignTop="@id/emailtxt"
+            android:layout_alignEnd="@id/emailtxt"/>
+
         <EditText
             android:id="@+id/passwordtxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPassword"
-            android:text="NPict234"
             android:fontFamily="@font/kalam_regular"
             android:textColor="@color/black"
             android:layout_alignStart="@id/rectimage"
@@ -141,20 +150,43 @@
             android:layout_marginTop="320dp"
             android:layout_marginStart="25dp"/>
 
+        <TextView
+            android:id="@+id/passwordwarning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:textColor="#550000"
+            android:layout_marginTop="40dp"
+            android:layout_alignStart="@id/passwordtxt"
+            android:layout_alignTop="@id/passwordtxt"
+            android:layout_alignEnd="@id/passwordtxt"/>
+
         <EditText
             android:id="@+id/repwdtxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:ems="10"
             android:inputType="textVisiblePassword"
-            android:text="NPict234"
             android:fontFamily="@font/kalam_regular"
             android:textColor="@color/black"
             android:layout_alignStart="@id/rectimage"
             android:layout_alignTop="@id/rectimage"
-            android:layout_marginTop="420dp"
+            android:ems="10"
+            android:layout_marginTop="425dp"
             android:layout_marginStart="25dp"/>
-        
+
+        <TextView
+            android:id="@+id/confirmpwdwarning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:textColor="#550000"
+            android:layout_marginTop="40dp"
+            android:layout_alignStart="@id/repwdtxt"
+            android:layout_alignTop="@id/repwdtxt"
+            android:layout_alignEnd="@id/repwdtxt"/>
+
+
+
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
