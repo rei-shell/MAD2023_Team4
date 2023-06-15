@@ -13,6 +13,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.google.android.material.textfield.TextInputLayout;
+
 
 public class Login extends AppCompatActivity {
 /*
@@ -29,8 +31,8 @@ public class Login extends AppCompatActivity {
 
         Button loginButton = findViewById(R.id.loginbtn);
 
-        EditText etUsername = findViewById(R.id.usernametxtlogin);
-        EditText etPassword = findViewById(R.id.passwordtxtlogin);
+        TextInputLayout etUsername = (TextInputLayout) findViewById(R.id.username);
+        TextInputLayout etPassword = (TextInputLayout) findViewById(R.id.password);
 
         ImageView backbtn = findViewById(R.id.backbtn);
 
@@ -46,8 +48,8 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                String username = etUsername.getText().toString();
-                String password = etPassword.getText().toString();
+                String username = etUsername.getEditText().getText().toString();
+                String password = etPassword.getEditText().getText().toString();
 
                 if ((userUsername(username)) && (userPassword(password))) {
                         Toast.makeText(Login.this, "Login Successful", Toast.LENGTH_SHORT).show();
@@ -64,7 +66,7 @@ public class Login extends AppCompatActivity {
     };
 
     private boolean userUsername (String username){
-        return dbHandler.user_checkUsername(username);
+        return dbHandler.user_IsUsernameFree(username);
     }
 
     private boolean userPassword (String password){

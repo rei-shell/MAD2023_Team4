@@ -106,7 +106,7 @@ public class MyDBHandler extends SQLiteOpenHelper {
         return true;
     }
 
-    public boolean user_checkUsername(String userName)
+    /*public boolean user_checkUsername(String userName)
     {
         SQLiteDatabase db = getReadableDatabase();
         Cursor cursor = db.rawQuery("SELECT * FROM " + ACCOUNTS + " WHERE " + COLUMN_USERNAME + "= \"" + userName + " \"", null);
@@ -119,6 +119,6 @@ public class MyDBHandler extends SQLiteOpenHelper {
         cursor.close();
         db.close();
         return true;
-    }
+    }*/
 
 }

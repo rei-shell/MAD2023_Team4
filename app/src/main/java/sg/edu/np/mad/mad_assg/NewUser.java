@@ -12,6 +12,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
+
 import java.security.AccessController;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -28,14 +31,20 @@ public class NewUser extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.signin);
-        EditText etUsername = findViewById(R.id.usernametxt);
-        EditText etEmail = findViewById(R.id.emailtxt);
-        EditText etPassword = findViewById(R.id.passwordtxt);
-        EditText etreenterPassword = findViewById(R.id.repwdtxt);
 
+        TextInputLayout etUsername = (TextInputLayout) findViewById(R.id.username);
+        TextInputLayout etEmail = (TextInputLayout) findViewById(R.id.email);
+        TextInputLayout etPassword = (TextInputLayout) findViewById(R.id.password);
+        TextInputLayout etreenterPassword = (TextInputLayout) findViewById(R.id.confirm_password);
+
+        /*
+        EditText etUsername = findViewById(R.id.username);
+        EditText etEmail = findViewById(R.id.email);
+        EditText etPassword = findViewById(R.id.password);
+        EditText etreenterPassword = findViewById(R.id.confirm_password);
         TextView pwdwarnihng = findViewById(R.id.passwordwarning);
         TextView emailwarning = findViewById(R.id.emailwarning);
-        TextView confirmpwdwarning = findViewById(R.id.confirmpwdwarning);
+        TextView confirmpwdwarning = findViewById(R.id.confirmpwdwarning);*/
 
         Button signin = findViewById(R.id.signinbtn);
 
@@ -54,10 +63,10 @@ public class NewUser extends AppCompatActivity {
             public void onClick(View view) {
 
 
-                String dbUserName = etUsername.getText().toString();
-                String dbPassword = etPassword.getText().toString();
-                String dbConfirmPwd = etreenterPassword.getText().toString();
-                String dbEmail = etEmail.getText().toString();
+                String dbUserName = etUsername.getEditText().getText().toString();
+                String dbPassword = etPassword.getEditText().getText().toString();
+                String dbConfirmPwd = etreenterPassword.getEditText().getText().toString();
+                String dbEmail = etEmail.getEditText().getText().toString();
                 UserData dbUserData = new UserData(dbUserName, dbPassword, dbEmail);
                 if (isValidEmailType(dbEmail)) {                        //check email format
                     if (isValidEmail(dbEmail)) {                        //check if email have been registered
@@ -70,23 +79,23 @@ public class NewUser extends AppCompatActivity {
                                         Toast.makeText(NewUser.this, "Account Created!", Toast.LENGTH_SHORT).show();
                                         startActivity(intent);
                                     } else {
-                                        Toast.makeText(NewUser.this, "This username is already exist!", Toast.LENGTH_SHORT).show();//change after textview created
+                                        etUsername.setError("Username is already exist!");
                                     }
                                 } else {
-                                    pwdwarnihng.setText("Password mismatch!");
-                                    confirmpwdwarning.setText("Password mismatch!");
+                                    etPassword.setError("Password not match!");
+                                    etreenterPassword.setError("Password not match!");
                                 }
                             } else {
-                                confirmpwdwarning.setText("Must contain 1 letter, 1 uppercase, 1 lowercase, 1 special character, at least 4 character long!");
+                                etreenterPassword.setError("Must contain 1 letter, 1 uppercase, 1 lowercase, 1 special character, at least 4 character long!");
                             }
                         } else {
-                            pwdwarnihng.setText("Must contain 1 letter, 1 uppercase, 1 lowercase, 1 special character, at least 4 character long!");
+                            etPassword.setError("Must contain 1 letter, 1 uppercase, 1 lowercase, 1 special character, at least 4 character long!");
                         }
                     } else {
-                        emailwarning.setText("This email is already exist!");
+                        etEmail.setError("This email is already exist!");
                     }
                 } else {
-                    emailwarning.setText("Invaild Email format");
+                    etEmail.setError("Invaild Email format");
                 }
             }
         });
