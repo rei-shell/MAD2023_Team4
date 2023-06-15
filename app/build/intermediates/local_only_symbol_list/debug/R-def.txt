@@ -1,15 +1,21 @@
 R_DEF: Internal format may change without notice
 local
+array category
 color black
 color white
 dimen text_margin
+drawable beefstroganoff
+drawable bolognese
 drawable botnav_gradient
+drawable bulgogi
+drawable fried_rice_with_sausage
 drawable gradient
 drawable gradient2
 drawable gradient_list
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable icon
+drawable macaroni_cheese_ham
 drawable nav_gradient
 drawable outline_account_circle_24
 drawable outline_email_24
@@ -37,10 +43,13 @@ id backbtn1
 id bottom_navigation
 id cardview_id
 id category
+id categoryitem_img
+id categoryitem_text
 id confirm_password
 id content
 id email
 id flFragment
+id gridView_category
 id home
 id imageview
 id loginbtn
@@ -72,6 +81,7 @@ id viewall
 id viewall1
 id viewall2
 layout cardview_recipe
+layout category
 layout fragment_home_page
 layout fragment_search
 layout fragment_userpage

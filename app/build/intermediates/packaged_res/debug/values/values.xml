@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="category">
+        <item>Chinese</item>
+        <item>Western</item>
+        <item>Korean</item>
+        <item>Bakery</item>
+        <item>Japanese</item>
+        <item>Indonesian</item>
+        <item>Thai</item>
+        <item>Easy-Made</item>
+        <item>Drinks</item>
+        <item>Kids-Friendly</item>
+        <item>Sides</item>
+
+
+    </string-array>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <dimen name="text_margin">16dp</dimen>

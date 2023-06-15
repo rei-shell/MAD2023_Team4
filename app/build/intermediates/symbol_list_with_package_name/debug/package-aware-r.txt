@@ -63,6 +63,7 @@ animator mtrl_fab_hide_motion_spec
 animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
+array category
 attr SharedValue
 attr SharedValueId
 attr actionBarDivider
@@ -2433,6 +2434,8 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable beefstroganoff
+drawable bolognese
 drawable botnav_gradient
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
@@ -2442,11 +2445,13 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable bulgogi
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable fried_rice_with_sausage
 drawable gradient
 drawable gradient2
 drawable gradient_list
@@ -2470,6 +2475,7 @@ drawable m3_tabs_background
 drawable m3_tabs_line_indicator
 drawable m3_tabs_rounded_line_indicator
 drawable m3_tabs_transparent_background
+drawable macaroni_cheese_ham
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -2637,6 +2643,8 @@ id cancel_button
 id cardview_id
 id carryVelocity
 id category
+id categoryitem_img
+id categoryitem_text
 id center
 id center_horizontal
 id center_vertical
@@ -2735,6 +2743,7 @@ id ghost_view_holder
 id gone
 id graph
 id graph_wrap
+id gridView_category
 id group_divider
 id grouping
 id groups
@@ -3124,6 +3133,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout cardview_recipe
+layout category
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
