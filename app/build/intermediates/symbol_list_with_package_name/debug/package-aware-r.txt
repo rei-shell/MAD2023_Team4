@@ -2448,6 +2448,8 @@ drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable gradient
+drawable gradient2
+drawable gradient_list
 drawable ic_clock_black_24dp
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
@@ -2503,7 +2505,9 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable outline_account_circle_24
+drawable outline_email_24
 drawable outline_home_24
+drawable outline_lock_24
 drawable outline_person_24
 drawable outline_search_24
 drawable outline_settings_24
@@ -2594,7 +2598,6 @@ id action_mode_close_button
 id action_text
 id actions
 id activity_chooser_view_content
-id activity_main
 id add
 id alertTitle
 id aligned
@@ -2633,6 +2636,7 @@ id callMeasure
 id cancel_button
 id cardview_id
 id carryVelocity
+id category
 id center
 id center_horizontal
 id center_vertical
@@ -2656,7 +2660,7 @@ id closest
 id collapseActionView
 id compress
 id confirm_button
-id confirmpwdwarning
+id confirm_password
 id constraint
 id container
 id content
@@ -2706,8 +2710,6 @@ id east
 id edit_query
 id elastic
 id email
-id emailtxt
-id emailwarning
 id end
 id endToStart
 id enterAlways
@@ -2749,6 +2751,7 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageview
 id immediateStop
 id included
 id info
@@ -2825,6 +2828,7 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
+id name
 id navigation_bar_item_active_indicator_view
 id navigation_bar_item_icon_container
 id navigation_bar_item_icon_view
@@ -2857,9 +2861,6 @@ id parentRelative
 id parent_matrix
 id password
 id password_toggle
-id passwordtxt
-id passwordtxtlogin
-id passwordwarning
 id path
 id pathRelative
 id peekHeight
@@ -2878,9 +2879,6 @@ id recommendation
 id rectangles
 id rectimage
 id recyclerView_id
-id reenterpwd
-id rememberme
-id repwdtxt
 id reverseSawtooth
 id rexipe
 id right
@@ -2979,6 +2977,7 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textView
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3016,8 +3015,6 @@ id userdetails
 id userid
 id userlike
 id username
-id usernametxt
-id usernametxtlogin
 id userpic
 id userpost
 id vertical_only
@@ -3147,6 +3144,7 @@ layout fragment_home_page
 layout fragment_search
 layout fragment_userpage
 layout homepage_main
+layout item_history
 layout login
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
@@ -3200,6 +3198,7 @@ layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout recipes
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material

@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/gradient">
+    android:background="@drawable/gradient"
+>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -59,7 +60,6 @@
             app:counterMaxLength="10"
 
             android:textColorHint="@color/black"
-            app:boxColor="@color/black"
             app:counterTextColor="@color/black"
 
             android:layout_alignStart="@id/rectimage"
@@ -89,7 +89,6 @@
             app:errorEnabled="true"
 
             android:textColorHint="@color/black"
-            app:boxColor="@color/black"
 
             android:layout_alignStart="@id/rectimage"
             android:layout_alignTop="@id/username"
@@ -120,7 +119,6 @@
             app:counterMaxLength="10"
 
             android:textColorHint="@color/black"
-            app:boxColor="@color/black"
             app:counterTextColor="@color/black"
 
             android:layout_alignStart="@id/rectimage"
@@ -152,7 +150,6 @@
             app:counterMaxLength="10"
 
             android:textColorHint="@color/black"
-            app:boxColor="@color/black"
             app:counterTextColor="@color/black"
 
             android:layout_alignStart="@id/rectimage"

@@ -1,9 +1,11 @@
 package sg.edu.np.mad.mad_assg;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -27,7 +29,6 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
-
 
         Button loginButton = findViewById(R.id.loginbtn);
 
@@ -74,6 +75,15 @@ public class Login extends AppCompatActivity {
     }
 
 /*
+
+        ConstraintLayout constraintLayout = findViewById(R.id.bckgrd_color);
+
+        AnimationDrawable animationDrawable = (AnimationDrawable) constraintLayout.getBackground();
+        animationDrawable.setEnterFadeDuration(2500);
+        animationDrawable.setExitFadeDuration(2500);
+        animationDrawable.start();
+
+
 public boolean login(String username, String password){
 
         if (dbHandler.user_Login(username, password)){
