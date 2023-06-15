@@ -21,6 +21,16 @@
             android:contentDescription="background"
             android:src="@drawable/rectangle" />
 
+        <ImageView
+            android:id="@+id/backbtn1"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/twotone_arrow_back_24"
+            android:layout_alignStart="@id/rectimage"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignTop="@id/signin"/>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

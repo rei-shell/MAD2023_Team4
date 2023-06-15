@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/gradient">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -20,10 +21,21 @@
             android:layout_centerInParent="true"
             android:contentDescription="background"/>
 
+        <ImageView
+            android:id="@+id/backbtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/twotone_arrow_back_24"
+            android:layout_alignStart="@id/rectimage"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_alignTop="@id/title"/>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Login"
+            android:id="@+id/title"
             android:textSize="40sp"
             android:textColor="@color/black"
             android:layout_centerHorizontal="true"
@@ -59,7 +71,7 @@
             android:layout_marginStart="55dp"/>
 
         <EditText
-            android:id="@+id/usernametxt"
+            android:id="@+id/usernametxtlogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="6"
@@ -72,7 +84,7 @@
             android:layout_marginStart="170dp"/>
 
         <EditText
-            android:id="@+id/passwordtxt"
+            android:id="@+id/passwordtxtlogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="6"

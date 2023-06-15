@@ -14,11 +14,6 @@ import org.w3c.dom.Text;
 public class HomePage extends Fragment {
 
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        }
 
 
     @Override
