@@ -44,7 +44,144 @@
             android:layout_marginTop="15dp"
             />
 
-        <TextView
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:id="@+id/username"
+            app:startIconDrawable="@drawable/outline_person_24"
+            android:hint="UserName"
+            app:endIconMode="clear_text"
+            app:helperText="Required*"
+            app:hintTextColor="#DD0000"
+            app:errorEnabled="true"
+            app:counterEnabled="true"
+            app:counterMaxLength="10"
+
+            android:textColorHint="@color/black"
+            app:boxColor="@color/black"
+            app:counterTextColor="@color/black"
+
+            android:layout_alignStart="@id/rectimage"
+            android:layout_alignTop="@id/rectimage"
+            android:layout_alignEnd="@+id/rectimage"
+            android:layout_marginTop="90dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:fontFamily="@font/kalam_regular"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:id="@+id/email"
+            app:startIconDrawable="@drawable/outline_email_24"
+            android:hint="Email"
+            app:endIconMode="clear_text"
+            app:helperText="Required*"
+            app:hintTextColor="#DD0000"
+            app:errorEnabled="true"
+
+            android:textColorHint="@color/black"
+            app:boxColor="@color/black"
+
+            android:layout_alignStart="@id/rectimage"
+            android:layout_alignTop="@id/username"
+            android:layout_alignEnd="@+id/rectimage"
+            android:layout_marginTop="90dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:fontFamily="@font/kalam_regular"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:id="@+id/password"
+            app:startIconDrawable="@drawable/outline_lock_24"
+            android:hint="Password"
+            app:endIconMode="password_toggle"
+            app:helperText="Required*"
+            app:hintTextColor="#DD0000"
+            app:errorEnabled="true"
+            app:counterEnabled="true"
+            app:counterMaxLength="10"
+
+            android:textColorHint="@color/black"
+            app:boxColor="@color/black"
+            app:counterTextColor="@color/black"
+
+            android:layout_alignStart="@id/rectimage"
+            android:layout_alignTop="@id/email"
+            android:layout_alignEnd="@+id/rectimage"
+            android:layout_marginTop="90dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:fontFamily="@font/kalam_regular"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:id="@+id/confirm_password"
+            app:startIconDrawable="@drawable/outline_lock_24"
+            android:hint="Confirm Password"
+            app:endIconMode="password_toggle"
+            app:helperText="Required*"
+            app:hintTextColor="#DD0000"
+            app:errorEnabled="true"
+            app:counterEnabled="true"
+            app:counterMaxLength="10"
+
+            android:textColorHint="@color/black"
+            app:boxColor="@color/black"
+            app:counterTextColor="@color/black"
+
+            android:layout_alignStart="@id/rectimage"
+            android:layout_alignTop="@id/password"
+            android:layout_alignEnd="@+id/rectimage"
+            android:layout_marginTop="90dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:fontFamily="@font/kalam_regular"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign In"
+            android:id="@+id/signinbtn"
+            android:textSize="20sp"
+            android:fontFamily="@font/kalam_regular"
+            android:textColor="@color/black"
+            android:layout_centerHorizontal="true"
+            android:layout_alignBottom="@id/rectimage"
+            android:layout_marginBottom="25dp"
+            />
+        <!--<TextView
             android:id="@+id/username"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -193,7 +330,7 @@
             android:layout_marginTop="40dp"
             android:layout_alignStart="@id/repwdtxt"
             android:layout_alignTop="@id/repwdtxt"
-            android:layout_alignEnd="@id/repwdtxt"/>
+            android:layout_alignEnd="@id/repwdtxt"/>-->
 
 
 
