@@ -4,18 +4,13 @@ array category
 color black
 color white
 dimen text_margin
-drawable beefstroganoff
-drawable bolognese
 drawable botnav_gradient
-drawable bulgogi
-drawable fried_rice_with_sausage
 drawable gradient
 drawable gradient2
 drawable gradient_list
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable icon
-drawable macaroni_cheese_ham
 drawable nav_gradient
 drawable outline_account_circle_24
 drawable outline_email_24
@@ -26,7 +21,6 @@ drawable outline_search_24
 drawable outline_settings_24
 drawable rectangle
 drawable twotone_arrow_back_24
-drawable world
 font kalam_bold
 font kalam_light
 font kalam_regular
@@ -57,6 +51,7 @@ id name
 id password
 id person
 id recipe_image_id
+id recipe_recyclerview
 id recipe_text
 id recommendation
 id rectimage
@@ -68,6 +63,7 @@ id signinbtn
 id stuff
 id textView
 id title
+id toolbar
 id top_nav
 id update
 id userName
@@ -87,11 +83,13 @@ layout fragment_search
 layout fragment_userpage
 layout homepage_main
 layout item_history
+layout item_recipe
 layout login
-layout recipes
+layout recipe
 layout signin
 layout splashscreen
 layout startpage
+layout viewed_history
 menu bottom_nav
 menu top_nav
 mipmap facebook

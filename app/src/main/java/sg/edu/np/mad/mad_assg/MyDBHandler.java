@@ -1,6 +1,7 @@
 package sg.edu.np.mad.mad_assg;
 
 
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -113,6 +114,41 @@ public class MyDBHandler extends SQLiteOpenHelper {
         cursor.close();
         db.close();
         return exists;
+    }
+    public UserData getUserName(String username){
+        String query = "SELECT * FROM " + ACCOUNTS + " WHERE " + COLUMN_USERNAME + "= \"" + username + "\"";
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(query,null);
+        UserData queryResult = new UserData();
+
+        if (cursor.moveToFirst()){
+            queryResult.setUsername(cursor.getColumnName(0));
+            cursor.close();
+        }
+        else{
+            queryResult=null;
+        }
+        db.close();
+        return queryResult;
+    }
+
+    @SuppressLint("Range")
+    public String getUsername() {
+        String query = "SELECT " + COLUMN_USERNAME + " FROM " + ACCOUNTS;
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(query, null);
+        String username = null;
+
+        if (cursor.moveToFirst()) {
+            username = cursor.getString(cursor.getColumnIndex(COLUMN_USERNAME));
+        }
+
+        cursor.close();
+        db.close();
+
+        return username;
     }
 
 }

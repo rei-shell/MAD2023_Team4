@@ -6,9 +6,9 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="21"
-8-->C:\Users\nicky\AndroidStudioProjects\new\app\src\main\AndroidManifest.xml
+8-->C:\Users\nicky\AndroidStudioProjects\next\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="33" />
-9-->C:\Users\nicky\AndroidStudioProjects\new\app\src\main\AndroidManifest.xml
+9-->C:\Users\nicky\AndroidStudioProjects\next\app\src\main\AndroidManifest.xml
 10
 11    <permission
 11-->[androidx.core:core:1.9.0] C:\Users\nicky\.gradle\caches\transforms-3\8c25e88eb4ea76e8f3d0900731d8ae12\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
@@ -22,54 +22,54 @@
 15-->[androidx.core:core:1.9.0] C:\Users\nicky\.gradle\caches\transforms-3\8c25e88eb4ea76e8f3d0900731d8ae12\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
 16
 17    <application
-17-->C:\Users\nicky\AndroidStudioProjects\new\app\src\main\AndroidManifest.xml:5:5-30:19
+17-->C:\Users\nicky\AndroidStudioProjects\next\app\src\main\AndroidManifest.xml:5:5-30:19
 18        android:allowBackup="true"
-18-->C:\Users\nicky\AndroidStudioProjects\new\app\src\main\AndroidManifest.xml:6:9-35
+18-->C:\Users\nicky\AndroidStudioProjects\next\app\src\main\AndroidManifest.xml:6:9-35
 19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 19-->[androidx.core:core:1.9.0] C:\Users\nicky\.gradle\caches\transforms-3\8c25e88eb4ea76e8f3d0900731d8ae12\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
 20        android:dataExtractionRules="@xml/data_extraction_rules"
-20-->C:\Users\nicky\AndroidStudioProjects\new\app\src\main\AndroidManifest.xml:7:9-65
+20-->C:\Users\nicky\AndroidStudioProjects\next\app\src\main\AndroidManifest.xml:7:9-65
 21        android:debuggable="true"
 22        android:fullBackupContent="@xml/backup_rules"
-22-->C:\Users\nicky\AndroidStudioProjects\new\app\src\main\AndroidManifest.xml:8:9-54
+22-->C:\Users\nicky\AndroidStudioProjects\next\app\src\main\AndroidManifest.xml:8:9-54
 23        android:icon="@mipmap/ic_launcher"
-23-->C:\Users\nicky\AndroidStudioProjects\new\app\src\main\AndroidManifest.xml:9:9-43
+23-->C:\Users\nicky\AndroidStudioProjects\next\app\src\main\AndroidManifest.xml:9:9-43
 24        android:label="Rexipe"
-24-->C:\Users\nicky\AndroidStudioProjects\new\app\src\main\AndroidManifest.xml:10:9-31
+24-->C:\Users\nicky\AndroidStudioProjects\next\app\src\main\AndroidManifest.xml:10:9-31
 25        android:roundIcon="@mipmap/ic_launcher_round"
-25-->C:\Users\nicky\AndroidStudioProjects\new\app\src\main\AndroidManifest.xml:13:9-54
+25-->C:\Users\nicky\AndroidStudioProjects\next\app\src\main\AndroidManifest.xml:13:9-54
 26        android:supportsRtl="true"
-26-->C:\Users\nicky\AndroidStudioProjects\new\app\src\main\AndroidManifest.xml:11:9-35
+26-->C:\Users\nicky\AndroidStudioProjects\next\app\src\main\AndroidManifest.xml:11:9-35
 27        android:testOnly="true"
 28        android:theme="@style/Theme.MAD_Assg" >
-28-->C:\Users\nicky\AndroidStudioProjects\new\app\src\main\AndroidManifest.xml:12:9-46
+28-->C:\Users\nicky\AndroidStudioProjects\next\app\src\main\AndroidManifest.xml:12:9-46
 29        <activity android:name="sg.edu.np.mad.mad_assg.MainActivity" />
-29-->C:\Users\nicky\AndroidStudioProjects\new\app\src\main\AndroidManifest.xml:16:9-49
-29-->C:\Users\nicky\AndroidStudioProjects\new\app\src\main\AndroidManifest.xml:16:19-47
+29-->C:\Users\nicky\AndroidStudioProjects\next\app\src\main\AndroidManifest.xml:16:9-49
+29-->C:\Users\nicky\AndroidStudioProjects\next\app\src\main\AndroidManifest.xml:16:19-47
 30        <activity android:name="sg.edu.np.mad.mad_assg.Login" />
-30-->C:\Users\nicky\AndroidStudioProjects\new\app\src\main\AndroidManifest.xml:17:9-42
-30-->C:\Users\nicky\AndroidStudioProjects\new\app\src\main\AndroidManifest.xml:17:19-40
+30-->C:\Users\nicky\AndroidStudioProjects\next\app\src\main\AndroidManifest.xml:17:9-42
+30-->C:\Users\nicky\AndroidStudioProjects\next\app\src\main\AndroidManifest.xml:17:19-40
 31        <activity android:name="sg.edu.np.mad.mad_assg.NewUser" />
-31-->C:\Users\nicky\AndroidStudioProjects\new\app\src\main\AndroidManifest.xml:18:9-44
-31-->C:\Users\nicky\AndroidStudioProjects\new\app\src\main\AndroidManifest.xml:18:19-42
+31-->C:\Users\nicky\AndroidStudioProjects\next\app\src\main\AndroidManifest.xml:18:9-44
+31-->C:\Users\nicky\AndroidStudioProjects\next\app\src\main\AndroidManifest.xml:18:19-42
 32        <activity android:name="sg.edu.np.mad.mad_assg.StartPage" />
-32-->C:\Users\nicky\AndroidStudioProjects\new\app\src\main\AndroidManifest.xml:19:9-46
-32-->C:\Users\nicky\AndroidStudioProjects\new\app\src\main\AndroidManifest.xml:19:19-44
+32-->C:\Users\nicky\AndroidStudioProjects\next\app\src\main\AndroidManifest.xml:19:9-46
+32-->C:\Users\nicky\AndroidStudioProjects\next\app\src\main\AndroidManifest.xml:19:19-44
 33        <activity
-33-->C:\Users\nicky\AndroidStudioProjects\new\app\src\main\AndroidManifest.xml:20:9-27:20
+33-->C:\Users\nicky\AndroidStudioProjects\next\app\src\main\AndroidManifest.xml:20:9-27:20
 34            android:name="sg.edu.np.mad.mad_assg.SplashScreen"
-34-->C:\Users\nicky\AndroidStudioProjects\new\app\src\main\AndroidManifest.xml:21:13-41
+34-->C:\Users\nicky\AndroidStudioProjects\next\app\src\main\AndroidManifest.xml:21:13-41
 35            android:exported="true" >
-35-->C:\Users\nicky\AndroidStudioProjects\new\app\src\main\AndroidManifest.xml:22:13-36
+35-->C:\Users\nicky\AndroidStudioProjects\next\app\src\main\AndroidManifest.xml:22:13-36
 36            <intent-filter>
-36-->C:\Users\nicky\AndroidStudioProjects\new\app\src\main\AndroidManifest.xml:23:13-26:29
+36-->C:\Users\nicky\AndroidStudioProjects\next\app\src\main\AndroidManifest.xml:23:13-26:29
 37                <action android:name="android.intent.action.MAIN" />
-37-->C:\Users\nicky\AndroidStudioProjects\new\app\src\main\AndroidManifest.xml:24:17-69
-37-->C:\Users\nicky\AndroidStudioProjects\new\app\src\main\AndroidManifest.xml:24:25-66
+37-->C:\Users\nicky\AndroidStudioProjects\next\app\src\main\AndroidManifest.xml:24:17-69
+37-->C:\Users\nicky\AndroidStudioProjects\next\app\src\main\AndroidManifest.xml:24:25-66
 38
 39                <category android:name="android.intent.category.LAUNCHER" />
-39-->C:\Users\nicky\AndroidStudioProjects\new\app\src\main\AndroidManifest.xml:25:17-77
-39-->C:\Users\nicky\AndroidStudioProjects\new\app\src\main\AndroidManifest.xml:25:27-74
+39-->C:\Users\nicky\AndroidStudioProjects\next\app\src\main\AndroidManifest.xml:25:17-77
+39-->C:\Users\nicky\AndroidStudioProjects\next\app\src\main\AndroidManifest.xml:25:27-74
 40            </intent-filter>
 41        </activity>
 42

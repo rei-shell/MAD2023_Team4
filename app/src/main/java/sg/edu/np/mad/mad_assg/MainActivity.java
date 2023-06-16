@@ -6,11 +6,16 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.annotation.SuppressLint;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -32,13 +37,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.homepage_main);
 
-        /*FrameLayout relativeLayout = findViewById(R.id.content);
-
-        AnimationDrawable animationDrawable = (AnimationDrawable) relativeLayout.getBackground();
-        animationDrawable.setEnterFadeDuration(2500);
-        animationDrawable.setExitFadeDuration(2500);
-        animationDrawable.start();*/
-
         bottomNavigationView = findViewById(R.id.bottom_navigation);
 
         getSupportFragmentManager().beginTransaction().replace(R.id.content, homeFragment).commit();
@@ -50,29 +48,49 @@ public class MainActivity extends AppCompatActivity {
                 int id = item.getItemId();
 
                 if (id == R.id.home) {
-                    // Handle the camera action
                     fragment = new HomePage();
-                    FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-                    ft.replace(R.id.content, fragment);
-                    ft.commit();
                 } else if (id == R.id.search) {
                     fragment = new Search();
-                    FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-                    ft.replace(R.id.content,fragment);
-                    ft.commit();
                 } else if (id == R.id.person) {
-                    fragment = new Userpage();
-                    FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-                    ft.replace(R.id.content,fragment);
-                    ft.commit();
-
+                    fragment = userFragment;
+                } else {
+                    return false;
                 }
+
+                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                ft.replace(R.id.content, fragment);
+                ft.commit();
+
                 return true;
             }
         });
+
+        // Retrieve the username from the SQL database
+        String username = getUserNameFromDatabase();
+
+        // Set the username text in the Userpage fragment
+        userFragment.setUsernameText(username);
     }
 
+
+    @SuppressLint("Range")
+    private String getUserNameFromDatabase() {
+        MyDBHandler dbHandler = new MyDBHandler(this, "User.db", null, 1);
+        SQLiteDatabase db = dbHandler.getReadableDatabase();
+        String username = null;
+
+        // Perform the SQL query to retrieve the username from the database
+        Cursor cursor = db.query("User", new String[]{"UserName"}, null, null, null, null, null);
+        if (cursor != null && cursor.moveToFirst()) {
+            username = cursor.getString(cursor.getColumnIndex("UserName"));
+            cursor.close();
+        }
+        db.close();
+
+        return username;
+    }
 }
+
 
 
 /*
@@ -259,7 +277,7 @@ Logout();
     }
 */
 
-    }*/
+
 
 
 
