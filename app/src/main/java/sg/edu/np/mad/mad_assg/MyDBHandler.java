@@ -16,12 +16,27 @@ public class MyDBHandler extends SQLiteOpenHelper {
     public static String COLUMN_PASSWORD = "Password";
     public static String COLUMN_EMAIL = "Email";
 
+    public static String RECIPE = "Recipe";
+
+    public static String COLUMN_CATEGORY = "Category";
+
+    public static String COLUMN_NAME = "Name";
+
+    public static String COLUMN_INGREDIENTS = "Ingredients";
+
+    public static String COLUMN_DESCRIPTION = "Description";
+
+    public static String COLUMN_STEPS = "Steps";
+
+    public static String COLUMN_USER = "Publisher";
     public MyDBHandler(Context context, String name, SQLiteDatabase.CursorFactory factory, int version){
         super(context, DATABASE_NAME, factory, DATABASE_VERSION);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db){
+        /*String CREATE_RECIPE_TABLE = "CREATE TABLE " + RECIPE + "(" + COLUMN_NAME + " TEXT," + COLUMN_CATEGORY + " TEXT," + COLUMN_USER + " TEXT," + COLUMN_DESCRIPTION + " TEXT," + COLUMN_INGREDIENTS + " TEXT," + COLUMN_STEPS + " TEXT)";  */
+        /*db.execSQL(CREATE_RECIPE_TABLE);*/
         String CREATE_ACCOUNTS_TABLE = "CREATE TABLE " + ACCOUNTS + "(" + COLUMN_USERNAME + " TEXT," + COLUMN_PASSWORD + " TEXT," + COLUMN_EMAIL + " TEXT)";
         db.execSQL(CREATE_ACCOUNTS_TABLE);
     }
@@ -44,39 +59,30 @@ public class MyDBHandler extends SQLiteOpenHelper {
     }
 
     //registration check function
-    public boolean user_IsUsernameFree(String userName)
-    {
+    public boolean user_IsUsernameFree(String userName) {
         SQLiteDatabase db = getReadableDatabase();
-        Cursor cursor = db.rawQuery("SELECT * FROM " + ACCOUNTS + " WHERE " + COLUMN_USERNAME + "= \"" + userName + " \"", null);
-        if (cursor != null)
-        {
-            while (cursor.moveToNext()) {
-                return false;
-            }
-        }
+        String[] columns = {COLUMN_USERNAME};
+        String selection = COLUMN_USERNAME + "=?";
+        String[] selectionArgs = {userName};
+        Cursor cursor = db.query(ACCOUNTS, columns, selection, selectionArgs, null, null, null);
+        boolean isUsernameFree = cursor.getCount() == 0;
         cursor.close();
-        db.close();
-        return true;
+        return isUsernameFree;
     }
 
-    //registration check function
-    public boolean user_IsEmailFree(String email)
-    {
+    public boolean user_IsEmailFree(String email) {
         SQLiteDatabase db = getReadableDatabase();
-        Cursor cursor = db.rawQuery("SELECT * FROM " + ACCOUNTS + " WHERE " + COLUMN_EMAIL + "= \"" + email + " \"", null);
-        if (cursor != null)
-        {
-            while (cursor.moveToNext()) {
-                return false;
-            }
-        }
+        String[] columns = {COLUMN_EMAIL};
+        String selection = COLUMN_EMAIL + "=?";
+        String[] selectionArgs = {email};
+        Cursor cursor = db.query(ACCOUNTS, columns, selection, selectionArgs, null, null, null);
+        boolean isEmailFree = cursor.getCount() == 0;
         cursor.close();
-        db.close();
-        return true;
+        return isEmailFree;
     }
 
     //login function
-    public boolean user_Login(String userName, String password)
+   /* public boolean user_Login(String userName, String password)
     {
         SQLiteDatabase db = getReadableDatabase();
         Cursor cursor = db.rawQuery("SELECT * FROM " + ACCOUNTS + " WHERE " + COLUMN_USERNAME +  "= \"" + userName + " \" " + " AND " + COLUMN_PASSWORD + "= \"" + password + " \" ", null);
@@ -89,6 +95,24 @@ public class MyDBHandler extends SQLiteOpenHelper {
         cursor.close();
         db.close();
         return false;
+    }*/
+    public boolean user_checkUsername(String userName) {
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM " + ACCOUNTS + " WHERE " + COLUMN_USERNAME + "= ?", new String[]{userName});
+        boolean exists = cursor.getCount() > 0;
+        cursor.close();
+        db.close();
+        return exists;
+    }
+
+
+    public boolean user_checkPassword(String userName, String password) {
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM " + ACCOUNTS + " WHERE " + COLUMN_USERNAME + "= ? AND " + COLUMN_PASSWORD + "= ?", new String[]{userName, password});
+        boolean exists = cursor.getCount() > 0;
+        cursor.close();
+        db.close();
+        return exists;
     }
 
 }

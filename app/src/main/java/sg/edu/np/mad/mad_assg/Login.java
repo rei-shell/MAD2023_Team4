@@ -1,16 +1,23 @@
 package sg.edu.np.mad.mad_assg;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.google.android.material.textfield.TextInputLayout;
+
+import java.util.Objects;
 
 
 public class Login extends AppCompatActivity {
@@ -19,37 +26,72 @@ public class Login extends AppCompatActivity {
     public String MY_USERNAME = "MyUserName";
     public String MY_PASSWORD = "MyPassword";
     SharedPreferences sharedPreferences;*/
-    MyDBHandler dbHandler = new MyDBHandler(this,null,null,1);
+    MyDBHandler dbHandler = new MyDBHandler(this,"User.db",null,1);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
 
-
         Button loginButton = findViewById(R.id.loginbtn);
-        EditText etUsername = findViewById(R.id.usernametxt);
-        EditText etPassword = findViewById(R.id.passwordtxt);
+
+        TextInputLayout etUsername = (TextInputLayout) findViewById(R.id.username);
+        TextInputLayout etPassword = (TextInputLayout) findViewById(R.id.password);
+
+        ImageView backbtn = findViewById(R.id.backbtn);
+
+        backbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Login.this, StartPage.class);
+                startActivity(intent);
+            }
+        });
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String username = etUsername.getEditText().getText().toString();
+                String password = etPassword.getEditText().getText().toString();
 
-                String username = etUsername.getText().toString();
-                String password = etPassword.getText().toString();
-                if (dbHandler.user_Login(username, password)){
+                if (isValidCredentials(username, password)) {
+                    Toast.makeText(Login.this, "Login Successful", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(Login.this, MainActivity.class);
                     startActivity(intent);
-                }
-                else {
-                    Toast.makeText(Login.this, "Invaild Username/Password!", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(Login.this, MainActivity.class);
-                    startActivity(intent);
+                } else {
+                    Toast.makeText(Login.this, "Invalid Username/Password!", Toast.LENGTH_SHORT).show();
                 }
             }
-
         });
-    };
+
+    }
+    private boolean isValidCredentials(String username, String password) {
+        return dbHandler.user_checkUsername(username) && dbHandler.user_checkPassword(username, password);
+    }
+
+
+
 /*
+private boolean userUsername (String username){
+        return dbHandler.user_IsUsernameFree(username);
+    }
+
+    private boolean userPassword (String password){
+        return dbHandler.user_checkPassword(password);
+    }
+        ConstraintLayout constraintLayout = findViewById(R.id.bckgrd_color);
+
+        AnimationDrawable animationDrawable = (AnimationDrawable) constraintLayout.getBackground();
+        animationDrawable.setEnterFadeDuration(2500);
+        animationDrawable.setExitFadeDuration(2500);
+        animationDrawable.start();
+
+
+public boolean login(String username, String password){
+
+        if (dbHandler.user_Login(username, password)){
+            return true;
+        } return false;
+    }
     public boolean isValidCredential(String username, String password){
         /*sharedPreferences = getSharedPreferences(GLOBAL_PREFS, MODE_PRIVATE);
         String sharedUsername = sharedPreferences.getString(MY_USERNAME, "");

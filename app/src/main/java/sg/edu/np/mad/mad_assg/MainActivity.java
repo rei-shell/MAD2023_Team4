@@ -1,37 +1,97 @@
 package sg.edu.np.mad.mad_assg;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.view.GravityCompat;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
-import android.view.MotionEvent;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toolbar;
+import android.widget.FrameLayout;
+import android.widget.RelativeLayout;
 
-<<<<<<< HEAD
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
+
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-=======
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.navigation.NavigationView;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+    BottomNavigationView bottomNavigationView;
 
+    HomePage homeFragment = new HomePage();
+    Search searchFragment = new Search();
+    Userpage userFragment = new Userpage();
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState){
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.homepage_main);
+
+        /*FrameLayout relativeLayout = findViewById(R.id.content);
+
+        AnimationDrawable animationDrawable = (AnimationDrawable) relativeLayout.getBackground();
+        animationDrawable.setEnterFadeDuration(2500);
+        animationDrawable.setExitFadeDuration(2500);
+        animationDrawable.start();*/
+
+        bottomNavigationView = findViewById(R.id.bottom_navigation);
+
+        getSupportFragmentManager().beginTransaction().replace(R.id.content, homeFragment).commit();
+
+        bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem item) {
+                Fragment fragment;
+                int id = item.getItemId();
+
+                if (id == R.id.home) {
+                    // Handle the camera action
+                    fragment = new HomePage();
+                    FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                    ft.replace(R.id.content, fragment);
+                    ft.commit();
+                } else if (id == R.id.search) {
+                    fragment = new Search();
+                    FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                    ft.replace(R.id.content,fragment);
+                    ft.commit();
+                } else if (id == R.id.person) {
+                    fragment = new Userpage();
+                    FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                    ft.replace(R.id.content,fragment);
+                    ft.commit();
+
+                }
+                return true;
+            }
+        });
+    }
+
+}
+
+
+/*
+
+    switch(item.getItemId()){
+                    case R.id.home:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.content, homeFragment).commit();
+                        return true;
+                    case R.id.search:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.content, searchFragment).commit();
+                        return true;
+                    case R.id.person:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.content, userFragment).commit();
+                        return true;
+                }
+                return false;
     DrawerLayout drawer;
     NavigationView navigationView;
->>>>>>> origin/main
+
 
     ArrayList<String> myList = new ArrayList<>();
     @Override
@@ -39,7 +99,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.homepage);
-        drawer = (DrawerLayout) findViewById(R.id.content);
 
         };
     @Override
@@ -89,18 +148,20 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             //connect to search recipes page
             SearchFragment searchFragment = new SearchFragment();
             manager.beginTransaction().replace(R.id.root_layout, searchFragment, searchFragment.getTag()).addToBackStack(null).commit();
-        }*/
+        }
 
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.content);
         drawer.closeDrawer(GravityCompat.START);
         return true;
-    }
+}
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
     }
+
+
+}
 
         myList.add("");
     }
@@ -109,7 +170,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
 
+
 /*
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -192,6 +255,11 @@ Logout();
                 break;
         }
         return true;
+
+    }
+*/
+
     }*/
+
 
 

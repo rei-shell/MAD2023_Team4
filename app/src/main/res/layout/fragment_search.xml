@@ -8,16 +8,16 @@
     android:orientation="vertical"
     android:background="@drawable/gradient">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView_id"
+    <SearchView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <GridView
+        android:id="@+id/gridView_category"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:numColumns="auto_fit"
+        android:stretchMode="columnWidth"
+ />
 
-        android:clipChildren="false"
-        android:clipToPadding="true"
-        android:scrollbars="vertical"
-
-        >
-
-    </androidx.recyclerview.widget.RecyclerView>
 </LinearLayout>
