@@ -1,10 +1,13 @@
 package sg.edu.np.mad.mad_assg;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -31,6 +34,7 @@ public class NewUser extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.signin);
+
 
         TextInputLayout etUsername = (TextInputLayout) findViewById(R.id.username);
         TextInputLayout etEmail = (TextInputLayout) findViewById(R.id.email);
@@ -61,46 +65,86 @@ public class NewUser extends AppCompatActivity {
         signin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String dbUserName = etUsername.getEditText().getText().toString();
+                String dbPassword = etPassword.getEditText().getText().toString();
+                String dbConfirmPwd = etreenterPassword.getEditText().getText().toString();
+                String dbEmail = etEmail.getEditText().getText().toString();
+
+                boolean isValidEmailFormat = isValidEmailType(dbEmail);
+                boolean isEmailAvailable = isValidEmail(dbEmail);
+                boolean isValidPasswordFormat = isValidPassword(dbPassword);
+                boolean isPasswordConfirmed = dbPassword.equals(dbConfirmPwd);
+                boolean isUserNameAvailable = isValidUserName(dbUserName);
+
+                if (!isValidEmailFormat) {
+                    etEmail.setError("Invalid email format");
+                } else if (!isEmailAvailable) {
+                    etEmail.setError("This email is already registered");
+                } else if (!isValidPasswordFormat) {
+                    etPassword.setError("Invalid password format");
+                } else if (!isPasswordConfirmed) {
+                    etPassword.setError("Passwords do not match");
+                    etreenterPassword.setError("Passwords do not match");
+                } else if (!isUserNameAvailable) {
+                    etUsername.setError("Username is already taken");
+                } else {
+                    UserData dbUserData = new UserData(dbUserName, dbPassword, dbEmail);
+                    dbHandler.addUser(dbUserData);
+                    Toast.makeText(NewUser.this, "Account Created!", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(NewUser.this, Login.class);
+                    startActivity(intent);
+                }
+            }
+        });
 
 
+        /*signin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
                 String dbUserName = etUsername.getEditText().getText().toString();
                 String dbPassword = etPassword.getEditText().getText().toString();
                 String dbConfirmPwd = etreenterPassword.getEditText().getText().toString();
                 String dbEmail = etEmail.getEditText().getText().toString();
                 UserData dbUserData = new UserData(dbUserName, dbPassword, dbEmail);
-                if (isValidEmailType(dbEmail)) {                        //check email format
-                    if (isValidEmail(dbEmail)) {                        //check if email have been registered
-                        if (isValidPassword(dbPassword)) {              //check password format
-                            if (isValidPassword(dbConfirmPwd)) {        //check password format
-                                if (dbPassword.equals(dbConfirmPwd)) {  //check password and confirm password is same
-                                    if (isValidUserName(dbUserName)) {  //check if username have been registered
-                                        dbHandler.addUser(dbUserData);
-                                        Intent intent = new Intent(NewUser.this, Login.class);
-                                        Toast.makeText(NewUser.this, "Account Created!", Toast.LENGTH_SHORT).show();
-                                        startActivity(intent);
+
+                if (isValidEmailType(dbEmail)) {
+                    if (isValidEmail(dbEmail)) {
+                        if (isValidPassword(dbPassword)) {
+                            if (isValidPassword(dbConfirmPwd)) {
+                                if (dbPassword.equals(dbConfirmPwd)) {
+                                    if (isValidUserName(dbUserName)) {
+                                        if (isValidEmail(dbEmail)) {
+                                            dbHandler.addUser(dbUserData);
+                                            Intent intent = new Intent(NewUser.this, Login.class);
+                                            Toast.makeText(NewUser.this, "Account Created!", Toast.LENGTH_SHORT).show();
+                                            startActivity(intent);
+                                        } else {
+                                            etEmail.setError("This email is already registered!");
+                                        }
                                     } else {
-                                        etUsername.setError("Username is already exist!");
+                                        etUsername.setError("Username is already taken!");
                                     }
                                 } else {
-                                    etPassword.setError("Password not match!");
-                                    etreenterPassword.setError("Password not match!");
+                                    etPassword.setError("Password does not match!");
+                                    etreenterPassword.setError("Password does not match!");
                                 }
                             } else {
-                                etreenterPassword.setError("Must contain 1 letter, 1 uppercase, 1 lowercase, 1 special character, at least 4 character long!");
+                                etreenterPassword.setError("Must contain 1 letter, 1 uppercase, 1 lowercase, 1 special character, at least 4 characters long!");
                             }
                         } else {
-                            etPassword.setError("Must contain 1 letter, 1 uppercase, 1 lowercase, 1 special character, at least 4 character long!");
+                            etPassword.setError("Must contain 1 letter, 1 uppercase, 1 lowercase, 1 special character, at least 4 characters long!");
                         }
                     } else {
-                        etEmail.setError("This email is already exist!");
+                        etEmail.setError("This email is already registered!");
                     }
                 } else {
-                    etEmail.setError("Invaild Email format");
+                    etEmail.setError("Invalid email format");
                 }
             }
-        });
+        });*/
+
     }
-    MyDBHandler dbHandler = new MyDBHandler(this, null, null, 1);
+    MyDBHandler dbHandler = new MyDBHandler(this, "User.db", null, 1);
         public boolean isValidPassword (String password){
 
             Pattern pattern;
@@ -126,14 +170,16 @@ public class NewUser extends AppCompatActivity {
                     + "([a-zA-Z]+[\\w-]+\\.)+[a-zA-Z]{2,4})$").matcher(email).matches();
         }
 
-        private boolean isValidUserName (String username){
-            return dbHandler.user_IsUsernameFree(username);
-        }
+    private boolean isValidUserName(String username) {
+        return dbHandler.user_IsUsernameFree(username);
+    }
 
-        private boolean isValidEmail (String email){
-            return dbHandler.user_IsEmailFree(email);
-        }
-        /*
+    private boolean isValidEmail(String email) {
+        return dbHandler.user_IsEmailFree(email);
+    }
+}
+
+    /*
     @Override
     public boolean onOptionsItemSelected(android.view.MenuItem item) {
         switch (item.getItemId()) {
@@ -144,7 +190,7 @@ public class NewUser extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }*/
-}
+
 /*
 
                 /*sharedPreferences = getSharedPreferences(GLOBAL_PREFS, MODE_PRIVATE);

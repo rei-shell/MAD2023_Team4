@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="category">
+        <item>Chinese</item>
+        <item>Western</item>
+        <item>Korean</item>
+        <item>Bakery</item>
+        <item>Japanese</item>
+        <item>Indonesian</item>
+        <item>Thai</item>
+        <item>Easy-Made</item>
+        <item>Drinks</item>
+        <item>Kids-Friendly</item>
+        <item>Sides</item>
+
+
+    </string-array>
+</resources>
+<!-- add recipe-->

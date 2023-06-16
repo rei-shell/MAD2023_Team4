@@ -1,20 +1,22 @@
 package sg.edu.np.mad.mad_assg;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.FrameLayout;
+import android.widget.RelativeLayout;
 
-
-import java.util.ArrayList;
-
-public class MainActivity extends AppCompatActivity {
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,6 +31,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.homepage_main);
+
+        /*FrameLayout relativeLayout = findViewById(R.id.content);
+
+        AnimationDrawable animationDrawable = (AnimationDrawable) relativeLayout.getBackground();
+        animationDrawable.setEnterFadeDuration(2500);
+        animationDrawable.setExitFadeDuration(2500);
+        animationDrawable.start();*/
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
 
@@ -159,6 +168,11 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
+
+
+/*
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -241,5 +255,11 @@ Logout();
                 break;
         }
         return true;
+
     }
 */
+
+    }*/
+
+
+

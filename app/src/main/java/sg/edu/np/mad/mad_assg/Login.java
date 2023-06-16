@@ -1,9 +1,11 @@
 package sg.edu.np.mad.mad_assg;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -15,6 +17,8 @@ import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
 
+import java.util.Objects;
+
 
 public class Login extends AppCompatActivity {
 /*
@@ -22,12 +26,11 @@ public class Login extends AppCompatActivity {
     public String MY_USERNAME = "MyUserName";
     public String MY_PASSWORD = "MyPassword";
     SharedPreferences sharedPreferences;*/
-    MyDBHandler dbHandler = new MyDBHandler(this,null,null,1);
+    MyDBHandler dbHandler = new MyDBHandler(this,"User.db",null,1);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
-
 
         Button loginButton = findViewById(R.id.loginbtn);
 
@@ -47,33 +50,42 @@ public class Login extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 String username = etUsername.getEditText().getText().toString();
                 String password = etPassword.getEditText().getText().toString();
 
-                if ((userUsername(username)) && (userPassword(password))) {
-                        Toast.makeText(Login.this, "Login Successful", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(Login.this, MainActivity.class);
-                        startActivity(intent);
-                    } else{
-                        Toast.makeText(Login.this, "Invaild UserName/Password!", Toast.LENGTH_SHORT).show();
-                    }
+                if (isValidCredentials(username, password)) {
+                    Toast.makeText(Login.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(Login.this, MainActivity.class);
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(Login.this, "Invalid Username/Password!", Toast.LENGTH_SHORT).show();
                 }
-
-
-
+            }
         });
-    };
 
-    private boolean userUsername (String username){
+    }
+    private boolean isValidCredentials(String username, String password) {
+        return dbHandler.user_checkUsername(username) && dbHandler.user_checkPassword(username, password);
+    }
+
+
+
+/*
+private boolean userUsername (String username){
         return dbHandler.user_IsUsernameFree(username);
     }
 
     private boolean userPassword (String password){
         return dbHandler.user_checkPassword(password);
     }
+        ConstraintLayout constraintLayout = findViewById(R.id.bckgrd_color);
 
-/*
+        AnimationDrawable animationDrawable = (AnimationDrawable) constraintLayout.getBackground();
+        animationDrawable.setEnterFadeDuration(2500);
+        animationDrawable.setExitFadeDuration(2500);
+        animationDrawable.start();
+
+
 public boolean login(String username, String password){
 
         if (dbHandler.user_Login(username, password)){
