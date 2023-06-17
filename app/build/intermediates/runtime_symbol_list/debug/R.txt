@@ -3225,6 +3225,7 @@ int layout notification_template_icon_group 0x7f0d0066
 int layout notification_template_part_chronometer 0x7f0d0067
 int layout notification_template_part_time 0x7f0d0068
 int layout recipe 0x7f0d0069
+int layout recipe_view 0x7f0d0085
 int layout reset_password 0x7f0d0083
 int layout select_dialog_item_material 0x7f0d006a
 int layout select_dialog_multichoice_material 0x7f0d006b

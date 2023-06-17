@@ -106,6 +106,7 @@ layout item_history
 layout item_recipe
 layout login
 layout recipe
+layout recipe_view
 layout reset_password
 layout settings
 layout signin
