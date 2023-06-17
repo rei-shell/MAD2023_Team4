@@ -49,7 +49,7 @@ This app will hopefully inspire you to make every meal a wonderful and memorable
     <li> Rating & Reviews</li>
     <ul>
     <li> Rating</li>
-    <ul><li> This allows user to rate the recipe from 1 being the best to 5 being the worst.</li></ul>
+    <ul><li> This allows user to rate the recipe from 1 being the easiest to 5 being the hardest.</li></ul>
     <li> Reviews</li>
     <ul><li> This allows user to review on the recipe they were viewing or recreating. They could review that the recipe is good and easy or the recipe is long and not worth cooking for or many other different more reviews.</li></ul></ul><br>
 </p></li>
