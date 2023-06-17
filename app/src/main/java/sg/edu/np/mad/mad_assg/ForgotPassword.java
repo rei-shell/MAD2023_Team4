@@ -51,7 +51,7 @@ public class ForgotPassword extends AppCompatActivity {
                     startActivity(intent);
                 }
                 else{
-                    Toast.makeText(ForgotPassword.this, "User Not Registered!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ForgotPassword.this, "Invaild Username or Email", Toast.LENGTH_SHORT).show();
                 }
             }
         });

@@ -25,6 +25,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.textfield.TextInputLayout;
 
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -37,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState){
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.homepage_main);
 
@@ -45,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
         getSupportFragmentManager().beginTransaction().replace(R.id.content, homeFragment).commit();
 
+        String name = getIntent().getStringExtra("username");
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
@@ -57,11 +59,9 @@ public class MainActivity extends AppCompatActivity {
                     fragment = new Search();
                 } else if (id == R.id.person) {
                     fragment = userFragment;
-                    // Pass the username to the Userpage fragment
-                    String username = getUserNameFromDatabase();
                     Bundle bundle = new Bundle();
-                    bundle.putString("username", username);
-                    fragment.setArguments(bundle);
+                    bundle.putString("username", name);
+                    userFragment.setArguments(bundle);
                 } else {
                     return false;
                 }
@@ -75,14 +75,15 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        // Retrieve the username from the SQL database
+        /*// Retrieve the username from the SQL database
         String username = getUserNameFromDatabase();
 
         // Set the username text in the Userpage fragment
-        userFragment.setUsernameText(username);
+        userFragment.setUsernameText(username);*/
     }
+}
 
-
+/*
     @SuppressLint("Range")
     private String getUserNameFromDatabase() {
         MyDBHandler dbHandler = new MyDBHandler(this, "User.db", null, 1);
@@ -100,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
         return username;
     }
 
-}
+}*/
 
 
 
