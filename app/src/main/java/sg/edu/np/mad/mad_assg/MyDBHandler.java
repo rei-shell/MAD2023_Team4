@@ -59,6 +59,16 @@ public class MyDBHandler extends SQLiteOpenHelper {
         db.close();
     }
 
+    public boolean updatepassword(String username, String password){
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("password", password);
+        long result = db.update(ACCOUNTS, contentValues, "username = ?", new String[] {username} );
+        if (result == -1)return false;
+        else
+            return true;
+    }
+
     //registration check function
     public boolean user_IsUsernameFree(String userName) {
         SQLiteDatabase db = getReadableDatabase();
@@ -82,21 +92,7 @@ public class MyDBHandler extends SQLiteOpenHelper {
         return isEmailFree;
     }
 
-    //login function
-   /* public boolean user_Login(String userName, String password)
-    {
-        SQLiteDatabase db = getReadableDatabase();
-        Cursor cursor = db.rawQuery("SELECT * FROM " + ACCOUNTS + " WHERE " + COLUMN_USERNAME +  "= \"" + userName + " \" " + " AND " + COLUMN_PASSWORD + "= \"" + password + " \" ", null);
-        if (cursor != null)
-        {
-            while (cursor.moveToNext()) {
-                return true;
-            }
-        }
-        cursor.close();
-        db.close();
-        return false;
-    }*/
+
     public boolean user_checkUsername(String userName) {
         SQLiteDatabase db = getReadableDatabase();
         Cursor cursor = db.rawQuery("SELECT * FROM " + ACCOUNTS + " WHERE " + COLUMN_USERNAME + "= ?", new String[]{userName});
@@ -106,6 +102,14 @@ public class MyDBHandler extends SQLiteOpenHelper {
         return exists;
     }
 
+    public boolean user_checkEmail(String email) {
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM " + ACCOUNTS + " WHERE " + COLUMN_EMAIL + "= ?", new String[]{email});
+        boolean exists = cursor.getCount() > 0;
+        cursor.close();
+        db.close();
+        return exists;
+    }
 
     public boolean user_checkPassword(String userName, String password) {
         SQLiteDatabase db = getReadableDatabase();
@@ -114,23 +118,6 @@ public class MyDBHandler extends SQLiteOpenHelper {
         cursor.close();
         db.close();
         return exists;
-    }
-    public UserData getUserName(String username){
-        String query = "SELECT * FROM " + ACCOUNTS + " WHERE " + COLUMN_USERNAME + "= \"" + username + "\"";
-
-        SQLiteDatabase db = this.getWritableDatabase();
-        Cursor cursor = db.rawQuery(query,null);
-        UserData queryResult = new UserData();
-
-        if (cursor.moveToFirst()){
-            UserData.setUsername(cursor.getColumnName(0));
-            cursor.close();
-        }
-        else{
-            queryResult=null;
-        }
-        db.close();
-        return queryResult;
     }
 
     @SuppressLint("Range")
@@ -152,3 +139,41 @@ public class MyDBHandler extends SQLiteOpenHelper {
     }
 
 }
+
+
+
+
+//login function
+   /* public boolean user_Login(String userName, String password)
+    {
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM " + ACCOUNTS + " WHERE " + COLUMN_USERNAME +  "= \"" + userName + " \" " + " AND " + COLUMN_PASSWORD + "= \"" + password + " \" ", null);
+        if (cursor != null)
+        {
+            while (cursor.moveToNext()) {
+                return true;
+            }
+        }
+        cursor.close();
+        db.close();
+        return false;
+    }
+
+       public UserData getUserName(String username){
+        String query = "SELECT * FROM " + ACCOUNTS + " WHERE " + COLUMN_USERNAME + "= \"" + username + "\"";
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(query,null);
+        UserData queryResult = new UserData();
+
+        if (cursor.moveToFirst()){
+            UserData.setUsername(cursor.getColumnName(0));
+            cursor.close();
+        }
+        else{
+            queryResult=null;
+        }
+        db.close();
+        return queryResult;
+    }
+    */

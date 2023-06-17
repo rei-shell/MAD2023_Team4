@@ -1,5 +1,7 @@
 package sg.edu.np.mad.mad_assg;
 
+import static android.content.Intent.getIntent;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -7,6 +9,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.drawable.AnimationDrawable;
@@ -20,6 +23,7 @@ import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
+import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.ArrayList;
 
@@ -53,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
                     fragment = new Search();
                 } else if (id == R.id.person) {
                     fragment = userFragment;
+
 
                 } else {
                     return false;

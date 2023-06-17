@@ -34,6 +34,8 @@ public class Userpage extends Fragment {
         user = view.findViewById(R.id.userid);
         user2 = view.findViewById(R.id.userName);
         settings = view.findViewById(R.id.settingbtn);
+
+
         dbHandler = new MyDBHandler(getContext(), "User.db", null, 1);
         settings.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,8 +43,11 @@ public class Userpage extends Fragment {
                 settingpage();
             }
         });
+
+
         String username = dbHandler.getUsername();
         if (username != null) {
+
             user.setText(username);
             user2.setText(username);
         }
