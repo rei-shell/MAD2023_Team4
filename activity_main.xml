@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F8F8"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Recipe Image -->
+        <ImageView
+            android:id="@+id/recipeImage"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/cake"
+            android:contentDescription="Chocolate Cupcake" />
+
+        <!-- Recipe Title -->
+        <TextView
+            android:id="@+id/recipeTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chocolate Cupcake"
+            android:textSize="24sp"
+            android:textColor="#000000"
+            android:layout_marginTop="16dp"
+            android:gravity="center" />
+
+        <!-- Recipe Ingredients -->
+        <TextView
+            android:id="@+id/recipeIngredients"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ingredients:"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/ingredientsList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1 cup all-purpose flour\n1/2 cup cocoa powder\n1/2 cup sugar\n1/2 tsp baking powder\n1/4 tsp salt\n1/2 cup milk\n1/4 cup vegetable oil\n1 tsp vanilla extract"
+            android:textSize="14sp"
+            android:textColor="#555555"
+            android:layout_marginTop="8dp" />
+
+        <!-- Recipe Instructions -->
+        <TextView
+            android:id="@+id/recipeInstructions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Instructions:"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/instructionsList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1. Preheat the oven to 350°F (180°C).\n2. In a large bowl, sift together the flour, cocoa powder, sugar, baking powder, and salt.\n3. Add the milk, vegetable oil, and vanilla extract to the dry ingredients. Mix until well combined.\n4. Pour the batter into cupcake liners, filling each liner about 2/3 full.\n5. Bake for 18-20 minutes or until a toothpick inserted into the center comes out clean.\n6. Remove from the oven and let the cupcakes cool completely."
+            android:textSize="14sp"
+            android:textColor="#555555"
+            android:layout_marginTop="8dp" />
+
+        <!-- Time Taken -->
+        <TextView
+            android:id="@+id/timeTaken"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time Taken: 30 minutes"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:layout_marginTop="16dp" />
+
+        <!-- Feedback Button -->
+        <Button
+            android:id="@+id/feedbackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:background="#FF5722"
+            android:text="Feedback"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+</ScrollView>
