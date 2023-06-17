@@ -86,6 +86,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
 
+        android:id="@+id/logoutbtn"
 
         android:text="Log Out"
         android:textSize="25sp"

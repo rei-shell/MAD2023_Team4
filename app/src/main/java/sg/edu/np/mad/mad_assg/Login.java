@@ -57,6 +57,7 @@ public class Login extends AppCompatActivity {
                 if (isValidCredentials(username, password)) {
                     Toast.makeText(Login.this, "Login Successful", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(Login.this, MainActivity.class);
+
                     startActivity(intent);
                 } else {
                     Toast.makeText(Login.this, "Invalid Username/Password!", Toast.LENGTH_SHORT).show();
@@ -70,6 +71,7 @@ public class Login extends AppCompatActivity {
     }
 
 
+}
 
 /*
 private boolean userUsername (String username){
@@ -119,4 +121,4 @@ public boolean login(String username, String password){
 
         return super.onOptionsItemSelected(item);
     }*/
-}
+

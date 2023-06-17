@@ -1,6 +1,7 @@
 package sg.edu.np.mad.mad_assg;
 
 import static android.content.Intent.getIntent;
+import static android.content.Intent.getIntentOld;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -14,6 +15,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class Userpage extends Fragment {
@@ -22,6 +24,8 @@ public class Userpage extends Fragment {
     private TextView user2;
     private MyDBHandler dbHandler;
 
+    private ImageView settings;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -29,8 +33,14 @@ public class Userpage extends Fragment {
         final View view = inflater.inflate(R.layout.fragment_userpage, container, false);
         user = view.findViewById(R.id.userid);
         user2 = view.findViewById(R.id.userName);
+        settings = view.findViewById(R.id.settingbtn);
         dbHandler = new MyDBHandler(getContext(), "User.db", null, 1);
-
+        settings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                settingpage();
+            }
+        });
         String username = dbHandler.getUsername();
         if (username != null) {
             user.setText(username);
@@ -47,6 +57,10 @@ public class Userpage extends Fragment {
         if (user2 != null) {
             user2.setText(username);
         }
+    }
+    public void settingpage() {
+        Intent intent = new Intent(getActivity(), Setttings.class);
+        startActivity(intent);
     }
 }
 
