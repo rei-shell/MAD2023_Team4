@@ -45,11 +45,13 @@ public class Userpage extends Fragment {
         });
 
 
-        String username = dbHandler.getUsername();
-        if (username != null) {
-
-            user.setText(username);
-            user2.setText(username);
+        Bundle bundle = getArguments();
+        if (bundle != null) {
+            String username = bundle.getString("username");
+            if (username != null) {
+                user.setText(username);
+                user2.setText(username);
+            }
         }
 
         return view;

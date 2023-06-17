@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -50,17 +51,7 @@ public class ForgotPassword extends AppCompatActivity {
                     startActivity(intent);
                 }
                 else{
-                    AlertDialog.Builder builder = new AlertDialog.Builder(getApplicationContext());
-                    new AlertDialog.Builder(getApplicationContext())
-                            .setTitle("ERROR")
-                            .setMessage("Username & Email not registered!!")
-                            .setPositiveButton("Okay", new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialogInterface, int i) {
-                                    Intent intent = new Intent(ForgotPassword.this, StartPage.class);
-                                    startActivity(intent);
-                                }
-                            }).show();
+                    Toast.makeText(ForgotPassword.this, "User Not Registered!", Toast.LENGTH_SHORT).show();
                 }
             }
         });

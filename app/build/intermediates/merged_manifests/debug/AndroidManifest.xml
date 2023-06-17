@@ -30,6 +30,9 @@
         <activity android:name="sg.edu.np.mad.mad_assg.Login" />
         <activity android:name="sg.edu.np.mad.mad_assg.NewUser" />
         <activity android:name="sg.edu.np.mad.mad_assg.StartPage" />
+        <activity android:name="sg.edu.np.mad.mad_assg.ResetPassword" />
+        <activity android:name="sg.edu.np.mad.mad_assg.ForgotPassword" />
+        <activity android:name="sg.edu.np.mad.mad_assg.Setttings" />
         <activity
             android:name="sg.edu.np.mad.mad_assg.SplashScreen"
             android:exported="true" >

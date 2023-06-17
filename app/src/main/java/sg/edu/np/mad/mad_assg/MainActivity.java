@@ -57,8 +57,11 @@ public class MainActivity extends AppCompatActivity {
                     fragment = new Search();
                 } else if (id == R.id.person) {
                     fragment = userFragment;
-
-
+                    // Pass the username to the Userpage fragment
+                    String username = getUserNameFromDatabase();
+                    Bundle bundle = new Bundle();
+                    bundle.putString("username", username);
+                    fragment.setArguments(bundle);
                 } else {
                     return false;
                 }
@@ -70,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
+
 
         // Retrieve the username from the SQL database
         String username = getUserNameFromDatabase();
