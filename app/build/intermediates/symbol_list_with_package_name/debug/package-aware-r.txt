@@ -2434,8 +2434,8 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
-drawable beefstroganoff
-drawable bolognese
+drawable baseline_add_circle_outline_24
+drawable baseline_arrow_forward_24
 drawable botnav_gradient
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
@@ -2445,13 +2445,11 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
-drawable bulgogi
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
-drawable fried_rice_with_sausage
 drawable gradient
 drawable gradient2
 drawable gradient_list
@@ -2475,7 +2473,6 @@ drawable m3_tabs_background
 drawable m3_tabs_line_indicator
 drawable m3_tabs_rounded_line_indicator
 drawable m3_tabs_transparent_background
-drawable macaroni_cheese_ham
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -2523,7 +2520,6 @@ drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable twotone_arrow_back_24
-drawable world
 font kalam_bold
 font kalam_light
 font kalam_regular
@@ -2532,6 +2528,7 @@ id ALT
 id BOTTOM_END
 id BOTTOM_START
 id CTRL
+id Category
 id Explore
 id FUNCTION
 id GridView_explore
@@ -2540,6 +2537,8 @@ id GridView_reco
 id Login
 id META
 id NO_DEBUG
+id Recipe_Creator
+id Recipe_Name
 id SHIFT
 id SHOW_ALL
 id SHOW_PATH
@@ -2639,6 +2638,7 @@ id bounceStart
 id buttonPanel
 id cache_measures
 id callMeasure
+id cancel
 id cancel_button
 id cardview_id
 id carryVelocity
@@ -2667,7 +2667,9 @@ id clockwise
 id closest
 id collapseActionView
 id compress
+id confirm
 id confirm_button
+id confirm_new_password
 id confirm_password
 id constraint
 id container
@@ -2736,6 +2738,10 @@ id flFragment
 id flip
 id floating
 id forever
+id forgot_email
+id forgot_username
+id forgotpassword
+id forgottxt
 id fragment_container_view_tag
 id frost
 id ghost_view
@@ -2743,7 +2749,7 @@ id ghost_view_holder
 id gone
 id graph
 id graph_wrap
-id gridView_category
+id gridView_RecipeName
 id group_divider
 id grouping
 id groups
@@ -2781,6 +2787,7 @@ id linear
 id listMode
 id list_item
 id loginbtn
+id logoutbtn
 id masked
 id match_constraint
 id match_parent
@@ -2848,6 +2855,7 @@ id navigation_header_container
 id never
 id neverCompleteToEnd
 id neverCompleteToStart
+id new_password
 id noScroll
 id noState
 id none
@@ -2878,11 +2886,13 @@ id person
 id pin
 id position
 id postLayout
+id profile_edit
 id progress_circular
 id progress_horizontal
 id radio
 id ratio
 id recipe_image_id
+id recipe_recyclerview
 id recipe_text
 id recommendation
 id rectangles
@@ -2920,6 +2930,7 @@ id search_voice_btn
 id select_dialog_listview
 id selected
 id selection_type
+id settingbtn
 id sharedValueSet
 id sharedValueUnset
 id shortcut
@@ -3001,6 +3012,7 @@ id title
 id titleDividerNoCustom
 id title_template
 id toggle
+id toolbar
 id top
 id topPanel
 id top_nav
@@ -3027,6 +3039,7 @@ id username
 id userpic
 id userpost
 id vertical_only
+id view_history
 id view_offset_helper
 id view_transition
 id view_tree_lifecycle_owner
@@ -3036,6 +3049,7 @@ id view_tree_view_model_store_owner
 id viewall
 id viewall1
 id viewall2
+id viewall3
 id visible
 id visible_removing_fragment_view_tag
 id west
@@ -3150,11 +3164,14 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout edit_profile
+layout forgot_password
 layout fragment_home_page
 layout fragment_search
 layout fragment_userpage
 layout homepage_main
 layout item_history
+layout item_recipe
 layout login
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
@@ -3208,10 +3225,12 @@ layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
-layout recipes
+layout recipe
+layout reset_password
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout settings
 layout signin
 layout splashscreen
 layout startpage
@@ -3231,6 +3250,7 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
+layout viewed_history
 menu bottom_nav
 menu top_nav
 mipmap facebook

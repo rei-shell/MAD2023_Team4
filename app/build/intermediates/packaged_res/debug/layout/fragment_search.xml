@@ -10,14 +10,116 @@
 
     <SearchView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:inputType="text"
+
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/Category"
+
+            android:text="Category"
+            android:textSize="30sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/kalam_bold"
+
+            />
+
+        <TextView
+            android:id="@+id/viewall3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="10dp"
+
+            android:fontFamily="@font/kalam_bold"
+            android:text="View All"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null"
+        android:orientation="horizontal"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/Recipe_Name"
+
+            android:text="Recipe Name"
+            android:textSize="30sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/kalam_bold"
+
+            />
+
+        <TextView
+            android:id="@+id/viewall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="10dp"
+
+            android:fontFamily="@font/kalam_bold"
+            android:text="View All"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+    </LinearLayout>
 
     <GridView
-        android:id="@+id/gridView_category"
+        android:id="@+id/gridView_RecipeName"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="252dp"
         android:numColumns="auto_fit"
-        android:stretchMode="columnWidth"
- />
+        android:stretchMode="columnWidth" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/Recipe_Creator"
+
+            android:text="Creator"
+            android:textSize="30sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/kalam_bold"
+            />
+
+        <TextView
+            android:id="@+id/viewall2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="10dp"
+
+            android:fontFamily="@font/kalam_bold"
+            android:text="View All"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 </LinearLayout>

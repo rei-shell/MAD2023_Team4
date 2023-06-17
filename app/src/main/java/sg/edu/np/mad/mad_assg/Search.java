@@ -26,7 +26,7 @@ public class Search extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         final View view = inflater.inflate(R.layout.fragment_search, container, false);
-        GridView gridView = (GridView) view.findViewById(R.id.gridView_category);
+        /*GridView gridView = (GridView) view.findViewById(R.id.gridView_category);
 
         MyDBHandler dbHelper = new MyDBHandler(getContext(), "Recipe.db", null, 1);
         //final ArrayList<CategoryData> categotyList = dbHelper.recipes_SelectCategory();
@@ -41,7 +41,7 @@ public class Search extends Fragment {
               //  intent.putExtra("category", selectCategory.get_category());
               //  startActivity(intent);
             }
-        });
+        });*/
 
         return view;
     }

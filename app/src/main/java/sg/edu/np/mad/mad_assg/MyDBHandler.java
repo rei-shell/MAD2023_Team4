@@ -1,6 +1,7 @@
 package sg.edu.np.mad.mad_assg;
 
 
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -58,6 +59,16 @@ public class MyDBHandler extends SQLiteOpenHelper {
         db.close();
     }
 
+    public boolean updatepassword(String username, String password){
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("password", password);
+        long result = db.update(ACCOUNTS, contentValues, "username = ?", new String[] {username} );
+        if (result == -1)return false;
+        else
+            return true;
+    }
+
     //registration check function
     public boolean user_IsUsernameFree(String userName) {
         SQLiteDatabase db = getReadableDatabase();
@@ -81,7 +92,58 @@ public class MyDBHandler extends SQLiteOpenHelper {
         return isEmailFree;
     }
 
-    //login function
+
+    public boolean user_checkUsername(String userName) {
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM " + ACCOUNTS + " WHERE " + COLUMN_USERNAME + "= ?", new String[]{userName});
+        boolean exists = cursor.getCount() > 0;
+        cursor.close();
+        db.close();
+        return exists;
+    }
+
+    public boolean user_checkEmail(String email) {
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM " + ACCOUNTS + " WHERE " + COLUMN_EMAIL + "= ?", new String[]{email});
+        boolean exists = cursor.getCount() > 0;
+        cursor.close();
+        db.close();
+        return exists;
+    }
+
+    public boolean user_checkPassword(String userName, String password) {
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM " + ACCOUNTS + " WHERE " + COLUMN_USERNAME + "= ? AND " + COLUMN_PASSWORD + "= ?", new String[]{userName, password});
+        boolean exists = cursor.getCount() > 0;
+        cursor.close();
+        db.close();
+        return exists;
+    }
+
+    @SuppressLint("Range")
+    public String getUsername() {
+        String query = "SELECT " + COLUMN_USERNAME + " FROM " + ACCOUNTS;
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(query, null);
+        String username = null;
+
+        if (cursor.moveToFirst()) {
+            username = cursor.getString(cursor.getColumnIndex(COLUMN_USERNAME));
+        }
+
+        cursor.close();
+        db.close();
+
+        return username;
+    }
+
+}
+
+
+
+
+//login function
    /* public boolean user_Login(String userName, String password)
     {
         SQLiteDatabase db = getReadableDatabase();
@@ -95,24 +157,23 @@ public class MyDBHandler extends SQLiteOpenHelper {
         cursor.close();
         db.close();
         return false;
-    }*/
-    public boolean user_checkUsername(String userName) {
-        SQLiteDatabase db = getReadableDatabase();
-        Cursor cursor = db.rawQuery("SELECT * FROM " + ACCOUNTS + " WHERE " + COLUMN_USERNAME + "= ?", new String[]{userName});
-        boolean exists = cursor.getCount() > 0;
-        cursor.close();
-        db.close();
-        return exists;
     }
 
+       public UserData getUserName(String username){
+        String query = "SELECT * FROM " + ACCOUNTS + " WHERE " + COLUMN_USERNAME + "= \"" + username + "\"";
 
-    public boolean user_checkPassword(String userName, String password) {
-        SQLiteDatabase db = getReadableDatabase();
-        Cursor cursor = db.rawQuery("SELECT * FROM " + ACCOUNTS + " WHERE " + COLUMN_USERNAME + "= ? AND " + COLUMN_PASSWORD + "= ?", new String[]{userName, password});
-        boolean exists = cursor.getCount() > 0;
-        cursor.close();
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(query,null);
+        UserData queryResult = new UserData();
+
+        if (cursor.moveToFirst()){
+            UserData.setUsername(cursor.getColumnName(0));
+            cursor.close();
+        }
+        else{
+            queryResult=null;
+        }
         db.close();
-        return exists;
+        return queryResult;
     }
-
-}
+    */

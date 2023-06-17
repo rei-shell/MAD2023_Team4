@@ -9,13 +9,17 @@ import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
+
+import org.w3c.dom.Text;
 
 import java.util.Objects;
 
@@ -39,6 +43,15 @@ public class Login extends AppCompatActivity {
 
         ImageView backbtn = findViewById(R.id.backbtn);
 
+        TextView forgot = (TextView) findViewById(R.id.forgotpassword);
+
+        forgot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Login.this,ForgotPassword.class);
+                startActivity(intent);
+            }
+        });
         backbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -56,6 +69,7 @@ public class Login extends AppCompatActivity {
                 if (isValidCredentials(username, password)) {
                     Toast.makeText(Login.this, "Login Successful", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(Login.this, MainActivity.class);
+                    intent.putExtra("username", username);
                     startActivity(intent);
                 } else {
                     Toast.makeText(Login.this, "Invalid Username/Password!", Toast.LENGTH_SHORT).show();
@@ -69,6 +83,7 @@ public class Login extends AppCompatActivity {
     }
 
 
+}
 
 /*
 private boolean userUsername (String username){
@@ -118,4 +133,4 @@ public boolean login(String username, String password){
 
         return super.onOptionsItemSelected(item);
     }*/
-}
+
