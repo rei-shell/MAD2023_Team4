@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
                     fragment = new Search();
                 } else if (id == R.id.person) {
                     fragment = userFragment;
+
                 } else {
                     return false;
                 }
@@ -89,6 +90,7 @@ public class MainActivity extends AppCompatActivity {
 
         return username;
     }
+
 }
 
 

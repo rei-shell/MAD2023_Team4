@@ -123,7 +123,7 @@ public class MyDBHandler extends SQLiteOpenHelper {
         UserData queryResult = new UserData();
 
         if (cursor.moveToFirst()){
-            queryResult.setUsername(cursor.getColumnName(0));
+            UserData.setUsername(cursor.getColumnName(0));
             cursor.close();
         }
         else{
