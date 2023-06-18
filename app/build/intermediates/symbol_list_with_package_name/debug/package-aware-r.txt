@@ -3226,6 +3226,7 @@ layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
 layout recipe
+layout recipe_view
 layout reset_password
 layout select_dialog_item_material
 layout select_dialog_multichoice_material

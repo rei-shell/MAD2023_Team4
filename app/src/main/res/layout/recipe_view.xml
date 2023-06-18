@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/gradient">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/title">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="20dp"
+
+                    android:id="@+id/backarrow"
+                    android:src="@drawable/twotone_arrow_back_24"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="10dp"
+
+                        android:id="@+id/recipename"
+                        android:text="Recipe Name"
+                        android:textSize="30sp"
+                        android:fontFamily="@font/kalam_regular"
+                        android:textColor="@color/black"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_alignTop="@+id/recipename"
+                        android:layout_marginTop="35dp"
+
+                        android:id="@+id/author"
+                        android:text="Author"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/kalam_regular"
+                        android:textColor="@color/black" />
+                </RelativeLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/recipeimg"
+            android:src="@mipmap/ic_launcher_round"
+            android:scaleType="fitCenter"
+            />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="350dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="40dp"
+
+                android:src="@drawable/rectangle"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+
+                android:id="@+id/description"
+                android:text="Description"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/kalam_light"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="350dp"
+                android:layout_height="145dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="40dp"
+
+                android:id="@+id/duration_box"
+                android:src="@drawable/rectangle"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+
+                android:id="@+id/duration_txt"
+                android:text="Time Taken"
+                android:textAlignment="center"
+                android:textSize="28sp"
+                android:fontFamily="@font/kalam_light"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/duration_txt"
+                android:layout_marginTop="40dp"
+                android:layout_alignStart="@+id/duration_box"
+                android:layout_marginStart="15dp"
+
+                android:text="Prepreation Time"
+                android:textSize="20sp"
+                android:fontFamily="@font/kalam_light"
+                android:id="@+id/preperation"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/duration_txt"
+                android:layout_marginTop="40dp"
+                android:layout_alignEnd="@+id/minutes3"
+                android:layout_marginEnd="70dp"
+
+                android:text="12"
+                android:textSize="20sp"
+                android:fontFamily="@font/kalam_light"
+                android:id="@+id/mins"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/duration_txt"
+                android:layout_marginTop="40dp"
+                android:layout_alignEnd="@+id/duration_box"
+                android:layout_marginEnd="15dp"
+
+                android:text="Minutes"
+                android:textSize="20sp"
+                android:fontFamily="@font/kalam_light"
+                android:id="@+id/minutes3"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/preperation"
+                android:layout_marginTop="25dp"
+                android:layout_alignStart="@+id/duration_box"
+                android:layout_marginStart="15dp"
+
+                android:text="Cooking Time"
+                android:textSize="20sp"
+                android:fontFamily="@font/kalam_light"
+                android:id="@+id/cooking"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/preperation"
+                android:layout_marginTop="25dp"
+                android:layout_alignEnd="@+id/mins"
+
+                android:text="12"
+                android:textSize="20sp"
+                android:fontFamily="@font/kalam_light"
+                android:id="@+id/mins2"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/preperation"
+                android:layout_marginTop="25dp"
+                android:layout_alignEnd="@+id/duration_box"
+                android:layout_marginEnd="15dp"
+
+                android:text="Minutes"
+                android:textSize="20sp"
+                android:fontFamily="@font/kalam_light"
+                android:id="@+id/minutes2"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/cooking"
+                android:layout_marginTop="25dp"
+                android:layout_alignStart="@+id/duration_box"
+                android:layout_marginStart="15dp"
+
+                android:text="Total Time"
+                android:textSize="20sp"
+                android:fontFamily="@font/kalam_light"
+                android:id="@+id/total"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/cooking"
+                android:layout_marginTop="25dp"
+                android:layout_alignEnd="@+id/mins2"
+
+                android:text="12"
+                android:textSize="20sp"
+                android:fontFamily="@font/kalam_light"
+                android:id="@+id/mins3"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/cooking"
+                android:layout_marginTop="25dp"
+                android:layout_alignEnd="@+id/duration_box"
+                android:layout_marginEnd="15dp"
+
+                android:text="Minutes"
+                android:textSize="20sp"
+                android:fontFamily="@font/kalam_light"
+                android:id="@+id/minutes"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="350dp"
+                android:layout_height="145dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="40dp"
+                android:id="@+id/ingredientstxt"
+                android:src="@drawable/rectangle"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/ingredientstxt"
+                android:layout_alignEnd="@+id/ingredientstxt"
+                android:layout_marginTop="25dp"
+
+                android:id="@+id/ingredients"
+                android:text="Ingredients"
+                android:textAlignment="center"
+                android:textSize="28sp"
+                android:fontFamily="@font/kalam_light"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="350dp"
+                android:layout_height="145dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="40dp"
+                android:id="@+id/stepstxt"
+                android:src="@drawable/rectangle"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/stepstxt"
+                android:layout_alignEnd="@+id/stepstxt"
+                android:layout_marginTop="25dp"
+
+                android:id="@+id/steps"
+                android:text="Steps"
+                android:textAlignment="center"
+                android:textSize="28sp"
+                android:fontFamily="@font/kalam_light"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="350dp"
+                android:layout_height="145dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="40dp"
+                android:id="@+id/ratingstuff"
+                android:src="@drawable/rectangle"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/ratingstuff"
+                android:layout_alignEnd="@+id/ratingstuff"
+                android:layout_marginTop="25dp"
+
+                android:id="@+id/ratingdetails"
+                android:text="Rating Details"
+                android:textAlignment="center"
+                android:textSize="28sp"
+                android:fontFamily="@font/kalam_light"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="350dp"
+                android:layout_height="145dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="40dp"
+                android:id="@+id/reviewstuff"
+                android:src="@drawable/rectangle"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/reviewstuff"
+                android:layout_alignEnd="@+id/reviewstuff"
+                android:layout_marginTop="25dp"
+
+                android:id="@+id/review"
+                android:text="Reviews"
+                android:textAlignment="center"
+                android:textSize="28sp"
+                android:fontFamily="@font/kalam_light"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>
