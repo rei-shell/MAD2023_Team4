@@ -21,6 +21,9 @@
         <activity android:name=".ForgotPassword"/>
         <activity android:name=".Setttings"/>
         <activity
+            android:name=".FeedBackandReviews"
+            android:exported="false" />
+        <activity
             android:name=".SplashScreen"
             android:exported="true">
             <intent-filter>
@@ -28,7 +31,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
 
     </application>
 
