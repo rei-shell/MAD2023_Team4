@@ -6,11 +6,20 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher_round"
+        android:icon="@mipmap/ic_launcher"
         android:label="Rexipe"
         android:supportsRtl="true"
         android:theme="@style/Theme.MAD_Assg"
+        android:roundIcon="@mipmap/ic_launcher_round"
         tools:targetApi="31">
+
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".Login"/>
+        <activity android:name=".NewUser"/>
+        <activity android:name=".StartPage"/>
+        <activity android:name=".ResetPassword"/>
+        <activity android:name=".ForgotPassword"/>
+        <activity android:name=".Setttings"/>
         <activity
             android:name=".FeedBackandReviews"
             android:exported="false" />
@@ -19,11 +28,10 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
+
     </application>
 
 </manifest>

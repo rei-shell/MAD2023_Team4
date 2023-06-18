@@ -1,0 +1,907 @@
+Index: .gradle/buildOutputCleanup/cache.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/.gradle/buildOutputCleanup/cache.properties b/.gradle/buildOutputCleanup/cache.properties
+new file mode 100644
+--- /dev/null	(date 1685409556976)
++++ b/.gradle/buildOutputCleanup/cache.properties	(date 1685409556976)
+@@ -0,0 +1,2 @@
++#Tue May 30 09:19:16 SGT 2023
++gradle.version=8.0
+Index: app/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml b/app/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml
+new file mode 100644
+--- /dev/null	(date 1685409599678)
++++ b/app/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml	(date 1685409599678)
+@@ -0,0 +1,2 @@
++<?xml version="1.0" encoding="utf-8"?>
++<merger version="3"><dataSet config="main" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\User\MAD2023_Team4\app\src\main\jniLibs"/></dataSet><dataSet config="debug" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\User\MAD2023_Team4\app\src\debug\jniLibs"/></dataSet></merger>
+\ No newline at end of file
+Index: app/build/intermediates/incremental/mergeDebugAssets/merger.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/build/intermediates/incremental/mergeDebugAssets/merger.xml b/app/build/intermediates/incremental/mergeDebugAssets/merger.xml
+new file mode 100644
+--- /dev/null	(date 1685409599446)
++++ b/app/build/intermediates/incremental/mergeDebugAssets/merger.xml	(date 1685409599446)
+@@ -0,0 +1,2 @@
++<?xml version="1.0" encoding="utf-8"?>
++<merger version="3"><dataSet config="main" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\User\MAD2023_Team4\app\src\main\assets"/></dataSet><dataSet config="debug" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\User\MAD2023_Team4\app\src\debug\assets"/></dataSet><dataSet config="generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\User\MAD2023_Team4\app\build\intermediates\shader_assets\debug\out"/></dataSet></merger>
+\ No newline at end of file
+Index: app/build/intermediates/app_metadata/debug/app-metadata.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/app/build/intermediates/app_metadata/debug/app-metadata.properties b/app/build/intermediates/app_metadata/debug/app-metadata.properties
+new file mode 100644
+--- /dev/null	(date 1685409599953)
++++ b/app/build/intermediates/app_metadata/debug/app-metadata.properties	(date 1685409599953)
+@@ -0,0 +1,2 @@
++appMetadataVersion=1.1
++androidGradlePluginVersion=8.0.0
+Index: app/build/outputs/logs/manifest-merger-debug-report.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/build/outputs/logs/manifest-merger-debug-report.txt b/app/build/outputs/logs/manifest-merger-debug-report.txt
+new file mode 100644
+--- /dev/null	(date 1685409598589)
++++ b/app/build/outputs/logs/manifest-merger-debug-report.txt	(date 1685409598589)
+@@ -0,0 +1,259 @@
++-- Merging decision tree log ---
++manifest
++ADDED from C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml:2:1-26:12
++INJECTED from C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml:2:1-26:12
++INJECTED from C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml:2:1-26:12
++INJECTED from C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml:2:1-26:12
++MERGED from [com.google.android.material:material:1.5.0] C:\Users\User\.gradle\caches\transforms-3\b79e00459b51debe71c70b38b92dedee\transformed\material-1.5.0\AndroidManifest.xml:17:1-24:12
++MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\User\.gradle\caches\transforms-3\1b1fc35cfff048765e7b5057facd7433\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
++MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\User\.gradle\caches\transforms-3\a3b3964855112576846b464329822fa9\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:17:1-22:12
++MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\User\.gradle\caches\transforms-3\7ba610368285ef737a15a687544ee720\transformed\appcompat-1.6.1\AndroidManifest.xml:17:1-22:12
++MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\User\.gradle\caches\transforms-3\71a4b2e3b83f674b0802282a6bb1640f\transformed\viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
++MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\User\.gradle\caches\transforms-3\c7fdf132750f580e9799a5455b4a5c84\transformed\fragment-1.3.6\AndroidManifest.xml:17:1-24:12
++MERGED from [androidx.activity:activity:1.6.0] C:\Users\User\.gradle\caches\transforms-3\ea9480b242a8da7b5cc4e7169919a500\transformed\activity-1.6.0\AndroidManifest.xml:17:1-22:12
++MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\User\.gradle\caches\transforms-3\181c671d8ed9f4ee83ef37b69e89373c\transformed\emoji2-views-helper-1.2.0\AndroidManifest.xml:2:1-7:12
++MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\User\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:17:1-35:12
++MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\User\.gradle\caches\transforms-3\169fbc0cc288bcafd707ff1de5b5d1ef\transformed\drawerlayout-1.1.1\AndroidManifest.xml:17:1-24:12
++MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\User\.gradle\caches\transforms-3\602e0f40a2e4890a6c140b4e0e9297aa\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
++MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\User\.gradle\caches\transforms-3\1e7ff98370262fd019b8413a0f6844b9\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:17:1-22:12
++MERGED from [androidx.transition:transition:1.2.0] C:\Users\User\.gradle\caches\transforms-3\f550c9bc53f117cb9e3852beae837a10\transformed\transition-1.2.0\AndroidManifest.xml:17:1-24:12
++MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\User\.gradle\caches\transforms-3\1104968edb0b42381aa947d109a888c3\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
++MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\User\.gradle\caches\transforms-3\aa88bda1a69cb79a57f5c91edf6bd497\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
++MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\User\.gradle\caches\transforms-3\5532b3cbec1601c01b6235de990717a7\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
++MERGED from [androidx.loader:loader:1.0.0] C:\Users\User\.gradle\caches\transforms-3\546d4bc68ec85a8120517b15b62dc38b\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
++MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] C:\Users\User\.gradle\caches\transforms-3\53cbd816d1f0ce2619bbae9b8dcd2d8b\transformed\lifecycle-viewmodel-2.5.1\AndroidManifest.xml:17:1-24:12
++MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] C:\Users\User\.gradle\caches\transforms-3\8f16d121777a75a4f1908d2da158f029\transformed\lifecycle-viewmodel-savedstate-2.5.1\AndroidManifest.xml:17:1-24:12
++MERGED from [androidx.core:core-ktx:1.9.0] C:\Users\User\.gradle\caches\transforms-3\559d9211b8a4d26fbbdc8406e973d69c\transformed\core-ktx-1.9.0\AndroidManifest.xml:2:1-7:12
++MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\User\.gradle\caches\transforms-3\c2eb6369fb666d8c17cdcf42896777fe\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
++MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\User\.gradle\caches\transforms-3\9a156e10bc2cc6926719f38d9612f7be\transformed\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
++MERGED from [androidx.customview:customview:1.1.0] C:\Users\User\.gradle\caches\transforms-3\6c503aea2c1db1c79b614b9556ccbfa8\transformed\customview-1.1.0\AndroidManifest.xml:17:1-24:12
++MERGED from [androidx.core:core:1.9.0] C:\Users\User\.gradle\caches\transforms-3\8c25e88eb4ea76e8f3d0900731d8ae12\transformed\core-1.9.0\AndroidManifest.xml:17:1-30:12
++MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\User\.gradle\caches\transforms-3\fd7b603704272d08423d2d37fee5ab16\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
++MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\User\.gradle\caches\transforms-3\ae3e8265de2d7f874c642be745cd48da\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:17:1-37:12
++MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] C:\Users\User\.gradle\caches\transforms-3\f1cbfa66c793c84195ed08fdc711e3af\transformed\lifecycle-runtime-2.5.1\AndroidManifest.xml:17:1-24:12
++MERGED from [androidx.savedstate:savedstate:1.2.0] C:\Users\User\.gradle\caches\transforms-3\133132b7aa11abb90dffc4aeb4ffee71\transformed\savedstate-1.2.0\AndroidManifest.xml:17:1-24:12
++MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\User\.gradle\caches\transforms-3\7653a5192b1a36a00121994a24b4bb76\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
++MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\User\.gradle\caches\transforms-3\477190d2df3a2de3c97d15da98c0d16e\transformed\startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
++MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\User\.gradle\caches\transforms-3\b98f6027b82a62ed04f6555726901b14\transformed\tracing-1.0.0\AndroidManifest.xml:17:1-24:12
++MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\User\.gradle\caches\transforms-3\dd7137ffd950b411d610e9f27805e631\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
++MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\User\.gradle\caches\transforms-3\8e2aa67f29fd3f00654f3c85c161f1ef\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
++MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] C:\Users\User\.gradle\caches\transforms-3\39a903a6a5736151d5c8c6b114f3352a\transformed\lifecycle-livedata-core-2.5.1\AndroidManifest.xml:17:1-24:12
++MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\User\.gradle\caches\transforms-3\386058fc632ad8bf8b6baf681297c7c3\transformed\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
++MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\User\.gradle\caches\transforms-3\3894e5f58ab393766c3f47283285615c\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
++MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\User\.gradle\caches\transforms-3\3217a7b58a8fc6c763799ee115ae35b1\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
++MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\User\.gradle\caches\transforms-3\e955da626a3fb0b49faa6dcf12a4f6a2\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
++MERGED from [androidx.print:print:1.0.0] C:\Users\User\.gradle\caches\transforms-3\e15e0c47fb3dde4d9ec9696347094b31\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
++MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\User\.gradle\caches\transforms-3\5db8ee51bbecc36e07eba7a77a7ae7c4\transformed\annotation-experimental-1.3.0\AndroidManifest.xml:17:1-22:12
++INJECTED from C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml:2:1-26:12
++INJECTED from C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml:2:1-26:12
++INJECTED from C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml:2:1-26:12
++	package
++		INJECTED from C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml
++		ADDED from C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml:2:1-26:12
++		INJECTED from C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml
++	android:versionName
++		INJECTED from C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml
++		ADDED from C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml:2:1-26:12
++		INJECTED from C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml
++	xmlns:tools
++		ADDED from C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml:3:5-51
++	android:versionCode
++		INJECTED from C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml
++		ADDED from C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml:2:1-26:12
++		INJECTED from C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml
++	xmlns:android
++		ADDED from C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml:2:11-69
++application
++ADDED from C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml:5:5-24:19
++MERGED from [com.google.android.material:material:1.5.0] C:\Users\User\.gradle\caches\transforms-3\b79e00459b51debe71c70b38b92dedee\transformed\material-1.5.0\AndroidManifest.xml:22:5-20
++MERGED from [com.google.android.material:material:1.5.0] C:\Users\User\.gradle\caches\transforms-3\b79e00459b51debe71c70b38b92dedee\transformed\material-1.5.0\AndroidManifest.xml:22:5-20
++MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\User\.gradle\caches\transforms-3\1b1fc35cfff048765e7b5057facd7433\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
++MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\User\.gradle\caches\transforms-3\1b1fc35cfff048765e7b5057facd7433\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
++MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\User\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:23:5-33:19
++MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\User\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:23:5-33:19
++MERGED from [androidx.core:core:1.9.0] C:\Users\User\.gradle\caches\transforms-3\8c25e88eb4ea76e8f3d0900731d8ae12\transformed\core-1.9.0\AndroidManifest.xml:28:5-89
++MERGED from [androidx.core:core:1.9.0] C:\Users\User\.gradle\caches\transforms-3\8c25e88eb4ea76e8f3d0900731d8ae12\transformed\core-1.9.0\AndroidManifest.xml:28:5-89
++MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\User\.gradle\caches\transforms-3\ae3e8265de2d7f874c642be745cd48da\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:25:5-35:19
++MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\User\.gradle\caches\transforms-3\ae3e8265de2d7f874c642be745cd48da\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:25:5-35:19
++MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\User\.gradle\caches\transforms-3\477190d2df3a2de3c97d15da98c0d16e\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
++MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\User\.gradle\caches\transforms-3\477190d2df3a2de3c97d15da98c0d16e\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
++MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\User\.gradle\caches\transforms-3\dd7137ffd950b411d610e9f27805e631\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
++MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\User\.gradle\caches\transforms-3\dd7137ffd950b411d610e9f27805e631\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
++	android:appComponentFactory
++		ADDED from [androidx.core:core:1.9.0] C:\Users\User\.gradle\caches\transforms-3\8c25e88eb4ea76e8f3d0900731d8ae12\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
++	android:supportsRtl
++		ADDED from C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml:11:9-35
++	android:label
++		ADDED from C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml:10:9-31
++	android:fullBackupContent
++		ADDED from C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml:8:9-54
++	tools:targetApi
++		ADDED from C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml:13:9-29
++	android:icon
++		ADDED from C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml:9:9-49
++	android:allowBackup
++		ADDED from C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml:6:9-35
++	android:theme
++		ADDED from C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml:12:9-46
++	android:dataExtractionRules
++		ADDED from C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml:7:9-65
++activity#sg.edu.np.mad.mad_assg.SplashScreen
++ADDED from C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml:14:9-22:20
++	android:exported
++		ADDED from C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml:16:13-36
++	android:name
++		ADDED from C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml:15:13-41
++intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
++ADDED from C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml:17:13-21:29
++action#android.intent.action.MAIN
++ADDED from C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml:18:17-69
++	android:name
++		ADDED from C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml:18:25-66
++category#android.intent.category.LAUNCHER
++ADDED from C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml:20:17-77
++	android:name
++		ADDED from C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml:20:27-74
++activity#sg.edu.np.mad.mad_assg.MainActivity
++ADDED from C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml:23:9-49
++	android:name
++		ADDED from C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml:23:19-47
++uses-sdk
++INJECTED from C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
++INJECTED from C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml
++INJECTED from C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml
++MERGED from [com.google.android.material:material:1.5.0] C:\Users\User\.gradle\caches\transforms-3\b79e00459b51debe71c70b38b92dedee\transformed\material-1.5.0\AndroidManifest.xml:20:5-44
++MERGED from [com.google.android.material:material:1.5.0] C:\Users\User\.gradle\caches\transforms-3\b79e00459b51debe71c70b38b92dedee\transformed\material-1.5.0\AndroidManifest.xml:20:5-44
++MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\User\.gradle\caches\transforms-3\1b1fc35cfff048765e7b5057facd7433\transformed\constraintlayout-2.1.4\AndroidManifest.xml:5:5-7:41
++MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\User\.gradle\caches\transforms-3\1b1fc35cfff048765e7b5057facd7433\transformed\constraintlayout-2.1.4\AndroidManifest.xml:5:5-7:41
++MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\User\.gradle\caches\transforms-3\a3b3964855112576846b464329822fa9\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:20:5-44
++MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\User\.gradle\caches\transforms-3\a3b3964855112576846b464329822fa9\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:20:5-44
++MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\User\.gradle\caches\transforms-3\7ba610368285ef737a15a687544ee720\transformed\appcompat-1.6.1\AndroidManifest.xml:20:5-44
++MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\User\.gradle\caches\transforms-3\7ba610368285ef737a15a687544ee720\transformed\appcompat-1.6.1\AndroidManifest.xml:20:5-44
++MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\User\.gradle\caches\transforms-3\71a4b2e3b83f674b0802282a6bb1640f\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
++MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\User\.gradle\caches\transforms-3\71a4b2e3b83f674b0802282a6bb1640f\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
++MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\User\.gradle\caches\transforms-3\c7fdf132750f580e9799a5455b4a5c84\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
++MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\User\.gradle\caches\transforms-3\c7fdf132750f580e9799a5455b4a5c84\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
++MERGED from [androidx.activity:activity:1.6.0] C:\Users\User\.gradle\caches\transforms-3\ea9480b242a8da7b5cc4e7169919a500\transformed\activity-1.6.0\AndroidManifest.xml:20:5-44
++MERGED from [androidx.activity:activity:1.6.0] C:\Users\User\.gradle\caches\transforms-3\ea9480b242a8da7b5cc4e7169919a500\transformed\activity-1.6.0\AndroidManifest.xml:20:5-44
++MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\User\.gradle\caches\transforms-3\181c671d8ed9f4ee83ef37b69e89373c\transformed\emoji2-views-helper-1.2.0\AndroidManifest.xml:5:5-44
++MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\User\.gradle\caches\transforms-3\181c671d8ed9f4ee83ef37b69e89373c\transformed\emoji2-views-helper-1.2.0\AndroidManifest.xml:5:5-44
++MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\User\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:21:5-44
++MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\User\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:21:5-44
++MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\User\.gradle\caches\transforms-3\169fbc0cc288bcafd707ff1de5b5d1ef\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
++MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\User\.gradle\caches\transforms-3\169fbc0cc288bcafd707ff1de5b5d1ef\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
++MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\User\.gradle\caches\transforms-3\602e0f40a2e4890a6c140b4e0e9297aa\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
++MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\User\.gradle\caches\transforms-3\602e0f40a2e4890a6c140b4e0e9297aa\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
++MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\User\.gradle\caches\transforms-3\1e7ff98370262fd019b8413a0f6844b9\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
++MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\User\.gradle\caches\transforms-3\1e7ff98370262fd019b8413a0f6844b9\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
++MERGED from [androidx.transition:transition:1.2.0] C:\Users\User\.gradle\caches\transforms-3\f550c9bc53f117cb9e3852beae837a10\transformed\transition-1.2.0\AndroidManifest.xml:20:5-22:41
++MERGED from [androidx.transition:transition:1.2.0] C:\Users\User\.gradle\caches\transforms-3\f550c9bc53f117cb9e3852beae837a10\transformed\transition-1.2.0\AndroidManifest.xml:20:5-22:41
++MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\User\.gradle\caches\transforms-3\1104968edb0b42381aa947d109a888c3\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
++MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\User\.gradle\caches\transforms-3\1104968edb0b42381aa947d109a888c3\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
++MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\User\.gradle\caches\transforms-3\aa88bda1a69cb79a57f5c91edf6bd497\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
++MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\User\.gradle\caches\transforms-3\aa88bda1a69cb79a57f5c91edf6bd497\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
++MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\User\.gradle\caches\transforms-3\5532b3cbec1601c01b6235de990717a7\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
++MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\User\.gradle\caches\transforms-3\5532b3cbec1601c01b6235de990717a7\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
++MERGED from [androidx.loader:loader:1.0.0] C:\Users\User\.gradle\caches\transforms-3\546d4bc68ec85a8120517b15b62dc38b\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
++MERGED from [androidx.loader:loader:1.0.0] C:\Users\User\.gradle\caches\transforms-3\546d4bc68ec85a8120517b15b62dc38b\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
++MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] C:\Users\User\.gradle\caches\transforms-3\53cbd816d1f0ce2619bbae9b8dcd2d8b\transformed\lifecycle-viewmodel-2.5.1\AndroidManifest.xml:20:5-22:41
++MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] C:\Users\User\.gradle\caches\transforms-3\53cbd816d1f0ce2619bbae9b8dcd2d8b\transformed\lifecycle-viewmodel-2.5.1\AndroidManifest.xml:20:5-22:41
++MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] C:\Users\User\.gradle\caches\transforms-3\8f16d121777a75a4f1908d2da158f029\transformed\lifecycle-viewmodel-savedstate-2.5.1\AndroidManifest.xml:20:5-22:41
++MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] C:\Users\User\.gradle\caches\transforms-3\8f16d121777a75a4f1908d2da158f029\transformed\lifecycle-viewmodel-savedstate-2.5.1\AndroidManifest.xml:20:5-22:41
++MERGED from [androidx.core:core-ktx:1.9.0] C:\Users\User\.gradle\caches\transforms-3\559d9211b8a4d26fbbdc8406e973d69c\transformed\core-ktx-1.9.0\AndroidManifest.xml:5:5-44
++MERGED from [androidx.core:core-ktx:1.9.0] C:\Users\User\.gradle\caches\transforms-3\559d9211b8a4d26fbbdc8406e973d69c\transformed\core-ktx-1.9.0\AndroidManifest.xml:5:5-44
++MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\User\.gradle\caches\transforms-3\c2eb6369fb666d8c17cdcf42896777fe\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
++MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\User\.gradle\caches\transforms-3\c2eb6369fb666d8c17cdcf42896777fe\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
++MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\User\.gradle\caches\transforms-3\9a156e10bc2cc6926719f38d9612f7be\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
++MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\User\.gradle\caches\transforms-3\9a156e10bc2cc6926719f38d9612f7be\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
++MERGED from [androidx.customview:customview:1.1.0] C:\Users\User\.gradle\caches\transforms-3\6c503aea2c1db1c79b614b9556ccbfa8\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
++MERGED from [androidx.customview:customview:1.1.0] C:\Users\User\.gradle\caches\transforms-3\6c503aea2c1db1c79b614b9556ccbfa8\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
++MERGED from [androidx.core:core:1.9.0] C:\Users\User\.gradle\caches\transforms-3\8c25e88eb4ea76e8f3d0900731d8ae12\transformed\core-1.9.0\AndroidManifest.xml:20:5-44
++MERGED from [androidx.core:core:1.9.0] C:\Users\User\.gradle\caches\transforms-3\8c25e88eb4ea76e8f3d0900731d8ae12\transformed\core-1.9.0\AndroidManifest.xml:20:5-44
++MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\User\.gradle\caches\transforms-3\fd7b603704272d08423d2d37fee5ab16\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
++MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\User\.gradle\caches\transforms-3\fd7b603704272d08423d2d37fee5ab16\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
++MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\User\.gradle\caches\transforms-3\ae3e8265de2d7f874c642be745cd48da\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:21:5-23:41
++MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\User\.gradle\caches\transforms-3\ae3e8265de2d7f874c642be745cd48da\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:21:5-23:41
++MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] C:\Users\User\.gradle\caches\transforms-3\f1cbfa66c793c84195ed08fdc711e3af\transformed\lifecycle-runtime-2.5.1\AndroidManifest.xml:20:5-22:41
++MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] C:\Users\User\.gradle\caches\transforms-3\f1cbfa66c793c84195ed08fdc711e3af\transformed\lifecycle-runtime-2.5.1\AndroidManifest.xml:20:5-22:41
++MERGED from [androidx.savedstate:savedstate:1.2.0] C:\Users\User\.gradle\caches\transforms-3\133132b7aa11abb90dffc4aeb4ffee71\transformed\savedstate-1.2.0\AndroidManifest.xml:20:5-22:41
++MERGED from [androidx.savedstate:savedstate:1.2.0] C:\Users\User\.gradle\caches\transforms-3\133132b7aa11abb90dffc4aeb4ffee71\transformed\savedstate-1.2.0\AndroidManifest.xml:20:5-22:41
++MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\User\.gradle\caches\transforms-3\7653a5192b1a36a00121994a24b4bb76\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
++MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\User\.gradle\caches\transforms-3\7653a5192b1a36a00121994a24b4bb76\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
++MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\User\.gradle\caches\transforms-3\477190d2df3a2de3c97d15da98c0d16e\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
++MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\User\.gradle\caches\transforms-3\477190d2df3a2de3c97d15da98c0d16e\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
++MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\User\.gradle\caches\transforms-3\b98f6027b82a62ed04f6555726901b14\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
++MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\User\.gradle\caches\transforms-3\b98f6027b82a62ed04f6555726901b14\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
++MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\User\.gradle\caches\transforms-3\dd7137ffd950b411d610e9f27805e631\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
++MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\User\.gradle\caches\transforms-3\dd7137ffd950b411d610e9f27805e631\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
++MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\User\.gradle\caches\transforms-3\8e2aa67f29fd3f00654f3c85c161f1ef\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
++MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\User\.gradle\caches\transforms-3\8e2aa67f29fd3f00654f3c85c161f1ef\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
++MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] C:\Users\User\.gradle\caches\transforms-3\39a903a6a5736151d5c8c6b114f3352a\transformed\lifecycle-livedata-core-2.5.1\AndroidManifest.xml:20:5-22:41
++MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] C:\Users\User\.gradle\caches\transforms-3\39a903a6a5736151d5c8c6b114f3352a\transformed\lifecycle-livedata-core-2.5.1\AndroidManifest.xml:20:5-22:41
++MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\User\.gradle\caches\transforms-3\386058fc632ad8bf8b6baf681297c7c3\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
++MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\User\.gradle\caches\transforms-3\386058fc632ad8bf8b6baf681297c7c3\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
++MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\User\.gradle\caches\transforms-3\3894e5f58ab393766c3f47283285615c\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
++MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\User\.gradle\caches\transforms-3\3894e5f58ab393766c3f47283285615c\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
++MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\User\.gradle\caches\transforms-3\3217a7b58a8fc6c763799ee115ae35b1\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
++MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\User\.gradle\caches\transforms-3\3217a7b58a8fc6c763799ee115ae35b1\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
++MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\User\.gradle\caches\transforms-3\e955da626a3fb0b49faa6dcf12a4f6a2\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
++MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\User\.gradle\caches\transforms-3\e955da626a3fb0b49faa6dcf12a4f6a2\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
++MERGED from [androidx.print:print:1.0.0] C:\Users\User\.gradle\caches\transforms-3\e15e0c47fb3dde4d9ec9696347094b31\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
++MERGED from [androidx.print:print:1.0.0] C:\Users\User\.gradle\caches\transforms-3\e15e0c47fb3dde4d9ec9696347094b31\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
++MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\User\.gradle\caches\transforms-3\5db8ee51bbecc36e07eba7a77a7ae7c4\transformed\annotation-experimental-1.3.0\AndroidManifest.xml:20:5-44
++MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\User\.gradle\caches\transforms-3\5db8ee51bbecc36e07eba7a77a7ae7c4\transformed\annotation-experimental-1.3.0\AndroidManifest.xml:20:5-44
++INJECTED from C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml
++INJECTED from C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml
++	android:targetSdkVersion
++		INJECTED from C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml
++		ADDED from C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml
++		INJECTED from C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml
++	android:minSdkVersion
++		INJECTED from C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml
++		ADDED from C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml
++		INJECTED from C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml
++provider#androidx.startup.InitializationProvider
++ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\User\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
++MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\User\.gradle\caches\transforms-3\ae3e8265de2d7f874c642be745cd48da\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:26:9-34:20
++MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\User\.gradle\caches\transforms-3\ae3e8265de2d7f874c642be745cd48da\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:26:9-34:20
++MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\User\.gradle\caches\transforms-3\477190d2df3a2de3c97d15da98c0d16e\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
++MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\User\.gradle\caches\transforms-3\477190d2df3a2de3c97d15da98c0d16e\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
++	tools:node
++		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\User\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:28:13-31
++	android:authorities
++		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\User\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
++	android:exported
++		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\User\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
++	android:name
++		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\User\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
++meta-data#androidx.emoji2.text.EmojiCompatInitializer
++ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\User\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
++	android:value
++		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\User\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
++	android:name
++		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\User\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
++permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
++ADDED from [androidx.core:core:1.9.0] C:\Users\User\.gradle\caches\transforms-3\8c25e88eb4ea76e8f3d0900731d8ae12\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
++	android:protectionLevel
++		ADDED from [androidx.core:core:1.9.0] C:\Users\User\.gradle\caches\transforms-3\8c25e88eb4ea76e8f3d0900731d8ae12\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
++	android:name
++		ADDED from [androidx.core:core:1.9.0] C:\Users\User\.gradle\caches\transforms-3\8c25e88eb4ea76e8f3d0900731d8ae12\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
++permission#sg.edu.np.mad.mad_assg.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
++ADDED from [androidx.core:core:1.9.0] C:\Users\User\.gradle\caches\transforms-3\8c25e88eb4ea76e8f3d0900731d8ae12\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
++	android:protectionLevel
++		ADDED from [androidx.core:core:1.9.0] C:\Users\User\.gradle\caches\transforms-3\8c25e88eb4ea76e8f3d0900731d8ae12\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
++	android:name
++		ADDED from [androidx.core:core:1.9.0] C:\Users\User\.gradle\caches\transforms-3\8c25e88eb4ea76e8f3d0900731d8ae12\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
++uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
++ADDED from [androidx.core:core:1.9.0] C:\Users\User\.gradle\caches\transforms-3\8c25e88eb4ea76e8f3d0900731d8ae12\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
++	android:name
++		ADDED from [androidx.core:core:1.9.0] C:\Users\User\.gradle\caches\transforms-3\8c25e88eb4ea76e8f3d0900731d8ae12\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
++uses-permission#sg.edu.np.mad.mad_assg.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
++ADDED from [androidx.core:core:1.9.0] C:\Users\User\.gradle\caches\transforms-3\8c25e88eb4ea76e8f3d0900731d8ae12\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
++	android:name
++		ADDED from [androidx.core:core:1.9.0] C:\Users\User\.gradle\caches\transforms-3\8c25e88eb4ea76e8f3d0900731d8ae12\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
++meta-data#androidx.lifecycle.ProcessLifecycleInitializer
++ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\User\.gradle\caches\transforms-3\ae3e8265de2d7f874c642be745cd48da\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
++	android:value
++		ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\User\.gradle\caches\transforms-3\ae3e8265de2d7f874c642be745cd48da\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
++	android:name
++		ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\User\.gradle\caches\transforms-3\ae3e8265de2d7f874c642be745cd48da\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+Index: app/build/intermediates/incremental/mergeDebugShaders/merger.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/build/intermediates/incremental/mergeDebugShaders/merger.xml b/app/build/intermediates/incremental/mergeDebugShaders/merger.xml
+new file mode 100644
+--- /dev/null	(date 1685409599382)
++++ b/app/build/intermediates/incremental/mergeDebugShaders/merger.xml	(date 1685409599382)
+@@ -0,0 +1,2 @@
++<?xml version="1.0" encoding="utf-8"?>
++<merger version="3"><dataSet config="main" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\User\MAD2023_Team4\app\src\main\shaders"/></dataSet><dataSet config="debug" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\User\MAD2023_Team4\app\src\debug\shaders"/></dataSet></merger>
+\ No newline at end of file
+Index: app/build/intermediates/variant_model/debug/variant_model.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/build/intermediates/variant_model/debug/variant_model.json b/app/build/intermediates/variant_model/debug/variant_model.json
+new file mode 100644
+--- /dev/null	(date 1685409595411)
++++ b/app/build/intermediates/variant_model/debug/variant_model.json	(date 1685409595411)
+@@ -0,0 +1,2 @@
++
++ sg.edu.np.mad.mad_assg
+\ No newline at end of file
+Index: .idea/gradle.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/gradle.xml b/.idea/gradle.xml
+new file mode 100644
+--- /dev/null	(date 1685898187501)
++++ b/.idea/gradle.xml	(date 1685898187501)
+@@ -0,0 +1,19 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="GradleMigrationSettings" migrationVersion="1" />
++  <component name="GradleSettings">
++    <option name="linkedExternalProjectsSettings">
++      <GradleProjectSettings>
++        <option name="testRunner" value="GRADLE" />
++        <option name="distributionType" value="DEFAULT_WRAPPED" />
++        <option name="externalProjectPath" value="$PROJECT_DIR$" />
++        <option name="modules">
++          <set>
++            <option value="$PROJECT_DIR$" />
++            <option value="$PROJECT_DIR$/app" />
++          </set>
++        </option>
++      </GradleProjectSettings>
++    </option>
++  </component>
++</project>
+\ No newline at end of file
+Index: app/build/intermediates/navigation_json/debug/navigation.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/build/intermediates/navigation_json/debug/navigation.json b/app/build/intermediates/navigation_json/debug/navigation.json
+new file mode 100644
+--- /dev/null	(date 1685409598130)
++++ b/app/build/intermediates/navigation_json/debug/navigation.json	(date 1685409598130)
+@@ -0,0 +1,1 @@
++[]
+\ No newline at end of file
+Index: app/build/intermediates/merged_manifest/debug/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/build/intermediates/merged_manifest/debug/AndroidManifest.xml b/app/build/intermediates/merged_manifest/debug/AndroidManifest.xml
+new file mode 100644
+--- /dev/null	(date 1685409598595)
++++ b/app/build/intermediates/merged_manifest/debug/AndroidManifest.xml	(date 1685409598595)
+@@ -0,0 +1,52 @@
++<?xml version="1.0" encoding="utf-8"?>
++<manifest xmlns:android="http://schemas.android.com/apk/res/android"
++    package="sg.edu.np.mad.mad_assg"
++    android:versionCode="1"
++    android:versionName="1.0" >
++
++    <uses-sdk
++        android:minSdkVersion="21"
++        android:targetSdkVersion="33" />
++
++    <permission
++        android:name="sg.edu.np.mad.mad_assg.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
++        android:protectionLevel="signature" />
++
++    <uses-permission android:name="sg.edu.np.mad.mad_assg.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
++
++    <application
++        android:allowBackup="true"
++        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
++        android:dataExtractionRules="@xml/data_extraction_rules"
++        android:debuggable="true"
++        android:fullBackupContent="@xml/backup_rules"
++        android:icon="@mipmap/ic_launcher_round"
++        android:label="Rexipe"
++        android:supportsRtl="true"
++        android:testOnly="true"
++        android:theme="@style/Theme.MAD_Assg" >
++        <activity
++            android:name="sg.edu.np.mad.mad_assg.SplashScreen"
++            android:exported="true" >
++            <intent-filter>
++                <action android:name="android.intent.action.MAIN" />
++
++                <category android:name="android.intent.category.LAUNCHER" />
++            </intent-filter>
++        </activity>
++        <activity android:name="sg.edu.np.mad.mad_assg.MainActivity" />
++
++        <provider
++            android:name="androidx.startup.InitializationProvider"
++            android:authorities="sg.edu.np.mad.mad_assg.androidx-startup"
++            android:exported="false" >
++            <meta-data
++                android:name="androidx.emoji2.text.EmojiCompatInitializer"
++                android:value="androidx.startup" />
++            <meta-data
++                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
++                android:value="androidx.startup" />
++        </provider>
++    </application>
++
++</manifest>
+\ No newline at end of file
+Index: app/build/intermediates/merged_manifests/debug/output-metadata.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/build/intermediates/merged_manifests/debug/output-metadata.json b/app/build/intermediates/merged_manifests/debug/output-metadata.json
+new file mode 100644
+--- /dev/null	(date 1685409599315)
++++ b/app/build/intermediates/merged_manifests/debug/output-metadata.json	(date 1685409599315)
+@@ -0,0 +1,20 @@
++{
++  "version": 3,
++  "artifactType": {
++    "type": "MERGED_MANIFESTS",
++    "kind": "Directory"
++  },
++  "applicationId": "sg.edu.np.mad.mad_assg",
++  "variantName": "debug",
++  "elements": [
++    {
++      "type": "SINGLE",
++      "filters": [],
++      "attributes": [],
++      "versionCode": 1,
++      "versionName": "1.0",
++      "outputFile": "AndroidManifest.xml"
++    }
++  ],
++  "elementType": "File"
++}
+\ No newline at end of file
+Index: .idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/compiler.xml b/.idea/compiler.xml
+new file mode 100644
+--- /dev/null	(date 1685409572684)
++++ b/.idea/compiler.xml	(date 1685409572684)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="CompilerConfiguration">
++    <bytecodeTargetLevel target="17" />
++  </component>
++</project>
+\ No newline at end of file
+Index: app/build/intermediates/merged_manifests/debug/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml b/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml
+new file mode 100644
+--- /dev/null	(date 1685409599311)
++++ b/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml	(date 1685409599311)
+@@ -0,0 +1,52 @@
++<?xml version="1.0" encoding="utf-8"?>
++<manifest xmlns:android="http://schemas.android.com/apk/res/android"
++    package="sg.edu.np.mad.mad_assg"
++    android:versionCode="1"
++    android:versionName="1.0" >
++
++    <uses-sdk
++        android:minSdkVersion="21"
++        android:targetSdkVersion="33" />
++
++    <permission
++        android:name="sg.edu.np.mad.mad_assg.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
++        android:protectionLevel="signature" />
++
++    <uses-permission android:name="sg.edu.np.mad.mad_assg.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
++
++    <application
++        android:allowBackup="true"
++        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
++        android:dataExtractionRules="@xml/data_extraction_rules"
++        android:debuggable="true"
++        android:fullBackupContent="@xml/backup_rules"
++        android:icon="@mipmap/ic_launcher_round"
++        android:label="Rexipe"
++        android:supportsRtl="true"
++        android:testOnly="true"
++        android:theme="@style/Theme.MAD_Assg" >
++        <activity
++            android:name="sg.edu.np.mad.mad_assg.SplashScreen"
++            android:exported="true" >
++            <intent-filter>
++                <action android:name="android.intent.action.MAIN" />
++
++                <category android:name="android.intent.category.LAUNCHER" />
++            </intent-filter>
++        </activity>
++        <activity android:name="sg.edu.np.mad.mad_assg.MainActivity" />
++
++        <provider
++            android:name="androidx.startup.InitializationProvider"
++            android:authorities="sg.edu.np.mad.mad_assg.androidx-startup"
++            android:exported="false" >
++            <meta-data
++                android:name="androidx.emoji2.text.EmojiCompatInitializer"
++                android:value="androidx.startup" />
++            <meta-data
++                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
++                android:value="androidx.startup" />
++        </provider>
++    </application>
++
++</manifest>
+\ No newline at end of file
+Index: app/build/intermediates/packaged_manifests/debug/output-metadata.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/build/intermediates/packaged_manifests/debug/output-metadata.json b/app/build/intermediates/packaged_manifests/debug/output-metadata.json
+new file mode 100644
+--- /dev/null	(date 1685409600048)
++++ b/app/build/intermediates/packaged_manifests/debug/output-metadata.json	(date 1685409600048)
+@@ -0,0 +1,20 @@
++{
++  "version": 3,
++  "artifactType": {
++    "type": "PACKAGED_MANIFESTS",
++    "kind": "Directory"
++  },
++  "applicationId": "sg.edu.np.mad.mad_assg",
++  "variantName": "debug",
++  "elements": [
++    {
++      "type": "SINGLE",
++      "filters": [],
++      "attributes": [],
++      "versionCode": 1,
++      "versionName": "1.0",
++      "outputFile": "AndroidManifest.xml"
++    }
++  ],
++  "elementType": "File"
++}
+\ No newline at end of file
+Index: app/build/intermediates/packaged_manifests/debug/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/build/intermediates/packaged_manifests/debug/AndroidManifest.xml b/app/build/intermediates/packaged_manifests/debug/AndroidManifest.xml
+new file mode 100644
+--- /dev/null	(date 1685409599946)
++++ b/app/build/intermediates/packaged_manifests/debug/AndroidManifest.xml	(date 1685409599946)
+@@ -0,0 +1,52 @@
++<?xml version="1.0" encoding="utf-8"?>
++<manifest xmlns:android="http://schemas.android.com/apk/res/android"
++    package="sg.edu.np.mad.mad_assg"
++    android:versionCode="1"
++    android:versionName="1.0" >
++
++    <uses-sdk
++        android:minSdkVersion="21"
++        android:targetSdkVersion="33" />
++
++    <permission
++        android:name="sg.edu.np.mad.mad_assg.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
++        android:protectionLevel="signature" />
++
++    <uses-permission android:name="sg.edu.np.mad.mad_assg.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
++
++    <application
++        android:allowBackup="true"
++        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
++        android:dataExtractionRules="@xml/data_extraction_rules"
++        android:debuggable="true"
++        android:fullBackupContent="@xml/backup_rules"
++        android:icon="@mipmap/ic_launcher_round"
++        android:label="Rexipe"
++        android:supportsRtl="true"
++        android:testOnly="true"
++        android:theme="@style/Theme.MAD_Assg" >
++        <activity
++            android:name="sg.edu.np.mad.mad_assg.SplashScreen"
++            android:exported="true" >
++            <intent-filter>
++                <action android:name="android.intent.action.MAIN" />
++
++                <category android:name="android.intent.category.LAUNCHER" />
++            </intent-filter>
++        </activity>
++        <activity android:name="sg.edu.np.mad.mad_assg.MainActivity" />
++
++        <provider
++            android:name="androidx.startup.InitializationProvider"
++            android:authorities="sg.edu.np.mad.mad_assg.androidx-startup"
++            android:exported="false" >
++            <meta-data
++                android:name="androidx.emoji2.text.EmojiCompatInitializer"
++                android:value="androidx.startup" />
++            <meta-data
++                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
++                android:value="androidx.startup" />
++        </provider>
++    </application>
++
++</manifest>
+\ No newline at end of file
+Index: .idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+new file mode 100644
+--- /dev/null	(date 1685409540589)
++++ b/.idea/.gitignore	(date 1685409540589)
+@@ -0,0 +1,3 @@
++# Default ignored files
++/shelf/
++/workspace.xml
+Index: app/build/intermediates/source_set_path_map/debug/file-map.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/build/intermediates/source_set_path_map/debug/file-map.txt b/app/build/intermediates/source_set_path_map/debug/file-map.txt
+new file mode 100644
+--- /dev/null	(date 1686573530738)
++++ b/app/build/intermediates/source_set_path_map/debug/file-map.txt	(date 1686573530738)
+@@ -0,0 +1,31 @@
++sg.edu.np.mad.mad_assg.app-emoji2-1.2.0-0 C:\Users\User\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\res
++sg.edu.np.mad.mad_assg.app-savedstate-1.2.0-1 C:\Users\User\.gradle\caches\transforms-3\133132b7aa11abb90dffc4aeb4ffee71\transformed\savedstate-1.2.0\res
++sg.edu.np.mad.mad_assg.app-drawerlayout-1.1.1-2 C:\Users\User\.gradle\caches\transforms-3\169fbc0cc288bcafd707ff1de5b5d1ef\transformed\drawerlayout-1.1.1\res
++sg.edu.np.mad.mad_assg.app-emoji2-views-helper-1.2.0-3 C:\Users\User\.gradle\caches\transforms-3\181c671d8ed9f4ee83ef37b69e89373c\transformed\emoji2-views-helper-1.2.0\res
++sg.edu.np.mad.mad_assg.app-constraintlayout-2.1.4-4 C:\Users\User\.gradle\caches\transforms-3\1b1fc35cfff048765e7b5057facd7433\transformed\constraintlayout-2.1.4\res
++sg.edu.np.mad.mad_assg.app-lifecycle-livedata-core-2.5.1-5 C:\Users\User\.gradle\caches\transforms-3\39a903a6a5736151d5c8c6b114f3352a\transformed\lifecycle-livedata-core-2.5.1\res
++sg.edu.np.mad.mad_assg.app-startup-runtime-1.1.1-6 C:\Users\User\.gradle\caches\transforms-3\477190d2df3a2de3c97d15da98c0d16e\transformed\startup-runtime-1.1.1\res
++sg.edu.np.mad.mad_assg.app-lifecycle-viewmodel-2.5.1-7 C:\Users\User\.gradle\caches\transforms-3\53cbd816d1f0ce2619bbae9b8dcd2d8b\transformed\lifecycle-viewmodel-2.5.1\res
++sg.edu.np.mad.mad_assg.app-core-ktx-1.9.0-8 C:\Users\User\.gradle\caches\transforms-3\559d9211b8a4d26fbbdc8406e973d69c\transformed\core-ktx-1.9.0\res
++sg.edu.np.mad.mad_assg.app-annotation-experimental-1.3.0-9 C:\Users\User\.gradle\caches\transforms-3\5db8ee51bbecc36e07eba7a77a7ae7c4\transformed\annotation-experimental-1.3.0\res
++sg.edu.np.mad.mad_assg.app-coordinatorlayout-1.1.0-10 C:\Users\User\.gradle\caches\transforms-3\602e0f40a2e4890a6c140b4e0e9297aa\transformed\coordinatorlayout-1.1.0\res
++sg.edu.np.mad.mad_assg.app-viewpager2-1.0.0-11 C:\Users\User\.gradle\caches\transforms-3\71a4b2e3b83f674b0802282a6bb1640f\transformed\viewpager2-1.0.0\res
++sg.edu.np.mad.mad_assg.app-cardview-1.0.0-12 C:\Users\User\.gradle\caches\transforms-3\7653a5192b1a36a00121994a24b4bb76\transformed\cardview-1.0.0\res
++sg.edu.np.mad.mad_assg.app-appcompat-1.6.1-13 C:\Users\User\.gradle\caches\transforms-3\7ba610368285ef737a15a687544ee720\transformed\appcompat-1.6.1\res
++sg.edu.np.mad.mad_assg.app-core-1.9.0-14 C:\Users\User\.gradle\caches\transforms-3\8c25e88eb4ea76e8f3d0900731d8ae12\transformed\core-1.9.0\res
++sg.edu.np.mad.mad_assg.app-lifecycle-viewmodel-savedstate-2.5.1-15 C:\Users\User\.gradle\caches\transforms-3\8f16d121777a75a4f1908d2da158f029\transformed\lifecycle-viewmodel-savedstate-2.5.1\res
++sg.edu.np.mad.mad_assg.app-recyclerview-1.1.0-16 C:\Users\User\.gradle\caches\transforms-3\9a156e10bc2cc6926719f38d9612f7be\transformed\recyclerview-1.1.0\res
++sg.edu.np.mad.mad_assg.app-appcompat-resources-1.6.1-17 C:\Users\User\.gradle\caches\transforms-3\a3b3964855112576846b464329822fa9\transformed\appcompat-resources-1.6.1\res
++sg.edu.np.mad.mad_assg.app-lifecycle-process-2.4.1-18 C:\Users\User\.gradle\caches\transforms-3\ae3e8265de2d7f874c642be745cd48da\transformed\lifecycle-process-2.4.1\res
++sg.edu.np.mad.mad_assg.app-material-1.5.0-19 C:\Users\User\.gradle\caches\transforms-3\b79e00459b51debe71c70b38b92dedee\transformed\material-1.5.0\res
++sg.edu.np.mad.mad_assg.app-fragment-1.3.6-20 C:\Users\User\.gradle\caches\transforms-3\c7fdf132750f580e9799a5455b4a5c84\transformed\fragment-1.3.6\res
++sg.edu.np.mad.mad_assg.app-activity-1.6.0-21 C:\Users\User\.gradle\caches\transforms-3\ea9480b242a8da7b5cc4e7169919a500\transformed\activity-1.6.0\res
++sg.edu.np.mad.mad_assg.app-lifecycle-runtime-2.5.1-22 C:\Users\User\.gradle\caches\transforms-3\f1cbfa66c793c84195ed08fdc711e3af\transformed\lifecycle-runtime-2.5.1\res
++sg.edu.np.mad.mad_assg.app-transition-1.2.0-23 C:\Users\User\.gradle\caches\transforms-3\f550c9bc53f117cb9e3852beae837a10\transformed\transition-1.2.0\res
++sg.edu.np.mad.mad_assg.app-pngs-24 C:\Users\User\MAD2023_Team4\app\build\generated\res\pngs\debug
++sg.edu.np.mad.mad_assg.app-resValues-25 C:\Users\User\MAD2023_Team4\app\build\generated\res\resValues\debug
++sg.edu.np.mad.mad_assg.app-packageDebugResources-26 C:\Users\User\MAD2023_Team4\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
++sg.edu.np.mad.mad_assg.app-packageDebugResources-27 C:\Users\User\MAD2023_Team4\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
++sg.edu.np.mad.mad_assg.app-merged_res-28 C:\Users\User\MAD2023_Team4\app\build\intermediates\merged_res\debug
++sg.edu.np.mad.mad_assg.app-debug-29 C:\Users\User\MAD2023_Team4\app\src\debug\res
++sg.edu.np.mad.mad_assg.app-main-30 C:\Users\User\MAD2023_Team4\app\src\main\res
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	(date 1685409572729)
++++ b/.idea/vcs.xml	(date 1685409572729)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: app/build/intermediates/signing_config_versions/debug/signing-config-versions.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/build/intermediates/signing_config_versions/debug/signing-config-versions.json b/app/build/intermediates/signing_config_versions/debug/signing-config-versions.json
+new file mode 100644
+--- /dev/null	(date 1685409600040)
++++ b/app/build/intermediates/signing_config_versions/debug/signing-config-versions.json	(date 1685409600040)
+@@ -0,0 +1,1 @@
++{"enableV1Signing":false,"enableV2Signing":true,"enableV3Signing":false,"enableV4Signing":false}
+\ No newline at end of file
+Index: app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt b/app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt
+new file mode 100644
+--- /dev/null	(date 1685409598596)
++++ b/app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt	(date 1685409598596)
+@@ -0,0 +1,88 @@
++1<?xml version="1.0" encoding="utf-8"?>
++2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
++3    package="sg.edu.np.mad.mad_assg"
++4    android:versionCode="1"
++5    android:versionName="1.0" >
++6
++7    <uses-sdk
++8        android:minSdkVersion="21"
++8-->C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml
++9        android:targetSdkVersion="33" />
++9-->C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml
++10
++11    <permission
++11-->[androidx.core:core:1.9.0] C:\Users\User\.gradle\caches\transforms-3\8c25e88eb4ea76e8f3d0900731d8ae12\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
++12        android:name="sg.edu.np.mad.mad_assg.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
++12-->[androidx.core:core:1.9.0] C:\Users\User\.gradle\caches\transforms-3\8c25e88eb4ea76e8f3d0900731d8ae12\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
++13        android:protectionLevel="signature" />
++13-->[androidx.core:core:1.9.0] C:\Users\User\.gradle\caches\transforms-3\8c25e88eb4ea76e8f3d0900731d8ae12\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
++14
++15    <uses-permission android:name="sg.edu.np.mad.mad_assg.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
++15-->[androidx.core:core:1.9.0] C:\Users\User\.gradle\caches\transforms-3\8c25e88eb4ea76e8f3d0900731d8ae12\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
++15-->[androidx.core:core:1.9.0] C:\Users\User\.gradle\caches\transforms-3\8c25e88eb4ea76e8f3d0900731d8ae12\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
++16
++17    <application
++17-->C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml:5:5-24:19
++18        android:allowBackup="true"
++18-->C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml:6:9-35
++19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
++19-->[androidx.core:core:1.9.0] C:\Users\User\.gradle\caches\transforms-3\8c25e88eb4ea76e8f3d0900731d8ae12\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
++20        android:dataExtractionRules="@xml/data_extraction_rules"
++20-->C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml:7:9-65
++21        android:debuggable="true"
++22        android:fullBackupContent="@xml/backup_rules"
++22-->C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml:8:9-54
++23        android:icon="@mipmap/ic_launcher_round"
++23-->C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml:9:9-49
++24        android:label="Rexipe"
++24-->C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml:10:9-31
++25        android:supportsRtl="true"
++25-->C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml:11:9-35
++26        android:testOnly="true"
++27        android:theme="@style/Theme.MAD_Assg" >
++27-->C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml:12:9-46
++28        <activity
++28-->C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml:14:9-22:20
++29            android:name="sg.edu.np.mad.mad_assg.SplashScreen"
++29-->C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml:15:13-41
++30            android:exported="true" >
++30-->C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml:16:13-36
++31            <intent-filter>
++31-->C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml:17:13-21:29
++32                <action android:name="android.intent.action.MAIN" />
++32-->C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml:18:17-69
++32-->C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml:18:25-66
++33
++34                <category android:name="android.intent.category.LAUNCHER" />
++34-->C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml:20:17-77
++34-->C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml:20:27-74
++35            </intent-filter>
++36        </activity>
++37        <activity android:name="sg.edu.np.mad.mad_assg.MainActivity" />
++37-->C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml:23:9-49
++37-->C:\Users\User\MAD2023_Team4\app\src\main\AndroidManifest.xml:23:19-47
++38
++39        <provider
++39-->[androidx.emoji2:emoji2:1.2.0] C:\Users\User\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
++40            android:name="androidx.startup.InitializationProvider"
++40-->[androidx.emoji2:emoji2:1.2.0] C:\Users\User\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
++41            android:authorities="sg.edu.np.mad.mad_assg.androidx-startup"
++41-->[androidx.emoji2:emoji2:1.2.0] C:\Users\User\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
++42            android:exported="false" >
++42-->[androidx.emoji2:emoji2:1.2.0] C:\Users\User\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
++43            <meta-data
++43-->[androidx.emoji2:emoji2:1.2.0] C:\Users\User\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
++44                android:name="androidx.emoji2.text.EmojiCompatInitializer"
++44-->[androidx.emoji2:emoji2:1.2.0] C:\Users\User\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
++45                android:value="androidx.startup" />
++45-->[androidx.emoji2:emoji2:1.2.0] C:\Users\User\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
++46            <meta-data
++46-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\User\.gradle\caches\transforms-3\ae3e8265de2d7f874c642be745cd48da\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
++47                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
++47-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\User\.gradle\caches\transforms-3\ae3e8265de2d7f874c642be745cd48da\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
++48                android:value="androidx.startup" />
++48-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\User\.gradle\caches\transforms-3\ae3e8265de2d7f874c642be745cd48da\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
++49        </provider>
++50    </application>
++51
++52</manifest>
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+new file mode 100644
+--- /dev/null	(date 1686800859877)
++++ b/.idea/misc.xml	(date 1686800859877)
+@@ -0,0 +1,9 @@
++<project version="4">
++  <component name="ExternalStorageConfigurationManager" enabled="true" />
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
++    <output url="file://$PROJECT_DIR$/build/classes" />
++  </component>
++  <component name="ProjectType">
++    <option name="id" value="Android" />
++  </component>
++</project>
+\ No newline at end of file
+Index: app/build/intermediates/annotation_processor_list/debug/annotationProcessors.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/build/intermediates/annotation_processor_list/debug/annotationProcessors.json b/app/build/intermediates/annotation_processor_list/debug/annotationProcessors.json
+new file mode 100644
+--- /dev/null	(date 1685409595558)
++++ b/app/build/intermediates/annotation_processor_list/debug/annotationProcessors.json	(date 1685409595558)
+@@ -0,0 +1,1 @@
++{}
+\ No newline at end of file
+Index: app/build/intermediates/compatible_screen_manifest/debug/output-metadata.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/build/intermediates/compatible_screen_manifest/debug/output-metadata.json b/app/build/intermediates/compatible_screen_manifest/debug/output-metadata.json
+new file mode 100644
+--- /dev/null	(date 1685409598106)
++++ b/app/build/intermediates/compatible_screen_manifest/debug/output-metadata.json	(date 1685409598106)
+@@ -0,0 +1,10 @@
++{
++  "version": 3,
++  "artifactType": {
++    "type": "COMPATIBLE_SCREEN_MANIFEST",
++    "kind": "Directory"
++  },
++  "applicationId": "sg.edu.np.mad.mad_assg",
++  "variantName": "debug",
++  "elements": []
++}
+\ No newline at end of file
+Index: .idea/.name
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.name b/.idea/.name
+new file mode 100644
+--- /dev/null	(date 1685409572043)
++++ b/.idea/.name	(date 1685409572043)
+@@ -0,0 +1,1 @@
++MAD_Assg
+\ No newline at end of file
+diff --git a/.gradle/vcs-1/gc.properties b/.gradle/vcs-1/gc.properties
+new file mode 100644
+diff --git a/.gradle/8.0/dependencies-accessors/gc.properties b/.gradle/8.0/dependencies-accessors/gc.properties
+new file mode 100644
+diff --git a/.gradle/8.0/gc.properties b/.gradle/8.0/gc.properties
+new file mode 100644

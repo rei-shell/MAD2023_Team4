@@ -24,14 +24,14 @@ This app will hopefully inspire you to make every meal a wonderful and memorable
 <li>
 <p> Stage 1:
   <ul>
-    feature group: Eudora
+    feature group: Rachelle
     <li> Login/Logout </li>
     <ul> 
     <li> This allows the user to login and logout of the app. After logging in to the app, the user will be able to rate, review, view user profile and create recipe</li>
     </ul>
     <li> User Profile</li>
     <ul><li> This allows the user to view their profile and edit the profile information or add information to their profile.</li></ul><br>
-    feature group: Rachelle
+    feature group: Eudora
     <li> View History</li>
     <ul><li> This allows user to view back their viewed recipe just in case they wanna try that recipe again but could not find in the wide variety of recipe options.</li></ul>
     <li> Food Recipe Options</li>
@@ -49,7 +49,7 @@ This app will hopefully inspire you to make every meal a wonderful and memorable
     <li> Rating & Reviews</li>
     <ul>
     <li> Rating</li>
-    <ul><li> This allows user to rate the recipe from 1 being the best to 5 being the worst.</li></ul>
+    <ul><li> This allows user to rate the recipe from 1 being the easiest to 5 being the hardest.</li></ul>
     <li> Reviews</li>
     <ul><li> This allows user to review on the recipe they were viewing or recreating. They could review that the recipe is good and easy or the recipe is long and not worth cooking for or many other different more reviews.</li></ul></ul><br>
 </p></li>
