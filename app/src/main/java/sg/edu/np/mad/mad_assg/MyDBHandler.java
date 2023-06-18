@@ -7,6 +7,10 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.database.sqlite.SQLiteStatement;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MyDBHandler extends SQLiteOpenHelper {
 
@@ -19,6 +23,8 @@ public class MyDBHandler extends SQLiteOpenHelper {
 
     public static String RECIPE = "Recipe";
 
+    private static final String COLUMN_ID = "_id";
+
     public static String COLUMN_CATEGORY = "Category";
 
     public static String COLUMN_NAME = "Name";
@@ -30,41 +36,46 @@ public class MyDBHandler extends SQLiteOpenHelper {
     public static String COLUMN_STEPS = "Steps";
 
     public static String COLUMN_USER = "Publisher";
-    public MyDBHandler(Context context, String name, SQLiteDatabase.CursorFactory factory, int version){
+
+    private static final String COLUMN_IMAGE_URL = "image_url";
+
+    public MyDBHandler(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, DATABASE_NAME, factory, DATABASE_VERSION);
     }
 
     @Override
-    public void onCreate(SQLiteDatabase db){
-        /*String CREATE_RECIPE_TABLE = "CREATE TABLE " + RECIPE + "(" + COLUMN_NAME + " TEXT," + COLUMN_CATEGORY + " TEXT," + COLUMN_USER + " TEXT," + COLUMN_DESCRIPTION + " TEXT," + COLUMN_INGREDIENTS + " TEXT," + COLUMN_STEPS + " TEXT)";  */
-        /*db.execSQL(CREATE_RECIPE_TABLE);*/
+    public void onCreate(SQLiteDatabase db) {
+        // Create the recipe table
+        String CREATE_RECIPE_TABLE = "CREATE TABLE " + RECIPE + "(" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," + COLUMN_NAME + " TEXT," + COLUMN_CATEGORY + " TEXT," + COLUMN_USERNAME + " TEXT," + COLUMN_USER + " TEXT," +COLUMN_DESCRIPTION + " TEXT," + COLUMN_INGREDIENTS + " TEXT," + COLUMN_STEPS + " TEXT," + COLUMN_IMAGE_URL + " TEXT" + ")";
+        db.execSQL(CREATE_RECIPE_TABLE);
         String CREATE_ACCOUNTS_TABLE = "CREATE TABLE " + ACCOUNTS + "(" + COLUMN_USERNAME + " TEXT," + COLUMN_PASSWORD + " TEXT," + COLUMN_EMAIL + " TEXT)";
         db.execSQL(CREATE_ACCOUNTS_TABLE);
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion){
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + ACCOUNTS);
+        db.execSQL("DROP TABLE IF EXISTS " + RECIPE);
         onCreate(db);
     }
 
-    public void addUser(UserData userDate){
+    public void addUser(UserData userDate) {
         ContentValues values = new ContentValues();
         values.put(COLUMN_USERNAME, userDate.getUsername());
         values.put(COLUMN_PASSWORD, userDate.getPassword());
         values.put(COLUMN_EMAIL, userDate.getEmail());
 
         SQLiteDatabase db = this.getWritableDatabase();
-        db.insert(ACCOUNTS,null, values);
+        db.insert(ACCOUNTS, null, values);
         db.close();
     }
 
-    public boolean updatepassword(String username, String password){
+    public boolean updatepassword(String username, String password) {
         SQLiteDatabase db = getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("password", password);
-        long result = db.update(ACCOUNTS, contentValues, "username = ?", new String[] {username} );
-        if (result == -1)return false;
+        long result = db.update(ACCOUNTS, contentValues, "username = ?", new String[]{username});
+        if (result == -1) return false;
         else
             return true;
     }
@@ -138,13 +149,150 @@ public class MyDBHandler extends SQLiteOpenHelper {
         return username;
     }
 
+    public long insertRecipe(RecipeList recipe) {
+        SQLiteDatabase db = getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_NAME, recipe.getRecipeName());
+        values.put(COLUMN_CATEGORY, recipe.getCategory());
+        values.put(COLUMN_USER, recipe.getUsername());
+        values.put(COLUMN_DESCRIPTION, recipe.getDescription());
+        values.put(COLUMN_INGREDIENTS, recipe.getIngredients());
+        values.put(COLUMN_STEPS, recipe.getSteps());
+        values.put(COLUMN_IMAGE_URL, recipe.getImageUrl());
+
+        long id = db.insert(RECIPE, null, values);
+        db.close();
+
+        return id;
+    }
+
+    @SuppressLint("Range")
+    public List<RecipeList> getAllRecipes() {
+        List<RecipeList> recipes = new ArrayList<>();
+
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor cursor = db.query(RECIPE, null, null, null, null, null, null);
+
+        if (cursor.moveToFirst()) {
+            do {
+                RecipeList recipe = new RecipeList();
+                recipe.setId(cursor.getLong(cursor.getColumnIndex(COLUMN_ID)));
+                recipe.setRecipeName(cursor.getString(cursor.getColumnIndex(COLUMN_NAME)));
+                recipe.setCategory(cursor.getString(cursor.getColumnIndex(COLUMN_CATEGORY)));
+                recipe.setUsername(cursor.getString(cursor.getColumnIndex(COLUMN_USER)));
+                recipe.setDescription(cursor.getString(cursor.getColumnIndex(COLUMN_DESCRIPTION)));
+                recipe.setIngredients(cursor.getString(cursor.getColumnIndex(COLUMN_INGREDIENTS)));
+                recipe.setSteps(cursor.getString(cursor.getColumnIndex(COLUMN_STEPS)));
+                recipe.setImageUrl(cursor.getString(cursor.getColumnIndex(COLUMN_IMAGE_URL)));
+
+                recipes.add(recipe);
+            } while (cursor.moveToNext());
+        }
+
+        cursor.close();
+        db.close();
+
+        return recipes;
+    }
+
+
+}
+
+    /*public  void  Ingredients_Insert(String name, String ingreName)
+    {
+        // open read and write database
+        SQLiteDatabase db = getWritableDatabase();
+        // execute insert query
+        db.execSQL("INSERT INTO INGREDIENTS VALUES(null, " + name + ", '" + ingreName + "');");
+
+        db.close();
+    }
+    public ArrayList<RecipeList> recipes_SelectBest()
+    {
+        // Open available reading database
+        SQLiteDatabase db = getReadableDatabase();
+        ArrayList<RecipeList> allRecipes = new ArrayList<>();
+        // Get all recipes data
+        Cursor cursor = db.rawQuery("SELECT * FROM RECIPES ORDER BY likeCount DESC LIMIT 3", null);
+        if (cursor != null)
+        {
+            while (cursor.moveToNext()) {
+                allRecipes.add(new RecipeList(
+                        cursor.getColumnIndex(COLUMN_ID),
+                        cursor.getColumnIndex(COLUMN_NAME),
+                        cursor.getColumnIndex(COLUMN_CATEGORY),
+
+                ));
+            }
+        }
+        cursor.close();
+        db.close();
+
+        return allRecipes;
+    }
+
+    public ArrayList<RecipeList> recipes_SelectAll()
+    {
+        // Open available reading database
+        SQLiteDatabase db = getReadableDatabase();
+        ArrayList<RecipeList> allRecipes = new ArrayList<>();
+        // Get all recipes data
+        Cursor cursor = db.rawQuery("SELECT * FROM RECIPES", null);
+        if (cursor != null)
+        {
+            while (cursor.moveToNext()) {
+                allRecipes.add(new RecipeList(
+                        cursor.getString(1),
+                        cursor.getString(2),
+                        cursor.getString(3),
+                        cursor.getString(4),
+                        cursor.getString(5),
+                        cursor.getString(6)
+                ));
+            }
+        }
+        cursor.close();
+        db.close();
+
+        return allRecipes;
+    }
+
+
+    public RecipeList recipes_SelectById(int id)
+    {
+        // Open available reading database
+        SQLiteDatabase db = getReadableDatabase();
+
+        Cursor cursor = db.rawQuery("SELECT * FROM RECIPES WHERE _id = " + id, null);
+        if (cursor != null)
+        {
+            while (cursor.moveToNext()) {
+                RecipeList recipe = new RecipeList(
+                        cursor.getString(1),
+                        cursor.getString(2),
+                        cursor.getString(3),
+                        cursor.getString(4),
+                        cursor.getString(5),
+                        cursor.getString(6)
+                );
+                cursor.close();
+                db.close();
+                return recipe;
+            }
+
+
+        }
+        return  null;
+    }
+
 }
 
 
 
 
 //login function
-   /* public boolean user_Login(String userName, String password)
+   public boolean user_Login(String userName, String password)
     {
         SQLiteDatabase db = getReadableDatabase();
         Cursor cursor = db.rawQuery("SELECT * FROM " + ACCOUNTS + " WHERE " + COLUMN_USERNAME +  "= \"" + userName + " \" " + " AND " + COLUMN_PASSWORD + "= \"" + password + " \" ", null);
