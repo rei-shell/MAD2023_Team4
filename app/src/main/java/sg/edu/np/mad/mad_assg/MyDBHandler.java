@@ -149,6 +149,28 @@ public class MyDBHandler extends SQLiteOpenHelper {
         return username;
     }
 
+    public void updateUser(UserData user) {
+        SQLiteDatabase db = getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_USERNAME, user.getUsername());
+        values.put(COLUMN_EMAIL, user.getEmail());
+
+        db.update(ACCOUNTS, values, COLUMN_USERNAME + " = ?",
+                new String[]{String.valueOf(user.getUsername())});
+
+        db.close();
+    }
+
+    public void deleteUser(long userId) {
+        SQLiteDatabase db = getWritableDatabase();
+
+        db.delete(ACCOUNTS, COLUMN_USERNAME + " = ?",
+                new String[]{String.valueOf(userId)});
+
+        db.close();
+    }
+
     public long insertRecipe(RecipeList recipe) {
         SQLiteDatabase db = getWritableDatabase();
 
