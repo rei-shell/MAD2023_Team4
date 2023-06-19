@@ -25,6 +25,17 @@ public class RecipeList {
     public RecipeList() {
 
     }
+    public static RecipeList get(int position) {
+        // Assuming you have a list called recipeList to store the recipe items
+        if (position >= 0 && position < RecipeList.size()) {
+            return RecipeList.get(position);
+        }
+        return null; // Return null or handle the out-of-bounds case as per your requirements
+    }
+
+    private static int size() {
+        return RecipeList.size();
+    }
 
     public long getId() {
         return id;

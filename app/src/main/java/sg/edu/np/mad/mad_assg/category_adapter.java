@@ -1,6 +1,7 @@
 package sg.edu.np.mad.mad_assg;
 
 import android.content.Context;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,13 +9,16 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.collection.CircularArray;
+
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 
 public class category_adapter extends BaseAdapter {
     private LayoutInflater inflater;
     private ArrayList<CategoryData> categoryList;
     private int layout;
-    private ImageData imageHelper = new ImageData();
 
     public category_adapter(Context context, ArrayList<CategoryData> categoryList, int layout) {
         this.inflater=(LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -42,12 +46,17 @@ public class category_adapter extends BaseAdapter {
         if(convertView==null){
             convertView=inflater.inflate(layout,parent,false);
         }
-        CategoryData categoryItem = categoryList.get(position);
-        ImageView icon=(ImageView)convertView.findViewById(R.id.categoryitem_img);
-        icon.setImageBitmap(imageHelper.getBitmapFromByteArray(categoryItem.get_mainImg()));
+        RecipeList recipeItem = RecipeList.get(position);
+        ImageView icon = (ImageView) convertView.findViewById(R.id.recipe_image_id);
+        // Assuming your recipe list is a list of Recipe objects with an image URL property
+// Assuming you have a RecipeList object at the desired position
+        RecipeList recipe = RecipeList.get(position);
 
-        TextView name = (TextView)convertView.findViewById(R.id.categoryitem_text);
-        name.setText(categoryItem.get_category());
+// Load the image using Picasso
+        Picasso.get().load(recipe.getImageUrl()).into(icon);
+
+        TextView name = (TextView) convertView.findViewById(R.id.recipe_text);
+        name.setText(recipeItem.getRecipeName());
         return convertView;
     }
 
