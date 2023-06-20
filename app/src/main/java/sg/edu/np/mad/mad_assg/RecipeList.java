@@ -10,8 +10,9 @@ public class RecipeList {
     private String description;
     private String ingredients;
     private String steps;
+    private String rating;
 
-    public RecipeList(long id, String imageUrl, String recipeName, String category, String username, String description, String ingredients, String steps) {
+    public RecipeList(String imageUrl, String recipeName, String category, String username, String description, String ingredients) {
         this.id = id;
         this.imageUrl = imageUrl;
         this.recipeName = recipeName;
@@ -51,6 +52,14 @@ public class RecipeList {
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public void setRating(float rating) {
+        this.rating = String.valueOf(rating);
+    }
+
+    public String getRating() {
+        return rating;
     }
 
     public String getRecipeName() {
@@ -100,5 +109,7 @@ public class RecipeList {
     public void setSteps(String steps) {
         this.steps = steps;
     }
+
+
 }
 

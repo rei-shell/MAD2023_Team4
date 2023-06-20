@@ -69,22 +69,26 @@
 
             <ImageView
                 android:layout_width="350dp"
-                android:layout_height="100dp"
+                android:layout_height="125dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginStart="40dp"
-
+                android:id="@id/descriptiontable"
                 android:src="@drawable/rectangle"/>
 
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:layout_alignStart="@+id/descriptiontable"
+                android:layout_alignEnd="@+id/descriptiontable"
+                android:layout_alignBottom="@+id/descriptiontable"
+                android:layout_alignTop="@+id/descriptiontable"
                 android:id="@+id/description"
                 android:text="Description"
                 android:textAlignment="center"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textColor="@color/black"
                 android:fontFamily="@font/kalam_light"/>
 
@@ -247,7 +251,7 @@
 
             <ImageView
                 android:layout_width="350dp"
-                android:layout_height="145dp"
+                android:layout_height="900dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginStart="40dp"
                 android:id="@+id/ingredientstxt"
@@ -258,12 +262,16 @@
                 android:layout_height="wrap_content"
                 android:layout_alignStart="@+id/ingredientstxt"
                 android:layout_alignEnd="@+id/ingredientstxt"
-                android:layout_marginTop="25dp"
+                android:layout_alignBottom="@+id/ingredientstxt"
+                android:layout_alignTop="@+id/ingredientstxt"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
 
                 android:id="@+id/ingredients"
                 android:text="Ingredients"
                 android:textAlignment="center"
-                android:textSize="28sp"
+                android:textSize="20sp"
+                android:textColor="@color/black"
                 android:fontFamily="@font/kalam_light"/>
 
         </RelativeLayout>
@@ -274,7 +282,7 @@
 
             <ImageView
                 android:layout_width="350dp"
-                android:layout_height="145dp"
+                android:layout_height="1250dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginStart="40dp"
                 android:id="@+id/stepstxt"
@@ -285,12 +293,16 @@
                 android:layout_height="wrap_content"
                 android:layout_alignStart="@+id/stepstxt"
                 android:layout_alignEnd="@+id/stepstxt"
-                android:layout_marginTop="25dp"
+                android:layout_alignTop="@+id/stepstxt"
+                android:layout_alignBottom="@+id/stepstxt"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
 
                 android:id="@+id/steps"
                 android:text="Steps"
                 android:textAlignment="center"
-                android:textSize="28sp"
+                android:textSize="20sp"
+                android:textColor="@color/black"
                 android:fontFamily="@font/kalam_light"/>
 
         </RelativeLayout>

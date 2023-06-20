@@ -6,8 +6,13 @@ import android.graphics.drawable.AnimationDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -234,37 +239,104 @@ public class HomePage extends Fragment {
             dbHelper.insertRecipe(recipe);
         }
 
-        //connect GrieView code to UI
-        GridView newGridView = (GridView) view.findViewById(R.id.GridView_new);
+        RecyclerView update = view.findViewById(R.id.updateview);
+        update.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+        MainRecipeRecyclerViewAdapter adapter = new MainRecipeRecyclerViewAdapter(recipes);
+        update.setAdapter(adapter);
 
-        newGridView.setAdapter(new MainRecipeAdapter(this.getContext(), recipes, R.layout.cardview_recipe));
-
-        newGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            public void onItemClick(AdapterView<?> parent, View v,
-                                    int position, long id) {
+        adapter.setOnItemClickListener(new MainRecipeRecyclerViewAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
                 RecipeList selectRecipe = recipes.get(position);
                 Intent intent = new Intent(getActivity(), RecipeView.class);
-                intent.putExtra("recipe", selectRecipe.getRecipeName());
+                intent.putExtra("recipename", selectRecipe.getRecipeName());
+                intent.putExtra("image", selectRecipe.getImageUrl());
+                intent.putExtra("username", selectRecipe.getUsername());
+                intent.putExtra("description", selectRecipe.getDescription());
+                intent.putExtra("ingredients", selectRecipe.getIngredients());
+                intent.putExtra("steps", selectRecipe.getSteps());
                 startActivity(intent);
-                //Toast.makeText(view.getContext(),selectRecipe.get_recipName(),Toast.LENGTH_SHORT).show();
             }
         });
 
-        GridView recoGridView = (GridView)view.findViewById(R.id.GridView_reco);
-        recoGridView.setAdapter(new MainRecipeAdapter(this.getContext(), recipes, R.layout.cardview_recipe));
+        RecyclerView recommendation = view.findViewById(R.id.recoview);
+        recommendation.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+        recommendation.setAdapter(adapter);
+        adapter.setOnItemClickListener(new MainRecipeRecyclerViewAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                RecipeList selectRecipe = recipes.get(position);
+                Intent intent = new Intent(getActivity(), RecipeView.class);
+                intent.putExtra("recipename", selectRecipe.getRecipeName());
+                intent.putExtra("image", selectRecipe.getImageUrl());
+                intent.putExtra("username", selectRecipe.getUsername());
+                intent.putExtra("description", selectRecipe.getDescription());
+                intent.putExtra("ingredients", selectRecipe.getIngredients());
+                intent.putExtra("steps", selectRecipe.getSteps());
+                startActivity(intent);
+            }
+        });
+
+        RecyclerView explore = view.findViewById(R.id.exploreview);
+        explore.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
+
+        explore.setAdapter(adapter);
+
+
+        adapter.setOnItemClickListener(new MainRecipeRecyclerViewAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                RecipeList selectRecipe = recipes.get(position);
+                Intent intent = new Intent(getActivity(), RecipeView.class);
+                intent.putExtra("recipename", selectRecipe.getRecipeName());
+                intent.putExtra("image", selectRecipe.getImageUrl());
+                intent.putExtra("username", selectRecipe.getUsername());
+                intent.putExtra("description", selectRecipe.getDescription());
+                intent.putExtra("ingredients", selectRecipe.getIngredients());
+                intent.putExtra("steps", selectRecipe.getSteps());
+                startActivity(intent);
+            }
+        });
+
+
+
+        /*GridView recoGridView = (GridView)view.findViewById(R.id.GridView_reco);
+        recoGridView.setAdapter(new MainRecipeRecyclerViewAdapter(this.getContext(), recipes, R.layout.cardview_recipe));
 
         recoGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
                 RecipeList selectRecipe = recipes.get(position);
                 Intent intent = new Intent(getActivity(), RecipeView.class);
-                intent.putExtra("recipe", selectRecipe.getRecipeName());
+                intent.putExtra("recipename", selectRecipe.getRecipeName());
+                intent.putExtra("image", selectRecipe.getImageUrl());
+                intent.putExtra("username", selectRecipe.getUsername());
+                intent.putExtra("description", selectRecipe.getDescription());
+                intent.putExtra("ingredients", selectRecipe.getIngredients());
+                intent.putExtra("steps", selectRecipe.getSteps());
                 startActivity(intent);
                 //Toast.makeText(view.getContext(),selectRecipe.get_recipName(),Toast.LENGTH_SHORT).show();
             }
-        });
+        });*/
         return view;
     }
+/*
+    private List<ItemRecipe> setupRecipe(){
+        itemList = new ArrayList<>();
+        String recipe[] = {"Mapo Tofu", "Chcoloate Cake", "Pasta Carbonara", "Gimbap"};
+        String img[] = {"https://www.justonecookbook.com/wp-content/uploads/2020/03/Mapo-Tofu-5079-I.jpg", "https://ichef.bbci.co.uk/food/ic/food_16x9_1600/recipes/easy_chocolate_cake_31070_16x9.jpg", "https://www.simplyrecipes.com/thmb/9DSEOemXX-gGJQBJqsY-qDzRjDw=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Simply-Recipes-Spaghetti-Carbonara-LEAD-6-b3880a6eb49f4158be6f13885c797ded.jpg","https://www.maangchi.com/wp-content/uploads/2007/08/gimbap_blog-590x351.jpg"};
+        //String time[] = {"1h 5'", "30m", "1h 10'", "50m", "20m", "1h 20'", "20m", "1h 20'"};
+        float rating[] = {3, 4, 4, 5};
+
+        for (int i = 0; i<recipe.length; i++){
+            ItemRecipe item = new ItemRecipe();
+            item.setRecipe(recipe[i]);
+            item.setRating(rating[i]);
+            item.setImg(img[i]);
+            itemList.add(item);
+        }
+        return itemList;
+    }*/
 }
 
 

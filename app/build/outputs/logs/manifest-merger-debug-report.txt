@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:2:1-37:12
+ADDED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:2:1-39:12
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\nicky\.gradle\caches\transforms-3\692489d3dc573099ee21258915553d51\transformed\picasso-2.71828\AndroidManifest.xml:2:1-14:12
 MERGED from [com.google.android.material:material:1.5.0] C:\Users\nicky\.gradle\caches\transforms-3\b79e00459b51debe71c70b38b92dedee\transformed\material-1.5.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\nicky\.gradle\caches\transforms-3\1b1fc35cfff048765e7b5057facd7433\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
@@ -11,6 +11,7 @@ MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\nicky\.gradl
 MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\nicky\.gradle\caches\transforms-3\7ba610368285ef737a15a687544ee720\transformed\appcompat-1.6.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\nicky\.gradle\caches\transforms-3\71a4b2e3b83f674b0802282a6bb1640f\transformed\viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\nicky\.gradle\caches\transforms-3\9a156e10bc2cc6926719f38d9612f7be\transformed\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.github.bumptech.glide:glide:4.12.0] C:\Users\nicky\.gradle\caches\transforms-3\5f967631cbcd77a1b3cf08ebdadbd54e\transformed\glide-4.12.0\AndroidManifest.xml:2:1-12:12
 MERGED from [com.android.support:exifinterface:27.1.0] C:\Users\nicky\.gradle\caches\transforms-3\a727c936d3e9f7634abf6544a0b22cbb\transformed\exifinterface-27.1.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\nicky\.gradle\caches\transforms-3\c7fdf132750f580e9799a5455b4a5c84\transformed\fragment-1.3.6\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.activity:activity:1.6.0] C:\Users\nicky\.gradle\caches\transforms-3\ea9480b242a8da7b5cc4e7169919a500\transformed\activity-1.6.0\AndroidManifest.xml:17:1-22:12
@@ -35,6 +36,8 @@ MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\nicky\.gradle\
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] C:\Users\nicky\.gradle\caches\transforms-3\f1cbfa66c793c84195ed08fdc711e3af\transformed\lifecycle-runtime-2.5.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.savedstate:savedstate:1.2.0] C:\Users\nicky\.gradle\caches\transforms-3\133132b7aa11abb90dffc4aeb4ffee71\transformed\savedstate-1.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\nicky\.gradle\caches\transforms-3\7653a5192b1a36a00121994a24b4bb76\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] C:\Users\nicky\.gradle\caches\transforms-3\e35334e43e761278bbcd51277e004b7b\transformed\gifdecoder-4.12.0\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.exifinterface:exifinterface:1.2.0] C:\Users\nicky\.gradle\caches\transforms-3\cf3d0f85b7f7e8687414d3cf34e4375d\transformed\exifinterface-1.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\nicky\.gradle\caches\transforms-3\477190d2df3a2de3c97d15da98c0d16e\transformed\startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
 MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\nicky\.gradle\caches\transforms-3\b98f6027b82a62ed04f6555726901b14\transformed\tracing-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\nicky\.gradle\caches\transforms-3\dd7137ffd950b411d610e9f27805e631\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
@@ -46,39 +49,43 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\nicky\.gradle\ca
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\nicky\.gradle\caches\transforms-3\e955da626a3fb0b49faa6dcf12a4f6a2\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\nicky\.gradle\caches\transforms-3\e15e0c47fb3dde4d9ec9696347094b31\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\nicky\.gradle\caches\transforms-3\5db8ee51bbecc36e07eba7a77a7ae7c4\transformed\annotation-experimental-1.3.0\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:2:1-37:12
+INJECTED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:2:1-39:12
 	package
 		INJECTED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:2:1-37:12
+		ADDED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:2:1-39:12
 		INJECTED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:2:1-37:12
+		ADDED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:2:1-39:12
 		INJECTED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:2:1-37:12
+		ADDED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:2:1-39:12
 		INJECTED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:5:5-35:19
+ADDED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:5:5-37:19
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\nicky\.gradle\caches\transforms-3\692489d3dc573099ee21258915553d51\transformed\picasso-2.71828\AndroidManifest.xml:7:5-12:19
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\nicky\.gradle\caches\transforms-3\692489d3dc573099ee21258915553d51\transformed\picasso-2.71828\AndroidManifest.xml:7:5-12:19
 MERGED from [com.google.android.material:material:1.5.0] C:\Users\nicky\.gradle\caches\transforms-3\b79e00459b51debe71c70b38b92dedee\transformed\material-1.5.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.5.0] C:\Users\nicky\.gradle\caches\transforms-3\b79e00459b51debe71c70b38b92dedee\transformed\material-1.5.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\nicky\.gradle\caches\transforms-3\1b1fc35cfff048765e7b5057facd7433\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\nicky\.gradle\caches\transforms-3\1b1fc35cfff048765e7b5057facd7433\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:glide:4.12.0] C:\Users\nicky\.gradle\caches\transforms-3\5f967631cbcd77a1b3cf08ebdadbd54e\transformed\glide-4.12.0\AndroidManifest.xml:10:5-20
+MERGED from [com.github.bumptech.glide:glide:4.12.0] C:\Users\nicky\.gradle\caches\transforms-3\5f967631cbcd77a1b3cf08ebdadbd54e\transformed\glide-4.12.0\AndroidManifest.xml:10:5-20
 MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\nicky\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:23:5-33:19
 MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\nicky\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:23:5-33:19
 MERGED from [androidx.core:core:1.9.0] C:\Users\nicky\.gradle\caches\transforms-3\8c25e88eb4ea76e8f3d0900731d8ae12\transformed\core-1.9.0\AndroidManifest.xml:28:5-89
 MERGED from [androidx.core:core:1.9.0] C:\Users\nicky\.gradle\caches\transforms-3\8c25e88eb4ea76e8f3d0900731d8ae12\transformed\core-1.9.0\AndroidManifest.xml:28:5-89
 MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\nicky\.gradle\caches\transforms-3\ae3e8265de2d7f874c642be745cd48da\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:25:5-35:19
 MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\nicky\.gradle\caches\transforms-3\ae3e8265de2d7f874c642be745cd48da\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:25:5-35:19
+MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] C:\Users\nicky\.gradle\caches\transforms-3\e35334e43e761278bbcd51277e004b7b\transformed\gifdecoder-4.12.0\AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] C:\Users\nicky\.gradle\caches\transforms-3\e35334e43e761278bbcd51277e004b7b\transformed\gifdecoder-4.12.0\AndroidManifest.xml:9:5-20
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\nicky\.gradle\caches\transforms-3\477190d2df3a2de3c97d15da98c0d16e\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\nicky\.gradle\caches\transforms-3\477190d2df3a2de3c97d15da98c0d16e\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\nicky\.gradle\caches\transforms-3\dd7137ffd950b411d610e9f27805e631\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
@@ -131,28 +138,36 @@ activity#sg.edu.np.mad.mad_assg.Setttings
 ADDED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:22:9-46
 	android:name
 		ADDED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:22:19-44
+activity#sg.edu.np.mad.mad_assg.RecipeView
+ADDED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:23:9-47
+	android:name
+		ADDED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:23:19-45
+activity#sg.edu.np.mad.mad_assg.Recipe
+ADDED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:24:9-43
+	android:name
+		ADDED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:24:19-41
 activity#sg.edu.np.mad.mad_assg.FeedBackandReviews
-ADDED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:23:9-25:40
+ADDED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:25:9-27:40
 	android:exported
-		ADDED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:25:13-37
+		ADDED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:27:13-37
 	android:name
-		ADDED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:24:13-47
+		ADDED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:26:13-47
 activity#sg.edu.np.mad.mad_assg.SplashScreen
-ADDED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:26:9-33:20
+ADDED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:28:9-35:20
 	android:exported
-		ADDED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:28:13-36
+		ADDED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:30:13-36
 	android:name
-		ADDED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:27:13-41
+		ADDED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:29:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:29:13-32:29
+ADDED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:31:13-34:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:30:17-69
+ADDED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:32:17-69
 	android:name
-		ADDED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:30:25-66
+		ADDED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:32:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:31:17-77
+ADDED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:33:17-77
 	android:name
-		ADDED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:31:27-74
+		ADDED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:33:27-74
 uses-sdk
 INJECTED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml
@@ -171,6 +186,8 @@ MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\nicky\.gradle\caches
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\nicky\.gradle\caches\transforms-3\71a4b2e3b83f674b0802282a6bb1640f\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\nicky\.gradle\caches\transforms-3\9a156e10bc2cc6926719f38d9612f7be\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\nicky\.gradle\caches\transforms-3\9a156e10bc2cc6926719f38d9612f7be\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.github.bumptech.glide:glide:4.12.0] C:\Users\nicky\.gradle\caches\transforms-3\5f967631cbcd77a1b3cf08ebdadbd54e\transformed\glide-4.12.0\AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:glide:4.12.0] C:\Users\nicky\.gradle\caches\transforms-3\5f967631cbcd77a1b3cf08ebdadbd54e\transformed\glide-4.12.0\AndroidManifest.xml:6:5-8:41
 MERGED from [com.android.support:exifinterface:27.1.0] C:\Users\nicky\.gradle\caches\transforms-3\a727c936d3e9f7634abf6544a0b22cbb\transformed\exifinterface-27.1.0\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:exifinterface:27.1.0] C:\Users\nicky\.gradle\caches\transforms-3\a727c936d3e9f7634abf6544a0b22cbb\transformed\exifinterface-27.1.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\nicky\.gradle\caches\transforms-3\c7fdf132750f580e9799a5455b4a5c84\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
@@ -219,6 +236,10 @@ MERGED from [androidx.savedstate:savedstate:1.2.0] C:\Users\nicky\.gradle\caches
 MERGED from [androidx.savedstate:savedstate:1.2.0] C:\Users\nicky\.gradle\caches\transforms-3\133132b7aa11abb90dffc4aeb4ffee71\transformed\savedstate-1.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\nicky\.gradle\caches\transforms-3\7653a5192b1a36a00121994a24b4bb76\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\nicky\.gradle\caches\transforms-3\7653a5192b1a36a00121994a24b4bb76\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] C:\Users\nicky\.gradle\caches\transforms-3\e35334e43e761278bbcd51277e004b7b\transformed\gifdecoder-4.12.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] C:\Users\nicky\.gradle\caches\transforms-3\e35334e43e761278bbcd51277e004b7b\transformed\gifdecoder-4.12.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.exifinterface:exifinterface:1.2.0] C:\Users\nicky\.gradle\caches\transforms-3\cf3d0f85b7f7e8687414d3cf34e4375d\transformed\exifinterface-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.2.0] C:\Users\nicky\.gradle\caches\transforms-3\cf3d0f85b7f7e8687414d3cf34e4375d\transformed\exifinterface-1.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\nicky\.gradle\caches\transforms-3\477190d2df3a2de3c97d15da98c0d16e\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\nicky\.gradle\caches\transforms-3\477190d2df3a2de3c97d15da98c0d16e\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
 MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\nicky\.gradle\caches\transforms-3\b98f6027b82a62ed04f6555726901b14\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41

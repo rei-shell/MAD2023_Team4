@@ -33,6 +33,8 @@
         <activity android:name="sg.edu.np.mad.mad_assg.ResetPassword" />
         <activity android:name="sg.edu.np.mad.mad_assg.ForgotPassword" />
         <activity android:name="sg.edu.np.mad.mad_assg.Setttings" />
+        <activity android:name="sg.edu.np.mad.mad_assg.RecipeView" />
+        <activity android:name="sg.edu.np.mad.mad_assg.Recipe" />
         <activity
             android:name="sg.edu.np.mad.mad_assg.FeedBackandReviews"
             android:exported="false" />

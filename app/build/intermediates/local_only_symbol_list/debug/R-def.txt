@@ -2,11 +2,18 @@ R_DEF: Internal format may change without notice
 local
 array category
 color black
+color blue
+color green
+color red
 color white
 dimen text_margin
 drawable baseline_add_circle_outline_24
 drawable baseline_arrow_forward_24
+drawable baseline_star_24
+drawable baseline_star_border_24
+drawable baseline_star_half_24
 drawable botnav_gradient
+drawable custom_ratingbar
 drawable gradient
 drawable gradient2
 drawable gradient_list
@@ -30,8 +37,6 @@ font permanentmarker_regular
 id Category
 id EditText
 id Explore
-id GridView_explore
-id GridView_new
 id GridView_reco
 id Login
 id Recipe_Creator
@@ -42,6 +47,7 @@ id author
 id backarrow
 id backbtn
 id backbtn1
+id backgrd
 id bottom_navigation
 id btnSend
 id cancel
@@ -49,15 +55,18 @@ id cardview_id
 id category
 id categoryitem_img
 id categoryitem_text
+id catgoryview
 id confirm
 id confirm_new_password
 id confirm_password
 id content
 id cooking
 id description
+id descriptiontable
 id duration_box
 id duration_txt
 id email
+id exploreview
 id feedbackButton
 id flFragment
 id forgot_email
@@ -65,6 +74,7 @@ id forgot_username
 id forgotpassword
 id forgottxt
 id gridView_RecipeName
+id halfstar
 id home
 id imageView
 id imageview
@@ -83,10 +93,12 @@ id minutes2
 id minutes3
 id name
 id new_password
+id noprogress
 id password
 id person
 id preperation
 id profile_edit
+id ratingBar
 id ratingdetails
 id ratingstuff
 id rbStars
@@ -100,6 +112,7 @@ id recipe_text
 id recipeimg
 id recipename
 id recommendation
+id recoview
 id rectimage
 id recyclerView_id
 id review
@@ -120,6 +133,7 @@ id top_nav
 id total
 id tvFeedback
 id update
+id updateview
 id userName
 id userdetails
 id userid
@@ -167,6 +181,7 @@ mipmap world
 string app_name
 string hello_blank_fragment
 style Base.Theme.MAD_Assg
+style RatingBar
 style Theme.MAD_Assg
 xml backup_rules
 xml data_extraction_rules

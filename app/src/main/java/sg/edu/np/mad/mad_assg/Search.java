@@ -12,6 +12,7 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 
 public class Search extends Fragment {
@@ -26,22 +27,25 @@ public class Search extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         final View view = inflater.inflate(R.layout.fragment_search, container, false);
-        /*GridView gridView = (GridView) view.findViewById(R.id.gridView_category);
 
         MyDBHandler dbHelper = new MyDBHandler(getContext(), "Recipe.db", null, 1);
-        //final ArrayList<CategoryData> categotyList = dbHelper.recipes_SelectCategory();
+        //ArrayList<CategoryData> categoryData = new ArrayList<>();
 
-        //gridView.setAdapter(new category_adapter(this.getContext(), categotyList, R.layout.fragment_search));
 
-        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-              //  CategoryData selectCategory = categotyList.get(position);
-              //  Intent intent = new Intent(getActivity(), RecipeList.class);
-              //  intent.putExtra("category", selectCategory.get_category());
-              //  startActivity(intent);
-            }
-        });*/
+        CategoryData.setCategory("Korean");
+        CategoryData.setCategory("Chinese");
+        CategoryData.setCategory("Bakery");
+        CategoryData.setCategory("Western");
+        CategoryData.setCategory("Japanese");
+        CategoryData.setCategory("Indonesian");
+        CategoryData.setCategory("Thai");
+        CategoryData.setCategory("Easy-Made");
+        CategoryData.setCategory("Drinks");
+        CategoryData.setCategory("Kids-Friendly");
+        CategoryData.setCategory("Sides");
+
+        // Insert each recipe into the database
+
 
         return view;
     }

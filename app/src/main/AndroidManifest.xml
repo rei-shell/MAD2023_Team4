@@ -20,6 +20,8 @@
         <activity android:name=".ResetPassword"/>
         <activity android:name=".ForgotPassword"/>
         <activity android:name=".Setttings"/>
+        <activity android:name=".RecipeView"/>
+        <activity android:name=".Recipe"/>
         <activity
             android:name=".FeedBackandReviews"
             android:exported="false" />

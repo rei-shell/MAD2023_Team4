@@ -218,6 +218,46 @@ public class MyDBHandler extends SQLiteOpenHelper {
         return recipes;
     }
 
+    public RecipeList recipes_SelectByName(String name)
+    {
+        // Open available reading database
+        SQLiteDatabase db = getReadableDatabase();
+
+        Cursor cursor = db.rawQuery("SELECT * FROM RECIPES WHERE recipeName = '" + name + "'", null);
+        if (cursor != null)
+        {
+            while (cursor.moveToNext()) {
+                RecipeList recipe = new RecipeList(
+                        cursor.getString(1),
+                        cursor.getString(2),
+                        cursor.getString(3),
+                        cursor.getString(4),
+                        cursor.getString(5),
+                        cursor.getString(6)
+                );
+                cursor.close();
+                db.close();
+                return recipe;
+            }
+
+
+        }
+        return  null;
+    }
+
+    public long insertCategory(CategoryData catgory) {
+        SQLiteDatabase db = getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_CATEGORY, CategoryData.get_category());
+        values.put(COLUMN_IMAGE_URL, CategoryData.getImageUrl());
+
+        long id = db.insert(RECIPE, null, values);
+        db.close();
+
+        return id;
+    }
+
 
 }
 

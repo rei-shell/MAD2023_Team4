@@ -16,6 +16,9 @@
 
     </string-array>
     <color name="black">#FF000000</color>
+    <color name="blue">#0000FF</color>
+    <color name="green">#00FF00</color>
+    <color name="red">#FF0000</color>
     <color name="white">#FFFFFFFF</color>
     <dimen name="text_margin">16dp</dimen>
     <string name="app_name">Rexipe</string>
@@ -23,6 +26,11 @@
     <style name="Base.Theme.MAD_Assg" parent="Theme.Material3.DayNight.NoActionBar">
         
         
+    </style>
+    <style name="RatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/custom_ratingbar</item>
+        <item name="android:minHeight">18dip</item>
+        <item name="android:maxHeight">18dip</item>
     </style>
     <style name="Theme.MAD_Assg" parent="Base.Theme.MAD_Assg"/>
 </resources>

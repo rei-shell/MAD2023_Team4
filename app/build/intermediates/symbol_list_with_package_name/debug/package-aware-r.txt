@@ -1213,6 +1213,7 @@ color background_floating_material_light
 color background_material_dark
 color background_material_light
 color black
+color blue
 color bright_foreground_disabled_material_dark
 color bright_foreground_disabled_material_light
 color bright_foreground_inverse_material_dark
@@ -1272,6 +1273,7 @@ color error_color_material_dark
 color error_color_material_light
 color foreground_material_dark
 color foreground_material_light
+color green
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color m3_appbar_overlay_color
@@ -1751,6 +1753,7 @@ color primary_text_default_material_light
 color primary_text_disabled_material_dark
 color primary_text_disabled_material_light
 color radiobutton_themeable_attribute_color
+color red
 color ripple_material_dark
 color ripple_material_light
 color secondary_text_default_material_dark
@@ -2436,6 +2439,9 @@ drawable avd_hide_password
 drawable avd_show_password
 drawable baseline_add_circle_outline_24
 drawable baseline_arrow_forward_24
+drawable baseline_star_24
+drawable baseline_star_border_24
+drawable baseline_star_half_24
 drawable botnav_gradient
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
@@ -2445,6 +2451,7 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable custom_ratingbar
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
@@ -2532,8 +2539,6 @@ id Category
 id EditText
 id Explore
 id FUNCTION
-id GridView_explore
-id GridView_new
 id GridView_reco
 id Login
 id META
@@ -2626,6 +2631,7 @@ id autoCompleteToStart
 id backarrow
 id backbtn
 id backbtn1
+id backgrd
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -2649,6 +2655,7 @@ id carryVelocity
 id category
 id categoryitem_img
 id categoryitem_text
+id catgoryview
 id center
 id center_horizontal
 id center_vertical
@@ -2697,6 +2704,7 @@ id default_activity_button
 id deltaRelative
 id dependency_ordering
 id description
+id descriptiontable
 id design_bottom_sheet
 id design_menu_item_action_area
 id design_menu_item_action_area_stub
@@ -2735,6 +2743,7 @@ id enterAlwaysCollapsed
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
+id exploreview
 id fade
 id feedbackButton
 id fill
@@ -2755,6 +2764,7 @@ id fragment_container_view_tag
 id frost
 id ghost_view
 id ghost_view_holder
+id glide_custom_view_target_tag
 id gone
 id graph
 id graph_wrap
@@ -2763,6 +2773,7 @@ id group_divider
 id grouping
 id groups
 id guideline
+id halfstar
 id header_title
 id hideable
 id home
@@ -2880,6 +2891,7 @@ id new_password
 id noScroll
 id noState
 id none
+id noprogress
 id normal
 id north
 id notification_background
@@ -2912,6 +2924,7 @@ id profile_edit
 id progress_circular
 id progress_horizontal
 id radio
+id ratingBar
 id ratingdetails
 id ratingstuff
 id ratio
@@ -2926,6 +2939,7 @@ id recipe_text
 id recipeimg
 id recipename
 id recommendation
+id recoview
 id rectangles
 id rectimage
 id recyclerView_id
@@ -3068,6 +3082,7 @@ id uniform
 id unlabeled
 id up
 id update
+id updateview
 id useLogo
 id userName
 id userdetails
@@ -3748,6 +3763,7 @@ style Platform_V21_AppCompat_Light
 style Platform_V25_AppCompat
 style Platform_V25_AppCompat_Light
 style Platform_Widget_AppCompat_Spinner
+style RatingBar
 style RtlOverlay_DialogWindowTitle_AppCompat
 style RtlOverlay_Widget_AppCompat_ActionBar_TitleItem
 style RtlOverlay_Widget_AppCompat_DialogTitle_Icon
