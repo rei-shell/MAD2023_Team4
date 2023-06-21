@@ -6,14 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".Search"
     android:orientation="vertical"
-    android:background="@drawable/gradient">
+    android:id="@+id/linearlayout"
+    android:background="@drawable/gradient_list">
 
     <SearchView
+        android:id="@+id/searchview"
         android:layout_width="match_parent"
         android:layout_height="65dp"
         android:inputType="text"
         android:queryHint="Search Here"
         android:iconifiedByDefault="false" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/category"
         android:layout_width="match_parent"

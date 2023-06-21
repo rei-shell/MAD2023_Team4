@@ -22,7 +22,7 @@
 15-->[androidx.core:core:1.9.0] C:\Users\nicky\.gradle\caches\transforms-3\8c25e88eb4ea76e8f3d0900731d8ae12\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
 16
 17    <application
-17-->C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:5:5-37:19
+17-->C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:5:5-39:19
 18        android:allowBackup="true"
 18-->C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:6:9-35
 19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -70,59 +70,65 @@
 37        <activity android:name="sg.edu.np.mad.mad_assg.Recipe" />
 37-->C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:24:9-43
 37-->C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:24:19-41
-38        <activity
-38-->C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:25:9-27:40
-39            android:name="sg.edu.np.mad.mad_assg.FeedBackandReviews"
-39-->C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:26:13-47
-40            android:exported="false" />
-40-->C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:27:13-37
-41        <activity
-41-->C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:28:9-35:20
-42            android:name="sg.edu.np.mad.mad_assg.SplashScreen"
-42-->C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:29:13-41
-43            android:exported="true" >
-43-->C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:30:13-36
-44            <intent-filter>
-44-->C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:31:13-34:29
-45                <action android:name="android.intent.action.MAIN" />
-45-->C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:32:17-69
-45-->C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:32:25-66
-46
-47                <category android:name="android.intent.category.LAUNCHER" />
-47-->C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:33:17-77
-47-->C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:33:27-74
-48            </intent-filter>
-49        </activity>
-50
-51        <provider
-51-->[com.squareup.picasso:picasso:2.71828] C:\Users\nicky\.gradle\caches\transforms-3\692489d3dc573099ee21258915553d51\transformed\picasso-2.71828\AndroidManifest.xml:8:9-11:40
-52            android:name="com.squareup.picasso.PicassoProvider"
-52-->[com.squareup.picasso:picasso:2.71828] C:\Users\nicky\.gradle\caches\transforms-3\692489d3dc573099ee21258915553d51\transformed\picasso-2.71828\AndroidManifest.xml:9:13-64
-53            android:authorities="sg.edu.np.mad.mad_assg.com.squareup.picasso"
-53-->[com.squareup.picasso:picasso:2.71828] C:\Users\nicky\.gradle\caches\transforms-3\692489d3dc573099ee21258915553d51\transformed\picasso-2.71828\AndroidManifest.xml:10:13-72
-54            android:exported="false" />
-54-->[com.squareup.picasso:picasso:2.71828] C:\Users\nicky\.gradle\caches\transforms-3\692489d3dc573099ee21258915553d51\transformed\picasso-2.71828\AndroidManifest.xml:11:13-37
-55        <provider
-55-->[androidx.emoji2:emoji2:1.2.0] C:\Users\nicky\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-56            android:name="androidx.startup.InitializationProvider"
-56-->[androidx.emoji2:emoji2:1.2.0] C:\Users\nicky\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
-57            android:authorities="sg.edu.np.mad.mad_assg.androidx-startup"
-57-->[androidx.emoji2:emoji2:1.2.0] C:\Users\nicky\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
-58            android:exported="false" >
-58-->[androidx.emoji2:emoji2:1.2.0] C:\Users\nicky\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
-59            <meta-data
-59-->[androidx.emoji2:emoji2:1.2.0] C:\Users\nicky\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-60                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-60-->[androidx.emoji2:emoji2:1.2.0] C:\Users\nicky\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
-61                android:value="androidx.startup" />
-61-->[androidx.emoji2:emoji2:1.2.0] C:\Users\nicky\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
-62            <meta-data
-62-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\nicky\.gradle\caches\transforms-3\ae3e8265de2d7f874c642be745cd48da\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
-63                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-63-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\nicky\.gradle\caches\transforms-3\ae3e8265de2d7f874c642be745cd48da\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
-64                android:value="androidx.startup" />
-64-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\nicky\.gradle\caches\transforms-3\ae3e8265de2d7f874c642be745cd48da\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
-65        </provider>
-66    </application>
-67
-68</manifest>
+38        <activity android:name="sg.edu.np.mad.mad_assg.FeedBack_Result" />
+38-->C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:25:9-52
+38-->C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:25:19-50
+39        <activity android:name="sg.edu.np.mad.mad_assg.EditUserProfile" />
+39-->C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:26:9-51
+39-->C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:26:19-49
+40        <activity
+40-->C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:27:9-29:40
+41            android:name="sg.edu.np.mad.mad_assg.FeedBackandReviews"
+41-->C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:28:13-47
+42            android:exported="false" />
+42-->C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:29:13-37
+43        <activity
+43-->C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:30:9-37:20
+44            android:name="sg.edu.np.mad.mad_assg.SplashScreen"
+44-->C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:31:13-41
+45            android:exported="true" >
+45-->C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:32:13-36
+46            <intent-filter>
+46-->C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:33:13-36:29
+47                <action android:name="android.intent.action.MAIN" />
+47-->C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:34:17-69
+47-->C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:34:25-66
+48
+49                <category android:name="android.intent.category.LAUNCHER" />
+49-->C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:35:17-77
+49-->C:\Users\nicky\AndroidStudioProjects\stuff\app\src\main\AndroidManifest.xml:35:27-74
+50            </intent-filter>
+51        </activity>
+52
+53        <provider
+53-->[com.squareup.picasso:picasso:2.71828] C:\Users\nicky\.gradle\caches\transforms-3\692489d3dc573099ee21258915553d51\transformed\picasso-2.71828\AndroidManifest.xml:8:9-11:40
+54            android:name="com.squareup.picasso.PicassoProvider"
+54-->[com.squareup.picasso:picasso:2.71828] C:\Users\nicky\.gradle\caches\transforms-3\692489d3dc573099ee21258915553d51\transformed\picasso-2.71828\AndroidManifest.xml:9:13-64
+55            android:authorities="sg.edu.np.mad.mad_assg.com.squareup.picasso"
+55-->[com.squareup.picasso:picasso:2.71828] C:\Users\nicky\.gradle\caches\transforms-3\692489d3dc573099ee21258915553d51\transformed\picasso-2.71828\AndroidManifest.xml:10:13-72
+56            android:exported="false" />
+56-->[com.squareup.picasso:picasso:2.71828] C:\Users\nicky\.gradle\caches\transforms-3\692489d3dc573099ee21258915553d51\transformed\picasso-2.71828\AndroidManifest.xml:11:13-37
+57        <provider
+57-->[androidx.emoji2:emoji2:1.2.0] C:\Users\nicky\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+58            android:name="androidx.startup.InitializationProvider"
+58-->[androidx.emoji2:emoji2:1.2.0] C:\Users\nicky\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+59            android:authorities="sg.edu.np.mad.mad_assg.androidx-startup"
+59-->[androidx.emoji2:emoji2:1.2.0] C:\Users\nicky\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+60            android:exported="false" >
+60-->[androidx.emoji2:emoji2:1.2.0] C:\Users\nicky\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+61            <meta-data
+61-->[androidx.emoji2:emoji2:1.2.0] C:\Users\nicky\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+62                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+62-->[androidx.emoji2:emoji2:1.2.0] C:\Users\nicky\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+63                android:value="androidx.startup" />
+63-->[androidx.emoji2:emoji2:1.2.0] C:\Users\nicky\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+64            <meta-data
+64-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\nicky\.gradle\caches\transforms-3\ae3e8265de2d7f874c642be745cd48da\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+65                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+65-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\nicky\.gradle\caches\transforms-3\ae3e8265de2d7f874c642be745cd48da\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+66                android:value="androidx.startup" />
+66-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\nicky\.gradle\caches\transforms-3\ae3e8265de2d7f874c642be745cd48da\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+67        </provider>
+68    </application>
+69
+70</manifest>

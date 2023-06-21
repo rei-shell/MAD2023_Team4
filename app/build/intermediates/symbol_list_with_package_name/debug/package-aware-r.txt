@@ -2451,7 +2451,6 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
-drawable custom_ratingbar
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
@@ -2459,6 +2458,7 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable gradient
 drawable gradient2
+drawable gradient3
 drawable gradient_list
 drawable ic_clock_black_24dp
 drawable ic_keyboard_black_24dp
@@ -2628,7 +2628,6 @@ id autoCompleteToStart
 id backarrow
 id backbtn
 id backbtn1
-id backgrd
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -2741,6 +2740,7 @@ id expand_activities_button
 id expanded_menu
 id exploreview
 id fade
+id feedback
 id feedbackButton
 id fill
 id fill_horizontal
@@ -2768,7 +2768,6 @@ id group_divider
 id grouping
 id groups
 id guideline
-id halfstar
 id header_title
 id hideable
 id home
@@ -2805,6 +2804,7 @@ id legacy
 id line1
 id line3
 id linear
+id linearlayout
 id listMode
 id list_item
 id loginbtn
@@ -2886,7 +2886,6 @@ id new_password
 id noScroll
 id noState
 id none
-id noprogress
 id normal
 id north
 id notification_background
@@ -2919,8 +2918,8 @@ id profile_edit
 id progress_circular
 id progress_horizontal
 id radio
-id ratingBar
 id ratingdetails
+id ratingstar
 id ratingstuff
 id ratio
 id rbStars
@@ -2941,6 +2940,7 @@ id recyclerView_id
 id reverseSawtooth
 id review
 id reviewstuff
+id revioew
 id rexipe
 id right
 id rightToLeft
@@ -2958,6 +2958,7 @@ id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
 id scrollable
+id scrollview
 id search
 id search_badge
 id search_bar
@@ -2969,6 +2970,7 @@ id search_mag_icon
 id search_plate
 id search_src_text
 id search_voice_btn
+id searchview
 id select_dialog_listview
 id selected
 id selection_type
@@ -3757,7 +3759,6 @@ style Platform_V21_AppCompat_Light
 style Platform_V25_AppCompat
 style Platform_V25_AppCompat_Light
 style Platform_Widget_AppCompat_Spinner
-style RatingBar
 style RtlOverlay_DialogWindowTitle_AppCompat
 style RtlOverlay_Widget_AppCompat_ActionBar_TitleItem
 style RtlOverlay_Widget_AppCompat_DialogTitle_Icon

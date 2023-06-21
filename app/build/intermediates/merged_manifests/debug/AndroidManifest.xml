@@ -35,6 +35,8 @@
         <activity android:name="sg.edu.np.mad.mad_assg.Setttings" />
         <activity android:name="sg.edu.np.mad.mad_assg.RecipeView" />
         <activity android:name="sg.edu.np.mad.mad_assg.Recipe" />
+        <activity android:name="sg.edu.np.mad.mad_assg.FeedBack_Result" />
+        <activity android:name="sg.edu.np.mad.mad_assg.EditUserProfile" />
         <activity
             android:name="sg.edu.np.mad.mad_assg.FeedBackandReviews"
             android:exported="false" />

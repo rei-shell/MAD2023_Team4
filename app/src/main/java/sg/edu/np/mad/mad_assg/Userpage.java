@@ -1,14 +1,17 @@
 package sg.edu.np.mad.mad_assg;
 
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class Userpage extends Fragment {
@@ -24,6 +27,17 @@ public class Userpage extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         final View view = inflater.inflate(R.layout.fragment_userpage, container, false);
+
+        ConstraintLayout layout = view.findViewById(R.id.flFragment);
+        //With the help of AnimatedDrawable class, we can set
+        //the duration to our background and then call the
+        //function start at the end.
+        AnimationDrawable animationDrawable = (AnimationDrawable) layout.getBackground();
+        animationDrawable.setEnterFadeDuration(1500);
+        animationDrawable.setExitFadeDuration(3000);
+        animationDrawable.start();
+
+
         user = view.findViewById(R.id.userid);
         user2 = view.findViewById(R.id.userName);
         settings = view.findViewById(R.id.settingbtn);

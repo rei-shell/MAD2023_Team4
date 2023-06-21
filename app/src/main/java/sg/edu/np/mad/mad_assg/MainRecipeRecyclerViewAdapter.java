@@ -26,6 +26,9 @@ public class MainRecipeRecyclerViewAdapter extends RecyclerView.Adapter<MainReci
     public MainRecipeRecyclerViewAdapter(ArrayList<RecipeList> recipeList) {
         this.recipeList = recipeList;
     }
+    public void setRecipeList(ArrayList<RecipeList> searchResults) {
+        this.recipeList = recipeList;
+    }
 
     // ViewHolder class
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
@@ -83,4 +86,5 @@ public class MainRecipeRecyclerViewAdapter extends RecyclerView.Adapter<MainReci
     public interface OnItemClickListener {
         void onItemClick(int position);
     }
+
 }

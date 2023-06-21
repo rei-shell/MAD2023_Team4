@@ -13,9 +13,9 @@ drawable baseline_star_24
 drawable baseline_star_border_24
 drawable baseline_star_half_24
 drawable botnav_gradient
-drawable custom_ratingbar
 drawable gradient
 drawable gradient2
+drawable gradient3
 drawable gradient_list
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -44,7 +44,6 @@ id author
 id backarrow
 id backbtn
 id backbtn1
-id backgrd
 id bottom_navigation
 id btnSend
 id cancel
@@ -55,6 +54,7 @@ id categoryitem_text
 id confirm
 id confirm_new_password
 id confirm_password
+id constraint
 id content
 id cooking
 id description
@@ -63,13 +63,13 @@ id duration_box
 id duration_txt
 id email
 id exploreview
+id feedback
 id feedbackButton
 id flFragment
 id forgot_email
 id forgot_username
 id forgotpassword
 id forgottxt
-id halfstar
 id home
 id imageView
 id imageview
@@ -78,6 +78,7 @@ id ingredientsList
 id ingredientstxt
 id instructionsList
 id ivGoBack
+id linearlayout
 id loginbtn
 id logoutbtn
 id mins
@@ -88,13 +89,12 @@ id minutes2
 id minutes3
 id name
 id new_password
-id noprogress
 id password
 id person
 id preperation
 id profile_edit
-id ratingBar
 id ratingdetails
+id ratingstar
 id ratingstuff
 id rbStars
 id recipeImage
@@ -112,8 +112,11 @@ id rectimage
 id recyclerView_id
 id review
 id reviewstuff
+id revioew
 id rexipe
+id scrollview
 id search
+id searchview
 id settingbtn
 id signin
 id signinbtn
@@ -175,7 +178,6 @@ mipmap world
 string app_name
 string hello_blank_fragment
 style Base.Theme.MAD_Assg
-style RatingBar
 style Theme.MAD_Assg
 xml backup_rules
 xml data_extraction_rules

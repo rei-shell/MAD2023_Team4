@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/gradient">
+    android:background="@drawable/gradient_list"
+    android:id="@+id/scrollview">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -282,7 +283,7 @@
 
             <ImageView
                 android:layout_width="350dp"
-                android:layout_height="1250dp"
+                android:layout_height="1200dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginStart="40dp"
                 android:id="@+id/stepstxt"
@@ -330,13 +331,28 @@
                 android:text="Rating Details"
                 android:textAlignment="center"
                 android:textSize="28sp"
+                android:textColor="@color/black"
                 android:fontFamily="@font/kalam_light"/>
+
+            <RatingBar
+                android:id="@+id/ratingstar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/ratingdetails"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="80dp"
+                android:backgroundTint="#FF9800"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:progressBackgroundTint="#FFFFFF"
+                android:progressTint="#FF9800" />
 
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:id="@+id/revioew">
 
             <ImageView
                 android:layout_width="350dp"
@@ -360,5 +376,17 @@
                 android:fontFamily="@font/kalam_light"/>
 
         </RelativeLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/feedback"
+            android:text="FeedBack"
+            />
+
     </LinearLayout>
 </ScrollView>
