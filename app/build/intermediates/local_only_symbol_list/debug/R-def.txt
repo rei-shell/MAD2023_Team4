@@ -34,13 +34,10 @@ font kalam_bold
 font kalam_light
 font kalam_regular
 font permanentmarker_regular
-id Category
 id EditText
 id Explore
 id GridView_reco
 id Login
-id Recipe_Creator
-id Recipe_Name
 id SignUp
 id appicon
 id author
@@ -55,7 +52,6 @@ id cardview_id
 id category
 id categoryitem_img
 id categoryitem_text
-id catgoryview
 id confirm
 id confirm_new_password
 id confirm_password
@@ -73,7 +69,6 @@ id forgot_email
 id forgot_username
 id forgotpassword
 id forgottxt
-id gridView_RecipeName
 id halfstar
 id home
 id imageView
@@ -145,7 +140,6 @@ id view_history
 id viewall
 id viewall1
 id viewall2
-id viewall3
 layout activity_feed_backand_reviews
 layout cardview_recipe
 layout category

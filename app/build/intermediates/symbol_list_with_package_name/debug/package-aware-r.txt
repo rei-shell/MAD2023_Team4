@@ -2535,7 +2535,6 @@ id ALT
 id BOTTOM_END
 id BOTTOM_START
 id CTRL
-id Category
 id EditText
 id Explore
 id FUNCTION
@@ -2543,8 +2542,6 @@ id GridView_reco
 id Login
 id META
 id NO_DEBUG
-id Recipe_Creator
-id Recipe_Name
 id SHIFT
 id SHOW_ALL
 id SHOW_PATH
@@ -2655,7 +2652,6 @@ id carryVelocity
 id category
 id categoryitem_img
 id categoryitem_text
-id catgoryview
 id center
 id center_horizontal
 id center_vertical
@@ -2768,7 +2764,6 @@ id glide_custom_view_target_tag
 id gone
 id graph
 id graph_wrap
-id gridView_RecipeName
 id group_divider
 id grouping
 id groups
@@ -3102,7 +3097,6 @@ id view_tree_view_model_store_owner
 id viewall
 id viewall1
 id viewall2
-id viewall3
 id visible
 id visible_removing_fragment_view_tag
 id west

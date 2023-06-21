@@ -1,10 +1,9 @@
 package sg.edu.np.mad.mad_assg;
 
 public class RecipeList {
-
     private long id;
     private String imageUrl;
-    private String recipeName;
+    private String recipeName; // Remove the 'static' keyword from here
     private String category;
     private String username;
     private String description;
@@ -12,8 +11,7 @@ public class RecipeList {
     private String steps;
     private String rating;
 
-    public RecipeList(String imageUrl, String recipeName, String category, String username, String description, String ingredients) {
-        this.id = id;
+    public RecipeList(String imageUrl, String recipeName, String category, String username, String description, String ingredients, String steps) {
         this.imageUrl = imageUrl;
         this.recipeName = recipeName;
         this.category = category;
@@ -24,22 +22,14 @@ public class RecipeList {
     }
 
     public RecipeList() {
-
+        // Default constructor required for Parcelable
     }
-    public static RecipeList get(int position) {
-        // Assuming you have a list called recipeList to store the recipe items
-        if (position >= 0 && position < RecipeList.size()) {
-            return RecipeList.get(position);
-        }
-        return null; // Return null or handle the out-of-bounds case as per your requirements
-    }
-
-    private static int size() {
-        return RecipeList.size();
-    }
-
     public long getId() {
         return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getImageUrl() {
@@ -48,18 +38,6 @@ public class RecipeList {
 
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public void setRating(float rating) {
-        this.rating = String.valueOf(rating);
-    }
-
-    public String getRating() {
-        return rating;
     }
 
     public String getRecipeName() {
@@ -110,6 +88,12 @@ public class RecipeList {
         this.steps = steps;
     }
 
+    public String getRating() {
+        return rating;
+    }
 
+    public void setRating(String rating) {
+        this.rating = rating;
+    }
 }
 

@@ -13,11 +13,16 @@
         android:layout_height="65dp"
         android:inputType="text"
         android:queryHint="Search Here"
-        android:iconifiedByDefault="false"
-        android:layout_alignParentTop="true"
-        />
-
-    <LinearLayout
+        android:iconifiedByDefault="false" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        android:orientation="vertical"
+        app:spanCount="2" />
+    <!--<LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -47,15 +52,10 @@
             android:text="View All"
             android:textColor="@color/white"
             android:textSize="20sp" />
-    </LinearLayout>
+    </LinearLayout>-->
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/catgoryview"
-        android:orientation="horizontal"/>
 
-    <LinearLayout
+   <!-- <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -86,14 +86,15 @@
             android:textSize="20sp" />
     </LinearLayout>
 
-    <GridView
-        android:id="@+id/gridView_RecipeName"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recipename"
         android:layout_width="match_parent"
-        android:layout_height="252dp"
-        android:numColumns="auto_fit"
-        android:stretchMode="columnWidth" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="vertical" />
 
-    <LinearLayout
+   ><LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -123,7 +124,11 @@
             android:textSize="20sp" />
     </LinearLayout>
 
-    <ListView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/username"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="vertical" />-->
 </LinearLayout>

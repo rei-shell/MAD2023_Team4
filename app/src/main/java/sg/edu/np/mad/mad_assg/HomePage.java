@@ -278,7 +278,7 @@ public class HomePage extends Fragment {
         });
 
         RecyclerView explore = view.findViewById(R.id.exploreview);
-        explore.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
+        explore.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
 
         explore.setAdapter(adapter);
 
@@ -297,27 +297,6 @@ public class HomePage extends Fragment {
                 startActivity(intent);
             }
         });
-
-
-
-        /*GridView recoGridView = (GridView)view.findViewById(R.id.GridView_reco);
-        recoGridView.setAdapter(new MainRecipeRecyclerViewAdapter(this.getContext(), recipes, R.layout.cardview_recipe));
-
-        recoGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            public void onItemClick(AdapterView<?> parent, View v,
-                                    int position, long id) {
-                RecipeList selectRecipe = recipes.get(position);
-                Intent intent = new Intent(getActivity(), RecipeView.class);
-                intent.putExtra("recipename", selectRecipe.getRecipeName());
-                intent.putExtra("image", selectRecipe.getImageUrl());
-                intent.putExtra("username", selectRecipe.getUsername());
-                intent.putExtra("description", selectRecipe.getDescription());
-                intent.putExtra("ingredients", selectRecipe.getIngredients());
-                intent.putExtra("steps", selectRecipe.getSteps());
-                startActivity(intent);
-                //Toast.makeText(view.getContext(),selectRecipe.get_recipName(),Toast.LENGTH_SHORT).show();
-            }
-        });*/
         return view;
     }
 /*

@@ -60,15 +60,14 @@ public class MainRecipeRecyclerViewAdapter extends RecyclerView.Adapter<MainReci
     }
 
     // onBindViewHolder
-    @SuppressLint("ResourceAsColor")
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         RecipeList recipe = recipeList.get(position);
         Picasso.get().load(recipe.getImageUrl()).into(holder.imageView);
+        int whiteColor = ContextCompat.getColor(holder.name.getContext(), R.color.white);
+        holder.name.setTextColor(whiteColor);
         holder.name.setText(recipe.getRecipeName());
-        holder.name.setTextColor(R.color.white);
     }
-
     // getItemCount
     @Override
     public int getItemCount() {

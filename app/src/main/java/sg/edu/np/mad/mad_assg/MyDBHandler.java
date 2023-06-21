@@ -7,10 +7,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.database.sqlite.SQLiteStatement;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class MyDBHandler extends SQLiteOpenHelper {
 
@@ -46,7 +42,17 @@ public class MyDBHandler extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         // Create the recipe table
-        String CREATE_RECIPE_TABLE = "CREATE TABLE " + RECIPE + "(" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," + COLUMN_NAME + " TEXT," + COLUMN_CATEGORY + " TEXT," + COLUMN_USERNAME + " TEXT," + COLUMN_USER + " TEXT," +COLUMN_DESCRIPTION + " TEXT," + COLUMN_INGREDIENTS + " TEXT," + COLUMN_STEPS + " TEXT," + COLUMN_IMAGE_URL + " TEXT" + ")";
+        String CREATE_RECIPE_TABLE = "CREATE TABLE " + RECIPE + "(" +
+                COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+                COLUMN_NAME + " TEXT," +
+                COLUMN_CATEGORY + " TEXT," +
+                COLUMN_USERNAME + " TEXT," +
+                COLUMN_USER + " TEXT," +
+                COLUMN_DESCRIPTION + " TEXT," +
+                COLUMN_INGREDIENTS + " TEXT," +
+                COLUMN_STEPS + " TEXT," +
+                COLUMN_IMAGE_URL + " TEXT" +
+                ")";
         db.execSQL(CREATE_RECIPE_TABLE);
         String CREATE_ACCOUNTS_TABLE = "CREATE TABLE " + ACCOUNTS + "(" + COLUMN_USERNAME + " TEXT," + COLUMN_PASSWORD + " TEXT," + COLUMN_EMAIL + " TEXT)";
         db.execSQL(CREATE_ACCOUNTS_TABLE);
@@ -171,10 +177,11 @@ public class MyDBHandler extends SQLiteOpenHelper {
         db.close();
     }
 
-    public long insertRecipe(RecipeList recipe) {
+    public void insertRecipe(RecipeList recipe) {
         SQLiteDatabase db = getWritableDatabase();
 
         ContentValues values = new ContentValues();
+        values.put(COLUMN_ID, recipe.getId());
         values.put(COLUMN_NAME, recipe.getRecipeName());
         values.put(COLUMN_CATEGORY, recipe.getCategory());
         values.put(COLUMN_USER, recipe.getUsername());
@@ -186,39 +193,10 @@ public class MyDBHandler extends SQLiteOpenHelper {
         long id = db.insert(RECIPE, null, values);
         db.close();
 
-        return id;
     }
+}
 
-    @SuppressLint("Range")
-    public List<RecipeList> getAllRecipes() {
-        List<RecipeList> recipes = new ArrayList<>();
-
-        SQLiteDatabase db = getReadableDatabase();
-        Cursor cursor = db.query(RECIPE, null, null, null, null, null, null);
-
-        if (cursor.moveToFirst()) {
-            do {
-                RecipeList recipe = new RecipeList();
-                recipe.setId(cursor.getLong(cursor.getColumnIndex(COLUMN_ID)));
-                recipe.setRecipeName(cursor.getString(cursor.getColumnIndex(COLUMN_NAME)));
-                recipe.setCategory(cursor.getString(cursor.getColumnIndex(COLUMN_CATEGORY)));
-                recipe.setUsername(cursor.getString(cursor.getColumnIndex(COLUMN_USER)));
-                recipe.setDescription(cursor.getString(cursor.getColumnIndex(COLUMN_DESCRIPTION)));
-                recipe.setIngredients(cursor.getString(cursor.getColumnIndex(COLUMN_INGREDIENTS)));
-                recipe.setSteps(cursor.getString(cursor.getColumnIndex(COLUMN_STEPS)));
-                recipe.setImageUrl(cursor.getString(cursor.getColumnIndex(COLUMN_IMAGE_URL)));
-
-                recipes.add(recipe);
-            } while (cursor.moveToNext());
-        }
-
-        cursor.close();
-        db.close();
-
-        return recipes;
-    }
-
-    public RecipeList recipes_SelectByName(String name)
+    /*public RecipeList recipes_SelectByName(String name)
     {
         // Open available reading database
         SQLiteDatabase db = getReadableDatabase();
@@ -244,24 +222,7 @@ public class MyDBHandler extends SQLiteOpenHelper {
         }
         return  null;
     }
-
-    public long insertCategory(CategoryData catgory) {
-        SQLiteDatabase db = getWritableDatabase();
-
-        ContentValues values = new ContentValues();
-        values.put(COLUMN_CATEGORY, CategoryData.get_category());
-        values.put(COLUMN_IMAGE_URL, CategoryData.getImageUrl());
-
-        long id = db.insert(RECIPE, null, values);
-        db.close();
-
-        return id;
-    }
-
-
-}
-
-    /*public  void  Ingredients_Insert(String name, String ingreName)
+    public  void  Ingredients_Insert(String name, String ingreName)
     {
         // open read and write database
         SQLiteDatabase db = getWritableDatabase();
