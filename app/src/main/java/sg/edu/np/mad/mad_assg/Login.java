@@ -36,6 +36,15 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
 
+        ConstraintLayout layout = findViewById(R.id.constraint);
+        //With the help of AnimatedDrawable class, we can set
+        //the duration to our background and then call the
+        //function start at the end.
+        AnimationDrawable animationDrawable = (AnimationDrawable) layout.getBackground();
+        animationDrawable.setEnterFadeDuration(1500);
+        animationDrawable.setExitFadeDuration(3000);
+        animationDrawable.start();
+
         Button loginButton = findViewById(R.id.loginbtn);
 
         TextInputLayout etUsername = (TextInputLayout) findViewById(R.id.username);

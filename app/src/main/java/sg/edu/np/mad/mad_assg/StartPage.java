@@ -14,6 +14,15 @@ public class StartPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.startpage);
 
+        ConstraintLayout layout = findViewById(R.id.constraint);
+        //With the help of AnimatedDrawable class, we can set
+        //the duration to our background and then call the
+        //function start at the end.
+        AnimationDrawable animationDrawable = (AnimationDrawable) layout.getBackground();
+        animationDrawable.setEnterFadeDuration(1500);
+        animationDrawable.setExitFadeDuration(3000);
+        animationDrawable.start();
+
         Button newUser = (Button) findViewById(R.id.SignUp);
         newUser.setOnClickListener(view -> {
             Intent signin = new Intent(this, NewUser.class);

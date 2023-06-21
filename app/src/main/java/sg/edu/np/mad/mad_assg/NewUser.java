@@ -35,6 +35,15 @@ public class NewUser extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.signin);
 
+        ConstraintLayout layout = findViewById(R.id.flFragment);
+        //With the help of AnimatedDrawable class, we can set
+        //the duration to our background and then call the
+        //function start at the end.
+        AnimationDrawable animationDrawable = (AnimationDrawable) layout.getBackground();
+        animationDrawable.setEnterFadeDuration(1500);
+        animationDrawable.setExitFadeDuration(3000);
+        animationDrawable.start();
+
 
         TextInputLayout etUsername = (TextInputLayout) findViewById(R.id.username);
         TextInputLayout etEmail = (TextInputLayout) findViewById(R.id.email);

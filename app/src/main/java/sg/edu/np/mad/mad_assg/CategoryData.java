@@ -3,17 +3,26 @@ package sg.edu.np.mad.mad_assg;
 public class CategoryData {
 
     private String category;
-    private byte[] mainImg;
+    private String imageUrl;
 
-    public String get_category()
-    {return category;}
-
-    public byte[] get_mainImg()
-    {return mainImg;}
-
-    public CategoryData(String category, byte[] mainImg) {
+    public CategoryData(String category, String imageUrl) {
         this.category = category;
-        this.mainImg = mainImg;
+        this.imageUrl = imageUrl;
     }
 
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
 }

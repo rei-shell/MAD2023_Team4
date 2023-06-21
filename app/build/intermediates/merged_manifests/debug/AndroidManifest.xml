@@ -33,6 +33,13 @@
         <activity android:name="sg.edu.np.mad.mad_assg.ResetPassword" />
         <activity android:name="sg.edu.np.mad.mad_assg.ForgotPassword" />
         <activity android:name="sg.edu.np.mad.mad_assg.Setttings" />
+        <activity android:name="sg.edu.np.mad.mad_assg.RecipeView" />
+        <activity android:name="sg.edu.np.mad.mad_assg.Recipe" />
+        <activity android:name="sg.edu.np.mad.mad_assg.FeedBack_Result" />
+        <activity android:name="sg.edu.np.mad.mad_assg.EditUserProfile" />
+        <activity
+            android:name="sg.edu.np.mad.mad_assg.FeedBackandReviews"
+            android:exported="false" />
         <activity
             android:name="sg.edu.np.mad.mad_assg.SplashScreen"
             android:exported="true" >
@@ -43,6 +50,10 @@
             </intent-filter>
         </activity>
 
+        <provider
+            android:name="com.squareup.picasso.PicassoProvider"
+            android:authorities="sg.edu.np.mad.mad_assg.com.squareup.picasso"
+            android:exported="false" />
         <provider
             android:name="androidx.startup.InitializationProvider"
             android:authorities="sg.edu.np.mad.mad_assg.androidx-startup"

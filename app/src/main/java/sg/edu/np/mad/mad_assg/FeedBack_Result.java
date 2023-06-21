@@ -1,5 +1,6 @@
 package sg.edu.np.mad.mad_assg;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -29,13 +30,13 @@ public class FeedBack_Result extends AppCompatActivity {
             public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
                 if (rating == 0) {
                     tvFeedback.setText("Very Dissatisfied");
-                } else if (rating == 1) {
+                } else if (rating <= 1) {
                     tvFeedback.setText("Dissatisfied");
-                } else if (rating == 2 || rating == 3) {
+                } else if (rating <= 2 || rating == 3) {
                     tvFeedback.setText("OK");
-                } else if (rating == 4) {
+                } else if (rating <= 4) {
                     tvFeedback.setText("Satisfied");
-                } else if (rating == 5) {
+                } else if (rating <= 5) {
                     tvFeedback.setText("Very Satisfied");
                 } else {
 
@@ -49,6 +50,8 @@ public class FeedBack_Result extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 EditText feedbackEditText = findViewById(R.id.EditText);
+                RatingBar ratingbar = findViewById(R.id.rbStars);
+                Float ratingNumber = ratingbar.getRating();
                 String feedback = feedbackEditText.getText().toString().trim();
 
                 if (feedback.isEmpty()) {
@@ -57,6 +60,10 @@ public class FeedBack_Result extends AppCompatActivity {
                 } else {
                     // Handle button click event with non-empty feedback
                     // Your code for sending feedback or further processing
+                    Intent intent = new Intent(FeedBack_Result.this, RecipeView.class);
+                    intent.putExtra("rbStars", ratingNumber);
+                    intent.putExtra("tvFeedback", feedback);
+                    startActivity(intent);
                     Toast.makeText(getApplicationContext(), "Feedback sent!", Toast.LENGTH_SHORT).show();
                     feedbackEditText.setText(""); // Clear the text in the EditText
                 }
@@ -67,8 +74,11 @@ public class FeedBack_Result extends AppCompatActivity {
         ivGoBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(FeedBack_Result.this, RecipeView.class);
+                startActivity(intent);
                 finish(); // Go back to the previous activity
             }
+
         });
 
         // Enable the back button
