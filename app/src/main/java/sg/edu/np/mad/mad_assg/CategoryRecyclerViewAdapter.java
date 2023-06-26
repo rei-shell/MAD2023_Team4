@@ -61,8 +61,8 @@ public class CategoryRecyclerViewAdapter extends RecyclerView.Adapter<CategoryRe
         CategoryData categoryData = categoryDataList.get(position);
         Picasso.get().load(categoryData.getImageUrl()).into(holder.imageView);
         holder.name.setText(categoryData.getCategory());
-        int whiteColor = ContextCompat.getColor(holder.name.getContext(), R.color.white);
-        holder.name.setTextColor(whiteColor);
+        int blackColor = ContextCompat.getColor(holder.name.getContext(), R.color.black);
+        holder.name.setTextColor(blackColor);
     }
 
     // getItemCount

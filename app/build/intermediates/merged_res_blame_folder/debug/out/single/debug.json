@@ -24,12 +24,12 @@
         "source": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-main-31:\\drawable\\outline_person_24.xml"
     },
     {
-        "merged": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-merged_res-29:\\mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-main-31:\\mipmap-xhdpi\\ic_launcher_round.png"
-    },
-    {
         "merged": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-merged_res-29:\\drawable_baseline_star_half_24.xml.flat",
         "source": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-main-31:\\drawable\\baseline_star_half_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-merged_res-29:\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-main-31:\\mipmap-xhdpi\\ic_launcher_round.png"
     },
     {
         "merged": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-merged_res-29:\\layout_feedback_result.xml.flat",
@@ -124,12 +124,12 @@
         "source": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-main-31:\\drawable\\nav_gradient.xml"
     },
     {
-        "merged": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-merged_res-29:\\layout_settings.xml.flat",
-        "source": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-main-31:\\layout\\settings.xml"
-    },
-    {
         "merged": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-merged_res-29:\\font_kalam_bold.ttf.flat",
         "source": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-main-31:\\font\\kalam_bold.ttf"
+    },
+    {
+        "merged": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-merged_res-29:\\layout_settings.xml.flat",
+        "source": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-main-31:\\layout\\settings.xml"
     },
     {
         "merged": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-merged_res-29:\\mipmap-anydpi-v26_ic_launcher.xml.flat",

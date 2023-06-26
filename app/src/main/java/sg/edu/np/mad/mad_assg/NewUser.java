@@ -35,7 +35,7 @@ public class NewUser extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.signin);
 
-        ConstraintLayout layout = findViewById(R.id.flFragment);
+        ConstraintLayout layout = findViewById(R.id.constraint);
         //With the help of AnimatedDrawable class, we can set
         //the duration to our background and then call the
         //function start at the end.
