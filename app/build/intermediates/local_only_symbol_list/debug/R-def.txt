@@ -126,7 +126,6 @@ id stuff
 id textView
 id timeTaken
 id title
-id toolbar
 id top_nav
 id total
 id tvFeedback

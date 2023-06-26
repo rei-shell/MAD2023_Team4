@@ -60,6 +60,26 @@ public class RecipeView extends AppCompatActivity {
         howtoTextView.setText(steps);
         Picasso.get().load(imageUrl).into(mainImg);
 
+        feedback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RecipeView.this, FeedBack_Result.class);
+                intent.putExtra("img", imageUrl);
+                intent.putExtra("name", recipeName);
+                intent.putExtra("username", username);
+                intent.putExtra("ingredient", ingredients);
+                intent.putExtra("description", description);
+                intent.putExtra("steps", steps);
+                startActivity(intent);
+            }
+        });
+    }
+
+    @SuppressLint("ResourceAsColor")
+    @Override
+    protected void onResume() {
+        super.onResume();
+        setContentView(R.layout.recipe_view);
 
         Intent ratingreview = getIntent();
         RatingBar ratingBar = findViewById(R.id.ratingstar);
@@ -70,13 +90,5 @@ public class RecipeView extends AppCompatActivity {
         Bundle bundle = ratingreview.getExtras();
         float totalRating = bundle.getFloat("rbStars");
         ratingBar.setRating(totalRating);
-
-        feedback.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(RecipeView.this, FeedBack_Result.class);
-                startActivity(intent);
-            }
-        });
     }
 }

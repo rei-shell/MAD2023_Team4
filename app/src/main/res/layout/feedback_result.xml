@@ -19,7 +19,7 @@
             android:layout_width="21dp"
             android:layout_height="25dp"
             android:contentDescription="Go Back"
-            android:src="@android:drawable/ic_menu_revert"
+            android:src="@drawable/twotone_arrow_back_24"
             app:tint="#000000" />
 
         <TextView

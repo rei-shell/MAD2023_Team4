@@ -91,6 +91,7 @@ public class NewUser extends AppCompatActivity {
                     etEmail.setError("This email is already registered");
                 } else if (!isValidPasswordFormat) {
                     etPassword.setError("Invalid password format");
+                    Toast.makeText(NewUser.this, "at least 1 number, 1 lowercase, 1 uppercase, i special character", Toast.LENGTH_SHORT).show();
                 } else if (!isPasswordConfirmed) {
                     etPassword.setError("Passwords do not match");
                     etreenterPassword.setError("Passwords do not match");

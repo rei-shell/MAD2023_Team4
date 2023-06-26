@@ -4,7 +4,7 @@
             "outputFile": "sg.edu.np.mad.mad_assg.app-mergeDebugResources-27:/values-large-v4/values-large-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\nicky\\.gradle\\caches\\transforms-3\\b79e00459b51debe71c70b38b92dedee\\transformed\\material-1.5.0\\res\\values-large-v4\\values-large-v4.xml",
+                    "source": "C:\\Users\\reishell\\.gradle\\caches\\transforms-3\\b79e00459b51debe71c70b38b92dedee\\transformed\\material-1.5.0\\res\\values-large-v4\\values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,10",
                         "startColumns": "4,4,4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\nicky\\.gradle\\caches\\transforms-3\\7ba610368285ef737a15a687544ee720\\transformed\\appcompat-1.6.1\\res\\values-large-v4\\values-large-v4.xml",
+                    "source": "C:\\Users\\reishell\\.gradle\\caches\\transforms-3\\7ba610368285ef737a15a687544ee720\\transformed\\appcompat-1.6.1\\res\\values-large-v4\\values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",
