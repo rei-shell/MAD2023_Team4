@@ -31,7 +31,13 @@ public class RecipeView extends AppCompatActivity {
         animationDrawable.setEnterFadeDuration(1500);
         animationDrawable.setExitFadeDuration(3000);
         animationDrawable.start();
+    }
 
+    @SuppressLint("ResourceAsColor")
+    @Override
+    protected void onResume() {
+        super.onResume();
+        setContentView(R.layout.recipe_view);
 
         // Retrieve recipe data from intent extras
         Intent intent = getIntent();
@@ -64,22 +70,10 @@ public class RecipeView extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(RecipeView.this, FeedBack_Result.class);
-                intent.putExtra("img", imageUrl);
-                intent.putExtra("name", recipeName);
-                intent.putExtra("username", username);
-                intent.putExtra("ingredient", ingredients);
-                intent.putExtra("description", description);
-                intent.putExtra("steps", steps);
+                intent.putExtra("mainimg", imageUrl);
                 startActivity(intent);
             }
         });
-    }
-
-    @SuppressLint("ResourceAsColor")
-    @Override
-    protected void onResume() {
-        super.onResume();
-        setContentView(R.layout.recipe_view);
 
         Intent ratingreview = getIntent();
         RatingBar ratingBar = findViewById(R.id.ratingstar);

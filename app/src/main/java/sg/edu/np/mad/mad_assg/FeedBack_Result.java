@@ -31,7 +31,7 @@ public class FeedBack_Result extends AppCompatActivity {
         rbStars = findViewById(R.id.rbStars);
 
         Intent intent = getIntent();
-        String imageUrl = intent.getStringExtra("img");
+        String imageUrl = intent.getStringExtra("mainimg");
         Picasso.get().load(imageUrl).into(imgview);
 
         rbStars.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
@@ -54,14 +54,6 @@ public class FeedBack_Result extends AppCompatActivity {
         });
 
         Button btnSend = findViewById(R.id.btnSend);
-
-        // Retrieve recipe data from intent extras
-        String recipeName = intent.getStringExtra("recipename");
-        String username = intent.getStringExtra("username");
-        String description = intent.getStringExtra("description");
-        String ingredients = intent.getStringExtra("ingredients");
-        String steps = intent.getStringExtra("steps");
-
         btnSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -69,8 +61,6 @@ public class FeedBack_Result extends AppCompatActivity {
                 RatingBar ratingbar = findViewById(R.id.rbStars);
                 Float ratingNumber = ratingbar.getRating();
                 String feedback = feedbackEditText.getText().toString().trim();
-
-
 
                 if (feedback.isEmpty()) {
                     // Display message for empty feedback
