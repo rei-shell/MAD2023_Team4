@@ -25,7 +25,8 @@
         <activity android:name=".RecipeView"/>
         <activity android:name=".Recipe"/>
         <activity android:name=".FeedBack_Result"/>
-        <activity android:name="EditUserProfile"/>
+        <activity android:name=".EditUserProfile"/>
+        <activity android:name=".HistoryViewHolder"/>
         <activity
             android:name=".FeedBackandReviews"
             android:exported="false" />
