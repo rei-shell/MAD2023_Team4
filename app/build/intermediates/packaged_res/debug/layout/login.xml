@@ -51,7 +51,7 @@
             android:layout_height="wrap_content"
 
             android:id="@+id/username"
-            app:startIconDrawable="@drawable/outline_person_24"
+            app:startIconDrawable="@drawable/outline_email_24"
             android:hint="Email"
             app:endIconMode="clear_text"
             app:helperText="Required*"

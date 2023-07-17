@@ -1,15 +1,16 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:2:1-43:12
-INJECTED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:2:1-43:12
-INJECTED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:2:1-43:12
-INJECTED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:2:1-43:12
+ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:2:1-47:12
+INJECTED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:2:1-47:12
+INJECTED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:2:1-47:12
+INJECTED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:2:1-47:12
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\nicky\.gradle\caches\transforms-3\1eaa1b10fb8572a85d8d8ba59e79f014\transformed\picasso-2.71828\AndroidManifest.xml:2:1-14:12
 MERGED from [com.google.android.material:material:1.9.0] C:\Users\nicky\.gradle\caches\transforms-3\80eb2003702769638adf84dd8dd398da\transformed\material-1.9.0\AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\nicky\.gradle\caches\transforms-3\e1cfdd0c6f5103f54e22916f521311c0\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\nicky\.gradle\caches\transforms-3\6ffb9a4442eb05db90a8b8544d3a2809\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\nicky\.gradle\caches\transforms-3\cfdbee0d1ae476556cbadab517dd5312\transformed\appcompat-1.6.1\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-auth:22.1.0] C:\Users\nicky\.gradle\caches\transforms-3\c3fc0d454c4142b8062abe072dc81096\transformed\firebase-auth-22.1.0\AndroidManifest.xml:17:1-75:12
+MERGED from [com.google.firebase:firebase-storage:20.2.1] C:\Users\nicky\.gradle\caches\transforms-3\10eb4b428fe27a05d6faaa225d079bac\transformed\firebase-storage-20.2.1\AndroidManifest.xml:15:1-38:12
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\nicky\.gradle\caches\transforms-3\f97163c3b0416d7a5ad22a7a9246aaa9\transformed\viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.recyclerview:recyclerview:1.3.0] C:\Users\nicky\.gradle\caches\transforms-3\59e2b2cc92843c208b7095329dfafd5a\transformed\recyclerview-1.3.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.github.bumptech.glide:glide:4.12.0] C:\Users\nicky\.gradle\caches\transforms-3\bf790c02dae07da316e63a9efc41a8bc\transformed\glide-4.12.0\AndroidManifest.xml:2:1-12:12
@@ -67,29 +68,31 @@ MERGED from [androidx.print:print:1.0.0] C:\Users\nicky\.gradle\caches\transform
 MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\nicky\.gradle\caches\transforms-3\2d30e8d8f05f9f12c3bfc8097f5f0927\transformed\annotation-experimental-1.3.0\AndroidManifest.xml:17:1-22:12
 MERGED from [io.grpc:grpc-android:1.52.1] C:\Users\nicky\.gradle\caches\transforms-3\7a365f26bdd3d1feda52a2de54d86b40\transformed\grpc-android-1.52.1\AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\nicky\.gradle\caches\transforms-3\33be26067e111569baa91e7a8c6eb4a4\transformed\protolite-well-known-types-18.0.0\AndroidManifest.xml:2:1-11:12
-INJECTED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:2:1-43:12
-INJECTED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:2:1-43:12
-INJECTED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:2:1-43:12
+INJECTED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:2:1-47:12
+INJECTED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:2:1-47:12
+INJECTED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:2:1-47:12
 	package
 		INJECTED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:2:1-43:12
+		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:2:1-47:12
 		INJECTED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:2:1-43:12
+		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:2:1-47:12
 		INJECTED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:2:1-43:12
+		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:2:1-47:12
 		INJECTED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:4:5-67
+ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:6:5-67
 MERGED from [com.google.firebase:firebase-auth:22.1.0] C:\Users\nicky\.gradle\caches\transforms-3\c3fc0d454c4142b8062abe072dc81096\transformed\firebase-auth-22.1.0\AndroidManifest.xml:25:5-67
 MERGED from [com.google.firebase:firebase-auth:22.1.0] C:\Users\nicky\.gradle\caches\transforms-3\c3fc0d454c4142b8062abe072dc81096\transformed\firebase-auth-22.1.0\AndroidManifest.xml:25:5-67
+MERGED from [com.google.firebase:firebase-storage:20.2.1] C:\Users\nicky\.gradle\caches\transforms-3\10eb4b428fe27a05d6faaa225d079bac\transformed\firebase-storage-20.2.1\AndroidManifest.xml:26:5-67
+MERGED from [com.google.firebase:firebase-storage:20.2.1] C:\Users\nicky\.gradle\caches\transforms-3\10eb4b428fe27a05d6faaa225d079bac\transformed\firebase-storage-20.2.1\AndroidManifest.xml:26:5-67
 MERGED from [com.google.firebase:firebase-database:20.2.2] C:\Users\nicky\.gradle\caches\transforms-3\c990887c89256894b2b8f09465ad2d5e\transformed\firebase-database-20.2.2\AndroidManifest.xml:25:5-67
 MERGED from [com.google.firebase:firebase-database:20.2.2] C:\Users\nicky\.gradle\caches\transforms-3\c990887c89256894b2b8f09465ad2d5e\transformed\firebase-database-20.2.2\AndroidManifest.xml:25:5-67
 MERGED from [com.google.firebase:firebase-firestore:24.7.0] C:\Users\nicky\.gradle\caches\transforms-3\6650b987584ef34b4e1b988023a919bc\transformed\firebase-firestore-24.7.0\AndroidManifest.xml:13:5-67
@@ -97,9 +100,9 @@ MERGED from [com.google.firebase:firebase-firestore:24.7.0] C:\Users\nicky\.grad
 MERGED from [com.google.android.recaptcha:recaptcha:18.1.2] C:\Users\nicky\.gradle\caches\transforms-3\dd3da254b7a9d273744d5b46fba4f7cd\transformed\recaptcha-18.1.2\AndroidManifest.xml:7:5-67
 MERGED from [com.google.android.recaptcha:recaptcha:18.1.2] C:\Users\nicky\.gradle\caches\transforms-3\dd3da254b7a9d273744d5b46fba4f7cd\transformed\recaptcha-18.1.2\AndroidManifest.xml:7:5-67
 	android:name
-		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:4:22-64
+		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:6:22-64
 application
-ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:5:5-41:19
+ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:8:5-45:19
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\nicky\.gradle\caches\transforms-3\1eaa1b10fb8572a85d8d8ba59e79f014\transformed\picasso-2.71828\AndroidManifest.xml:7:5-12:19
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\nicky\.gradle\caches\transforms-3\1eaa1b10fb8572a85d8d8ba59e79f014\transformed\picasso-2.71828\AndroidManifest.xml:7:5-12:19
 MERGED from [com.google.android.material:material:1.9.0] C:\Users\nicky\.gradle\caches\transforms-3\80eb2003702769638adf84dd8dd398da\transformed\material-1.9.0\AndroidManifest.xml:24:5-20
@@ -108,6 +111,8 @@ MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\nicky\.g
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\nicky\.gradle\caches\transforms-3\e1cfdd0c6f5103f54e22916f521311c0\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
 MERGED from [com.google.firebase:firebase-auth:22.1.0] C:\Users\nicky\.gradle\caches\transforms-3\c3fc0d454c4142b8062abe072dc81096\transformed\firebase-auth-22.1.0\AndroidManifest.xml:28:5-73:19
 MERGED from [com.google.firebase:firebase-auth:22.1.0] C:\Users\nicky\.gradle\caches\transforms-3\c3fc0d454c4142b8062abe072dc81096\transformed\firebase-auth-22.1.0\AndroidManifest.xml:28:5-73:19
+MERGED from [com.google.firebase:firebase-storage:20.2.1] C:\Users\nicky\.gradle\caches\transforms-3\10eb4b428fe27a05d6faaa225d079bac\transformed\firebase-storage-20.2.1\AndroidManifest.xml:28:5-36:19
+MERGED from [com.google.firebase:firebase-storage:20.2.1] C:\Users\nicky\.gradle\caches\transforms-3\10eb4b428fe27a05d6faaa225d079bac\transformed\firebase-storage-20.2.1\AndroidManifest.xml:28:5-36:19
 MERGED from [com.github.bumptech.glide:glide:4.12.0] C:\Users\nicky\.gradle\caches\transforms-3\bf790c02dae07da316e63a9efc41a8bc\transformed\glide-4.12.0\AndroidManifest.xml:10:5-20
 MERGED from [com.github.bumptech.glide:glide:4.12.0] C:\Users\nicky\.gradle\caches\transforms-3\bf790c02dae07da316e63a9efc41a8bc\transformed\glide-4.12.0\AndroidManifest.xml:10:5-20
 MERGED from [com.google.firebase:firebase-database:20.2.2] C:\Users\nicky\.gradle\caches\transforms-3\c990887c89256894b2b8f09465ad2d5e\transformed\firebase-database-20.2.2\AndroidManifest.xml:27:5-35:19
@@ -143,89 +148,95 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\ni
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.9.0] C:\Users\nicky\.gradle\caches\transforms-3\3dbdebe5616f35ea14ff987369494724\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:11:9-35
+		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:15:9-35
 	android:label
-		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:10:9-31
+		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:14:9-31
 	android:fullBackupContent
-		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:8:9-54
+		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:12:9-54
 	android:roundIcon
-		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:13:9-54
+		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:17:9-54
 	tools:targetApi
-		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:14:9-29
+		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:18:9-29
 	android:icon
-		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:9:9-43
+		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:13:9-43
 	android:allowBackup
-		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:6:9-35
+		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:10:9-35
 	android:theme
-		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:12:9-46
+		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:16:9-46
 	android:dataExtractionRules
-		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:7:9-65
+		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:11:9-65
+	android:usesCleartextTraffic
+		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:9:9-44
 activity#sg.edu.np.mad.mad_assg.MainActivity
-ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:18:9-49
+ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:20:9-49
 	android:name
-		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:18:19-47
+		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:20:19-47
 activity#sg.edu.np.mad.mad_assg.Login
-ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:19:9-43
+ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:21:9-43
 	android:name
-		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:19:19-40
+		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:21:19-40
 activity#sg.edu.np.mad.mad_assg.NewUser
-ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:20:9-44
+ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:22:9-44
 	android:name
-		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:20:19-42
+		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:22:19-42
 activity#sg.edu.np.mad.mad_assg.StartPage
-ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:21:9-46
-	android:name
-		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:21:19-44
-activity#sg.edu.np.mad.mad_assg.ForgotPassword
-ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:22:9-51
-	android:name
-		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:22:19-49
-activity#sg.edu.np.mad.mad_assg.Setttings
 ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:23:9-46
 	android:name
 		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:23:19-44
+activity#sg.edu.np.mad.mad_assg.ForgotPassword
+ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:24:9-51
+	android:name
+		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:24:19-49
+activity#sg.edu.np.mad.mad_assg.Setttings
+ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:25:9-46
+	android:name
+		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:25:19-44
 activity#sg.edu.np.mad.mad_assg.RecipeView
-ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:24:9-47
+ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:26:9-47
 	android:name
-		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:24:19-45
+		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:26:19-45
 activity#sg.edu.np.mad.mad_assg.Recipe
-ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:25:9-43
+ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:27:9-43
 	android:name
-		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:25:19-41
+		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:27:19-41
 activity#sg.edu.np.mad.mad_assg.FeedBack_Result
-ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:26:9-52
+ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:28:9-52
 	android:name
-		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:26:19-50
+		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:28:19-50
 activity#sg.edu.np.mad.mad_assg.EditUserProfile
-ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:27:9-52
+ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:29:9-52
 	android:name
-		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:27:19-50
+		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:29:19-50
 activity#sg.edu.np.mad.mad_assg.HistoryViewHolder
-ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:28:9-54
+ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:30:9-54
 	android:name
-		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:28:19-52
+		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:30:19-52
+activity#sg.edu.np.mad.mad_assg.EditUser
+ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:31:9-45
+	android:name
+		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:31:19-43
 activity#sg.edu.np.mad.mad_assg.FeedBackandReviews
-ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:29:9-31:40
+ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:32:9-34:40
 	android:exported
-		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:31:13-37
+		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:34:13-37
 	android:name
-		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:30:13-47
+		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:33:13-47
 activity#sg.edu.np.mad.mad_assg.SplashScreen
-ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:32:9-39:20
+ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:35:9-42:20
 	android:exported
-		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:34:13-36
+		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:37:13-36
 	android:name
-		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:33:13-41
+		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:36:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:35:13-38:29
+ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:38:13-41:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:36:17-69
+ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:39:17-69
 	android:name
-		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:36:25-66
+		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:39:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:37:17-77
+ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:40:17-77
 	android:name
-		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:37:27-74
+		ADDED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:40:27-74
 uses-sdk
 INJECTED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml
@@ -242,6 +253,8 @@ MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\nicky\.gradle\caches\t
 MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\nicky\.gradle\caches\transforms-3\cfdbee0d1ae476556cbadab517dd5312\transformed\appcompat-1.6.1\AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-auth:22.1.0] C:\Users\nicky\.gradle\caches\transforms-3\c3fc0d454c4142b8062abe072dc81096\transformed\firebase-auth-22.1.0\AndroidManifest.xml:21:5-23:64
 MERGED from [com.google.firebase:firebase-auth:22.1.0] C:\Users\nicky\.gradle\caches\transforms-3\c3fc0d454c4142b8062abe072dc81096\transformed\firebase-auth-22.1.0\AndroidManifest.xml:21:5-23:64
+MERGED from [com.google.firebase:firebase-storage:20.2.1] C:\Users\nicky\.gradle\caches\transforms-3\10eb4b428fe27a05d6faaa225d079bac\transformed\firebase-storage-20.2.1\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-storage:20.2.1] C:\Users\nicky\.gradle\caches\transforms-3\10eb4b428fe27a05d6faaa225d079bac\transformed\firebase-storage-20.2.1\AndroidManifest.xml:19:5-21:41
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\nicky\.gradle\caches\transforms-3\f97163c3b0416d7a5ad22a7a9246aaa9\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\nicky\.gradle\caches\transforms-3\f97163c3b0416d7a5ad22a7a9246aaa9\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.recyclerview:recyclerview:1.3.0] C:\Users\nicky\.gradle\caches\transforms-3\59e2b2cc92843c208b7095329dfafd5a\transformed\recyclerview-1.3.0\AndroidManifest.xml:20:5-44
@@ -378,6 +391,8 @@ ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\nicky\.gradle\caches\
 		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\nicky\.gradle\caches\transforms-3\1eaa1b10fb8572a85d8d8ba59e79f014\transformed\picasso-2.71828\AndroidManifest.xml:9:13-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [com.google.firebase:firebase-auth:22.1.0] C:\Users\nicky\.gradle\caches\transforms-3\c3fc0d454c4142b8062abe072dc81096\transformed\firebase-auth-22.1.0\AndroidManifest.xml:26:5-79
+MERGED from [com.google.firebase:firebase-storage:20.2.1] C:\Users\nicky\.gradle\caches\transforms-3\10eb4b428fe27a05d6faaa225d079bac\transformed\firebase-storage-20.2.1\AndroidManifest.xml:25:5-79
+MERGED from [com.google.firebase:firebase-storage:20.2.1] C:\Users\nicky\.gradle\caches\transforms-3\10eb4b428fe27a05d6faaa225d079bac\transformed\firebase-storage-20.2.1\AndroidManifest.xml:25:5-79
 MERGED from [com.google.firebase:firebase-database:20.2.2] C:\Users\nicky\.gradle\caches\transforms-3\c990887c89256894b2b8f09465ad2d5e\transformed\firebase-database-20.2.2\AndroidManifest.xml:24:5-79
 MERGED from [com.google.firebase:firebase-database:20.2.2] C:\Users\nicky\.gradle\caches\transforms-3\c990887c89256894b2b8f09465ad2d5e\transformed\firebase-database-20.2.2\AndroidManifest.xml:24:5-79
 MERGED from [com.google.firebase:firebase-firestore:24.7.0] C:\Users\nicky\.gradle\caches\transforms-3\6650b987584ef34b4e1b988023a919bc\transformed\firebase-firestore-24.7.0\AndroidManifest.xml:12:5-79
@@ -438,6 +453,8 @@ intent-filter#action:name:android.intent.action.VIEW+category:name:android.inten
 ADDED from [com.google.firebase:firebase-auth:22.1.0] C:\Users\nicky\.gradle\caches\transforms-3\c3fc0d454c4142b8062abe072dc81096\transformed\firebase-auth-22.1.0\AndroidManifest.xml:53:13-63:29
 service#com.google.firebase.components.ComponentDiscoveryService
 ADDED from [com.google.firebase:firebase-auth:22.1.0] C:\Users\nicky\.gradle\caches\transforms-3\c3fc0d454c4142b8062abe072dc81096\transformed\firebase-auth-22.1.0\AndroidManifest.xml:66:9-72:19
+MERGED from [com.google.firebase:firebase-storage:20.2.1] C:\Users\nicky\.gradle\caches\transforms-3\10eb4b428fe27a05d6faaa225d079bac\transformed\firebase-storage-20.2.1\AndroidManifest.xml:29:9-35:19
+MERGED from [com.google.firebase:firebase-storage:20.2.1] C:\Users\nicky\.gradle\caches\transforms-3\10eb4b428fe27a05d6faaa225d079bac\transformed\firebase-storage-20.2.1\AndroidManifest.xml:29:9-35:19
 MERGED from [com.google.firebase:firebase-database:20.2.2] C:\Users\nicky\.gradle\caches\transforms-3\c990887c89256894b2b8f09465ad2d5e\transformed\firebase-database-20.2.2\AndroidManifest.xml:28:9-34:19
 MERGED from [com.google.firebase:firebase-database:20.2.2] C:\Users\nicky\.gradle\caches\transforms-3\c990887c89256894b2b8f09465ad2d5e\transformed\firebase-database-20.2.2\AndroidManifest.xml:28:9-34:19
 MERGED from [com.google.firebase:firebase-firestore:24.7.0] C:\Users\nicky\.gradle\caches\transforms-3\6650b987584ef34b4e1b988023a919bc\transformed\firebase-firestore-24.7.0\AndroidManifest.xml:16:9-22:19
@@ -458,6 +475,12 @@ ADDED from [com.google.firebase:firebase-auth:22.1.0] C:\Users\nicky\.gradle\cac
 		ADDED from [com.google.firebase:firebase-auth:22.1.0] C:\Users\nicky\.gradle\caches\transforms-3\c3fc0d454c4142b8062abe072dc81096\transformed\firebase-auth-22.1.0\AndroidManifest.xml:71:17-82
 	android:name
 		ADDED from [com.google.firebase:firebase-auth:22.1.0] C:\Users\nicky\.gradle\caches\transforms-3\c3fc0d454c4142b8062abe072dc81096\transformed\firebase-auth-22.1.0\AndroidManifest.xml:70:17-109
+meta-data#com.google.firebase.components:com.google.firebase.storage.StorageRegistrar
+ADDED from [com.google.firebase:firebase-storage:20.2.1] C:\Users\nicky\.gradle\caches\transforms-3\10eb4b428fe27a05d6faaa225d079bac\transformed\firebase-storage-20.2.1\AndroidManifest.xml:32:13-34:85
+	android:value
+		ADDED from [com.google.firebase:firebase-storage:20.2.1] C:\Users\nicky\.gradle\caches\transforms-3\10eb4b428fe27a05d6faaa225d079bac\transformed\firebase-storage-20.2.1\AndroidManifest.xml:34:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-storage:20.2.1] C:\Users\nicky\.gradle\caches\transforms-3\10eb4b428fe27a05d6faaa225d079bac\transformed\firebase-storage-20.2.1\AndroidManifest.xml:33:17-107
 meta-data#com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar
 ADDED from [com.google.firebase:firebase-database:20.2.2] C:\Users\nicky\.gradle\caches\transforms-3\c990887c89256894b2b8f09465ad2d5e\transformed\firebase-database-20.2.2\AndroidManifest.xml:31:13-33:85
 	android:value

@@ -2931,6 +2931,7 @@ drawable avd_hide_password
 drawable avd_show_password
 drawable baseline_add_circle_outline_24
 drawable baseline_arrow_forward_24
+drawable baseline_error_24
 drawable baseline_star_24
 drawable baseline_star_border_24
 drawable baseline_star_half_24
@@ -2943,6 +2944,7 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable circle_button
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
 drawable common_google_signin_btn_icon_dark_focused
@@ -3081,6 +3083,7 @@ id BOTTOM_END
 id BOTTOM_START
 id CTRL
 id EditText
+id Email
 id Explore
 id FUNCTION
 id GridView_reco
@@ -3246,6 +3249,7 @@ id decelerate
 id decelerateAndComplete
 id decor_content_parent
 id default_activity_button
+id deleteacct
 id deltaRelative
 id dependency_ordering
 id description
@@ -3279,10 +3283,13 @@ id easeInOut
 id easeOut
 id east
 id edge
+id edit_button
 id edit_query
+id editacct
 id editprofile
 id elastic
 id email
+id email_header
 id embed
 id end
 id endToStart
@@ -3325,6 +3332,7 @@ id graph_wrap
 id group_divider
 id grouping
 id groups
+id header
 id header_title
 id hideable
 id home
@@ -3468,6 +3476,7 @@ id parentPanel
 id parentRelative
 id parent_matrix
 id password
+id passwordEditText
 id password_toggle
 id path
 id pathRelative
@@ -3480,7 +3489,10 @@ id position
 id postLayout
 id preperation
 id pressed
+id profileImageView
+id profile_buttons
 id profile_edit
+id profile_img
 id progress_circular
 id progress_horizontal
 id radio
@@ -3661,6 +3673,9 @@ id userdetails
 id userid
 id userlike
 id username
+id usernameEditText
+id usernameLayout
+id username_header
 id userpic
 id userpost
 id vertical_only
@@ -3822,7 +3837,9 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout dialog_password_input
 layout edit_profile
+layout edit_profile_page
 layout feedback_result
 layout forgot_password
 layout fragment_home_page
@@ -5363,3 +5380,4 @@ styleable include constraintSet
 xml backup_rules
 xml data_extraction_rules
 xml image_share_filepaths
+xml provider_paths

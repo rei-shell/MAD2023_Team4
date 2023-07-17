@@ -30,9 +30,8 @@ public class Userpage extends Fragment {
 
     private TextView user;
     private TextView user2;
-    private MyDBHandler dbHandler;
+   // private MyDBHandler dbHandler;
     private ImageView settings;
-    private FirebaseAuth mAuth;
     private FirebaseUser username;
 
     private FirebaseFirestore db;
@@ -54,7 +53,6 @@ public class Userpage extends Fragment {
         // Initialize Firestore instance
         db = FirebaseFirestore.getInstance();
 
-        user = view.findViewById(R.id.userName);
 
         // Get the currently logged-in user
         username = FirebaseAuth.getInstance().getCurrentUser();
@@ -67,7 +65,7 @@ public class Userpage extends Fragment {
         user2 = view.findViewById(R.id.userName);
         settings = view.findViewById(R.id.settingbtn);
 
-        dbHandler = new MyDBHandler(getContext(), "User.db", null, 1);
+       // dbHandler = new MyDBHandler(getContext(), "User.db", null, 1);
         settings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -77,15 +75,6 @@ public class Userpage extends Fragment {
 
             }
         });
-
-        /*Bundle bundle = getArguments();
-        if (bundle != null) {
-            String username = bundle.getString("username");
-            if (username != null) {
-                user.setText(username);
-                user2.setText(username);
-            }
-        }*/
 
         return view;
     }
