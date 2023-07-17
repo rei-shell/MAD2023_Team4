@@ -1,7 +1,10 @@
 package sg.edu.np.mad.mad_assg;
 
+import static android.content.ContentValues.TAG;
+
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -10,18 +13,32 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Setttings extends AppCompatActivity {
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
+public class Setttings extends AppCompatActivity {
+    FirebaseAuth mAuth;
+    FirebaseUser user;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.settings);
 
         LinearLayout profile = (LinearLayout) findViewById(R.id.profile_edit);
+
+        //content not done
         LinearLayout history = (LinearLayout) findViewById(R.id.view_history);
 
         ImageView back = (ImageView) findViewById(R.id.backbtn);
         Button logout = (Button) findViewById(R.id.logoutbtn);
+
+        mAuth = FirebaseAuth.getInstance();
+        user = mAuth.getCurrentUser();
+        if (user == null){
+            Intent intent = new Intent(getApplicationContext(), StartPage.class);
+            startActivity(intent);
+            finish();
+        }
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,6 +53,7 @@ public class Setttings extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(Setttings.this, EditUserProfile.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -49,6 +67,7 @@ public class Setttings extends AppCompatActivity {
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
                 Intent intent = new Intent(Setttings.this, StartPage.class);
                 startActivity(intent);
                 finish();
@@ -59,5 +78,6 @@ public class Setttings extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        Log.d(TAG, "Destroyed");
     }
 }

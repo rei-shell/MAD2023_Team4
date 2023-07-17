@@ -52,7 +52,6 @@ id category
 id categoryitem_img
 id categoryitem_text
 id confirm
-id confirm_new_password
 id confirm_password
 id constraint
 id content
@@ -61,6 +60,7 @@ id description
 id descriptiontable
 id duration_box
 id duration_txt
+id editprofile
 id email
 id exploreview
 id feedback
@@ -88,7 +88,6 @@ id minutes
 id minutes2
 id minutes3
 id name
-id new_password
 id password
 id person
 id preperation
@@ -142,6 +141,7 @@ id view_history
 id viewall
 id viewall1
 id viewall2
+id viewhistory
 layout activity_feed_backand_reviews
 layout cardview_recipe
 layout category
@@ -157,7 +157,6 @@ layout item_recipe
 layout login
 layout recipe
 layout recipe_view
-layout reset_password
 layout settings
 layout signin
 layout splashscreen
@@ -175,7 +174,14 @@ mipmap search
 mipmap user
 mipmap world
 string app_name
+string default_web_client_id
+string gcm_defaultSenderId
+string google_api_key
+string google_app_id
+string google_crash_reporting_api_key
+string google_storage_bucket
 string hello_blank_fragment
+string project_id
 style Base.Theme.MAD_Assg
 style Theme.MAD_Assg
 xml backup_rules

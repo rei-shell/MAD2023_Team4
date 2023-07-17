@@ -1,5 +1,6 @@
 package sg.edu.np.mad.mad_assg;
 
+import static android.content.ContentValues.TAG;
 import static android.content.Intent.getIntent;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +15,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -42,9 +44,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.homepage_main);
-
-
-
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
 
@@ -85,6 +84,13 @@ public class MainActivity extends AppCompatActivity {
         // Set the username text in the Userpage fragment
         userFragment.setUsernameText(username);*/
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d(TAG,"Destoryed!");
+    }
+
 }
 
 /*
@@ -106,9 +112,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 }*/
-
-
-
 /*
 
     switch(item.getItemId()){
@@ -292,8 +295,3 @@ Logout();
 
     }
 */
-
-
-
-
-

@@ -16,10 +16,9 @@
 
 
         <activity android:name=".MainActivity"/>
-        <activity android:name=".Login"/>
+        <activity android:name=".Login" />
         <activity android:name=".NewUser"/>
         <activity android:name=".StartPage"/>
-        <activity android:name=".ResetPassword"/>
         <activity android:name=".ForgotPassword"/>
         <activity android:name=".Setttings"/>
         <activity android:name=".RecipeView"/>

@@ -1,9 +1,12 @@
 package sg.edu.np.mad.mad_assg;
 
+import static android.content.ContentValues.TAG;
+
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.widget.RelativeLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -29,5 +32,9 @@ public class SplashScreen extends AppCompatActivity {
         },3000);
 
     }
-
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d(TAG, "Destroyed");
+    }
 }

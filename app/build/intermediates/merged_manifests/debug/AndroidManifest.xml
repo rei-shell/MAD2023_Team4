@@ -9,6 +9,7 @@
         android:targetSdkVersion="33" />
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <permission
         android:name="sg.edu.np.mad.mad_assg.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
@@ -32,13 +33,13 @@
         <activity android:name="sg.edu.np.mad.mad_assg.Login" />
         <activity android:name="sg.edu.np.mad.mad_assg.NewUser" />
         <activity android:name="sg.edu.np.mad.mad_assg.StartPage" />
-        <activity android:name="sg.edu.np.mad.mad_assg.ResetPassword" />
         <activity android:name="sg.edu.np.mad.mad_assg.ForgotPassword" />
         <activity android:name="sg.edu.np.mad.mad_assg.Setttings" />
         <activity android:name="sg.edu.np.mad.mad_assg.RecipeView" />
         <activity android:name="sg.edu.np.mad.mad_assg.Recipe" />
         <activity android:name="sg.edu.np.mad.mad_assg.FeedBack_Result" />
         <activity android:name="sg.edu.np.mad.mad_assg.EditUserProfile" />
+        <activity android:name="sg.edu.np.mad.mad_assg.HistoryViewHolder" />
         <activity
             android:name="sg.edu.np.mad.mad_assg.FeedBackandReviews"
             android:exported="false" />
@@ -56,6 +57,75 @@
             android:name="com.squareup.picasso.PicassoProvider"
             android:authorities="sg.edu.np.mad.mad_assg.com.squareup.picasso"
             android:exported="false" />
+
+        <activity
+            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="firebase.auth"
+                    android:path="/"
+                    android:scheme="genericidp" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="firebase.auth"
+                    android:path="/"
+                    android:scheme="recaptcha" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.google.firebase.components.ComponentDiscoveryService"
+            android:directBootAware="true"
+            android:exported="false" >
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+        </service>
+
+        <provider
+            android:name="com.google.firebase.provider.FirebaseInitProvider"
+            android:authorities="sg.edu.np.mad.mad_assg.firebaseinitprovider"
+            android:directBootAware="true"
+            android:exported="false"
+            android:initOrder="100" />
+
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
         <provider
             android:name="androidx.startup.InitializationProvider"
             android:authorities="sg.edu.np.mad.mad_assg.androidx-startup"

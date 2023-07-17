@@ -10,7 +10,7 @@ public class EditUserProfile extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login);
+        setContentView(R.layout.edit_profile);
 
         ConstraintLayout layout = findViewById(R.id.constraint);
         //With the help of AnimatedDrawable class, we can set

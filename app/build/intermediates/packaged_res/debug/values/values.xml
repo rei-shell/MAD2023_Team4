@@ -22,7 +22,14 @@
     <color name="white">#FFFFFFFF</color>
     <dimen name="text_margin">16dp</dimen>
     <string name="app_name">Rexipe</string>
+    <string name="default_web_client_id" translatable="false">815308253409-9dnpabckfuvk7jrgnlf5hfeorpterles.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">815308253409</string>
+    <string name="google_api_key" translatable="false">AIzaSyDz5d59-wzvzgtZhxqI4nT6qvPNGuTFd68</string>
+    <string name="google_app_id" translatable="false">1:815308253409:android:8f508cbb612ada8df3efa0</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDz5d59-wzvzgtZhxqI4nT6qvPNGuTFd68</string>
+    <string name="google_storage_bucket" translatable="false">asgteam4-ac141.appspot.com</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="project_id" translatable="false">asgteam4-ac141</string>
     <style name="Base.Theme.MAD_Assg" parent="Theme.Material3.DayNight.NoActionBar">
         
         

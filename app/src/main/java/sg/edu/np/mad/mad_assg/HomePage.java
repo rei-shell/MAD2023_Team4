@@ -264,6 +264,7 @@ public class HomePage extends Fragment {
                 intent.putExtra("ingredients", selectRecipe.getIngredients());
                 intent.putExtra("steps", selectRecipe.getSteps());
                 startActivity(intent);
+                getActivity().finish();
             }
         });
 
@@ -282,6 +283,7 @@ public class HomePage extends Fragment {
                 intent.putExtra("ingredients", selectRecipe.getIngredients());
                 intent.putExtra("steps", selectRecipe.getSteps());
                 startActivity(intent);
+                getActivity().finish();
             }
         });
 
@@ -303,6 +305,7 @@ public class HomePage extends Fragment {
                 intent.putExtra("ingredients", selectRecipe.getIngredients());
                 intent.putExtra("steps", selectRecipe.getSteps());
                 startActivity(intent);
+                getActivity().finish();
             }
         });
         return view;
