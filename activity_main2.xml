@@ -89,4 +89,15 @@
         android:text="Send Feedback"
         android:textColor="#FFFFFF" />
 
+    <Button
+        android:id="@+id/btnSend1"
+        android:layout_width="269dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="50dp"
+        android:background="#FF5722"
+        android:text="Share"
+        android:textColor="#FFFFFF" />
+
 </LinearLayout>
