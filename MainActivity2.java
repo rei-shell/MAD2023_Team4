@@ -1,5 +1,6 @@
-package sg.edu.np.mad.feedbackandreview;
+package sg.edu.np.mad.mad_assg;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -12,15 +13,17 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity2 extends AppCompatActivity {
+import sg.edu.np.mad.mad_assg.R;
+import sg.edu.np.mad.mad_assg.RecipeView;
 
+public class FeedBack_Result extends AppCompatActivity {
     TextView tvFeedback;
     RatingBar rbStars;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.feedback_result);
 
         tvFeedback = findViewById(R.id.tvFeedback);
         rbStars = findViewById(R.id.rbStars);
@@ -30,13 +33,13 @@ public class MainActivity2 extends AppCompatActivity {
             public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
                 if (rating == 0) {
                     tvFeedback.setText("Very Dissatisfied");
-                } else if (rating == 1) {
+                } else if (rating <= 1) {
                     tvFeedback.setText("Dissatisfied");
-                } else if (rating == 2 || rating == 3) {
+                } else if (rating <= 2 || rating == 3) {
                     tvFeedback.setText("OK");
-                } else if (rating == 4) {
+                } else if (rating <= 4) {
                     tvFeedback.setText("Satisfied");
-                } else if (rating == 5) {
+                } else if (rating <= 5) {
                     tvFeedback.setText("Very Satisfied");
                 } else {
 
@@ -45,11 +48,12 @@ public class MainActivity2 extends AppCompatActivity {
         });
 
         Button btnSend = findViewById(R.id.btnSend);
-
         btnSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 EditText feedbackEditText = findViewById(R.id.EditText);
+                RatingBar ratingbar = findViewById(R.id.rbStars);
+                Float ratingNumber = ratingbar.getRating();
                 String feedback = feedbackEditText.getText().toString().trim();
 
                 if (feedback.isEmpty()) {
@@ -58,6 +62,10 @@ public class MainActivity2 extends AppCompatActivity {
                 } else {
                     // Handle button click event with non-empty feedback
                     // Your code for sending feedback or further processing
+                    Intent intent = new Intent(FeedBack_Result.this, RecipeView.class);
+                    intent.putExtra("rbStars", ratingNumber);
+                    intent.putExtra("tvFeedback", feedback);
+                    startActivity(intent);
                     Toast.makeText(getApplicationContext(), "Feedback sent!", Toast.LENGTH_SHORT).show();
                     feedbackEditText.setText(""); // Clear the text in the EditText
                 }
@@ -68,6 +76,8 @@ public class MainActivity2 extends AppCompatActivity {
         ivGoBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(FeedBack_Result.this, RecipeView.class);
+                startActivity(intent);
                 finish(); // Go back to the previous activity
             }
         });
@@ -77,6 +87,14 @@ public class MainActivity2 extends AppCompatActivity {
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
+
+        Button shareButton = findViewById(R.id.btnSend1);
+        shareButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                shareRecipe();
+            }
+        });
     }
 
     @Override
@@ -87,5 +105,26 @@ public class MainActivity2 extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void shareRecipe() {
+
+        // Assuming you have obtained the recipe ID dynamically based on the selected recipe
+        String recipeId = getRecipeId(); // Replace getRecipeId() with the method or logic to retrieve the recipe ID
+
+        String deepLinkUrl = "http://recipeapp.com/recipes/" + recipeId;
+
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("text/plain");
+        intent.putExtra(Intent.EXTRA_SUBJECT, "Check out this cool recipe");
+        intent.putExtra(Intent.EXTRA_TEXT, deepLinkUrl);
+        startActivity(Intent.createChooser(intent, "Share via"));
+
+
+
+    }
+
+    private String getRecipeId() {
+        return null;
     }
 }
