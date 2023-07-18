@@ -240,8 +240,6 @@ public class EditUserProfile extends AppCompatActivity {
                 });
     }
 
-    // ... (other methods and callbacks)
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
