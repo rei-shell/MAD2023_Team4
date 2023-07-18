@@ -4,6 +4,7 @@ import static android.content.ContentValues.TAG;
 
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
+import android.media.Image;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -33,7 +34,7 @@ public class Userpage extends Fragment {
    // private MyDBHandler dbHandler;
     private ImageView settings;
     private FirebaseUser username;
-
+    private ImageView profilepic;
     private FirebaseFirestore db;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -64,6 +65,7 @@ public class Userpage extends Fragment {
         user = view.findViewById(R.id.userid);
         user2 = view.findViewById(R.id.userName);
         settings = view.findViewById(R.id.settingbtn);
+        profilepic = view.findViewById(R.id.userpic);
 
        // dbHandler = new MyDBHandler(getContext(), "User.db", null, 1);
         settings.setOnClickListener(new View.OnClickListener() {

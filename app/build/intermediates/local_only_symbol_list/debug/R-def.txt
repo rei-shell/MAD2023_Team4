@@ -38,9 +38,11 @@ font kalam_regular
 font permanentmarker_regular
 id EditText
 id Email
+id EmailEditText
 id Explore
 id GridView_reco
 id Login
+id Password
 id SignUp
 id appicon
 id author
@@ -54,6 +56,7 @@ id cardview_id
 id category
 id categoryitem_img
 id categoryitem_text
+id changepassword
 id confirm
 id confirm_password
 id constraint
@@ -74,7 +77,6 @@ id feedback
 id feedbackButton
 id flFragment
 id forgot_email
-id forgot_username
 id forgotpassword
 id forgottxt
 id header
@@ -104,6 +106,8 @@ id profileImageView
 id profile_buttons
 id profile_edit
 id profile_img
+id pwd
+id pwd_header
 id ratingdetails
 id ratingstar
 id ratingstuff
@@ -152,6 +156,7 @@ id usernameLayout
 id username_header
 id userpic
 id userpost
+id verifyemail
 id view_history
 id viewall
 id viewall1
@@ -160,6 +165,7 @@ id viewhistory
 layout activity_feed_backand_reviews
 layout cardview_recipe
 layout category
+layout dialog_email_input
 layout dialog_password_input
 layout edit_profile
 layout edit_profile_page

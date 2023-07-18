@@ -45,7 +45,8 @@ public class NewUser extends AppCompatActivity {
     FirebaseAuth mAuth;
     FirebaseFirestore db;
     CollectionReference usersCollection;
-    @Override
+
+    /*@Override
     public void onStart() {
         super.onStart();
         // Check if user is signed in (non-null) and update UI accordingly.
@@ -55,7 +56,7 @@ public class NewUser extends AppCompatActivity {
             startActivity(intent);
             finish();
         }
-    }
+    }*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
