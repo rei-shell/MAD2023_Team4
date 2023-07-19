@@ -45,15 +45,22 @@ public class Setttings extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(Setttings.this, Userpage.class);
                 startActivity(intent);
+                finish();
             }
         });
 
+        // Inside the onClick listener for the "Edit Profile" button in the Settings activity
         profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Retrieve the user's profile picture URL
+                String profileImageUrl = ""; // Replace this with the actual profile image URL from Firebase or any other source
+
+                // Create an intent to start the EditUserProfile activity
                 Intent intent = new Intent(Setttings.this, EditUserProfile.class);
+                // Put the profile picture URL as an extra in the intent
+                intent.putExtra("profileImageUrl", profileImageUrl);
                 startActivity(intent);
-                finish();
             }
         });
 

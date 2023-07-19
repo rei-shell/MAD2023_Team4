@@ -188,10 +188,6 @@
         "source": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-main-37:\\layout\\edit_profile.xml"
     },
     {
-        "merged": "sg.edu.np.mad.mad_assg.app-merged_res-35:/layout_forgot_password.xml.flat",
-        "source": "sg.edu.np.mad.mad_assg.app-main-37:/layout/forgot_password.xml"
-    },
-    {
         "merged": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-merged_res-35:\\mipmap-xxhdpi_user.png.flat",
         "source": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-main-37:\\mipmap-xxhdpi\\user.png"
     },
@@ -310,6 +306,10 @@
     {
         "merged": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-merged_res-35:\\font_kalam_light.ttf.flat",
         "source": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-main-37:\\font\\kalam_light.ttf"
+    },
+    {
+        "merged": "sg.edu.np.mad.mad_assg.app-merged_res-35:/layout_edit_profile.xml.flat",
+        "source": "sg.edu.np.mad.mad_assg.app-main-37:/layout/edit_profile.xml"
     },
     {
         "merged": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-merged_res-35:\\layout_activity_feed_backand_reviews.xml.flat",

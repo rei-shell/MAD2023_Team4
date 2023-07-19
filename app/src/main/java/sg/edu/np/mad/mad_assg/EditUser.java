@@ -8,6 +8,7 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -32,13 +33,13 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.squareup.picasso.Picasso;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
-
 public class EditUser extends AppCompatActivity {
 
     private static final int PICK_IMAGE_REQUEST = 1;
@@ -52,6 +53,7 @@ public class EditUser extends AppCompatActivity {
     private TextInputLayout usernameLayout;
     private String newDisplayName;
 
+    private Uri currentImageUri;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,6 +67,16 @@ public class EditUser extends AppCompatActivity {
         profileImageView = findViewById(R.id.profileImageView);
         usernameLayout = findViewById(R.id.usernameLayout);
         Button saveButton = findViewById(R.id.edit_button);
+        ImageView backbtn = findViewById(R.id.backbtn);
+
+        backbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(EditUser.this, EditUserProfile.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
         profileImageView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,13 +91,33 @@ public class EditUser extends AppCompatActivity {
                 newDisplayName = usernameLayout.getEditText().getText().toString().trim();
                 if (imageUri != null) {
                     uploadImage();
-                } else {
-                    saveUserDataToFirestore(null); // Passing null for photoUrl
-                }
+                    Log.d(TAG, "New photo URL: " + profileImageView);
+                    Toast.makeText(EditUser.this, "User profile picture updated.", Toast.LENGTH_SHORT).show();
+                } //else {
+                //           saveUserDataToFirestore(null); // Passing null for photoUrl
+                //   }
             }
         });
 
-        loadProfileImage();
+        // Load the user's current profile image using Glide
+        if (user != null && user.getPhotoUrl() != null) {
+            currentImageUri = user.getPhotoUrl();
+            Glide.with(this)
+                    .load(currentImageUri)
+                    .apply(new RequestOptions().circleCrop())
+                    .into(profileImageView);
+        }
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // Reload the profile image using the stored URI
+        if (currentImageUri != null) {
+            Glide.with(this)
+                    .load(currentImageUri)
+                    .apply(new RequestOptions().circleCrop())
+                    .into(profileImageView);
+        }
     }
 
     private void showImagePickerDialog() {
@@ -115,6 +147,7 @@ public class EditUser extends AppCompatActivity {
     private void loadProfileImage() {
         // Load the user's profile image using Glide or any other image loading library
         if (user.getPhotoUrl() != null) {
+            Log.d(TAG, "Load Photo: ");
             Glide.with(this)
                     .load(user.getPhotoUrl())
                     .apply(new RequestOptions().circleCrop())
@@ -140,11 +173,13 @@ public class EditUser extends AppCompatActivity {
                 uploadTask.addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                     @Override
                     public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                        // Inside the `uploadImage` method, after successfully uploading the image:
                         imageRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                             @Override
                             public void onSuccess(Uri downloadUri) {
                                 saveUserDataToFirestore(downloadUri.toString());
                                 Intent intent = new Intent(EditUser.this, EditUserProfile.class);
+                                intent.putExtra("newPhotoUrl", downloadUri.toString()); // Pass the new photo URL as an intent extra
                                 startActivity(intent);
                                 finish();
                             }
@@ -154,6 +189,7 @@ public class EditUser extends AppCompatActivity {
                                 Toast.makeText(EditUser.this, "Failed to upload image: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                             }
                         });
+
                     }
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override
@@ -173,6 +209,7 @@ public class EditUser extends AppCompatActivity {
         Map<String, Object> data = new HashMap<>();
         data.put("username", newDisplayName);
         if (photoUrl != null) {
+            Log.d(TAG, "New photo URL: " + photoUrl);
             data.put("photoUrl", photoUrl);
         }
 
@@ -186,6 +223,7 @@ public class EditUser extends AppCompatActivity {
                                 .build()).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void unused) {
+                                Log.e("EditUser", "update display");
                                 Toast.makeText(EditUser.this, "Profile updated successfully!", Toast.LENGTH_SHORT).show();
                             }
                         }).addOnFailureListener(new OnFailureListener() {

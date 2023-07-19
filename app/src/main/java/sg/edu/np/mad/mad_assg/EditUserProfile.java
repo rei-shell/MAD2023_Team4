@@ -5,6 +5,7 @@ import static android.content.ContentValues.TAG;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -24,6 +25,8 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.core.content.ContextCompat;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthCredential;
@@ -40,7 +43,8 @@ import com.squareup.picasso.Picasso;
 import java.util.List;
 
 public class EditUserProfile extends AppCompatActivity {
-
+    //private static final String PREFS_NAME = "UserProfilePrefs";
+    //private static final String PREF_PROFILE_IMAGE_URL = "profileImageUrl";
     private static final String TAG = "EditUserProfile";
     FirebaseAuth mAuth;
     private FirebaseUser user;
@@ -49,9 +53,8 @@ public class EditUserProfile extends AppCompatActivity {
     private TextView email;
     private ImageView profileImageView;
     private Button verify;
-
     private Button changepwd;
-
+    private Uri currentImageUri;
     private static final int EDIT_USER_REQUEST_CODE = 100;
 
     @Override
@@ -73,21 +76,64 @@ public class EditUserProfile extends AppCompatActivity {
         profileImageView = findViewById(R.id.userpic);
 
         // Fetch the user's data from Firestore
-        fetchUserData();
+        //  fetchUserData();
+
+        // Load the user's current profile image using Glide
+        if (user != null && user.getPhotoUrl() != null) {
+            currentImageUri = user.getPhotoUrl();
+
+            Glide.with(this)
+                    .load(currentImageUri)
+                    .apply(new RequestOptions().circleCrop())
+                    .into(profileImageView);
+        }
+
+      /*  // Retrieve the profile picture URL from SharedPreferences
+        String profileImageUrl = getProfileImageUrlFromPrefs();
+        if (!TextUtils.isEmpty(profileImageUrl)) {
+            // Load the profile picture using Picasso or any other image loading library
+            Picasso.get()
+                    .load(profileImageUrl)
+                    .fit()
+                    .centerCrop()
+                    .placeholder(R.drawable.outline_person_24)
+                    .error(R.drawable.baseline_error_24)
+                    .into(profileImageView);
+        } else {
+            // Set a default placeholder image if no profile picture URL is stored
+            profileImageView.setImageResource(R.drawable.outline_person_24);
+        }*/
+
+     /*   // Retrieve the new photo URL from the intent extra (if available)
+        String newPhotoUrl = getIntent().getStringExtra("newPhotoUrl");
+        if (newPhotoUrl != null) {
+            // Load the new profile picture into the ImageView using Picasso
+            Picasso.get()
+                    .load(newPhotoUrl)
+                    .fit()
+                    .centerCrop()
+                    .placeholder(R.drawable.outline_person_24)
+                    .error(R.drawable.baseline_error_24)
+                    .into(profileImageView);
+        } else {
+            // If newPhotoUrl is not available, load the user's current profile picture from Firebase or Firestore
+            fetchUserData();
+        }*/
 
         ImageView backbtn = findViewById(R.id.backbtn);
         Button delete = findViewById(R.id.deleteacct);
         Button edit = findViewById(R.id.editacct);
         verify = findViewById(R.id.verifyemail);
         changepwd = findViewById(R.id.changepassword);
+
         backbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(EditUserProfile.this, Userpage.class);
+                Intent intent = new Intent(EditUserProfile.this, Setttings.class);
                 startActivity(intent);
+                finish();
             }
         });
-
         //done
         delete.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -142,6 +188,19 @@ public class EditUserProfile extends AppCompatActivity {
         });
 
     }
+
+   /* // Helper method to store the profile picture URL in SharedPreferences
+    private void saveProfileImageUrlToPrefs(String imageUrl) {
+        SharedPreferences.Editor editor = getSharedPreferences(PREFS_NAME, MODE_PRIVATE).edit();
+        editor.putString(PREF_PROFILE_IMAGE_URL, imageUrl);
+        editor.apply();
+    }
+
+    // Helper method to retrieve the profile picture URL from SharedPreferences
+    private String getProfileImageUrlFromPrefs() {
+        SharedPreferences prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
+        return prefs.getString(PREF_PROFILE_IMAGE_URL, "");
+    }*/
 
     private void deleteUser() {
         if (user != null) {
@@ -317,10 +376,9 @@ public class EditUserProfile extends AppCompatActivity {
 
                         // Update the TextView with the new display name
                         username.setText(newDisplayName);
-                        profileImageView.setImageURI(Uri.parse(newPhotoUrl));
-                        // If there is a new photo URL, load and display the image using Picasso
+
+                        // Load the updated profile picture using Picasso
                         if (!TextUtils.isEmpty(newPhotoUrl)) {
-                            Log.d(TAG, "New photo URL: " + newPhotoUrl);
                             Picasso.get()
                                     .load(newPhotoUrl)
                                     .fit()
@@ -328,6 +386,9 @@ public class EditUserProfile extends AppCompatActivity {
                                     .placeholder(R.drawable.outline_person_24)
                                     .error(R.drawable.baseline_error_24)
                                     .into(profileImageView);
+                        } else {
+                            // Set a default placeholder image if no profile picture URL is provided
+                            profileImageView.setImageResource(R.drawable.outline_person_24);
                         }
                     }
                 }
@@ -350,24 +411,22 @@ public class EditUserProfile extends AppCompatActivity {
                             if (document != null && document.exists()) {
                                 String userName = document.getString("username");
                                 String emailValue = document.getString("email");
-                                //String password = document.getString("password");
-                                String photoUrl = document.getString("updatedPhotoUrl"); // Use the correct key
+                                // Fetch the profile picture URL from the intent extra
+                                String profileImageUrl = document.getString("photoUrl");
 
                                 username.setText(userName);
                                 email.setText(emailValue);
-                                //pwd.setText(password);
-                                if (!TextUtils.isEmpty(photoUrl)) {
-                                    Picasso.get()
-                                            .load(photoUrl)
-                                            .fit()
-                                            .centerCrop()
-                                            .placeholder(R.drawable.outline_person_24)
-                                            .error(R.drawable.baseline_error_24)
-                                            .into(profileImageView);
 
+                                // Load the user's current profile image using Glide
+                                if (!TextUtils.isEmpty(profileImageUrl)) {
+                                    currentImageUri = Uri.parse(profileImageUrl);
+                                    Glide.with(EditUserProfile.this)
+                                            .load(currentImageUri)
+                                            .apply(new RequestOptions().circleCrop())
+                                            .into(profileImageView);
                                 } else {
-                                    // Set a default placeholder image if no profile picture is available
-                                    profileImageView.setImageDrawable(ContextCompat.getDrawable(EditUserProfile.this, R.drawable.outline_person_24));
+                                    // Set a default placeholder image if no profile picture URL is provided
+                                    profileImageView.setImageResource(R.drawable.outline_person_24);
                                 }
                             } else {
                                 Log.d(TAG, "No such document");
@@ -386,14 +445,15 @@ public class EditUserProfile extends AppCompatActivity {
             // Check if the data contains the updated display name and photo URL
             if (data.hasExtra("displayName") && data.hasExtra("photoUrl")) {
                 String newDisplayName = data.getStringExtra("displayName");
-                String newPhotoUrl = data.getStringExtra("photoUrl");
+                String updatedPhotoUrl = data.getStringExtra("photoUrl"); // Use the correct key for the updated photo URL
 
                 // Update the TextView with the new display name
                 username.setText(newDisplayName);
-
+                Log.d(TAG, "Upload photo");
                 // If there is a new photo URL, update the profile picture
-                if (!TextUtils.isEmpty(newPhotoUrl)) {
-                    updateProfilePicture(newPhotoUrl);
+                if (!TextUtils.isEmpty(updatedPhotoUrl)) {
+                    updateProfilePicture(updatedPhotoUrl);
+                    Log.d(TAG, "Upload photo");
                 }
             }
         }
@@ -411,14 +471,20 @@ public class EditUserProfile extends AppCompatActivity {
                         public void onComplete(@NonNull Task<Void> task) {
                             if (task.isSuccessful()) {
                                 Log.d(TAG, "User profile picture updated.");
-                                // Update the profile picture in the ImageView using Picasso
-                                Picasso.get()
-                                        .load(newPhotoUrl)
-                                        .fit()
-                                        .centerCrop()
-                                        .placeholder(R.drawable.outline_person_24)
-                                        .error(R.drawable.baseline_error_24)
-                                        .into(profileImageView);
+
+                                // Load the new profile picture into the ImageView using Picasso
+                                if (!TextUtils.isEmpty(newPhotoUrl)) {
+                                    Picasso.get()
+                                            .load(newPhotoUrl)
+                                            .fit()
+                                            .centerCrop()
+                                            .placeholder(R.drawable.outline_person_24)
+                                            .error(R.drawable.baseline_error_24)
+                                            .into(profileImageView);
+                                } else {
+                                    // If newPhotoUrl is empty, set a default placeholder image
+                                    profileImageView.setImageResource(R.drawable.outline_person_24);
+                                }
                             } else {
                                 Log.e(TAG, "Error updating user profile picture: " + task.getException());
                                 // Handle the error if the update fails
@@ -441,11 +507,11 @@ public class EditUserProfile extends AppCompatActivity {
                             if (task.isSuccessful()) {
                                 // email sent
                                 Toast.makeText(EditUserProfile.this, "Verify Email sent.", Toast.LENGTH_SHORT).show();
-                    //            verify.setText("Verified");
+                                //            verify.setText("Verified");
                                 // after email is sent just logout the user and finish this activity
-                            FirebaseAuth.getInstance().signOut();
-                            startActivity(new Intent(EditUserProfile.this, StartPage.class));
-                            finish();
+                                FirebaseAuth.getInstance().signOut();
+                                startActivity(new Intent(EditUserProfile.this, StartPage.class));
+                                finish();
                             } else {
                                 // email not sent, so display message and restart the activity or do whatever you wish to do
 
@@ -462,55 +528,29 @@ public class EditUserProfile extends AppCompatActivity {
     }
 
     @Override
+    protected void onPause() {
+        super.onPause();
+
+        // Clear Glide cache when the activity is paused
+        Glide.get(this).clearMemory();
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                Glide.get(EditUserProfile.this).clearDiskCache();
+            }
+        }).start();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // Refresh the user's data from Firestore
+        fetchUserData();
+    }
+
+    @Override
     protected void onDestroy() {
         super.onDestroy();
         Log.d(TAG, "Destroyed");
     }
 }
-
-/*private void saveUserDataToFirestore(String newDisplayName, String newPhotoUrl) {
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        if (user != null) {
-            DocumentReference userRef = db.collection("users").document(user.getUid());
-
-            // Create a map to update the user's data
-            Map<String, Object> updates = new HashMap<>();
-
-            // Update the display name if available
-            if (newDisplayName != null && !newDisplayName.isEmpty()) {
-                updates.put("username", newDisplayName);
-            }
-
-            // Update the photo URL if available
-            if (newPhotoUrl != null && !newPhotoUrl.isEmpty()) {
-                updates.put("updatedPhotoUrl", newPhotoUrl); // Use the correct key for the photo URL
-            }
-
-            // Perform the update operation
-            userRef.update(updates)
-                    .addOnSuccessListener(new OnSuccessListener<Void>() {
-                        @Override
-                        public void onSuccess(Void aVoid) {
-                            Log.d(TAG, "User data updated successfully.");
-                            // Show a success message if the update is successful
-                            Toast.makeText(EditUserProfile.this, "User data updated successfully.", Toast.LENGTH_SHORT).show();
-
-                            // If needed, you can update the local user object with the new data
-                            if (newDisplayName != null) {
-                                user.updateProfile(new UserProfileChangeRequest.Builder().setDisplayName(newDisplayName).build());
-                            }
-                            if (newPhotoUrl != null) {
-                                user.updateProfile(new UserProfileChangeRequest.Builder().setPhotoUri(Uri.parse(newPhotoUrl)).build());
-                            }
-                        }
-                    })
-                    .addOnFailureListener(new OnFailureListener() {
-                        @Override
-                        public void onFailure(@NonNull Exception e) {
-                            Log.e(TAG, "Failed to update user data: " + e.getMessage());
-                            // Show an error message if the update fails
-                            Toast.makeText(EditUserProfile.this, "Failed to update user data.", Toast.LENGTH_SHORT).show();
-                        }
-                    });
-        }
-    }*/
