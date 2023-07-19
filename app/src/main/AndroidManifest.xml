@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+
+
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
+        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -13,13 +17,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         tools:targetApi="31">
 
-
-
         <activity android:name=".MainActivity"/>
-        <activity android:name=".Login"/>
+        <activity android:name=".Login" />
         <activity android:name=".NewUser"/>
         <activity android:name=".StartPage"/>
-        <activity android:name=".ResetPassword"/>
         <activity android:name=".ForgotPassword"/>
         <activity android:name=".Setttings"/>
         <activity android:name=".RecipeView"/>
@@ -27,6 +28,7 @@
         <activity android:name=".FeedBack_Result"/>
         <activity android:name=".EditUserProfile"/>
         <activity android:name=".HistoryViewHolder"/>
+        <activity android:name=".EditUser"/>
         <activity
             android:name=".FeedBackandReviews"
             android:exported="false" />
@@ -38,6 +40,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
 
     </application>
 

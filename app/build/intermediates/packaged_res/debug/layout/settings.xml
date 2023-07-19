@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:id="@+id/setting">
 
     <ImageView
         android:id="@+id/backbtn"
@@ -21,13 +22,15 @@
         android:layout_marginTop="60dp"
         android:layout_marginStart="10dp"
         android:layout_alignTop="@+id/backbtn"
-        android:id="@+id/profile_edit">
+        android:id="@+id/profile_edit"
+        android:clickable="true">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
 
+            android:id="@+id/editprofile"
             android:text="Profile"
             android:textSize="30sp"
             android:textColor="@color/black"
@@ -48,13 +51,14 @@
         android:layout_marginTop="60dp"
         android:layout_marginStart="10dp"
         android:layout_alignTop="@+id/profile_edit"
-        android:id="@+id/view_history">
+        android:id="@+id/view_history"
+        android:clickable="true">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-
+            android:id="@+id/viewhistory"
             android:text="History"
             android:textSize="30sp"
             android:textColor="@color/black"

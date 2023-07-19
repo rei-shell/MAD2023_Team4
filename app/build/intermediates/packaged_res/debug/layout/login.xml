@@ -51,14 +51,12 @@
             android:layout_height="wrap_content"
 
             android:id="@+id/username"
-            app:startIconDrawable="@drawable/outline_person_24"
-            android:hint="UserName"
+            app:startIconDrawable="@drawable/outline_email_24"
+            android:hint="Email"
             app:endIconMode="clear_text"
             app:helperText="Required*"
             app:helperTextTextColor="#DD0000"
             app:errorEnabled="true"
-            app:counterEnabled="true"
-            app:counterMaxLength="10"
 
             android:textColorHint="@color/black"
             app:counterTextColor="@color/black"
@@ -74,7 +72,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
-                android:inputType="text"
+                android:inputType="textEmailAddress"
                 android:fontFamily="@font/kalam_regular"/>
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -89,8 +87,6 @@
             app:helperText="Required*"
             app:helperTextTextColor="#DD0000"
             app:errorEnabled="true"
-            app:counterEnabled="true"
-            app:counterMaxLength="10"
 
             android:textColorHint="@color/black"
             app:counterTextColor="@color/black"

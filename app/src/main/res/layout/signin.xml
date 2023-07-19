@@ -58,8 +58,6 @@
             app:helperText="Required*"
             app:helperTextTextColor="#DD0000"
             app:errorEnabled="true"
-            app:counterEnabled="true"
-            app:counterMaxLength="10"
 
             android:textColorHint="@color/black"
             app:counterTextColor="@color/black"
@@ -121,8 +119,6 @@
             app:helperText="Required*"
             app:helperTextTextColor="#DD0000"
             app:errorEnabled="true"
-            app:counterEnabled="true"
-            app:counterMaxLength="10"
 
             android:textColorHint="@color/black"
             app:counterTextColor="@color/black"
@@ -154,8 +150,6 @@
             app:helperText="Required*"
             app:helperTextTextColor="#DD0000"
             app:errorEnabled="true"
-            app:counterEnabled="true"
-            app:counterMaxLength="10"
 
             android:textColorHint="@color/black"
             app:counterTextColor="@color/black"
