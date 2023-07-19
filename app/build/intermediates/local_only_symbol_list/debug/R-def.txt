@@ -132,6 +132,7 @@ id rexipe
 id scrollview
 id search
 id searchview
+id setting
 id settingbtn
 id signin
 id signinbtn

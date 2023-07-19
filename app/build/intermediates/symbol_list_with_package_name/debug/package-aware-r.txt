@@ -3570,6 +3570,7 @@ id searchview
 id select_dialog_listview
 id selected
 id selection_type
+id setting
 id settingbtn
 id sharedValueSet
 id sharedValueUnset

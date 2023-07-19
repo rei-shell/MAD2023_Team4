@@ -86,7 +86,7 @@
         <ImageView
             android:id="@+id/userpic"
             android:layout_width="200dp"
-            android:layout_height="110dp"
+            android:layout_height="200dp"
             android:layout_centerHorizontal="true"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
@@ -100,10 +100,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignTop="@+id/userpic"
-            android:layout_marginTop="120dp"
+            android:layout_marginTop="230dp"
 
             android:textAlignment="center"
             android:text="UserName"
+            android:textColor="@color/black"
             android:textSize="35sp"
             android:fontFamily="@font/kalam_bold"/>
     </RelativeLayout>

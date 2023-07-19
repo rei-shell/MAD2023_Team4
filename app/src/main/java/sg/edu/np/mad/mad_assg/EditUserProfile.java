@@ -142,12 +142,13 @@ public class EditUserProfile extends AppCompatActivity {
             }
         });
 
-        //got error
+        //done
         edit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(EditUserProfile.this, EditUser.class);
                 editUserLauncher.launch(intent);
+                finish();
             }
         });
 

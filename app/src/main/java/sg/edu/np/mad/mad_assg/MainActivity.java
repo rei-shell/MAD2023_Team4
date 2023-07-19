@@ -62,9 +62,9 @@ public class MainActivity extends AppCompatActivity {
                     fragment = new Search();
                 } else if (id == R.id.person) {
                     fragment = userFragment;
-                    Bundle bundle = new Bundle();
+                    /*Bundle bundle = new Bundle();
                     bundle.putString("username", name);
-                    userFragment.setArguments(bundle);
+                    userFragment.setArguments(bundle);*/
                 } else {
                     return false;
                 }
@@ -88,9 +88,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.d(TAG,"Destoryed!");
+        Log.d(TAG," Fragment Destoryed!");
     }
-
 }
 
 /*

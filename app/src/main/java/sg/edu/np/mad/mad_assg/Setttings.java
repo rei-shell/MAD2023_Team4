@@ -12,6 +12,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -43,7 +45,8 @@ public class Setttings extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Setttings.this, Userpage.class);
+                Log.d(TAG, "Userpage");
+                Intent intent = new Intent(Setttings.this, MainActivity.class);
                 startActivity(intent);
                 finish();
             }
@@ -55,12 +58,12 @@ public class Setttings extends AppCompatActivity {
             public void onClick(View v) {
                 // Retrieve the user's profile picture URL
                 String profileImageUrl = ""; // Replace this with the actual profile image URL from Firebase or any other source
-
                 // Create an intent to start the EditUserProfile activity
                 Intent intent = new Intent(Setttings.this, EditUserProfile.class);
                 // Put the profile picture URL as an extra in the intent
                 intent.putExtra("profileImageUrl", profileImageUrl);
                 startActivity(intent);
+                finish();
             }
         });
 
