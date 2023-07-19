@@ -25,11 +25,11 @@ This app will hopefully inspire you to make every meal a wonderful and memorable
 <p> Stage 1:
   <ul>
     feature group: Rachelle
-    <li> Login/Logout </li>
+    <li> Login/Logout (done)</li>
     <ul> 
     <li> This allows the user to login and logout of the app. After logging in to the app, the user will be able to rate, review, view user profile and create recipe</li>
     </ul>
-    <li> User Profile</li>
+    <li> User Profile (done)</li>
     <ul><li> This allows the user to view their profile and edit the profile information or add information to their profile.</li></ul><br>
     feature group: Eudora
     <li> View History</li>
@@ -57,6 +57,7 @@ This app will hopefully inspire you to make every meal a wonderful and memorable
 <p> Stage 2:
   <ul>
     <li> Random Generator</li>
+    feature: Kelsie
     <li> Notifications System</li>
     <li> Like Page</li>
     <li> Settings</li>
