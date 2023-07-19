@@ -56,7 +56,7 @@ This app will hopefully inspire you to make every meal a wonderful and memorable
 <li>
 <p> Stage 2:
   <ul>
-    <li> Random Generator</li>
+    <li> Random Generator</li><br>
     feature: Kelsie
     <li> Notifications System</li>
     <li> Like Page</li>
