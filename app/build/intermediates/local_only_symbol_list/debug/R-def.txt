@@ -31,6 +31,8 @@ drawable outline_person_24
 drawable outline_search_24
 drawable outline_settings_24
 drawable rectangle
+drawable rexipe
+drawable toggle_style
 drawable twotone_arrow_back_24
 font kalam_bold
 font kalam_light
@@ -44,6 +46,7 @@ id GridView_reco
 id Login
 id Password
 id SignUp
+id about
 id appicon
 id author
 id backarrow
@@ -98,6 +101,7 @@ id minutes
 id minutes2
 id minutes3
 id name
+id notification
 id password
 id passwordEditText
 id person
@@ -142,6 +146,7 @@ id stuff
 id textView
 id timeTaken
 id title
+id toggleswitch
 id top_nav
 id total
 id tvFeedback
@@ -199,6 +204,7 @@ mipmap user
 mipmap world
 string app_name
 string default_web_client_id
+string feedback
 string gcm_defaultSenderId
 string google_api_key
 string google_app_id

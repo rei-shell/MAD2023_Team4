@@ -159,6 +159,7 @@ public class EditUserProfile extends AppCompatActivity {
             // Set the initial text of the Verify button based on the verification status
             if (isEmailVerified) {
                 verify.setText("Verified");
+                verify.setClickable(false);
             } else {
                 verify.setText("Verify");
             }

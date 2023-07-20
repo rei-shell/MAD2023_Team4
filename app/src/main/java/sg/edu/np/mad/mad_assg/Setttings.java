@@ -7,8 +7,10 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -26,6 +28,7 @@ public class Setttings extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.settings);
 
+        //content done
         LinearLayout profile = (LinearLayout) findViewById(R.id.profile_edit);
 
         //content not done
@@ -33,6 +36,7 @@ public class Setttings extends AppCompatActivity {
 
         ImageView back = (ImageView) findViewById(R.id.backbtn);
         Button logout = (Button) findViewById(R.id.logoutbtn);
+        Switch toggle = findViewById(R.id.toggleswitch);
 
         mAuth = FirebaseAuth.getInstance();
         user = mAuth.getCurrentUser();
@@ -51,6 +55,26 @@ public class Setttings extends AppCompatActivity {
                 finish();
             }
         });
+
+        //toggle notification system
+
+        toggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                // Handle the toggle event here
+                if (isChecked) {
+                    // Switch is turned ON
+                    // Perform actions for ON state
+                    toggle.setChecked(true);;
+                } else {
+                    // Switch is turned OFF
+                    // Perform actions for OFF state
+                    toggle.setChecked(false);
+                }
+            }
+        });
+
+
 
         // Inside the onClick listener for the "Edit Profile" button in the Settings activity
         profile.setOnClickListener(new View.OnClickListener() {
