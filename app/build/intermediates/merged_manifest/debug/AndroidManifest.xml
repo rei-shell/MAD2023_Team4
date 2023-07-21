@@ -42,6 +42,9 @@
         <activity android:name="sg.edu.np.mad.mad_assg.EditUserProfile" />
         <activity android:name="sg.edu.np.mad.mad_assg.HistoryViewHolder" />
         <activity android:name="sg.edu.np.mad.mad_assg.EditUser" />
+        <activity android:name="sg.edu.np.mad.mad_assg.AboutUs" />
+        <activity android:name="sg.edu.np.mad.mad_assg.FeedBack" />
+        <activity android:name="sg.edu.np.mad.mad_assg.GeneralSetting" />
         <activity
             android:name="sg.edu.np.mad.mad_assg.FeedBackandReviews"
             android:exported="false" />

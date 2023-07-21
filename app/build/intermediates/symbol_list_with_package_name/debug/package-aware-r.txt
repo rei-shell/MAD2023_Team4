@@ -3066,11 +3066,14 @@ drawable outline_account_circle_24
 drawable outline_email_24
 drawable outline_home_24
 drawable outline_lock_24
+drawable outline_notifications_24
 drawable outline_person_24
 drawable outline_search_24
 drawable outline_settings_24
 drawable rectangle
+drawable rexipe
 drawable test_level_drawable
+drawable toggle_style
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable twotone_arrow_back_24
@@ -3100,6 +3103,7 @@ id SYM
 id SignUp
 id TOP_END
 id TOP_START
+id about
 id accelerate
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
@@ -3462,9 +3466,11 @@ id noState
 id none
 id normal
 id north
+id notification
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id notificationbtn
 id off
 id on
 id onInterceptTouchReturnSwipe
@@ -3652,6 +3658,7 @@ id title
 id titleDividerNoCustom
 id title_template
 id toggle
+id toggleswitch
 id top
 id topPanel
 id top_nav
@@ -3822,6 +3829,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout about_us
 layout activity_feed_backand_reviews
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
@@ -3848,10 +3856,12 @@ layout dialog_password_input
 layout edit_profile
 layout edit_profile_page
 layout feedback_result
+layout feedback_support
 layout forgot_password
 layout fragment_home_page
 layout fragment_search
 layout fragment_userpage
+layout general_setting
 layout homepage_main
 layout item_history
 layout item_recipe
@@ -4005,6 +4015,7 @@ string fab_transformation_sheet_behavior
 string fallback_menu_item_copy_link
 string fallback_menu_item_open_in_browser
 string fallback_menu_item_share_link
+string feedback
 string gcm_defaultSenderId
 string google_api_key
 string google_app_id

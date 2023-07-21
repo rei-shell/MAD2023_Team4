@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient"
@@ -13,7 +14,6 @@
         android:layout_marginTop="10dp"
         android:layout_marginStart="10dp"
         android:src="@drawable/twotone_arrow_back_24"/>
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -70,29 +70,130 @@
             android:layout_marginEnd="10dp"
             android:layout_marginTop="5dp"
             android:src="@drawable/baseline_arrow_forward_24"/>
-        <!--
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:text="Notfication"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:text="General Settings"/>-->
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="10dp"
+        android:layout_alignTop="@+id/view_history"
+        android:id="@+id/notification"
+        android:clickable="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Notfication"
+            android:textSize="30sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/kalam_regular"/>
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:id="@+id/toggleswitch"
+            android:thumbTint="@drawable/toggle_style"
+            android:trackTint="@color/white"
+            android:checked="true"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="10dp"
+        android:layout_alignTop="@+id/notification"
+        android:id="@+id/stuff"
+        android:clickable="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="General Settings"
+            android:textSize="30sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/kalam_regular"/>
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/baseline_arrow_forward_24"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="10dp"
+        android:layout_alignTop="@+id/stuff"
+        android:id="@+id/feedback"
+        android:clickable="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/feedback"
+            android:textSize="30sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/kalam_regular"/>
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/baseline_arrow_forward_24"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="10dp"
+        android:layout_alignTop="@+id/feedback"
+        android:id="@+id/about"
+        android:clickable="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="About Us"
+            android:textSize="30sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/kalam_regular"/>
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/baseline_arrow_forward_24"/>
+    </LinearLayout>
+
     <Button
+        android:id="@+id/logoutbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/about"
         android:layout_centerInParent="true"
 
-        android:id="@+id/logoutbtn"
-
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/kalam_regular"
         android:text="Log Out"
-        android:textSize="25sp"
-        android:fontFamily="@font/kalam_regular"/>
+        android:textSize="25sp" />
 </RelativeLayout>

@@ -29,6 +29,9 @@
         <activity android:name=".EditUserProfile"/>
         <activity android:name=".HistoryViewHolder"/>
         <activity android:name=".EditUser"/>
+        <activity android:name=".AboutUs"/>
+        <activity android:name=".FeedBack"/>
+        <activity android:name=".GeneralSetting"/>
         <activity
             android:name=".FeedBackandReviews"
             android:exported="false" />

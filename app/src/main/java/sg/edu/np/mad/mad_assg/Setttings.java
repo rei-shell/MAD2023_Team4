@@ -7,8 +7,10 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -26,13 +28,20 @@ public class Setttings extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.settings);
 
+        //content done
         LinearLayout profile = (LinearLayout) findViewById(R.id.profile_edit);
 
         //content not done
         LinearLayout history = (LinearLayout) findViewById(R.id.view_history);
 
+        LinearLayout gerenal = findViewById(R.id.stuff);
+
+        LinearLayout feedback = findViewById(R.id.feedback);
+
+        LinearLayout aboutus = findViewById(R.id.about);
         ImageView back = (ImageView) findViewById(R.id.backbtn);
         Button logout = (Button) findViewById(R.id.logoutbtn);
+        Switch toggle = findViewById(R.id.toggleswitch);
 
         mAuth = FirebaseAuth.getInstance();
         user = mAuth.getCurrentUser();
@@ -49,6 +58,23 @@ public class Setttings extends AppCompatActivity {
                 Intent intent = new Intent(Setttings.this, MainActivity.class);
                 startActivity(intent);
                 finish();
+            }
+        });
+
+        //toggle notification system
+        toggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                // Handle the toggle event here
+                if (isChecked) {
+                    // Switch is turned ON
+                    // Perform actions for ON state
+                    toggle.setChecked(true);
+                } else {
+                    // Switch is turned OFF
+                    // Perform actions for OFF state
+                    toggle.setChecked(false);
+                }
             }
         });
 
@@ -72,6 +98,33 @@ public class Setttings extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(Setttings.this, HistoryViewHolder.class);
                 startActivity(intent);
+            }
+        });
+
+        gerenal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Setttings.this, GeneralSetting.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        feedback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Setttings.this, FeedBack.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        aboutus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Setttings.this, AboutUs.class);
+                startActivity(intent);
+                finish();
             }
         });
         logout.setOnClickListener(new View.OnClickListener() {

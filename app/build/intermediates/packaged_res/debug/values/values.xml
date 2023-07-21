@@ -23,6 +23,7 @@
     <dimen name="text_margin">16dp</dimen>
     <string name="app_name">Rexipe</string>
     <string name="default_web_client_id" translatable="false">815308253409-9dnpabckfuvk7jrgnlf5hfeorpterles.apps.googleusercontent.com</string>
+    <string name="feedback">Feedback &amp; Support</string>
     <string name="gcm_defaultSenderId" translatable="false">815308253409</string>
     <string name="google_api_key" translatable="false">AIzaSyDz5d59-wzvzgtZhxqI4nT6qvPNGuTFd68</string>
     <string name="google_app_id" translatable="false">1:815308253409:android:8f508cbb612ada8df3efa0</string>
