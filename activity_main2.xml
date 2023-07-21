@@ -4,10 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E3DFDF"
+    android:background="@drawable/gradient_list"
     android:orientation="vertical"
-    android:padding="20dp"
-    tools:context=".MainActivity2">
+    android:padding="20dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -27,23 +26,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:fontFamily="@font/autour_one"
+
             android:text="Feedback App"
             android:textColor="#000000"
             android:textSize="30dp" />
-
+        <!--android:fontFamily="@font/autour_one"-->
     </LinearLayout>
 
+    <!--android:src="@drawable/recipe"-->
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="374dp"
-        android:layout_height="197dp"
-        android:src="@drawable/recipe" />
+        android:layout_height="62dp" />
 
     <TextView
         android:id="@+id/tvFeedback"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="39dp"
         android:gravity="center_horizontal"
         android:text="Very Dissatisfied"
         android:textColor="#000000" />
@@ -80,11 +79,11 @@
 
     <Button
         android:id="@+id/btnSend"
-        android:layout_width="264dp"
+        android:layout_width="277dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="20dp"
-        android:layout_marginRight="50dp"
+        android:layout_marginRight="20dp"
         android:background="#FF5722"
         android:text="Send Feedback"
         android:textColor="#FFFFFF" />
@@ -98,6 +97,16 @@
         android:layout_marginRight="50dp"
         android:background="#FF5722"
         android:text="Share"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/btnPollFloating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:background="#FF5722"
+        android:text="Do a Poll"
         android:textColor="#FFFFFF" />
 
 </LinearLayout>
