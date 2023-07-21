@@ -3065,6 +3065,7 @@ int drawable outline_account_circle_24 0x7f0800ff
 int drawable outline_email_24 0x7f080100
 int drawable outline_home_24 0x7f080101
 int drawable outline_lock_24 0x7f080102
+int drawable outline_notifications_24 0x7f08010d
 int drawable outline_person_24 0x7f080103
 int drawable outline_search_24 0x7f080104
 int drawable outline_settings_24 0x7f080105
@@ -3468,6 +3469,7 @@ int id notification 0x7f0a0180
 int id notification_background 0x7f0a0181
 int id notification_main_column 0x7f0a0182
 int id notification_main_column_container 0x7f0a0183
+int id notificationbtn 0x7f0a0279
 int id off 0x7f0a0184
 int id on 0x7f0a0185
 int id onInterceptTouchReturnSwipe 0x7f0a0186
@@ -3826,6 +3828,7 @@ int layout abc_search_dropdown_item_icons_2line 0x7f0d0018
 int layout abc_search_view 0x7f0d0019
 int layout abc_select_dialog_material 0x7f0d001a
 int layout abc_tooltip 0x7f0d001b
+int layout about_us 0x7f0d0082
 int layout activity_feed_backand_reviews 0x7f0d001c
 int layout browser_actions_context_menu_page 0x7f0d001d
 int layout browser_actions_context_menu_row 0x7f0d001e
@@ -3852,10 +3855,12 @@ int layout dialog_password_input 0x7f0d0032
 int layout edit_profile 0x7f0d0033
 int layout edit_profile_page 0x7f0d0034
 int layout feedback_result 0x7f0d0035
+int layout feedback_support 0x7f0d0083
 int layout forgot_password 0x7f0d0036
 int layout fragment_home_page 0x7f0d0037
 int layout fragment_search 0x7f0d0038
 int layout fragment_userpage 0x7f0d0039
+int layout general_setting 0x7f0d0084
 int layout homepage_main 0x7f0d003a
 int layout item_history 0x7f0d003b
 int layout item_recipe 0x7f0d003c

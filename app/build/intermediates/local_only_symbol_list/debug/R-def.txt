@@ -27,6 +27,7 @@ drawable outline_account_circle_24
 drawable outline_email_24
 drawable outline_home_24
 drawable outline_lock_24
+drawable outline_notifications_24
 drawable outline_person_24
 drawable outline_search_24
 drawable outline_settings_24
@@ -102,6 +103,7 @@ id minutes2
 id minutes3
 id name
 id notification
+id notificationbtn
 id password
 id passwordEditText
 id person
@@ -168,6 +170,7 @@ id viewall
 id viewall1
 id viewall2
 id viewhistory
+layout about_us
 layout activity_feed_backand_reviews
 layout cardview_recipe
 layout category
@@ -176,10 +179,12 @@ layout dialog_password_input
 layout edit_profile
 layout edit_profile_page
 layout feedback_result
+layout feedback_support
 layout forgot_password
 layout fragment_home_page
 layout fragment_search
 layout fragment_userpage
+layout general_setting
 layout homepage_main
 layout item_history
 layout item_recipe

@@ -34,6 +34,11 @@ public class Setttings extends AppCompatActivity {
         //content not done
         LinearLayout history = (LinearLayout) findViewById(R.id.view_history);
 
+        LinearLayout gerenal = findViewById(R.id.stuff);
+
+        LinearLayout feedback = findViewById(R.id.feedback);
+
+        LinearLayout aboutus = findViewById(R.id.about);
         ImageView back = (ImageView) findViewById(R.id.backbtn);
         Button logout = (Button) findViewById(R.id.logoutbtn);
         Switch toggle = findViewById(R.id.toggleswitch);
@@ -57,7 +62,6 @@ public class Setttings extends AppCompatActivity {
         });
 
         //toggle notification system
-
         toggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -65,7 +69,7 @@ public class Setttings extends AppCompatActivity {
                 if (isChecked) {
                     // Switch is turned ON
                     // Perform actions for ON state
-                    toggle.setChecked(true);;
+                    toggle.setChecked(true);
                 } else {
                     // Switch is turned OFF
                     // Perform actions for OFF state
@@ -73,8 +77,6 @@ public class Setttings extends AppCompatActivity {
                 }
             }
         });
-
-
 
         // Inside the onClick listener for the "Edit Profile" button in the Settings activity
         profile.setOnClickListener(new View.OnClickListener() {
@@ -96,6 +98,33 @@ public class Setttings extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(Setttings.this, HistoryViewHolder.class);
                 startActivity(intent);
+            }
+        });
+
+        gerenal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Setttings.this, GeneralSetting.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        feedback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Setttings.this, FeedBack.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        aboutus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Setttings.this, AboutUs.class);
+                startActivity(intent);
+                finish();
             }
         });
         logout.setOnClickListener(new View.OnClickListener() {

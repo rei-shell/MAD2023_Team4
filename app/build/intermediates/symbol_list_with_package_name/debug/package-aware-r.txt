@@ -3066,6 +3066,7 @@ drawable outline_account_circle_24
 drawable outline_email_24
 drawable outline_home_24
 drawable outline_lock_24
+drawable outline_notifications_24
 drawable outline_person_24
 drawable outline_search_24
 drawable outline_settings_24
@@ -3469,6 +3470,7 @@ id notification
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id notificationbtn
 id off
 id on
 id onInterceptTouchReturnSwipe
@@ -3827,6 +3829,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout about_us
 layout activity_feed_backand_reviews
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
@@ -3853,10 +3856,12 @@ layout dialog_password_input
 layout edit_profile
 layout edit_profile_page
 layout feedback_result
+layout feedback_support
 layout forgot_password
 layout fragment_home_page
 layout fragment_search
 layout fragment_userpage
+layout general_setting
 layout homepage_main
 layout item_history
 layout item_recipe
