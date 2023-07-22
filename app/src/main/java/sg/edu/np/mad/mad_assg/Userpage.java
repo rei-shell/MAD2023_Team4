@@ -99,7 +99,7 @@ public class Userpage extends Fragment {
         return view;
     }
 
-    private void fetchUserData() {
+    /*private void fetchUserData() {
         // Get the reference to the "users" collection in Firestore
         CollectionReference usersCollection = db.collection("users");
 
@@ -144,7 +144,59 @@ public class Userpage extends Fragment {
                         }
                     }
                 });
+    }*/
+
+    private void fetchUserData() {
+        // Get the reference to the "users" collection in Firestore
+        CollectionReference usersCollection = db.collection("users");
+
+        // Get the current user
+        FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+
+        if (currentUser != null) {
+            // Get the current user's UID
+            String userId = currentUser.getUid();
+
+            // Get the user document from Firestore based on the user's UID
+            usersCollection.document(userId).get()
+                    .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                        @Override
+                        public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                            if (task.isSuccessful()) {
+                                DocumentSnapshot document = task.getResult();
+                                if (document != null && document.exists()) {
+                                    String userName = document.getString("username");
+                                 //   String emailValue = document.getString("email");
+                                    // Fetch the profile picture URL from the document
+                                    String profileImageUrl = document.getString("photoUrl");
+
+                                    // Update the TextViews in the fragment with the user data
+                                    userid.setText(userName);
+                                    userid2.setText(userName);
+                                    //email.setText(emailValue);
+
+                                    // Load the user's current profile image using Glide
+                                    if (!TextUtils.isEmpty(profileImageUrl)) {
+                                        currentImageUri = Uri.parse(profileImageUrl);
+                                        Glide.with(Userpage.this)
+                                                .load(currentImageUri)
+                                                .apply(new RequestOptions().circleCrop())
+                                                .into(profilepic);
+                                    } else {
+                                        // Set a default placeholder image if no profile picture URL is provided
+                                        profilepic.setImageResource(R.drawable.outline_person_24);
+                                    }
+                                } else {
+                                    Log.d(TAG, "No such document");
+                                }
+                            } else {
+                                Log.d(TAG, "Error getting documents: ", task.getException());
+                            }
+                        }
+                    });
+        }
     }
+
 }
 
 /*

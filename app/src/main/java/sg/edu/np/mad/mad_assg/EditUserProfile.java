@@ -28,6 +28,8 @@ import androidx.core.content.ContextCompat;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.EmailAuthProvider;
@@ -40,7 +42,9 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.squareup.picasso.Picasso;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class EditUserProfile extends AppCompatActivity {
     //private static final String PREFS_NAME = "UserProfilePrefs";
@@ -461,7 +465,7 @@ public class EditUserProfile extends AppCompatActivity {
         }
     }
 
-    private void updateProfilePicture(String newPhotoUrl) {
+    /*private void updateProfilePicture(String newPhotoUrl) {
         if (user != null) {
             UserProfileChangeRequest profileUpdates = new UserProfileChangeRequest.Builder()
                     .setPhotoUri(Uri.parse(newPhotoUrl))
@@ -492,6 +496,80 @@ public class EditUserProfile extends AppCompatActivity {
                                 // Handle the error if the update fails
                                 Toast.makeText(EditUserProfile.this, "Failed to update profile picture", Toast.LENGTH_SHORT).show();
                             }
+                        }
+                    });
+        }
+    }*/
+    private void updateProfilePicture(String newPhotoUrl) {
+        FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+
+        if (currentUser != null) {
+            UserProfileChangeRequest profileUpdates = new UserProfileChangeRequest.Builder()
+                    .setPhotoUri(Uri.parse(newPhotoUrl))
+                    .build();
+
+            currentUser.updateProfile(profileUpdates)
+                    .addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            if (task.isSuccessful()) {
+                                Log.d(TAG, "User profile picture updated.");
+
+                                // Update the user's profile picture URL in the "users" collection
+                                updateUserDataInFirestore(newPhotoUrl);
+
+                                // Load the new profile picture into the ImageView using Picasso
+                                if (!TextUtils.isEmpty(newPhotoUrl)) {
+                                    Picasso.get()
+                                            .load(newPhotoUrl)
+                                            .fit()
+                                            .centerCrop()
+                                            .placeholder(R.drawable.outline_person_24)
+                                            .error(R.drawable.baseline_error_24)
+                                            .into(profileImageView);
+                                } else {
+                                    // If newPhotoUrl is empty, set a default placeholder image
+                                    profileImageView.setImageResource(R.drawable.outline_person_24);
+                                }
+                            } else {
+                                Log.e(TAG, "Error updating user profile picture: " + task.getException());
+                                // Handle the error if the update fails
+                                Toast.makeText(EditUserProfile.this, "Failed to update profile picture", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
+        }
+    }
+
+    private void updateUserDataInFirestore(String newPhotoUrl) {
+        FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+
+        if (currentUser != null) {
+            // Get the reference to the "users" collection in Firestore
+            CollectionReference usersCollection = db.collection("users");
+
+            // Get the current user's UID
+            String userId = currentUser.getUid();
+
+            // Update the user document in Firestore with the new profile picture URL
+            Map<String, Object> data = new HashMap<>();
+            if (!TextUtils.isEmpty(newPhotoUrl)) {
+                data.put("photoUrl", newPhotoUrl);
+            }
+
+            usersCollection.document(userId).update(data)
+                    .addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void unused) {
+                            // Handle the successful update, if needed
+                            Log.d(TAG, "User profile data updated in Firestore.");
+                        }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            // Handle the failure to update user data in Firestore
+                            Log.e(TAG, "Error updating user profile data in Firestore: " + e.getMessage());
                         }
                     });
         }

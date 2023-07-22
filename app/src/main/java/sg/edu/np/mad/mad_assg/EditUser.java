@@ -28,6 +28,7 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
@@ -144,17 +145,6 @@ public class EditUser extends AppCompatActivity {
         startActivityForResult(intent, PICK_IMAGE_REQUEST);
     }
 
-    private void loadProfileImage() {
-        // Load the user's profile image using Glide or any other image loading library
-        if (user.getPhotoUrl() != null) {
-            Log.d(TAG, "Load Photo: ");
-            Glide.with(this)
-                    .load(user.getPhotoUrl())
-                    .apply(new RequestOptions().circleCrop())
-                    .into(profileImageView);
-        }
-    }
-
     private void uploadImage() {
         if (imageUri != null) {
             // Generate a random image name
@@ -203,7 +193,7 @@ public class EditUser extends AppCompatActivity {
         }
     }
 
-    private void saveUserDataToFirestore(String photoUrl) {
+    /*private void saveUserDataToFirestore(String photoUrl) {
         DocumentReference userRef = db.collection("users").document(user.getUid());
 
         Map<String, Object> data = new HashMap<>();
@@ -239,6 +229,40 @@ public class EditUser extends AppCompatActivity {
                         Toast.makeText(EditUser.this, "Failed to update profile: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 });
+    }*/
+    private void saveUserDataToFirestore(String photoUrl) {
+        FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+
+        if (currentUser != null) {
+            // Get the reference to the "users" collection in Firestore
+            CollectionReference usersCollection = db.collection("users");
+
+            // Get the current user's UID
+            String userId = currentUser.getUid();
+
+            // Update the user document in Firestore with the new display name and profile picture URL
+            Map<String, Object> data = new HashMap<>();
+            data.put("username", newDisplayName);
+            if (photoUrl != null) {
+                data.put("photoUrl", photoUrl);
+            }
+
+            usersCollection.document(userId).update(data)
+                    .addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void unused) {
+                            // Handle the successful update, if needed
+                            Log.d(TAG, "User profile data updated in Firestore.");
+                        }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            // Handle the failure to update user data in Firestore
+                            Log.e(TAG, "Error updating user profile data in Firestore: " + e.getMessage());
+                        }
+                    });
+        }
     }
 
     @Override
@@ -272,5 +296,17 @@ public class EditUser extends AppCompatActivity {
                         .into(profileImageView);
             }
         }
-    }*/
+    }
+    private void loadProfileImage() {
+        // Load the user's profile image using Glide or any other image loading library
+        if (user.getPhotoUrl() != null) {
+            Log.d(TAG, "Load Photo: ");
+            Glide.with(this)
+                    .load(user.getPhotoUrl())
+                    .apply(new RequestOptions().circleCrop())
+                    .into(profileImageView);
+        }
+    }
+
+    */
 
