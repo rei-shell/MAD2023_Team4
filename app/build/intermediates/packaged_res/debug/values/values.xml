@@ -21,7 +21,15 @@
     <color name="red">#FF0000</color>
     <color name="white">#FFFFFFFF</color>
     <dimen name="text_margin">16dp</dimen>
+    <string name="about_contact">Contact or Questions</string>
+    <string name="about_contact_info">\u2022 Email: rexipe@np.edu.sg \n \u2022 Phone Number: +65 8762 5678 \n \u2022 Address: Ngee Ann Polytechnic, 535 Clementi Road Singapore 59</string>
+    <string name="about_contact_info_end">Thank you and Enjoy!\n\n\n</string>
+    <string name="about_features">We allow users to: </string>
+    <string name="about_features_info">\u2022 Upload Your Own Recipe \n \u2022 Rate and Review your choice of recipe \n \u2022 Update your Profile Picture and Username \n \u2022 View Recipe History \n \u2022 Like Your Favourite Recipe</string>
+    <string name="about_header">Welcome to Rexipe</string>
+    <string name="about_info">We are group of students from Ngee Ann Polytechnic. We created this app so that users like you can enjoy your own pace of cooking or baking. There are a few features that you may find interesting in this app. </string>
     <string name="app_name">Rexipe</string>
+    <string name="contact_info">We would love to hear from you! If you have any questions, Your can Reach us by: </string>
     <string name="default_web_client_id" translatable="false">815308253409-9dnpabckfuvk7jrgnlf5hfeorpterles.apps.googleusercontent.com</string>
     <string name="feedback">Feedback &amp; Support</string>
     <string name="gcm_defaultSenderId" translatable="false">815308253409</string>

@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/gradient"
     android:orientation="vertical"
     android:id="@+id/setting">
@@ -32,6 +33,124 @@
             android:layout_weight="1"
             />
     </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignTop="@+id/header"
+        android:layout_marginTop="65dp">
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:text="How can I help you?"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:fontFamily="@font/kalam_bold"/>
+
+        <!--<AutoCompleteTextView
+            android:id="@+id/dropdown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Select a topic"
+            android:padding="15dp"
+            android:layout_alignTop="@+id/textView1"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            />-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/dropdown_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textView1"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+
+            android:textColorHint="@color/black"
+            app:counterTextColor="@color/black"
+            app:hintTextColor="@color/black"
+            app:errorTextColor="@color/red"
+            app:boxStrokeErrorColor="@color/red"
+            app:boxStrokeColor="@color/black"
+            app:endIconMode="dropdown_menu"
+            app:endIconTint="@color/black"
+            >
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/dropdown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:text="Select a topic" />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
 
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/dropdown_layout"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="60dp"
+            android:text="Description"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:fontFamily="@font/kalam_bold"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
+            android:id="@+id/textdescription"
+            app:boxStrokeColor="@color/black"
+
+            app:hintEnabled="true"
+            app:hintAnimationEnabled="false"
+            app:helperText="Required*"
+            app:helperTextTextColor="#DD0000"
+            app:errorEnabled="true"
+
+            android:textColorHint="@color/black"
+            app:counterTextColor="@color/black"
+            app:hintTextColor="@color/black"
+            app:errorTextColor="@color/red"
+            app:boxStrokeErrorColor="@color/red"
+
+            android:layout_alignTop="@+id/description"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="40dp"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:textColor="@color/black"
+                android:inputType="text"
+                android:gravity="top|left"
+                android:hint="Description"
+                android:id="@+id/text_description"
+                android:fontFamily="@font/kalam_regular"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/submitbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignTop="@+id/textdescription"
+            android:layout_marginTop="250dp"
+            android:text="Submit"
+            android:fontFamily="@font/kalam_bold"
+            android:textSize="20sp"/>
+    </RelativeLayout>
 </RelativeLayout>
