@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.SEND_EMAIL" />
 
 
     <application
@@ -14,7 +13,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="Rexipe"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MAD_Assg"
+        android:theme="@style/AppTheme.Light"
         android:roundIcon="@mipmap/ic_launcher_round"
         tools:targetApi="31">
 

@@ -1,20 +1,36 @@
 package sg.edu.np.mad.mad_assg;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.ImageView;
+import android.widget.Spinner;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
+
+import java.util.Arrays;
 
 public class GeneralSetting extends AppCompatActivity {
+    String[] language = {"English", "Chinese", "Spanish", "Korean", "Japanese", "Malay", "Tamil"};
+    String[] mode = {"Light", "Dark"};
+    private Spinner dropdown;
+    private Spinner modedropdown;
+    boolean nightMode;
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.general_setting);
 
-        ImageView back = (ImageView) findViewById(R.id.backbtn);
-
+        ImageView back = findViewById(R.id.backbtn);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -23,5 +39,77 @@ public class GeneralSetting extends AppCompatActivity {
                 finish();
             }
         });
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.select_dialog_item, language);
+        dropdown = findViewById(R.id.dropdown);
+        dropdown.setAdapter(adapter);
+
+        ArrayAdapter<String> theme = new ArrayAdapter<>(this, android.R.layout.select_dialog_item, mode);
+        modedropdown = findViewById(R.id.dropdown_mode);
+        modedropdown.setAdapter(theme);
+
+        // Read the night mode preference from SharedPreferences
+        sharedPreferences = getSharedPreferences("MODE", Context.MODE_PRIVATE);
+        nightMode = sharedPreferences.getBoolean("nightMode", false);
+
+        // Set the appropriate night mode based on the preference
+        if (nightMode) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+            // If night mode is enabled, set the "Dark" item as selected in the Spinner
+            modedropdown.setSelection(Arrays.asList(mode).indexOf("Dark"));
+        } else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+            // If night mode is disabled, set the "Light" item as selected in the Spinner
+            modedropdown.setSelection(Arrays.asList(mode).indexOf("Light"));
+        }
+
+        modedropdown.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                // Get the selected item from the mode dropdown
+                String selectedMode = mode[position];
+
+                if (selectedMode.equals("Dark")) {
+                    // If "Dark" is selected, enable night mode
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                    // Store the night mode preference
+                    editor = sharedPreferences.edit();
+                    editor.putBoolean("nightMode", true);
+                    editor.apply();
+                } else {
+                    // If "Light" is selected, disable night mode
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                    // Store the night mode preference
+                    editor = sharedPreferences.edit();
+                    editor.putBoolean("nightMode", false);
+                    editor.apply();
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // Read the night mode preference from SharedPreferences
+        nightMode = sharedPreferences.getBoolean("nightMode", false);
+
+        // Set the appropriate night mode based on the preference
+        if (nightMode) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+            // If night mode is enabled, set the "Dark" item as selected in the Spinner
+            modedropdown.setSelection(Arrays.asList(mode).indexOf("Dark"));
+        } else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+            // If night mode is disabled, set the "Light" item as selected in the Spinner
+            modedropdown.setSelection(Arrays.asList(mode).indexOf("Light"));
+        }
     }
 }

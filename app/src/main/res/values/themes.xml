@@ -1,11 +1,52 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
+
     <!-- Base application theme. -->
     <style name="Base.Theme.MAD_Assg" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <!-- Customize your light theme attributes here -->
     </style>
 
-    <style name="Theme.MAD_Assg" parent="Base.Theme.MAD_Assg" />
+    <!-- Light Mode Theme -->
+    <style name="AppTheme.Light" parent="Base.Theme.MAD_Assg">
+        <!-- Customize other attributes for light mode as needed -->
+        <item name="colorPrimary">@color/my_light_primary</item>
+        <item name="colorPrimaryDark">@color/my_light_primary_dark</item>
+    </style>
 
+    <style name="ScreenBackground"><item name="android:background">@drawable/gradient</item></style>
+    <style name="CardBackground"><item name="android:background">@color/white</item></style>
 
+    <!-- Define a base style with common attributes -->
+    <style name="BaseStyle">
+        <!-- Add common attributes here -->
+        <!-- Add other common attributes if needed -->
+    </style>
+
+    <!-- Define styles that inherit from the base style and add/override specific attributes -->
+    <style name="BoxStrokeColor" parent="BaseStyle">
+        <!-- Add specific attributes for BoxStrokeColor style -->
+        <item name="boxStrokeColor">@color/black</item>
+        <!-- Add other attributes specific to BoxStrokeColor style -->
+    </style>
+
+    <style name="TextColor" parent="BaseStyle">
+        <!-- Add specific attributes for TextColor style -->
+        <item name="android:textColor">@color/black</item>
+        <!-- Add other attributes specific to TextColor style -->
+    </style>
+
+    <style name="TextColorHint" parent="BaseStyle">
+        <!-- Add specific attributes for TextColorHint style -->
+        <item name="android:textColorHint">@color/black</item>
+        <!-- Add other attributes specific to TextColorHint style -->
+    </style>
+
+    <style name="EndColor" parent="BaseStyle"><item name="endIconTint">@color/black</item></style>
+    <style name="TIntColor"><item name="android:tint">@color/black</item></style>
+
+    <!-- styles.xml -->
+    <style name="YourButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:background">@color/white</item>
+        <item name="android:textColor">@android:color/black</item> <!-- Example: Set text color to white -->
+        <!-- Add other style properties as needed -->
+    </style>
 </resources>

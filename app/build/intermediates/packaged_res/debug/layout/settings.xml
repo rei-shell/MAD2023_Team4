@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient"
+    style="@style/ScreenBackground"
     android:orientation="vertical"
     android:id="@+id/setting">
 
@@ -13,6 +13,7 @@
         android:layout_height="35dp"
         android:layout_marginTop="10dp"
         android:layout_marginStart="10dp"
+        style="@style/TIntColor"
         android:src="@drawable/twotone_arrow_back_24"/>
 
     <LinearLayout
@@ -33,7 +34,7 @@
             android:id="@+id/editprofile"
             android:text="Profile"
             android:textSize="30sp"
-            android:textColor="@color/black"
+            style="@style/TextColor"
             android:fontFamily="@font/kalam_regular"/>
 
         <ImageView
@@ -41,6 +42,7 @@
             android:layout_height="35dp"
             android:layout_marginEnd="10dp"
             android:layout_marginTop="5dp"
+            style="@style/TIntColor"
             android:src="@drawable/baseline_arrow_forward_24"/>
     </LinearLayout>
 
@@ -61,7 +63,7 @@
             android:id="@+id/viewhistory"
             android:text="History"
             android:textSize="30sp"
-            android:textColor="@color/black"
+            style="@style/TextColor"
             android:fontFamily="@font/kalam_regular"/>
 
         <ImageView
@@ -69,6 +71,7 @@
             android:layout_height="35dp"
             android:layout_marginEnd="10dp"
             android:layout_marginTop="5dp"
+            style="@style/TIntColor"
             android:src="@drawable/baseline_arrow_forward_24"/>
 
     </LinearLayout>
@@ -89,7 +92,7 @@
             android:layout_weight="1"
             android:text="Notfication"
             android:textSize="30sp"
-            android:textColor="@color/black"
+            style="@style/TextColor"
             android:fontFamily="@font/kalam_regular"/>
 
         <Switch
@@ -120,7 +123,7 @@
             android:layout_weight="1"
             android:text="General Settings"
             android:textSize="30sp"
-            android:textColor="@color/black"
+            style="@style/TextColor"
             android:fontFamily="@font/kalam_regular"/>
 
         <ImageView
@@ -128,6 +131,7 @@
             android:layout_height="35dp"
             android:layout_marginEnd="10dp"
             android:layout_marginTop="5dp"
+            style="@style/TIntColor"
             android:src="@drawable/baseline_arrow_forward_24"/>
     </LinearLayout>
 
@@ -147,7 +151,7 @@
             android:layout_weight="1"
             android:text="@string/feedback"
             android:textSize="30sp"
-            android:textColor="@color/black"
+            style="@style/TextColor"
             android:fontFamily="@font/kalam_regular"/>
 
         <ImageView
@@ -155,6 +159,7 @@
             android:layout_height="35dp"
             android:layout_marginEnd="10dp"
             android:layout_marginTop="5dp"
+            style="@style/TIntColor"
             android:src="@drawable/baseline_arrow_forward_24"/>
     </LinearLayout>
 
@@ -174,7 +179,7 @@
             android:layout_weight="1"
             android:text="About Us"
             android:textSize="30sp"
-            android:textColor="@color/black"
+            style="@style/TextColor"
             android:fontFamily="@font/kalam_regular"/>
 
         <ImageView
@@ -182,6 +187,7 @@
             android:layout_height="35dp"
             android:layout_marginEnd="10dp"
             android:layout_marginTop="5dp"
+            style="@style/TIntColor"
             android:src="@drawable/baseline_arrow_forward_24"/>
     </LinearLayout>
 
@@ -194,6 +200,7 @@
 
         android:layout_marginTop="100dp"
         android:fontFamily="@font/kalam_regular"
+        style="@style/YourButtonStyle"
         android:text="Log Out"
         android:textSize="25sp" />
 </RelativeLayout>

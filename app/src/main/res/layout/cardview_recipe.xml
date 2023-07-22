@@ -8,7 +8,7 @@
     android:clickable="true"
     app:cardCornerRadius="10dp"
     android:id="@+id/cardview_id"
-    app:cardBackgroundColor="#9f9df2">
+    style="@style/CardBackground">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -39,7 +39,7 @@
             android:gravity="center"
             android:text="recipe name"
             android:textSize="25sp"
-            android:textColor="#2d2d2d"
+            style="@style/BaseStyle"
 
             />
     </LinearLayout>

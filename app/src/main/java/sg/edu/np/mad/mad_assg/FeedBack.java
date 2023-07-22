@@ -24,7 +24,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 public class FeedBack extends AppCompatActivity {
 
-    String[] language = {"Report a Problem", "Request", "Category Request", "Suggestion", "Material Request", "Unit Request"};
+    String[] problem = {"Report a Problem", "Request", "Category Request", "Suggestion", "Material Request", "Unit Request"};
     private AutoCompleteTextView dropdown;
     private Button submit;
     private TextInputEditText textDescription;
@@ -40,7 +40,7 @@ public class FeedBack extends AppCompatActivity {
         textDescription = findViewById(R.id.text_description);
         //FirebaseApp.initializeApp(this);
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.select_dialog_item, language);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.select_dialog_item, problem);
 
         dropdown.setThreshold(1);
         dropdown.setAdapter(adapter);
