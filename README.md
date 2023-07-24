@@ -59,8 +59,9 @@ This app will hopefully inspire you to make every meal a wonderful and memorable
     <li> Random Generator</li><br>
     feature: Kelsie
     <li> Notifications System</li>
-    <li> Like Page</li>
-    <li> Settings</li>
+    <li> Like Page</li><br>
+    feature: Rachelle
+    <li> Settings (done)</li>
   </ul>
 </p></li>
 </ul>
