@@ -181,14 +181,14 @@ public class MyDBHandler extends SQLiteOpenHelper {
         SQLiteDatabase db = getWritableDatabase();
 
         ContentValues values = new ContentValues();
-        values.put(COLUMN_ID, recipe.getId());
-        values.put(COLUMN_NAME, recipe.getRecipeName());
-        values.put(COLUMN_CATEGORY, recipe.getCategory());
-        values.put(COLUMN_USER, recipe.getUsername());
-        values.put(COLUMN_DESCRIPTION, recipe.getDescription());
-        values.put(COLUMN_INGREDIENTS, recipe.getIngredients());
-        values.put(COLUMN_STEPS, recipe.getSteps());
-        values.put(COLUMN_IMAGE_URL, recipe.getImageUrl());
+        //values.put(COLUMN_ID, recipe.getId());
+        //values.put(COLUMN_NAME, recipe.getRecipeName());
+        //values.put(COLUMN_CATEGORY, recipe.getCategory());
+        //values.put(COLUMN_USER, recipe.getUsername());
+        //values.put(COLUMN_DESCRIPTION, recipe.getDescription());
+        //values.put(COLUMN_INGREDIENTS, recipe.getIngredients());
+        //values.put(COLUMN_STEPS, recipe.getSteps());
+        //values.put(COLUMN_IMAGE_URL, recipe.getImageUrl());
 
         long id = db.insert(RECIPE, null, values);
         db.close();

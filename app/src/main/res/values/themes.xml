@@ -15,7 +15,7 @@
     <style name="ScreenBackground"><item name="android:background">@drawable/gradient</item></style>
     <style name="CardBackground"><item name="android:background">@color/grey</item></style>
     <style name="TextHeaderColor"><item name="android:background">@color/grey</item></style>
-    <style name="TextHeader"><item name="android:textColor">@color/white</item></style>
+    <style name="TextHeader"><item name="android:textColor">@color/black</item></style>
     <style name="BottomNavigationStyle" parent="Widget.Design.BottomNavigationView">
         <!-- Set the background for the BottomNavigationView using a gradient -->
         <item name="android:background">@color/grey</item>

@@ -30,6 +30,9 @@
         android:testOnly="true"
         android:theme="@style/AppTheme.Light"
         android:usesCleartextTraffic="true" >
+        <activity
+            android:name="sg.edu.np.mad.mad_assg.Upload_Recipe"
+            android:exported="false" />
         <activity android:name="sg.edu.np.mad.mad_assg.MainActivity" />
         <activity android:name="sg.edu.np.mad.mad_assg.Login" />
         <activity android:name="sg.edu.np.mad.mad_assg.NewUser" />
@@ -45,9 +48,6 @@
         <activity android:name="sg.edu.np.mad.mad_assg.AboutUs" />
         <activity android:name="sg.edu.np.mad.mad_assg.FeedBack" />
         <activity android:name="sg.edu.np.mad.mad_assg.GeneralSetting" />
-        <activity
-            android:name="sg.edu.np.mad.mad_assg.FeedBackandReviews"
-            android:exported="false" />
         <activity
             android:name="sg.edu.np.mad.mad_assg.SplashScreen"
             android:exported="true" >

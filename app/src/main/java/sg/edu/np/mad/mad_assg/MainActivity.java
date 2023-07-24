@@ -19,6 +19,7 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -39,17 +40,28 @@ public class MainActivity extends AppCompatActivity {
     Search searchFragment = new Search();
     Userpage userFragment = new Userpage();
 
-
+    ImageView upload;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.homepage_main);
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
+        upload = findViewById(R.id.upload_recipe);
 
         getSupportFragmentManager().beginTransaction().replace(R.id.content, homeFragment).commit();
 
-        String name = getIntent().getStringExtra("username");
+        //String name = getIntent().getStringExtra("username");
+
+        upload.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Upload_Recipe.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
