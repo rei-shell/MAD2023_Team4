@@ -38,14 +38,14 @@ public class HomePage extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home_page, container, false);
 
-        ScrollView layout = view.findViewById(R.id.scrollview);
+       /* ScrollView layout = view.findViewById(R.id.scrollview);
         //With the help of AnimatedDrawable class, we can set
         //the duration to our background and then call the
         //function start at the end.
         AnimationDrawable animationDrawable = (AnimationDrawable) layout.getBackground();
         animationDrawable.setEnterFadeDuration(1500);
         animationDrawable.setExitFadeDuration(3000);
-        animationDrawable.start();
+        animationDrawable.start();*/
 
 
         MyDBHandler dbHelper = new MyDBHandler(getContext(), "Recipe.db", null, 1);

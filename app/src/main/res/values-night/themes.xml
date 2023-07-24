@@ -8,6 +8,19 @@
 
     <style name="ScreenBackground"><item name="android:background">@color/black</item></style>
     <style name="CardBackground"><item name="android:background">@color/dark_grey</item></style>
+    <style name="TextHeaderColor"><item name="android:background">@color/dark_grey</item></style>
+    <style name="TextHeader"><item name="android:textColor">@color/gold</item></style>
+    <style name="BottomNavigationStyle" parent="Widget.Design.BottomNavigationView">
+        <!-- Set the background for the BottomNavigationView using a gradient -->
+        <item name="android:background">@color/black</item>
+        <!-- Set the color for the menu icons -->
+        <item name="itemIconTint">@color/white</item>
+        <!-- Set the color for the menu text -->
+        <item name="itemTextColor">@color/white</item>
+
+        <!-- Set other attributes for the BottomNavigationView if needed -->
+    </style>
+
     <!-- Define a base style with common attributes -->
     <style name="BaseStyle">
         <!-- Add common attributes here -->
@@ -42,4 +55,14 @@
         <item name="android:textColor">@android:color/black</item> <!-- Example: Set text color to white -->
         <!-- Add other style properties as needed -->
     </style>
+
+    <style name="AppTheme.SearchViewStyle" parent="Widget.AppCompat.SearchView">
+        <!-- Customize attributes for the SearchView -->
+        <item name="android:queryBackground">@color/black</item> <!-- Replace "your_desired_color" with the color you want -->
+        <item name="android:queryHint">Search Here</item> <!-- Replace with your desired query hint text -->
+
+        <item name="android:iconifiedByDefault">false</item> <!-- Replace with your desired default iconified state -->
+        <!-- Add other attributes specific to your SearchView style -->
+    </style>
+
 </resources>

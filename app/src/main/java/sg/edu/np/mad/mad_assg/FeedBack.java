@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -25,7 +26,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 public class FeedBack extends AppCompatActivity {
 
     String[] problem = {"Report a Problem", "Request", "Category Request", "Suggestion", "Material Request", "Unit Request"};
-    private AutoCompleteTextView dropdown;
+    private Spinner dropdown;
     private Button submit;
     private TextInputEditText textDescription;
 
@@ -35,14 +36,13 @@ public class FeedBack extends AppCompatActivity {
         setContentView(R.layout.feedback_support);
 
         ImageView back = findViewById(R.id.backbtn);
-        dropdown = findViewById(R.id.dropdown);
+        dropdown = findViewById(R.id.dropdown_layout);
         submit = findViewById(R.id.submitbtn);
         textDescription = findViewById(R.id.text_description);
         //FirebaseApp.initializeApp(this);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.select_dialog_item, problem);
 
-        dropdown.setThreshold(1);
         dropdown.setAdapter(adapter);
 
         back.setOnClickListener(new View.OnClickListener() {
@@ -60,7 +60,8 @@ public class FeedBack extends AppCompatActivity {
                 //String emailsubject = dropdown.getText().toString();
                // String emailbody = textDescription.getText().toString();
                 //sendEmail("s10247620@connect.np.edu.sg", emailsubject, emailbody);
-                String emailSubject = dropdown.getText().toString();
+                String emailSubject = problem[dropdown.getSelectedItemPosition()];
+
                 String emailBody = textDescription.getText().toString();
 
                 // Create a Firestore instance

@@ -29,6 +29,7 @@ drawable gradient_list
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable icon
+drawable image_mask
 drawable nav_gradient
 drawable outline_account_circle_24
 drawable outline_email_24
@@ -67,7 +68,6 @@ id cancel
 id cardview_id
 id cat
 id category
-id categoryitem_img
 id categoryitem_text
 id changepassword
 id confirm
@@ -181,6 +181,7 @@ id textView
 id textView1
 id text_description
 id textdescription
+id theme
 id timeTaken
 id title
 id toggleswitch
@@ -263,8 +264,10 @@ string google_storage_bucket
 string hello_blank_fragment
 string project_id
 style AppTheme.Light
+style AppTheme.SearchViewStyle
 style BaseStyle
 style Base.Theme.MAD_Assg
+style BottomNavigationStyle
 style BoxStrokeColor
 style CardBackground
 style EndColor
@@ -272,6 +275,8 @@ style ScreenBackground
 style TIntColor
 style TextColor
 style TextColorHint
+style TextHeader
+style TextHeaderColor
 style YourButtonStyle
 xml backup_rules
 xml data_extraction_rules

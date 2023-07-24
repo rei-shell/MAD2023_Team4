@@ -3,11 +3,11 @@ package sg.edu.np.mad.mad_assg;
 public class CategoryData {
 
     private String category;
-    private String imageUrl;
+  //  private String imageUrl;
 
-    public CategoryData(String category, String imageUrl) {
+    public CategoryData(String category) {
         this.category = category;
-        this.imageUrl = imageUrl;
+       // this.imageUrl = imageUrl;
     }
 
     public String getCategory() {
@@ -18,11 +18,11 @@ public class CategoryData {
         this.category = category;
     }
 
-    public String getImageUrl() {
-        return imageUrl;
-    }
+   // public String getImageUrl() {
+      //  return imageUrl;
+    //}
 
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
-    }
+    //public void setImageUrl(String imageUrl) {
+        //this.imageUrl = imageUrl;
+    //}
 }

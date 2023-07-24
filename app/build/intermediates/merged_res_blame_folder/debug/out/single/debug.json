@@ -84,10 +84,6 @@
         "source": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-main-37:\\mipmap-mdpi\\user.png"
     },
     {
-        "merged": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-merged_res-35:\\drawable_baseline_arrow_drop_down_24.xml.flat",
-        "source": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-main-37:\\drawable\\baseline_arrow_drop_down_24.xml"
-    },
-    {
         "merged": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-merged_res-35:\\layout_dialog_email_input.xml.flat",
         "source": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-main-37:\\layout\\dialog_email_input.xml"
     },
@@ -144,6 +140,10 @@
         "source": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-main-37:\\menu\\top_nav.xml"
     },
     {
+        "merged": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-merged_res-35:\\drawable_image_mask.xml.flat",
+        "source": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-main-37:\\drawable\\image_mask.xml"
+    },
+    {
         "merged": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-merged_res-35:\\layout_item_recipe.xml.flat",
         "source": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-main-37:\\layout\\item_recipe.xml"
     },
@@ -162,6 +162,10 @@
     {
         "merged": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-merged_res-35:\\layout_forgot_password.xml.flat",
         "source": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-main-37:\\layout\\forgot_password.xml"
+    },
+    {
+        "merged": "sg.edu.np.mad.mad_assg.app-merged_res-35:/layout_category.xml.flat",
+        "source": "sg.edu.np.mad.mad_assg.app-main-37:/layout/category.xml"
     },
     {
         "merged": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-merged_res-35:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
@@ -320,16 +324,12 @@
         "source": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-main-37:\\layout\\activity_feed_backand_reviews.xml"
     },
     {
-        "merged": "sg.edu.np.mad.mad_assg.app-merged_res-35:/layout_edit_profile_page.xml.flat",
-        "source": "sg.edu.np.mad.mad_assg.app-main-37:/layout/edit_profile_page.xml"
+        "merged": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-merged_res-35:\\mipmap-hdpi_google.png.flat",
+        "source": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-main-37:\\mipmap-hdpi\\google.png"
     },
     {
         "merged": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-merged_res-35:\\layout_feedback_support.xml.flat",
         "source": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-main-37:\\layout\\feedback_support.xml"
-    },
-    {
-        "merged": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-merged_res-35:\\mipmap-hdpi_google.png.flat",
-        "source": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-main-37:\\mipmap-hdpi\\google.png"
     },
     {
         "merged": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-merged_res-35:\\mipmap-xhdpi_world.png.flat",

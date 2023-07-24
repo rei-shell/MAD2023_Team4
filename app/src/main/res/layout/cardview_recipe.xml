@@ -8,12 +8,13 @@
     android:clickable="true"
     app:cardCornerRadius="10dp"
     android:id="@+id/cardview_id"
-    style="@style/CardBackground">
+>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        style="@style/CardBackground"
         >
         <ImageView
             android:id="@+id/recipe_image_id"
@@ -26,21 +27,23 @@
         <RatingBar
             android:id="@+id/rbStars"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="46dp"
             android:backgroundTint="#FF9800"
             android:numStars="5"
+            android:layout_marginTop="10dp"
             android:progressBackgroundTint="#000000"
             android:progressTint="#FF9800" />
 
         <TextView
             android:id="@+id/recipe_text"
+            style="@style/BaseStyle"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:gravity="center"
             android:text="recipe name"
+            android:fontFamily="@font/kalam_bold"
             android:textSize="25sp"
-            style="@style/BaseStyle"
-
+            android:layout_marginTop="10dp"
             />
     </LinearLayout>
 

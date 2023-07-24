@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/header"
+        style="@style/TextHeaderColor"
         >
         <ImageView
             android:id="@+id/backbtn"
@@ -47,7 +48,7 @@
             android:layout_marginEnd="20dp"
             android:layout_marginTop="10dp"
             android:text="How can I help you?"
-            style="@style/TextColor"
+            style="@style/TextHeader"
             android:textSize="25sp"
             android:fontFamily="@font/kalam_bold"/>
 
@@ -64,7 +65,7 @@
             android:textColor="@android:color/black"
             android:textColorHint="@android:color/black"
             />-->
-        <com.google.android.material.textfield.TextInputLayout
+       <!-- <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/dropdown_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -90,21 +91,32 @@
                 style="@style/BaseStyle"
                 android:text="Select a topic" />
 
-        </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>-->
 
+        <Spinner
+            android:id="@+id/dropdown_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textView1"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:padding="10dp"
+            style="@style/BaseStyle"
+            android:text="Select a topic"/>
 
         <TextView
             android:id="@+id/description"
+            style="@style/TextHeader"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignTop="@+id/dropdown_layout"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
             android:layout_marginTop="60dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/kalam_bold"
             android:text="Description"
-            style="@style/TextColor"
-            android:textSize="25sp"
-            android:fontFamily="@font/kalam_bold"/>
+            android:textSize="25sp" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"

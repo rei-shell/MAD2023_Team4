@@ -103,8 +103,6 @@
             android:thumbTint="@drawable/toggle_style"
             android:trackTint="@color/white"
             android:checked="true"/>
-
-
     </LinearLayout>
 
     <LinearLayout
@@ -114,6 +112,35 @@
         android:layout_marginTop="60dp"
         android:layout_marginStart="10dp"
         android:layout_alignTop="@+id/notification"
+        android:id="@+id/theme"
+        android:clickable="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Theme"
+            android:textSize="30sp"
+            style="@style/TextColor"
+            android:fontFamily="@font/kalam_regular"/>
+
+        <Spinner
+            android:id="@+id/dropdown_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="10dp"
+            android:padding="10dp"
+            style="@style/TextColor"/>
+    </LinearLayout>
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="10dp"
+        android:layout_alignTop="@+id/theme"
         android:id="@+id/stuff"
         android:clickable="true">
 
@@ -134,14 +161,14 @@
             style="@style/TIntColor"
             android:src="@drawable/baseline_arrow_forward_24"/>
     </LinearLayout>
-
+-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="60dp"
         android:layout_marginStart="10dp"
-        android:layout_alignTop="@+id/stuff"
+        android:layout_alignTop="@+id/theme"
         android:id="@+id/feedback"
         android:clickable="true">
 

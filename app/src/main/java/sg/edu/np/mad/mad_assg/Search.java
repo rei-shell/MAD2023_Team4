@@ -35,17 +35,17 @@ public class Search extends Fragment{
         // Inflate the layout for this fragment
         final View view = inflater.inflate(R.layout.fragment_search, container, false);
 
-        LinearLayout layout = view.findViewById(R.id.linearlayout);
+      /*  LinearLayout layout = view.findViewById(R.id.linearlayout);
         //With the help of AnimatedDrawable class, we can set
         //the duration to our background and then call the
         //function start at the end.
         AnimationDrawable animationDrawable = (AnimationDrawable) layout.getBackground();
         animationDrawable.setEnterFadeDuration(1500);
         animationDrawable.setExitFadeDuration(3000);
-        animationDrawable.start();
+        animationDrawable.start();*/
 
         ArrayList<CategoryData> categoryData = new ArrayList<>();
-        categoryData.add(new CategoryData("Korean", "https://th.bing.com/th/id/OIP.4XNdsS_4d498NGWtsFUEMgHaCv?pid=ImgDet&rs=1"));
+        /*categoryData.add(new CategoryData("Korean", "https://th.bing.com/th/id/OIP.4XNdsS_4d498NGWtsFUEMgHaCv?pid=ImgDet&rs=1"));
         categoryData.add(new CategoryData("Chinese", "https://th.bing.com/th/id/OIP.0DIaCtOaFN2N9amGQaw3BwHaHa?pid=ImgDet&rs=1"));
         categoryData.add(new CategoryData("Bakery", "https://th.bing.com/th/id/OIP.jimuK0kF5msXZ884lzkvzQAAAA?pid=ImgDet&rs=1"));
         categoryData.add(new CategoryData("Western", "https://purepng.com/public/uploads/large/purepng.com-american-flagflagscountrylandflag-831523995311m0uxm.png"));
@@ -54,8 +54,18 @@ public class Search extends Fragment{
         categoryData.add(new CategoryData("Thai", "https://th.bing.com/th/id/R.357a65f8e8f3715fa59ef13173675606?rik=E6clXS1ynPUi%2fw&riu=http%3a%2f%2ficons.iconarchive.com%2ficons%2fwikipedia%2fflags%2f1024%2fTH-Thailand-Flag-icon.png&ehk=qDuYxKWVKPwWTHPQ1sU32uL3q8DrOdMrrioR86xy76g%3d&risl=&pid=ImgRaw&r=0"));
         categoryData.add(new CategoryData("Drinks", "https://th.bing.com/th/id/OIP.1zwixZBF8cEJlU8CsSgwhgHaHa?pid=ImgDet&rs=1"));
         categoryData.add(new CategoryData("Kids-Friendly", "https://th.bing.com/th/id/OIP.jUW7iZ2qHh-zIZXSVQfUIQHaE6?pid=ImgDet&rs=1"));
-        categoryData.add(new CategoryData("Sides", "https://th.bing.com/th/id/OIP.AtyT8Vt-wec3X18MUTj-9AAAAA?w=136&h=146&c=7&r=0&o=5&pid=1.7"));
+        categoryData.add(new CategoryData("Sides", "https://th.bing.com/th/id/OIP.AtyT8Vt-wec3X18MUTj-9AAAAA?w=136&h=146&c=7&r=0&o=5&pid=1.7"));*/
 
+        categoryData.add(new CategoryData("Korean"));
+        categoryData.add(new CategoryData("Chinese"));
+        categoryData.add(new CategoryData("Bakery"));
+        categoryData.add(new CategoryData("Western"));
+        categoryData.add(new CategoryData("Japanese"));
+        categoryData.add(new CategoryData("Indonesian"));
+        categoryData.add(new CategoryData("Thai"));
+        categoryData.add(new CategoryData("Drinks"));
+        categoryData.add(new CategoryData("Kids-Friendly"));
+        categoryData.add(new CategoryData("Sides"));
 
         RecyclerView categoryView = view.findViewById(R.id.category);
         categoryView.setLayoutManager(new GridLayoutManager(getContext(), 2));
@@ -64,25 +74,17 @@ public class Search extends Fragment{
         adapter.setOnItemClickListener((position, item) -> {
             // Retrieve the selected category data and perform the action
             String category = item.getCategory();
-            String imageUrl = item.getImageUrl();
+         //   String imageUrl = item.getImageUrl();
             // Perform the action, such as starting a new activity
-            Intent intent = new Intent(getActivity(), Recipe.class);
+            Intent intent = new Intent(getActivity(), RecipeView.class);
             intent.putExtra("category", category);
-            intent.putExtra("imageUrl", imageUrl);
+           // intent.putExtra("imageUrl", imageUrl);
             startActivity(intent);
         });
 
-
-
-
         return view;
     }
-
-
-
-
 }
-
 
 /*  // Initialize your recipe list with data from a database or API
         recipeList = new ArrayList<>();

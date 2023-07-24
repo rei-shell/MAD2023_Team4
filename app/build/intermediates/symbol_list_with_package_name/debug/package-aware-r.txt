@@ -2997,6 +2997,7 @@ drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_search_black_24
 drawable icon
+drawable image_mask
 drawable m3_appbar_background
 drawable m3_avd_hide_password
 drawable m3_avd_show_password
@@ -3219,7 +3220,6 @@ id cardview_id
 id carryVelocity
 id cat
 id category
-id categoryitem_img
 id categoryitem_text
 id center
 id centerCrop
@@ -3686,6 +3686,7 @@ id textinput_helper_text
 id textinput_placeholder
 id textinput_prefix_text
 id textinput_suffix_text
+id theme
 id time
 id timeTaken
 id title
@@ -4191,6 +4192,7 @@ style Animation_Material3_BottomSheetDialog
 style Animation_Material3_SideSheetDialog
 style Animation_MaterialComponents_BottomSheetDialog
 style AppTheme_Light
+style AppTheme_SearchViewStyle
 style Base_AlertDialog_AppCompat
 style Base_AlertDialog_AppCompat_Light
 style Base_Animation_AppCompat_Dialog
@@ -4465,6 +4467,7 @@ style Base_Widget_MaterialComponents_TextInputEditText
 style Base_Widget_MaterialComponents_TextInputLayout
 style Base_Widget_MaterialComponents_TextView
 style BaseStyle
+style BottomNavigationStyle
 style BoxStrokeColor
 style CardBackground
 style CardView
@@ -4705,6 +4708,8 @@ style TextAppearance_Widget_AppCompat_Toolbar_Subtitle
 style TextAppearance_Widget_AppCompat_Toolbar_Title
 style TextColor
 style TextColorHint
+style TextHeader
+style TextHeaderColor
 style Theme_AppCompat
 style Theme_AppCompat_CompactMenu
 style Theme_AppCompat_DayNight

@@ -49,14 +49,14 @@ public class Userpage extends Fragment {
         // Inflate the layout for this fragment
         final View view = inflater.inflate(R.layout.fragment_userpage, container, false);
 
-        ConstraintLayout layout = view.findViewById(R.id.flFragment);
+       /* ConstraintLayout layout = view.findViewById(R.id.flFragment);
         //With the help of AnimatedDrawable class, we can set
         //the duration to our background and then call the
         //function start at the end.
         AnimationDrawable animationDrawable = (AnimationDrawable) layout.getBackground();
         animationDrawable.setEnterFadeDuration(1500);
         animationDrawable.setExitFadeDuration(3000);
-        animationDrawable.start();
+        animationDrawable.start();*/
 
         // Initialize Firestore instance
         db = FirebaseFirestore.getInstance();
