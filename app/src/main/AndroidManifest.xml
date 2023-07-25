@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
 
     <application
         android:allowBackup="true"
@@ -15,9 +17,7 @@
         android:theme="@style/AppTheme.Light"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
-        <activity
-            android:name=".Upload_Recipe"
-            android:exported="false" />
+        <activity android:name=".Upload_Recipe"/>
         <activity android:name=".MainActivity" />
         <activity android:name=".Login" />
         <activity android:name=".NewUser" />

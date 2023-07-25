@@ -58,7 +58,7 @@ id Password
 id SignUp
 id about
 id aboutcontactinfo
-id addphoto
+id addphotoicon
 id appicon
 id author
 id backarrow
@@ -198,8 +198,6 @@ id title
 id toggleswitch
 id top_nav
 id total
-id totalTime
-id totalTimeTxt
 id tvFeedback
 id unit
 id update

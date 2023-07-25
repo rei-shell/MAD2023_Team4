@@ -3171,7 +3171,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
-id addphoto
+id addphotoicon
 id adjust_height
 id adjust_width
 id alertTitle
@@ -3709,8 +3709,6 @@ id top
 id topPanel
 id top_nav
 id total
-id totalTime
-id totalTimeTxt
 id touch_outside
 id transitionToEnd
 id transitionToStart

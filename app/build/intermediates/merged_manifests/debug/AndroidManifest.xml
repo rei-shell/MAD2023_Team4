@@ -9,6 +9,9 @@
         android:targetSdkVersion="33" />
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <permission
@@ -30,9 +33,7 @@
         android:testOnly="true"
         android:theme="@style/AppTheme.Light"
         android:usesCleartextTraffic="true" >
-        <activity
-            android:name="sg.edu.np.mad.mad_assg.Upload_Recipe"
-            android:exported="false" />
+        <activity android:name="sg.edu.np.mad.mad_assg.Upload_Recipe" />
         <activity android:name="sg.edu.np.mad.mad_assg.MainActivity" />
         <activity android:name="sg.edu.np.mad.mad_assg.Login" />
         <activity android:name="sg.edu.np.mad.mad_assg.NewUser" />

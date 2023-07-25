@@ -1,6 +1,7 @@
 package sg.edu.np.mad.mad_assg;
 
 public class RecipeList {
+
     private String title;
     private String description;
     private String photoUrl;

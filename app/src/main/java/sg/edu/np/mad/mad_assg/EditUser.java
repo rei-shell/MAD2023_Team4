@@ -99,15 +99,6 @@ public class EditUser extends AppCompatActivity {
                 //   }
             }
         });
-
-        // Load the user's current profile image using Glide
-        if (user != null && user.getPhotoUrl() != null) {
-            currentImageUri = user.getPhotoUrl();
-            Glide.with(this)
-                    .load(currentImageUri)
-                    .apply(new RequestOptions().circleCrop())
-                    .into(profileImageView);
-        }
     }
     @Override
     protected void onResume() {
@@ -124,7 +115,7 @@ public class EditUser extends AppCompatActivity {
     private void showImagePickerDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Select Image");
-        builder.setItems(new CharSequence[]{"Gallery", "Camera"}, new DialogInterface.OnClickListener() {
+        builder.setItems(new CharSequence[]{"Gallery"}, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 switch (which) {
@@ -192,44 +183,6 @@ public class EditUser extends AppCompatActivity {
             }
         }
     }
-
-    /*private void saveUserDataToFirestore(String photoUrl) {
-        DocumentReference userRef = db.collection("users").document(user.getUid());
-
-        Map<String, Object> data = new HashMap<>();
-        data.put("username", newDisplayName);
-        if (photoUrl != null) {
-            Log.d(TAG, "New photo URL: " + photoUrl);
-            data.put("photoUrl", photoUrl);
-        }
-
-        userRef.update(data)
-                .addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void unused) {
-                        // Update user's display name
-                        user.updateProfile(new com.google.firebase.auth.UserProfileChangeRequest.Builder()
-                                .setDisplayName(newDisplayName)
-                                .build()).addOnSuccessListener(new OnSuccessListener<Void>() {
-                            @Override
-                            public void onSuccess(Void unused) {
-                                Log.e("EditUser", "update display");
-                                Toast.makeText(EditUser.this, "Profile updated successfully!", Toast.LENGTH_SHORT).show();
-                            }
-                        }).addOnFailureListener(new OnFailureListener() {
-                            @Override
-                            public void onFailure(@NonNull Exception e) {
-                                Log.e("EditUser", "Failed to update display name: " + e.getMessage());
-                            }
-                        });
-                    }
-                }).addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(EditUser.this, "Failed to update profile: " + e.getMessage(), Toast.LENGTH_SHORT).show();
-                    }
-                });
-    }*/
     private void saveUserDataToFirestore(String photoUrl) {
         FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
 

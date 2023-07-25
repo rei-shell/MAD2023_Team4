@@ -103,7 +103,8 @@
             android:fontFamily="@font/kalam_bold"
             style="@style/TextColor"/>
 
-        <com.google.android.material.textfield.TextInputLayout
+
+        <!--<com.google.android.material.textfield.TextInputLayout
             android:id="@+id/addphoto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -126,16 +127,29 @@
                 style="@style/BaseStyle"
                 android:focusable="true" />
 
-        </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>-->
+
+        <ImageView
+            android:id="@+id/addphotoicon"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_below="@+id/phototext"
+            android:layout_alignStart="@+id/phototext"
+            android:layout_alignEnd="@+id/rexipename"
+            android:layout_marginStart="-6dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="6dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/outline_add_photo_alternate_24" />
 
         <TextView
             android:id="@+id/decriptiontxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Description"
+            android:layout_below="@+id/addphotoicon"
             android:layout_alignStart="@+id/phototext"
-            android:layout_alignTop="@+id/addphoto"
-            android:layout_marginTop="100dp"
+
             android:textSize="30sp"
             android:fontFamily="@font/kalam_bold"
             style="@style/TextColor"/>
@@ -175,24 +189,16 @@
             android:layout_marginStart="30dp"
             android:layout_below="@+id/recipedescription" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/category"
+        <Spinner
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter Recipe Category"
-            app:endIconMode="clear_text"
+            android:layout_height="50dp"
             style="@style/BaseStyle"
             android:layout_below="@+id/categoryTxt"
             android:layout_marginTop="10dp"
             android:layout_marginStart="30dp"
-            android:layout_marginEnd="25dp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/BaseStyle"
-                android:fontFamily="@font/kalam_regular" />
-        </com.google.android.material.textfield.TextInputLayout>
+            android:layout_alignEnd="@+id/recipedescription"
+            android:id="@+id/category"
+            android:fontFamily="@font/kalam_regular"/>
 
         <LinearLayout
             android:id="@+id/ppl"
@@ -213,7 +219,14 @@
                 android:fontFamily="@font/kalam_bold"
                 style="@style/TextColor" />
 
-            <com.google.android.material.textfield.TextInputLayout
+            <Spinner
+                android:id="@+id/numberOfPersons"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/BaseStyle"
+                android:layout_weight="1"
+                android:layout_marginStart="30dp"/>
+            <!--<com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/numberOfPersons"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -228,7 +241,7 @@
                     style="@style/BaseStyle"
                     android:inputType="number"
                     android:fontFamily="@font/kalam_regular" />
-            </com.google.android.material.textfield.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>-->
 
         </LinearLayout>
 
@@ -395,7 +408,7 @@
                 android:textSize="20sp" />
         </LinearLayout>
 
-        <LinearLayout
+        <!--<LinearLayout
             android:id="@+id/total"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -442,6 +455,6 @@
                 android:text="minutes"
                 style="@style/BaseStyle"
                 android:textSize="20sp" />
-        </LinearLayout>
+        </LinearLayout>-->
     </RelativeLayout>
 </ScrollView>
