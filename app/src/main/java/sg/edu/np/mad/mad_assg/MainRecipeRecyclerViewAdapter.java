@@ -66,10 +66,10 @@ public class MainRecipeRecyclerViewAdapter extends RecyclerView.Adapter<MainReci
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         RecipeList recipe = recipeList.get(position);
-        Picasso.get().load(recipe.getImageUrl()).into(holder.imageView);
+       // Picasso.get().load(recipe.getImageUrl()).into(holder.imageView);
         int whiteColor = ContextCompat.getColor(holder.name.getContext(), R.color.white);
         holder.name.setTextColor(whiteColor);
-        holder.name.setText(recipe.getRecipeName());
+       // holder.name.setText(recipe.getRecipeName());
     }
     // getItemCount
     @Override

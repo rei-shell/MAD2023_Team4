@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:grid="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/gradient_list"
+    style="@style/ScreenBackground"
     android:id="@+id/flFragment"
     android:visibility="visible">
 
@@ -24,10 +24,10 @@
     <com.google.android.material.navigation.NavigationView
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:background="@drawable/nav_gradient"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
+        style="@style/TextHeaderColor"
         android:id="@+id/top_nav"
         />
 
@@ -39,7 +39,7 @@
         android:fontFamily="@font/permanentmarker_regular"
         android:text="Welcome back, "
         android:textSize="20sp"
-        android:textColor="@color/white"
+        style="@style/TextColor"
 
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="20dp"
@@ -55,7 +55,7 @@
         android:fontFamily="@font/kalam_bold"
         android:text="UserName"
         android:textSize="35sp"
-        android:textColor="#FFF0F5"
+        style="@style/TextHeader"
 
         app:layout_constraintStart_toEndOf="@+id/title"
         android:layout_marginTop="15dp"
@@ -93,7 +93,7 @@
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
             android:layout_weight="1"
-            android:src="@drawable/outline_person_24" />
+            android:src="@drawable/icon" />
 
         <TextView
             android:id="@+id/userName"
@@ -104,7 +104,7 @@
 
             android:textAlignment="center"
             android:text="UserName"
-            android:textColor="@color/black"
+            style="@style/TextHeader"
             android:textSize="35sp"
             android:fontFamily="@font/kalam_bold"/>
     </RelativeLayout>
@@ -112,22 +112,24 @@
     <LinearLayout
         android:id="@+id/stuff"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         app:layout_constraintTop_toBottomOf="@+id/userdetails"
         app:layout_constraintStart_toStartOf="@+id/flFragment"
         app:layout_constraintEnd_toEndOf="@+id/flFragment"
-        android:layout_margin="5dp"
-        android:orientation="horizontal">
 
+        style="@style/TextHeaderColor"
+        android:orientation="horizontal">
+        <!--fragment-->
         <TextView
             android:id="@+id/userpost"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-
+            android:layout_marginTop="6.5dp"
             android:fontFamily="@font/permanentmarker_regular"
             android:text="Post"
             android:textAlignment="center"
+            android:clickable="true"
             android:textSize="25sp" />
 
         <TextView
@@ -136,9 +138,11 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
 
+            android:layout_marginTop="6.5dp"
             android:textAlignment="center"
             android:text="Liked"
             android:textSize="25sp"
+            android:clickable="true"
             android:fontFamily="@font/permanentmarker_regular"/>
     </LinearLayout>
 

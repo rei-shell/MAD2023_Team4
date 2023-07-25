@@ -38,22 +38,22 @@ public class HomePage extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home_page, container, false);
 
-        ScrollView layout = view.findViewById(R.id.scrollview);
+       /* ScrollView layout = view.findViewById(R.id.scrollview);
         //With the help of AnimatedDrawable class, we can set
         //the duration to our background and then call the
         //function start at the end.
         AnimationDrawable animationDrawable = (AnimationDrawable) layout.getBackground();
         animationDrawable.setEnterFadeDuration(1500);
         animationDrawable.setExitFadeDuration(3000);
-        animationDrawable.start();
+        animationDrawable.start();*/
 
 
         MyDBHandler dbHelper = new MyDBHandler(getContext(), "Recipe.db", null, 1);
         ArrayList<RecipeList> recipes = new ArrayList<>();
 
         // Insert a ChocolateCake
-        RecipeList chocolatecake = new RecipeList();
-        chocolatecake.setRecipeName("Chocolate Cake");
+        //RecipeList chocolatecake = new RecipeList();
+     /*   chocolatecake.setRecipeName("Chocolate Cake");
         chocolatecake.setCategory("Bakery");
         chocolatecake.setUsername("Rachel Manley");
         chocolatecake.setDescription("Our really easy chocolate cake recipe is perfect for birthdays. It’s so moist and fudgy and will keep well for 4–5 days. For buttercream quantities, instead of ganache, use our cake calculator. Each serving provides 477 kcal, 6.5g protein, 56g carbohydrates (of which 40g sugars), 25g fat (of which 10.5g saturates), 2.5g fibre and 0.6g salt. Serves up to 12 people.\n");
@@ -245,7 +245,7 @@ public class HomePage extends Fragment {
 // Insert each recipe into the database
         for (RecipeList recipe : recipes) {
             dbHelper.insertRecipe(recipe);
-        }
+        }*/
 
         RecyclerView update = view.findViewById(R.id.updateview);
         update.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
@@ -257,12 +257,12 @@ public class HomePage extends Fragment {
             public void onItemClick(int position) {
                 RecipeList selectRecipe = recipes.get(position);
                 Intent intent = new Intent(getActivity(), RecipeView.class);
-                intent.putExtra("recipename", selectRecipe.getRecipeName());
+                /*intent.putExtra("recipename", selectRecipe.getRecipeName());
                 intent.putExtra("image", selectRecipe.getImageUrl());
                 intent.putExtra("username", selectRecipe.getUsername());
                 intent.putExtra("description", selectRecipe.getDescription());
                 intent.putExtra("ingredients", selectRecipe.getIngredients());
-                intent.putExtra("steps", selectRecipe.getSteps());
+                intent.putExtra("steps", selectRecipe.getSteps());*/
                 startActivity(intent);
                 getActivity().finish();
             }
@@ -276,12 +276,12 @@ public class HomePage extends Fragment {
             public void onItemClick(int position) {
                 RecipeList selectRecipe = recipes.get(position);
                 Intent intent = new Intent(getActivity(), RecipeView.class);
-                intent.putExtra("recipename", selectRecipe.getRecipeName());
+                /*intent.putExtra("recipename", selectRecipe.getRecipeName());
                 intent.putExtra("image", selectRecipe.getImageUrl());
                 intent.putExtra("username", selectRecipe.getUsername());
                 intent.putExtra("description", selectRecipe.getDescription());
                 intent.putExtra("ingredients", selectRecipe.getIngredients());
-                intent.putExtra("steps", selectRecipe.getSteps());
+                intent.putExtra("steps", selectRecipe.getSteps());*/
                 startActivity(intent);
                 getActivity().finish();
             }
@@ -298,12 +298,12 @@ public class HomePage extends Fragment {
             public void onItemClick(int position) {
                 RecipeList selectRecipe = recipes.get(position);
                 Intent intent = new Intent(getActivity(), RecipeView.class);
-                intent.putExtra("recipename", selectRecipe.getRecipeName());
+                /*intent.putExtra("recipename", selectRecipe.getRecipeName());
                 intent.putExtra("image", selectRecipe.getImageUrl());
                 intent.putExtra("username", selectRecipe.getUsername());
                 intent.putExtra("description", selectRecipe.getDescription());
                 intent.putExtra("ingredients", selectRecipe.getIngredients());
-                intent.putExtra("steps", selectRecipe.getSteps());
+                intent.putExtra("steps", selectRecipe.getSteps());*/
                 startActivity(intent);
                 getActivity().finish();
             }

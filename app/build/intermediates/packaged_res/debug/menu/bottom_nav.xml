@@ -8,14 +8,8 @@
         android:title="Search"
         android:id="@+id/search"
         android:icon="@drawable/outline_search_24"/>
-    <!--<item
-        android:title="Community"
-        android:id="@+id/world"
-        android:icon="@drawable/world"/>-->
     <item
         android:title="Account"
         android:id="@+id/person"
         android:icon="@drawable/outline_account_circle_24"/>
-
-
 </menu>

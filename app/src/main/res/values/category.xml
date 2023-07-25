@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="category">
+        <item>Select one Category</item>
         <item>Chinese</item>
         <item>Western</item>
         <item>Korean</item>
@@ -12,8 +13,6 @@
         <item>Drinks</item>
         <item>Kids-Friendly</item>
         <item>Sides</item>
-
-
     </string-array>
 </resources>
 <!-- add recipe-->

@@ -28,6 +28,7 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
@@ -98,15 +99,6 @@ public class EditUser extends AppCompatActivity {
                 //   }
             }
         });
-
-        // Load the user's current profile image using Glide
-        if (user != null && user.getPhotoUrl() != null) {
-            currentImageUri = user.getPhotoUrl();
-            Glide.with(this)
-                    .load(currentImageUri)
-                    .apply(new RequestOptions().circleCrop())
-                    .into(profileImageView);
-        }
     }
     @Override
     protected void onResume() {
@@ -123,7 +115,7 @@ public class EditUser extends AppCompatActivity {
     private void showImagePickerDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Select Image");
-        builder.setItems(new CharSequence[]{"Gallery", "Camera"}, new DialogInterface.OnClickListener() {
+        builder.setItems(new CharSequence[]{"Gallery"}, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 switch (which) {
@@ -142,17 +134,6 @@ public class EditUser extends AppCompatActivity {
     private void selectImageFromGallery() {
         Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         startActivityForResult(intent, PICK_IMAGE_REQUEST);
-    }
-
-    private void loadProfileImage() {
-        // Load the user's profile image using Glide or any other image loading library
-        if (user.getPhotoUrl() != null) {
-            Log.d(TAG, "Load Photo: ");
-            Glide.with(this)
-                    .load(user.getPhotoUrl())
-                    .apply(new RequestOptions().circleCrop())
-                    .into(profileImageView);
-        }
     }
 
     private void uploadImage() {
@@ -202,43 +183,39 @@ public class EditUser extends AppCompatActivity {
             }
         }
     }
-
     private void saveUserDataToFirestore(String photoUrl) {
-        DocumentReference userRef = db.collection("users").document(user.getUid());
+        FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
 
-        Map<String, Object> data = new HashMap<>();
-        data.put("username", newDisplayName);
-        if (photoUrl != null) {
-            Log.d(TAG, "New photo URL: " + photoUrl);
-            data.put("photoUrl", photoUrl);
+        if (currentUser != null) {
+            // Get the reference to the "users" collection in Firestore
+            CollectionReference usersCollection = db.collection("users");
+
+            // Get the current user's UID
+            String userId = currentUser.getUid();
+
+            // Update the user document in Firestore with the new display name and profile picture URL
+            Map<String, Object> data = new HashMap<>();
+            data.put("username", newDisplayName);
+            if (photoUrl != null) {
+                data.put("photoUrl", photoUrl);
+            }
+
+            usersCollection.document(userId).update(data)
+                    .addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void unused) {
+                            // Handle the successful update, if needed
+                            Log.d(TAG, "User profile data updated in Firestore.");
+                        }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            // Handle the failure to update user data in Firestore
+                            Log.e(TAG, "Error updating user profile data in Firestore: " + e.getMessage());
+                        }
+                    });
         }
-
-        userRef.update(data)
-                .addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void unused) {
-                        // Update user's display name
-                        user.updateProfile(new com.google.firebase.auth.UserProfileChangeRequest.Builder()
-                                .setDisplayName(newDisplayName)
-                                .build()).addOnSuccessListener(new OnSuccessListener<Void>() {
-                            @Override
-                            public void onSuccess(Void unused) {
-                                Log.e("EditUser", "update display");
-                                Toast.makeText(EditUser.this, "Profile updated successfully!", Toast.LENGTH_SHORT).show();
-                            }
-                        }).addOnFailureListener(new OnFailureListener() {
-                            @Override
-                            public void onFailure(@NonNull Exception e) {
-                                Log.e("EditUser", "Failed to update display name: " + e.getMessage());
-                            }
-                        });
-                    }
-                }).addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(EditUser.this, "Failed to update profile: " + e.getMessage(), Toast.LENGTH_SHORT).show();
-                    }
-                });
     }
 
     @Override
@@ -272,5 +249,17 @@ public class EditUser extends AppCompatActivity {
                         .into(profileImageView);
             }
         }
-    }*/
+    }
+    private void loadProfileImage() {
+        // Load the user's profile image using Glide or any other image loading library
+        if (user.getPhotoUrl() != null) {
+            Log.d(TAG, "Load Photo: ");
+            Glide.with(this)
+                    .load(user.getPhotoUrl())
+                    .apply(new RequestOptions().circleCrop())
+                    .into(profileImageView);
+        }
+    }
+
+    */
 

@@ -7,15 +7,21 @@
     tools:context=".Search"
     android:orientation="vertical"
     android:id="@+id/linearlayout"
-    android:background="@drawable/gradient_list">
+    style="@style/ScreenBackground">
 
-    <SearchView
+   <!-- <SearchView
         android:id="@+id/searchview"
         android:layout_width="match_parent"
         android:layout_height="65dp"
         android:inputType="text"
         android:queryHint="Search Here"
-        android:iconifiedByDefault="false" />
+        android:iconifiedByDefault="false" />-->
+    <SearchView
+        android:id="@+id/searchview"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:inputType="text"
+        android:theme="@style/AppTheme.SearchViewStyle" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/category"

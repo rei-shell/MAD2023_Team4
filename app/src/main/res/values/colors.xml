@@ -5,4 +5,16 @@
     <color name="blue">#0000FF</color>
     <color name="green">#00FF00</color>
     <color name="red">#FF0000</color>
+    <color name="grey">#aaa</color>
+    <color name="dark_grey">#ff424242</color>
+    <color name="gold">#FFD700</color>
+
+    <!-- Light theme colors -->
+    <color name="my_light_primary">#ffffff</color>
+    <color name="my_light_primary_dark">#8692f7</color>
+
+    <!-- Dark theme colors -->
+    <color name="my_dark_primary">#aaa</color>
+    <color name="my_dark_primary_dark">#ff424242</color>
+
 </resources>

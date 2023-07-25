@@ -20,19 +20,17 @@ public class CategoryRecyclerViewAdapter extends RecyclerView.Adapter<CategoryRe
     private final ArrayList<CategoryData> categoryDataList;
     private OnItemClickListener onItemClickListener;
 
-    // Constructor
     public CategoryRecyclerViewAdapter(ArrayList<CategoryData> categoryDataList) {
         this.categoryDataList = categoryDataList;
     }
 
-    // ViewHolder class
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        ImageView imageView;
+   //     ImageView imageView;
         TextView name;
 
         public ViewHolder(View view) {
             super(view);
-            imageView = view.findViewById(R.id.categoryitem_img);
+           // imageView = view.findViewById(R.id.categoryitem_img);
             name = view.findViewById(R.id.categoryitem_text);
             view.setOnClickListener(this);
         }
@@ -48,7 +46,6 @@ public class CategoryRecyclerViewAdapter extends RecyclerView.Adapter<CategoryRe
         }
     }
 
-    // onCreateViewHolder
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -59,13 +56,10 @@ public class CategoryRecyclerViewAdapter extends RecyclerView.Adapter<CategoryRe
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         CategoryData categoryData = categoryDataList.get(position);
-        Picasso.get().load(categoryData.getImageUrl()).into(holder.imageView);
+     //   Picasso.get().load(categoryData.getImageUrl()).into(holder.imageView);
         holder.name.setText(categoryData.getCategory());
-        int blackColor = ContextCompat.getColor(holder.name.getContext(), R.color.black);
-        holder.name.setTextColor(blackColor);
     }
 
-    // getItemCount
     @Override
     public int getItemCount() {
         return categoryDataList.size();
