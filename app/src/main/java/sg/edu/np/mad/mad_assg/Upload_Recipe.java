@@ -57,7 +57,6 @@ public class Upload_Recipe extends AppCompatActivity {
     private TextInputLayout cookingTimeEditText;
     private Button saveButton;
     private ImageView backBtn;
-
     private Uri imageUri;
     private FirebaseUser user;
     private FirebaseFirestore db;
@@ -194,6 +193,11 @@ public class Upload_Recipe extends AppCompatActivity {
                             uploadImage(recipeId); // Pass the recipeId to the uploadImage() method
                             Toast.makeText(Upload_Recipe.this, "Recipe saved successfully!", Toast.LENGTH_SHORT).show();
                             // You can also navigate to the user's page or perform any other action here
+                            // Pass the recipe image URL as an extra to the MainActivity
+                            Intent intent = new Intent(Upload_Recipe.this, MainActivity.class);
+                            intent.putExtra("recipeImageURL", imageUri);
+                            startActivity(intent);
+                            finish();
                         }
                     })
                     .addOnFailureListener(new OnFailureListener() {
@@ -206,6 +210,75 @@ public class Upload_Recipe extends AppCompatActivity {
         }
     }
 
+    private void saveRecipeDataToFirestore(String recipeImageURL, String recipeId) {
+        FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+
+        if (currentUser != null) {
+            // Get the user input data
+            String recipeName = recipeNameEditText.getEditText().getText().toString();
+            String description = descriptionEditText.getEditText().getText().toString();
+            String category = categorySpinner.getSelectedItem().toString();
+            String personsText = numberOfPersonsSpinner.getSelectedItem().toString();
+            String ingredients = ingredientsEditText.getEditText().getText().toString();
+            String recipeSteps = recipeStepsEditText.getEditText().getText().toString();
+            String preparationTimeText = preparationTimeEditText.getEditText().getText().toString();
+            String cookingTimeText = cookingTimeEditText.getEditText().getText().toString();
+
+            // Validate input before parsing to integers
+            if (TextUtils.isEmpty(personsText) || TextUtils.isEmpty(recipeName)
+                    || TextUtils.isEmpty(description) || TextUtils.isEmpty(category)
+                    || TextUtils.isEmpty(ingredients) || TextUtils.isEmpty(recipeSteps)
+                    || TextUtils.isEmpty(preparationTimeText) || TextUtils.isEmpty(cookingTimeText)) {
+                // Display an error message or toast to inform the user that required fields are missing
+                Toast.makeText(this, "Please fill in all required fields", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            int numberOfPersons = Integer.parseInt(personsText);
+            int preparationTime = Integer.parseInt(preparationTimeText);
+            int cookingTime = Integer.parseInt(cookingTimeText);
+            int totalTime = preparationTime + cookingTime;
+
+            // Get the reference to the "recipes" collection in Firestore
+            CollectionReference recipesCollection = db.collection("recipes");
+
+            // Get the current user's UID
+            String userId = currentUser.getUid();
+
+            // Create a Recipe object with the provided data and image URL (if available)
+            RecipeList recipe = new RecipeList(
+                    userId, recipeName, description, recipeImageURL, category, numberOfPersons,
+                    ingredients, recipeSteps, preparationTime, cookingTime, totalTime
+            );
+
+            // Save the recipe object using the unique recipeId
+            recipesCollection.document(recipeId).set(recipe)
+                    .addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void aVoid) {
+                            // Recipe saved successfully, show a success message if needed
+                            Toast.makeText(Upload_Recipe.this, "Recipe saved successfully!", Toast.LENGTH_SHORT).show();
+
+                            // Pass the recipe image URL as an extra to the MainActivity
+                            Intent intent = new Intent(Upload_Recipe.this, MainActivity.class);
+                            intent.putExtra("recipeImageURL", recipeImageURL);
+                            startActivity(intent);
+                            finish();
+                        }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            // Failed to save the recipe, show an error message if needed
+                            Toast.makeText(Upload_Recipe.this, "Failed to save recipe: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    });
+        }
+    }
+
+
+
+    // Modify the uploadImage() method to store recipe image URL as an extra
     private void uploadImage(String recipeId) {
         if (imageUri != null) {
             // Generate a random image name
@@ -228,10 +301,7 @@ public class Upload_Recipe extends AppCompatActivity {
                         imageRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                             @Override
                             public void onSuccess(Uri downloadUri) {
-                                saveUserDataToFirestore(downloadUri.toString(), recipeId); // Pass the recipeId to the method
-                                Intent intent = new Intent(Upload_Recipe.this, MainActivity.class);
-                                startActivity(intent);
-                                finish();
+                                saveRecipeDataToFirestore(downloadUri.toString(), recipeId);
                             }
                         }).addOnFailureListener(new OnFailureListener() {
                             @Override
@@ -252,51 +322,9 @@ public class Upload_Recipe extends AppCompatActivity {
             }
         } else {
             // If imageUri is null, proceed with saving the recipe data without uploading an image
-            saveUserDataToFirestore(null, recipeId);
-            Intent intent = new Intent(Upload_Recipe.this, MainActivity.class);
-            startActivity(intent);
-            finish();
+            saveRecipeDataToFirestore(null, recipeId);
         }
     }
-
-
-    private void saveUserDataToFirestore(String photoUrl, String recipeId) {
-        FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
-
-        if (currentUser != null) {
-            // Get the reference to the "users" collection in Firestore
-            CollectionReference usersCollection = db.collection("recipes");
-
-            // Get the current user's UID
-            String userId = currentUser.getUid();
-
-            // Update the user document in Firestore with the new display name and profile picture URL
-            Map<String, Object> data = new HashMap<>();
-            if (photoUrl != null) {
-                data.put("photoUrl", photoUrl);
-            }
-
-            // Add the recipeId to the user's document in Firestore
-            data.put("recipeId", recipeId);
-
-            usersCollection.document(userId).update(data)
-                    .addOnSuccessListener(new OnSuccessListener<Void>() {
-                        @Override
-                        public void onSuccess(Void unused) {
-                            // Handle the successful update, if needed
-                            Log.d(TAG, "User profile data updated in Firestore.");
-                        }
-                    })
-                    .addOnFailureListener(new OnFailureListener() {
-                        @Override
-                        public void onFailure(@NonNull Exception e) {
-                            // Handle the failure to update user data in Firestore
-                            Log.e(TAG, "Error updating user profile data in Firestore: " + e.getMessage());
-                        }
-                    });
-        }
-    }
-
 
     private void showImagePickerDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);

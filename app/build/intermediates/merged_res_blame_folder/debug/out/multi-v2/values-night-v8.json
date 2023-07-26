@@ -4,7 +4,7 @@
             "outputFile": "sg.edu.np.mad.mad_assg.app-mergeDebugResources-33:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\nicky\\AndroidStudioProjects\\MAD2023_Team3\\app\\src\\main\\res\\values-night\\themes.xml",
+                    "source": "C:\\Users\\nicky\\AndroidStudioProjects\\MAD23_Team4\\app\\src\\main\\res\\values-night\\themes.xml",
                     "from": {
                         "startLines": "60,2,24,12,30,9,50,8,52,38,44,11,10,54",
                         "startColumns": "4,4,4,4,4,4,4,4,0,4,4,4,4,4",

@@ -6,13 +6,13 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="21"
-8-->C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml
+8-->C:\Users\nicky\AndroidStudioProjects\MAD23_Team4\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="33" />
-9-->C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml
+9-->C:\Users\nicky\AndroidStudioProjects\MAD23_Team4\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:5:5-67
-11-->C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:5:22-64
+11-->C:\Users\nicky\AndroidStudioProjects\MAD23_Team4\app\src\main\AndroidManifest.xml:5:5-67
+11-->C:\Users\nicky\AndroidStudioProjects\MAD23_Team4\app\src\main\AndroidManifest.xml:5:22-64
 12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 12-->[com.google.firebase:firebase-auth:22.1.0] C:\Users\nicky\.gradle\caches\transforms-3\c3fc0d454c4142b8062abe072dc81096\transformed\firebase-auth-22.1.0\AndroidManifest.xml:26:5-79
 12-->[com.google.firebase:firebase-auth:22.1.0] C:\Users\nicky\.gradle\caches\transforms-3\c3fc0d454c4142b8062abe072dc81096\transformed\firebase-auth-22.1.0\AndroidManifest.xml:26:22-76
@@ -29,92 +29,92 @@
 18-->[androidx.core:core:1.9.0] C:\Users\nicky\.gradle\caches\transforms-3\3dbdebe5616f35ea14ff987369494724\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
 19
 20    <application
-20-->C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:8:5-44:19
+20-->C:\Users\nicky\AndroidStudioProjects\MAD23_Team4\app\src\main\AndroidManifest.xml:8:5-44:19
 21        android:allowBackup="true"
-21-->C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:9:9-35
+21-->C:\Users\nicky\AndroidStudioProjects\MAD23_Team4\app\src\main\AndroidManifest.xml:9:9-35
 22        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 22-->[androidx.core:core:1.9.0] C:\Users\nicky\.gradle\caches\transforms-3\3dbdebe5616f35ea14ff987369494724\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
 23        android:dataExtractionRules="@xml/data_extraction_rules"
-23-->C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:10:9-65
+23-->C:\Users\nicky\AndroidStudioProjects\MAD23_Team4\app\src\main\AndroidManifest.xml:10:9-65
 24        android:debuggable="true"
 25        android:fullBackupContent="@xml/backup_rules"
-25-->C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:11:9-54
+25-->C:\Users\nicky\AndroidStudioProjects\MAD23_Team4\app\src\main\AndroidManifest.xml:11:9-54
 26        android:icon="@mipmap/ic_launcher"
-26-->C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:12:9-43
+26-->C:\Users\nicky\AndroidStudioProjects\MAD23_Team4\app\src\main\AndroidManifest.xml:12:9-43
 27        android:label="Rexipe"
-27-->C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:13:9-31
+27-->C:\Users\nicky\AndroidStudioProjects\MAD23_Team4\app\src\main\AndroidManifest.xml:13:9-31
 28        android:roundIcon="@mipmap/ic_launcher_round"
-28-->C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:14:9-54
+28-->C:\Users\nicky\AndroidStudioProjects\MAD23_Team4\app\src\main\AndroidManifest.xml:14:9-54
 29        android:supportsRtl="true"
-29-->C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:15:9-35
+29-->C:\Users\nicky\AndroidStudioProjects\MAD23_Team4\app\src\main\AndroidManifest.xml:15:9-35
 30        android:testOnly="true"
 31        android:theme="@style/AppTheme.Light"
-31-->C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:16:9-46
+31-->C:\Users\nicky\AndroidStudioProjects\MAD23_Team4\app\src\main\AndroidManifest.xml:16:9-46
 32        android:usesCleartextTraffic="true" >
-32-->C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:17:9-44
+32-->C:\Users\nicky\AndroidStudioProjects\MAD23_Team4\app\src\main\AndroidManifest.xml:17:9-44
 33        <activity android:name="sg.edu.np.mad.mad_assg.Upload_Recipe" />
-33-->C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:19:9-50
-33-->C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:19:19-48
+33-->C:\Users\nicky\AndroidStudioProjects\MAD23_Team4\app\src\main\AndroidManifest.xml:19:9-50
+33-->C:\Users\nicky\AndroidStudioProjects\MAD23_Team4\app\src\main\AndroidManifest.xml:19:19-48
 34        <activity android:name="sg.edu.np.mad.mad_assg.MainActivity" />
-34-->C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:20:9-50
-34-->C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:20:19-47
+34-->C:\Users\nicky\AndroidStudioProjects\MAD23_Team4\app\src\main\AndroidManifest.xml:20:9-50
+34-->C:\Users\nicky\AndroidStudioProjects\MAD23_Team4\app\src\main\AndroidManifest.xml:20:19-47
 35        <activity android:name="sg.edu.np.mad.mad_assg.Login" />
-35-->C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:21:9-43
-35-->C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:21:19-40
+35-->C:\Users\nicky\AndroidStudioProjects\MAD23_Team4\app\src\main\AndroidManifest.xml:21:9-43
+35-->C:\Users\nicky\AndroidStudioProjects\MAD23_Team4\app\src\main\AndroidManifest.xml:21:19-40
 36        <activity android:name="sg.edu.np.mad.mad_assg.NewUser" />
-36-->C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:22:9-45
-36-->C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:22:19-42
+36-->C:\Users\nicky\AndroidStudioProjects\MAD23_Team4\app\src\main\AndroidManifest.xml:22:9-45
+36-->C:\Users\nicky\AndroidStudioProjects\MAD23_Team4\app\src\main\AndroidManifest.xml:22:19-42
 37        <activity android:name="sg.edu.np.mad.mad_assg.StartPage" />
-37-->C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:23:9-47
-37-->C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:23:19-44
+37-->C:\Users\nicky\AndroidStudioProjects\MAD23_Team4\app\src\main\AndroidManifest.xml:23:9-47
+37-->C:\Users\nicky\AndroidStudioProjects\MAD23_Team4\app\src\main\AndroidManifest.xml:23:19-44
 38        <activity android:name="sg.edu.np.mad.mad_assg.ForgotPassword" />
-38-->C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:24:9-52
-38-->C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:24:19-49
+38-->C:\Users\nicky\AndroidStudioProjects\MAD23_Team4\app\src\main\AndroidManifest.xml:24:9-52
+38-->C:\Users\nicky\AndroidStudioProjects\MAD23_Team4\app\src\main\AndroidManifest.xml:24:19-49
 39        <activity android:name="sg.edu.np.mad.mad_assg.Setttings" />
-39-->C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:25:9-47
-39-->C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:25:19-44
+39-->C:\Users\nicky\AndroidStudioProjects\MAD23_Team4\app\src\main\AndroidManifest.xml:25:9-47
+39-->C:\Users\nicky\AndroidStudioProjects\MAD23_Team4\app\src\main\AndroidManifest.xml:25:19-44
 40        <activity android:name="sg.edu.np.mad.mad_assg.RecipeView" />
-40-->C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:26:9-48
-40-->C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:26:19-45
+40-->C:\Users\nicky\AndroidStudioProjects\MAD23_Team4\app\src\main\AndroidManifest.xml:26:9-48
+40-->C:\Users\nicky\AndroidStudioProjects\MAD23_Team4\app\src\main\AndroidManifest.xml:26:19-45
 41        <activity android:name="sg.edu.np.mad.mad_assg.Recipe" />
-41-->C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:27:9-44
-41-->C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:27:19-41
+41-->C:\Users\nicky\AndroidStudioProjects\MAD23_Team4\app\src\main\AndroidManifest.xml:27:9-44
+41-->C:\Users\nicky\AndroidStudioProjects\MAD23_Team4\app\src\main\AndroidManifest.xml:27:19-41
 42        <activity android:name="sg.edu.np.mad.mad_assg.FeedBack_Result" />
-42-->C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:28:9-53
-42-->C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:28:19-50
+42-->C:\Users\nicky\AndroidStudioProjects\MAD23_Team4\app\src\main\AndroidManifest.xml:28:9-53
+42-->C:\Users\nicky\AndroidStudioProjects\MAD23_Team4\app\src\main\AndroidManifest.xml:28:19-50
 43        <activity android:name="sg.edu.np.mad.mad_assg.EditUserProfile" />
-43-->C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:29:9-53
-43-->C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:29:19-50
+43-->C:\Users\nicky\AndroidStudioProjects\MAD23_Team4\app\src\main\AndroidManifest.xml:29:9-53
+43-->C:\Users\nicky\AndroidStudioProjects\MAD23_Team4\app\src\main\AndroidManifest.xml:29:19-50
 44        <activity android:name="sg.edu.np.mad.mad_assg.HistoryViewHolder" />
-44-->C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:30:9-55
-44-->C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:30:19-52
+44-->C:\Users\nicky\AndroidStudioProjects\MAD23_Team4\app\src\main\AndroidManifest.xml:30:9-55
+44-->C:\Users\nicky\AndroidStudioProjects\MAD23_Team4\app\src\main\AndroidManifest.xml:30:19-52
 45        <activity android:name="sg.edu.np.mad.mad_assg.EditUser" />
-45-->C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:31:9-46
-45-->C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:31:19-43
+45-->C:\Users\nicky\AndroidStudioProjects\MAD23_Team4\app\src\main\AndroidManifest.xml:31:9-46
+45-->C:\Users\nicky\AndroidStudioProjects\MAD23_Team4\app\src\main\AndroidManifest.xml:31:19-43
 46        <activity android:name="sg.edu.np.mad.mad_assg.AboutUs" />
-46-->C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:32:9-45
-46-->C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:32:19-42
+46-->C:\Users\nicky\AndroidStudioProjects\MAD23_Team4\app\src\main\AndroidManifest.xml:32:9-45
+46-->C:\Users\nicky\AndroidStudioProjects\MAD23_Team4\app\src\main\AndroidManifest.xml:32:19-42
 47        <activity android:name="sg.edu.np.mad.mad_assg.FeedBack" />
-47-->C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:33:9-46
-47-->C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:33:19-43
+47-->C:\Users\nicky\AndroidStudioProjects\MAD23_Team4\app\src\main\AndroidManifest.xml:33:9-46
+47-->C:\Users\nicky\AndroidStudioProjects\MAD23_Team4\app\src\main\AndroidManifest.xml:33:19-43
 48        <activity android:name="sg.edu.np.mad.mad_assg.GeneralSetting" />
-48-->C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:34:9-52
-48-->C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:34:19-49
+48-->C:\Users\nicky\AndroidStudioProjects\MAD23_Team4\app\src\main\AndroidManifest.xml:34:9-52
+48-->C:\Users\nicky\AndroidStudioProjects\MAD23_Team4\app\src\main\AndroidManifest.xml:34:19-49
 49        <activity
-49-->C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:35:9-43:20
+49-->C:\Users\nicky\AndroidStudioProjects\MAD23_Team4\app\src\main\AndroidManifest.xml:35:9-43:20
 50            android:name="sg.edu.np.mad.mad_assg.SplashScreen"
-50-->C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:36:13-41
+50-->C:\Users\nicky\AndroidStudioProjects\MAD23_Team4\app\src\main\AndroidManifest.xml:36:13-41
 51            android:exported="true" >
-51-->C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:37:13-36
+51-->C:\Users\nicky\AndroidStudioProjects\MAD23_Team4\app\src\main\AndroidManifest.xml:37:13-36
 52            <intent-filter>
-52-->C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:38:13-42:29
+52-->C:\Users\nicky\AndroidStudioProjects\MAD23_Team4\app\src\main\AndroidManifest.xml:38:13-42:29
 53                <action android:name="android.intent.action.MAIN" />
-53-->C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:39:17-69
-53-->C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:39:25-66
+53-->C:\Users\nicky\AndroidStudioProjects\MAD23_Team4\app\src\main\AndroidManifest.xml:39:17-69
+53-->C:\Users\nicky\AndroidStudioProjects\MAD23_Team4\app\src\main\AndroidManifest.xml:39:25-66
 54
 55                <category android:name="android.intent.category.LAUNCHER" />
-55-->C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:41:17-77
-55-->C:\Users\nicky\AndroidStudioProjects\MAD2023_Team3\app\src\main\AndroidManifest.xml:41:27-74
+55-->C:\Users\nicky\AndroidStudioProjects\MAD23_Team4\app\src\main\AndroidManifest.xml:41:17-77
+55-->C:\Users\nicky\AndroidStudioProjects\MAD23_Team4\app\src\main\AndroidManifest.xml:41:27-74
 56            </intent-filter>
 57        </activity>
 58

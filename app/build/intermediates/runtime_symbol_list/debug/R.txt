@@ -3980,8 +3980,8 @@ int layout splashscreen 0x7f0d0080
 int layout startpage 0x7f0d0081
 int layout support_simple_spinner_dropdown_item 0x7f0d0082
 int layout upload_recipe 0x7f0d0083
-int layout userpage_recipe_cardview 0x7f0d0085
-int layout viewed_history 0x7f0d0084
+int layout userpage_recipe_cardview 0x7f0d0084
+int layout viewed_history 0x7f0d0085
 int menu bottom_nav 0x7f0f0000
 int menu feedback_dropdown 0x7f0f0001
 int menu top_nav 0x7f0f0002
