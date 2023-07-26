@@ -1,7 +1,7 @@
 package sg.edu.np.mad.mad_assg;
 
 public class RecipeList {
-
+    private String userid;
     private String title;
     private String description;
     private String photoUrl;
@@ -13,7 +13,9 @@ public class RecipeList {
     private int cookingTime;
     private int totalTime;
 
-    public RecipeList(String title, String description, String photoUrl, String category, int numberOfPersons, String ingredients, String recipeSteps, int preparationTime, int cookingTime, int totalTime) {
+    public RecipeList(){}
+    public RecipeList(String userid, String title, String description, String photoUrl, String category, int numberOfPersons, String ingredients, String recipeSteps, int preparationTime, int cookingTime, int totalTime) {
+        this.userid = userid;
         this.title = title;
         this.description = description;
         this.photoUrl = photoUrl;
@@ -25,6 +27,15 @@ public class RecipeList {
         this.cookingTime = cookingTime;
         this.totalTime = totalTime;
     }
+
+    public String getUserid() {
+        return userid;
+    }
+
+    public void setUserid(String userid) {
+        this.userid = userid;
+    }
+
     public String getTitle() {
         return title;
     }

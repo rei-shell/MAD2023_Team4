@@ -56,6 +56,7 @@ public class Upload_Recipe extends AppCompatActivity {
     private TextInputLayout preparationTimeEditText;
     private TextInputLayout cookingTimeEditText;
     private Button saveButton;
+    private ImageView backBtn;
 
     private Uri imageUri;
     private FirebaseUser user;
@@ -80,6 +81,7 @@ public class Upload_Recipe extends AppCompatActivity {
         preparationTimeEditText = findViewById(R.id.preparationTime);
         cookingTimeEditText = findViewById(R.id.cookingTime);
         saveButton = findViewById(R.id.savebtn);
+        backBtn = findViewById(R.id.backbtn);
 
         // Initialize Firebase instances
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
@@ -108,6 +110,14 @@ public class Upload_Recipe extends AppCompatActivity {
         numberAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         numberOfPersonsSpinner.setAdapter(numberAdapter);
 
+        backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Upload_Recipe.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
         // Set an OnClickListener on the photoImageView to trigger image selection
         photoImageView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -135,7 +145,8 @@ public class Upload_Recipe extends AppCompatActivity {
     }
 
     private void saveRecipeToFirebase() {
-        if (user != null) {
+        FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+        if (currentUser != null) {
             // Get the user input data
             String recipeName = recipeNameEditText.getEditText().getText().toString();
             String description = descriptionEditText.getEditText().getText().toString();
@@ -166,10 +177,11 @@ public class Upload_Recipe extends AppCompatActivity {
 
             // Create a unique key for the new recipe entry
             String recipeId = recipesRef.document().getId();
-
+            // Get the current user's UID
+            String userId = currentUser.getUid();
             // Create a Recipe object with the provided data and image URL (if available)
             RecipeList recipe = new RecipeList(
-                    recipeName, description, imageUri.toString(), category, numberOfPersons,
+                    userId, recipeName, description, imageUri.toString(), category, numberOfPersons,
                     ingredients, recipeSteps, preparationTime, cookingTime, totalTime
             );
 
@@ -253,7 +265,7 @@ public class Upload_Recipe extends AppCompatActivity {
 
         if (currentUser != null) {
             // Get the reference to the "users" collection in Firestore
-            CollectionReference usersCollection = db.collection("users");
+            CollectionReference usersCollection = db.collection("recipes");
 
             // Get the current user's UID
             String userId = currentUser.getUid();

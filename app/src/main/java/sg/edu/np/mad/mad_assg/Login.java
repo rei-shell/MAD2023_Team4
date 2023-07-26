@@ -44,7 +44,7 @@ public class Login extends AppCompatActivity {
     //MyDBHandler dbHandler = new MyDBHandler(this,"User.db",null,1);
     FirebaseAuth mAuth;
 
-    @Override
+    /*@Override
     public void onStart() {
         super.onStart();
         // Check if user is signed in (non-null) and update UI accordingly.
@@ -54,7 +54,7 @@ public class Login extends AppCompatActivity {
             startActivity(intent);
             finish();
         }
-    }
+    }*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

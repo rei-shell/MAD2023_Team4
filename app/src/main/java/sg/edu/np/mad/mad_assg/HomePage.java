@@ -1,11 +1,15 @@
 package sg.edu.np.mad.mad_assg;
 
+import static android.content.ContentValues.TAG;
+
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -14,6 +18,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,6 +26,22 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Query;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import org.w3c.dom.Text;
 
@@ -28,29 +49,82 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class HomePage extends Fragment {
-
+    private FirebaseFirestore db;
+    private ArrayList<RecipeList> recipes;
+    private MainRecipeRecyclerViewAdapter adapter;
+    private RecipeRecycleViewAdapter adapter1;
     public HomePage() {
         // Required empty public constructor
     }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home_page, container, false);
 
-       /* ScrollView layout = view.findViewById(R.id.scrollview);
-        //With the help of AnimatedDrawable class, we can set
-        //the duration to our background and then call the
-        //function start at the end.
-        AnimationDrawable animationDrawable = (AnimationDrawable) layout.getBackground();
-        animationDrawable.setEnterFadeDuration(1500);
-        animationDrawable.setExitFadeDuration(3000);
-        animationDrawable.start();*/
+        db = FirebaseFirestore.getInstance();
+        recipes = new ArrayList<>();
+        adapter = new MainRecipeRecyclerViewAdapter(recipes);
+        adapter1 = new RecipeRecycleViewAdapter(recipes);
+        RecyclerView updateview = view.findViewById(R.id.updateview);
+        updateview.setAdapter(adapter);
+        RecyclerView recoview = view.findViewById(R.id.recoview);
+        recoview.setAdapter(adapter);
+        RecyclerView exploreview = view.findViewById(R.id.exploreview);
+        exploreview.setAdapter(adapter1);
 
+        // Set the onItemClickListener for the adapter
+        adapter.setOnItemClickListener(new MainRecipeRecyclerViewAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                // Handle item click here
+                RecipeList clickedRecipe = recipes.get(position);
+                // Perform any action you want based on the clicked recipe.
+                // For example, you can show a dialog, navigate to another fragment, etc.
+                Toast.makeText(requireContext(), "Clicked Recipe: " + clickedRecipe.getTitle(), Toast.LENGTH_SHORT).show();
+            }
+        });
 
-        MyDBHandler dbHelper = new MyDBHandler(getContext(), "Recipe.db", null, 1);
-        ArrayList<RecipeList> recipes = new ArrayList<>();
+        // Fetch user recipes from Firestore
+        fetchUserRecipes();
 
+        return view;
+    }
+
+    private void fetchUserRecipes() {
+        FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+        if (currentUser != null) {
+            // Get the current user's UID
+            String userId = currentUser.getUid();
+
+            // Get the reference to the "recipes" collection in Firestore
+            CollectionReference recipesRef = db.collection("recipes");
+
+            // Query for recipes uploaded by the current user
+        //    Query query = recipesRef.whereEqualTo("userid", userId); // Use the correct field name "userid" instead of "userId"
+
+            // Fetch the recipes
+            recipesRef.get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                @Override
+                public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                    if (task.isSuccessful()) {
+                        recipes.clear(); // Clear the list first
+                        for (QueryDocumentSnapshot document : task.getResult()) {
+                            // Convert each document to a RecipeList object
+                            RecipeList recipe = document.toObject(RecipeList.class);
+                            recipes.add(recipe);
+                            Log.d("RecipeDebug", "Recipe added: " + recipe.getTitle());
+                        }
+                        // Notify the adapter that data has changed
+                        adapter.notifyDataSetChanged();
+                    } else {
+                        Log.d(TAG, "Error getting documents: ", task.getException());
+                    }
+                }
+            });
+        }
+    }
+}
         // Insert a ChocolateCake
         //RecipeList chocolatecake = new RecipeList();
      /*   chocolatecake.setRecipeName("Chocolate Cake");
@@ -247,7 +321,7 @@ public class HomePage extends Fragment {
             dbHelper.insertRecipe(recipe);
         }*/
 
-        RecyclerView update = view.findViewById(R.id.updateview);
+        /*RecyclerView update = view.findViewById(R.id.updateview);
         update.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         MainRecipeRecyclerViewAdapter adapter = new MainRecipeRecyclerViewAdapter(recipes);
         update.setAdapter(adapter);
@@ -262,13 +336,13 @@ public class HomePage extends Fragment {
                 intent.putExtra("username", selectRecipe.getUsername());
                 intent.putExtra("description", selectRecipe.getDescription());
                 intent.putExtra("ingredients", selectRecipe.getIngredients());
-                intent.putExtra("steps", selectRecipe.getSteps());*/
+                intent.putExtra("steps", selectRecipe.getSteps());
                 startActivity(intent);
                 getActivity().finish();
             }
         });
 
-        RecyclerView recommendation = view.findViewById(R.id.recoview);
+        /*RecyclerView recommendation = view.findViewById(R.id.recoview);
         recommendation.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         recommendation.setAdapter(adapter);
         adapter.setOnItemClickListener(new MainRecipeRecyclerViewAdapter.OnItemClickListener() {
@@ -281,7 +355,7 @@ public class HomePage extends Fragment {
                 intent.putExtra("username", selectRecipe.getUsername());
                 intent.putExtra("description", selectRecipe.getDescription());
                 intent.putExtra("ingredients", selectRecipe.getIngredients());
-                intent.putExtra("steps", selectRecipe.getSteps());*/
+                intent.putExtra("steps", selectRecipe.getSteps());
                 startActivity(intent);
                 getActivity().finish();
             }
@@ -303,14 +377,14 @@ public class HomePage extends Fragment {
                 intent.putExtra("username", selectRecipe.getUsername());
                 intent.putExtra("description", selectRecipe.getDescription());
                 intent.putExtra("ingredients", selectRecipe.getIngredients());
-                intent.putExtra("steps", selectRecipe.getSteps());*/
+                intent.putExtra("steps", selectRecipe.getSteps());
                 startActivity(intent);
                 getActivity().finish();
             }
         });
         return view;
     }
-/*
+
     private List<ItemRecipe> setupRecipe(){
         itemList = new ArrayList<>();
         String recipe[] = {"Mapo Tofu", "Chcoloate Cake", "Pasta Carbonara", "Gimbap"};
@@ -327,6 +401,5 @@ public class HomePage extends Fragment {
         }
         return itemList;
     }*/
-}
 
 

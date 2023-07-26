@@ -54,6 +54,7 @@
             android:layout_alignTop="@id/rexipe"
 
             android:fontFamily="@font/kalam_bold"
+            style="@style/YourButtonStyle"
             android:text="Login"
             android:textSize="25sp" />
 
@@ -66,7 +67,7 @@
             android:layout_alignStart="@id/Login"
             android:layout_alignTop="@id/Login"
 
-
+            style="@style/YourButtonStyle"
             android:fontFamily="@font/kalam_bold"
             android:text="SignUp"
             android:textSize="25sp"/>
