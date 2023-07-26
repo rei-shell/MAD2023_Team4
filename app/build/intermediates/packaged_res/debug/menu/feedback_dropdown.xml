@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/report"
+        android:title="Report a Problem"/>
+    <item
+        android:title="Request"
+        android:id="@+id/request"/>
+    <item
+        android:title="Category Request"
+        android:id="@+id/cat"/>
+    <item
+        android:title="Material Request"
+        android:id="@+id/material"/>
+    <item
+        android:title="Unit Request"
+        android:id="@+id/unit"/>
+    <item
+        android:title="Suggestion"
+        android:id="@+id/suggestion"/>
+
+</menu>

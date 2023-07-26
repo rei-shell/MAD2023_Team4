@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,7 +6,6 @@
     android:layout_height="match_parent"
     android:background="@drawable/gradient_list"
     android:id="@+id/constraint"
-
  >
 
     <RelativeLayout
@@ -43,8 +41,7 @@
             android:text="REXIPE"
             android:textAlignment="center"
             android:textColor="#000000"
-            android:textSize="80sp"
-            android:textStyle="bold" />
+            android:textSize="80sp" />
 
         <Button
             android:id="@+id/Login"
@@ -58,8 +55,7 @@
 
             android:fontFamily="@font/kalam_bold"
             android:text="Login"
-            android:textSize="25sp"
-            android:textStyle="bold" />
+            android:textSize="25sp" />
 
         <Button
             android:id="@+id/SignUp"
@@ -73,10 +69,7 @@
 
             android:fontFamily="@font/kalam_bold"
             android:text="SignUp"
-            android:textSize="25sp"
-            android:textStyle="bold"
-
-            />
+            android:textSize="25sp"/>
 
 
     </RelativeLayout>

@@ -1,67 +1,36 @@
 package sg.edu.np.mad.mad_assg;
 
 public class RecipeList {
-    private long id;
-    private String imageUrl;
-    private String recipeName; // Remove the 'static' keyword from here
-    private String category;
-    private String username;
+
+    private String title;
     private String description;
+    private String photoUrl;
+    private String category;
+    private int numberOfPersons;
     private String ingredients;
-    private String steps;
-    private String rating;
+    private String recipeSteps;
+    private int preparationTime;
+    private int cookingTime;
+    private int totalTime;
 
-    public RecipeList(String imageUrl, String recipeName, String category, String username, String description, String ingredients, String steps) {
-        this.imageUrl = imageUrl;
-        this.recipeName = recipeName;
-        this.category = category;
-        this.username = username;
+    public RecipeList(String title, String description, String photoUrl, String category, int numberOfPersons, String ingredients, String recipeSteps, int preparationTime, int cookingTime, int totalTime) {
+        this.title = title;
         this.description = description;
-        this.ingredients = ingredients;
-        this.steps = steps;
-    }
-
-    public RecipeList() {
-        // Default constructor required for Parcelable
-    }
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public String getImageUrl() {
-        return imageUrl;
-    }
-
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
-    }
-
-    public String getRecipeName() {
-        return recipeName;
-    }
-
-    public void setRecipeName(String recipeName) {
-        this.recipeName = recipeName;
-    }
-
-    public String getCategory() {
-        return category;
-    }
-
-    public void setCategory(String category) {
+        this.photoUrl = photoUrl;
         this.category = category;
+        this.numberOfPersons = numberOfPersons;
+        this.ingredients = ingredients;
+        this.recipeSteps = recipeSteps;
+        this.preparationTime = preparationTime;
+        this.cookingTime = cookingTime;
+        this.totalTime = totalTime;
+    }
+    public String getTitle() {
+        return title;
     }
 
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getDescription() {
@@ -72,6 +41,30 @@ public class RecipeList {
         this.description = description;
     }
 
+    public String getPhotoUrl() {
+        return photoUrl;
+    }
+
+    public void setPhotoUrl(String photoUrl) {
+        this.photoUrl = photoUrl;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public int getNumberOfPersons() {
+        return numberOfPersons;
+    }
+
+    public void setNumberOfPersons(int numberOfPersons) {
+        this.numberOfPersons = numberOfPersons;
+    }
+
     public String getIngredients() {
         return ingredients;
     }
@@ -80,20 +73,38 @@ public class RecipeList {
         this.ingredients = ingredients;
     }
 
-    public String getSteps() {
-        return steps;
+    public String getRecipeSteps() {
+        return recipeSteps;
     }
 
-    public void setSteps(String steps) {
-        this.steps = steps;
+    public void setRecipeSteps(String recipeSteps) {
+        this.recipeSteps = recipeSteps;
     }
 
-    public String getRating() {
-        return rating;
+    public int getPreparationTime() {
+        return preparationTime;
     }
 
-    public void setRating(String rating) {
-        this.rating = rating;
+    public void setPreparationTime(int preparationTime) {
+        this.preparationTime = preparationTime;
     }
+
+    public int getCookingTime() {
+        return cookingTime;
+    }
+
+    public void setCookingTime(int cookingTime) {
+        this.cookingTime = cookingTime;
+    }
+
+    public int getTotalTime() {
+        return totalTime;
+    }
+
+    public void setTotalTime(int totalTime) {
+        this.totalTime = totalTime;
+    }
+
 }
+
 
