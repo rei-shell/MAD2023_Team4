@@ -19,6 +19,8 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.FirebaseApp;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -53,7 +55,7 @@ public class FeedBack extends AppCompatActivity {
                 finish();
             }
         });
-
+        FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -69,9 +71,10 @@ public class FeedBack extends AppCompatActivity {
 
                 // Reference to the "feedback" collection in Firestore
                 CollectionReference feedbackCollection = firestore.collection("feedback");
-
+// Get the current user's UID
+                String userId = currentUser.getUid();
                 // Create a Feedback object and store it in Firestore
-                FeedBackModel feedback = new FeedBackModel(emailSubject, emailBody);
+                FeedBackModel feedback = new FeedBackModel(userId, emailSubject, emailBody);
 
                 feedbackCollection.add(feedback)
                         .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {

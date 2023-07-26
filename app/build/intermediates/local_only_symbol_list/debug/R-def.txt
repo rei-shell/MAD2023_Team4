@@ -253,6 +253,7 @@ layout signin
 layout splashscreen
 layout startpage
 layout upload_recipe
+layout userpage_recipe_cardview
 layout viewed_history
 menu bottom_nav
 menu feedback_dropdown

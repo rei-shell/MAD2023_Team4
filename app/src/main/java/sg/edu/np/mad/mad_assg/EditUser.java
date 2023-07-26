@@ -187,6 +187,12 @@ public class EditUser extends AppCompatActivity {
         FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
 
         if (currentUser != null) {
+            if (TextUtils.isEmpty(newDisplayName)){
+                // Display an error message or toast to inform the user that required fields are missing
+                Toast.makeText(this, "Please fill in all required fields", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
             // Get the reference to the "users" collection in Firestore
             CollectionReference usersCollection = db.collection("users");
 

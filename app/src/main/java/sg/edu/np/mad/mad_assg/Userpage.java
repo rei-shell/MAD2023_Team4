@@ -11,6 +11,8 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.text.TextUtils;
 import android.util.Log;
@@ -20,6 +22,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
@@ -30,19 +33,25 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Query;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Userpage extends Fragment {
-
     private TextView userid;
     private TextView userid2;
-   // private MyDBHandler dbHandler;
+    // private MyDBHandler dbHandler;
     private ImageView settings;
-
     private FirebaseUser user;
-    private FirebaseUser username;
     private ImageView profilepic;
-    private FirebaseFirestore db;
+
     private Uri currentImageUri;
+    private FirebaseFirestore db;
+    private ArrayList<RecipeList> recipeList;
+    private RecipeRecycleViewAdapter adapter;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -61,18 +70,36 @@ public class Userpage extends Fragment {
         // Initialize Firestore instance
         db = FirebaseFirestore.getInstance();
 
-
         // Get the currently logged-in user
-        username = FirebaseAuth.getInstance().getCurrentUser();
+        user = FirebaseAuth.getInstance().getCurrentUser();
 
-        if (username != null) {
+        if (user != null) {
             // Fetch the user's data from Firestore
             fetchUserData();
+            fetchUserRecipes();
         }
+
         userid = view.findViewById(R.id.userid);
         userid2 = view.findViewById(R.id.userName);
         settings = view.findViewById(R.id.settingbtn);
         profilepic = view.findViewById(R.id.userpic);
+
+        recipeList = new ArrayList<>();
+        RecyclerView recyclerView = view.findViewById(R.id.recyclerView_id);
+        adapter = new RecipeRecycleViewAdapter(recipeList);
+        recyclerView.setAdapter(adapter);
+
+        // Set the onItemClickListener for the adapter
+        adapter.setOnItemClickListener(new RecipeRecycleViewAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                // Handle item click here
+                RecipeList clickedRecipe = recipeList.get(position);
+                // Perform any action you want based on the clicked recipe.
+                // For example, you can show a dialog, navigate to another fragment, etc.
+                Toast.makeText(requireContext(), "Clicked Recipe: " + clickedRecipe.getTitle(), Toast.LENGTH_SHORT).show();
+            }
+        });
 
         // Load the user's current profile image using Glide
         if (user != null && user.getPhotoUrl() != null) {
@@ -84,67 +111,16 @@ public class Userpage extends Fragment {
                     .into(profilepic);
         }
 
-       // dbHandler = new MyDBHandler(getContext(), "User.db", null, 1);
         settings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getContext(), Setttings.class);
                 startActivity(intent);
                 getActivity().finish();
-                Log.d(TAG, "CHange page");
-
             }
         });
-
         return view;
     }
-
-    /*private void fetchUserData() {
-        // Get the reference to the "users" collection in Firestore
-        CollectionReference usersCollection = db.collection("users");
-
-        // Get the current user's ID (assuming you use the user's ID as the document ID)
-        String userId = username.getUid();
-
-        // Get the user document from Firestore based on the user's ID
-        usersCollection.document(userId).get()
-                .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-                    @Override
-                    public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                        if (task.isSuccessful()) {
-                            // Get the user document snapshot
-                            DocumentSnapshot document = task.getResult();
-
-                            if (document != null && document.exists()) {
-                                // Retrieve the "username" field from the document
-                                String username = document.getString("username");
-                                // Fetch the profile picture URL from the intent extra
-                                String profileImageUrl = document.getString("photoUrl");
-                                // Update the TextView in the fragment with the username
-                                userid.setText(username);
-                                userid2.setText(username);
-                                // Load the user's current profile image using Glide
-                                if (!TextUtils.isEmpty(profileImageUrl)) {
-                                    currentImageUri = Uri.parse(profileImageUrl);
-                                    Glide.with(Userpage.this)
-                                            .load(currentImageUri)
-                                            .apply(new RequestOptions().circleCrop())
-                                            .into(profilepic);
-                                } else {
-                                    // Set a default placeholder image if no profile picture URL is provided
-                                    profilepic.setImageResource(R.drawable.outline_person_24);
-                                }
-                            } else {
-                                // Handle the case when the document does not exist
-                                Log.d(TAG, "No such document");
-                            }
-                        } else {
-                            // Handle errors
-                            Log.d(TAG, "Error getting documents: ", task.getException());
-                        }
-                    }
-                });
-    }*/
 
     private void fetchUserData() {
         // Get the reference to the "users" collection in Firestore
@@ -166,15 +142,13 @@ public class Userpage extends Fragment {
                                 DocumentSnapshot document = task.getResult();
                                 if (document != null && document.exists()) {
                                     String userName = document.getString("username");
-                                 //   String emailValue = document.getString("email");
+                                    //   String emailValue = document.getString("email");
                                     // Fetch the profile picture URL from the document
                                     String profileImageUrl = document.getString("photoUrl");
 
                                     // Update the TextViews in the fragment with the user data
                                     userid.setText(userName);
                                     userid2.setText(userName);
-                                    //email.setText(emailValue);
-
                                     // Load the user's current profile image using Glide
                                     if (!TextUtils.isEmpty(profileImageUrl)) {
                                         currentImageUri = Uri.parse(profileImageUrl);
@@ -197,60 +171,40 @@ public class Userpage extends Fragment {
         }
     }
 
+    private void fetchUserRecipes() {
+        FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+        if (currentUser != null) {
+            // Get the current user's UID
+            String userId = currentUser.getUid();
+
+            // Get the reference to the "recipes" collection in Firestore
+            CollectionReference recipesRef = db.collection("recipes");
+
+            // Query for recipes uploaded by the current user
+            Query query = recipesRef.whereEqualTo("userid", userId); // Use the correct field name "userid" instead of "userId"
+
+            // Fetch the recipes
+            query.get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                @Override
+                public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                    if (task.isSuccessful()) {
+                        recipeList.clear(); // Clear the list first
+                        for (QueryDocumentSnapshot document : task.getResult()) {
+                            // Convert each document to a RecipeList object
+                            RecipeList recipe = document.toObject(RecipeList.class);
+                            recipeList.add(recipe);
+                            Log.d("RecipeDebug", "Recipe added: " + recipe.getTitle());
+                        }
+                        // Notify the adapter that data has changed
+                        adapter.notifyDataSetChanged();
+                    } else {
+                        Log.d(TAG, "Error getting documents: ", task.getException());
+                    }
+                }
+            });
+        }
+    }
 }
 
-/*
 
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        final View view = inflater.inflate(R.layout.fragment_userpage, container, false);
-
-
-        //set userid
-        String userid = getActivity().getIntent().getExtras().getString("username");
-        user = (TextView) user.findViewById(R.id.userid);
-        user2 = (TextView) user.findViewById(R.id.userName);
-        user.setText(userid);
-        user2.setText(userid);
-
-        return view;
-    }*/
-
-
-
-
-/*
-
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        final View view = inflater.inflate(R.layout.fragment_userpage, container, false);
-
-
-        //set userid
-        String userid = getActivity().getIntent().getExtras().getString("username");
-        user = (TextView) user.findViewById(R.id.userid);
-        user2 = (TextView) user.findViewById(R.id.userName);
-        user.setText(userid);
-        user2.setText(userid);
-
-        return view;
-    }*/
 
