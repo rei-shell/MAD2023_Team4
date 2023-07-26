@@ -3212,7 +3212,11 @@ id browser_actions_menu_item_icon
 id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
+id btnClosePollOverlay
+id btnPollFloating
 id btnSend
+id btnSend1
+id btnSubmitPollOverlay
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -3543,10 +3547,13 @@ id progress_horizontal
 id pwd
 id pwd_header
 id radio
+id radioGroupPollOverlay
 id ratingdetails
 id ratingstar
 id ratingstuff
 id ratio
+id rbPollNoOverlay
+id rbPollYesOverlay
 id rbStars
 id recipeSteps
 id recipe_image_id
@@ -3719,6 +3726,7 @@ id transition_scene_layoutid_cache
 id transition_transform
 id triangle
 id tvFeedback
+id tvPollQuestionOverlay
 id unchecked
 id uniform
 id unit
@@ -3912,6 +3920,7 @@ layout general_setting
 layout homepage_main
 layout item_history
 layout item_recipe
+layout layout_poll_overlay
 layout login
 layout m3_alert_dialog
 layout m3_alert_dialog_actions

@@ -65,7 +65,11 @@ id backarrow
 id backbtn
 id backbtn1
 id bottom_navigation
+id btnClosePollOverlay
+id btnPollFloating
 id btnSend
+id btnSend1
+id btnSubmitPollOverlay
 id cancel
 id cardview_id
 id cat
@@ -152,9 +156,12 @@ id profile_edit
 id profile_img
 id pwd
 id pwd_header
+id radioGroupPollOverlay
 id ratingdetails
 id ratingstar
 id ratingstuff
+id rbPollNoOverlay
+id rbPollYesOverlay
 id rbStars
 id recipeSteps
 id recipe_image_id
@@ -199,6 +206,7 @@ id toggleswitch
 id top_nav
 id total
 id tvFeedback
+id tvPollQuestionOverlay
 id unit
 id update
 id updateview
@@ -236,6 +244,7 @@ layout general_setting
 layout homepage_main
 layout item_history
 layout item_recipe
+layout layout_poll_overlay
 layout login
 layout recipe
 layout recipe_view
