@@ -66,6 +66,7 @@ public class HomePage extends Fragment {
         recipes = new ArrayList<>();
         adapter = new MainRecipeRecyclerViewAdapter(recipes);
         adapter1 = new RecipeRecycleViewAdapter(recipes);
+
         RecyclerView updateview = view.findViewById(R.id.updateview);
         updateview.setAdapter(adapter);
         RecyclerView recoview = view.findViewById(R.id.recoview);
@@ -82,6 +83,9 @@ public class HomePage extends Fragment {
                 // Perform any action you want based on the clicked recipe.
                 // For example, you can show a dialog, navigate to another fragment, etc.
                 Toast.makeText(requireContext(), "Clicked Recipe: " + clickedRecipe.getTitle(), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(requireContext(), RecipeView.class);
+                intent.putExtra("title", clickedRecipe.getTitle());
+                startActivity(intent);
             }
         });
 

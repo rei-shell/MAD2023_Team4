@@ -66,10 +66,10 @@ public class MainRecipeRecyclerViewAdapter extends RecyclerView.Adapter<MainReci
         RecipeList recipe = recipeList.get(position);
         holder.recipeName.setText(recipe.getTitle());
 
-        // Load the recipe image using Glide or any other image loading library
         Glide.with(holder.imageView.getContext())
                 .load(recipe.getPhotoUrl())
                 .into(holder.imageView);
+
     }
 
     // getItemCount
@@ -88,4 +88,3 @@ public class MainRecipeRecyclerViewAdapter extends RecyclerView.Adapter<MainReci
         void onItemClick(int position);
     }
 }
-

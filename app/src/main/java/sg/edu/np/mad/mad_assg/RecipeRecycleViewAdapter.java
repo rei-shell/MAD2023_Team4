@@ -57,7 +57,6 @@ public class RecipeRecycleViewAdapter extends RecyclerView.Adapter<RecipeRecycle
         return new ViewHolder(view);
     }
 
-    // onBindViewHolder
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         RecipeList recipe = recipeList.get(position);
@@ -67,6 +66,7 @@ public class RecipeRecycleViewAdapter extends RecyclerView.Adapter<RecipeRecycle
                 .load(recipe.getPhotoUrl())
                 .into(holder.imageView);
     }
+
 
     // getItemCount
     @Override
