@@ -43,7 +43,7 @@ This app will hopefully inspire you to make every meal a wonderful and memorable
     <ul>
     <li> This allows the user to filter the many different cuisine the app have, such as chinese, western, dessert and many more.</li>
     </ul>
-    <li> Upload Recipe</li>
+    <li> Upload Recipe (done)</li>
     <ul><li> This allows user to share their signature dish to the world and let others have a try on that dish.</li></ul><br>
     feature group: Xin Yang
     <li> Rating & Reviews</li>
