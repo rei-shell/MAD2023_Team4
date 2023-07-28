@@ -1,11 +1,13 @@
 package sg.edu.np.mad.mad_assg;
 
 import android.content.Intent;
+import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -20,6 +22,11 @@ import sg.edu.np.mad.mad_assg.R;
 import sg.edu.np.mad.mad_assg.RecipeView;
 
 public class FeedBack_Result extends AppCompatActivity {
+
+
+    private boolean isLiked = false;
+    private ImageButton btnLike;
+
     TextView tvFeedback;
     RatingBar rbStars;
 
@@ -30,6 +37,18 @@ public class FeedBack_Result extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.feedback_result);
+
+        btnLike = findViewById(R.id.btnLike);
+        ColorStateList colorStateList = getResources().getColorStateList(R.color.btn_like_colors);
+        btnLike.setImageTintList(colorStateList);
+        btnLike.setImageTintList(null);
+        btnLike.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                isLiked = !isLiked;
+                btnLike.setImageTintList(isLiked ? colorStateList : null);
+            }
+        });
 
         tvFeedback = findViewById(R.id.tvFeedback);
         rbStars = findViewById(R.id.rbStars);
