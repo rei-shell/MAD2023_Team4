@@ -1355,6 +1355,7 @@ color browser_actions_bg_grey
 color browser_actions_divider_color
 color browser_actions_text_color
 color browser_actions_title_color
+color btn_like_colors
 color button_material_dark
 color button_material_light
 color cardview_dark_background
@@ -3213,6 +3214,7 @@ id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
 id btnClosePollOverlay
+id btnLike
 id btnPollFloating
 id btnSend
 id btnSend1

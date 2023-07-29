@@ -16,5 +16,6 @@
     <!-- Dark theme colors -->
     <color name="my_dark_primary">#aaa</color>
     <color name="my_dark_primary_dark">#ff424242</color>
+    <color name="btn_like_colors">#E22618</color>
 
 </resources>

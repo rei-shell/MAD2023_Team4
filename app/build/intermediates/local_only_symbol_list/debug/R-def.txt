@@ -3,6 +3,7 @@ local
 array category
 color black
 color blue
+color btn_like_colors
 color dark_grey
 color gold
 color green
@@ -66,6 +67,7 @@ id backbtn
 id backbtn1
 id bottom_navigation
 id btnClosePollOverlay
+id btnLike
 id btnPollFloating
 id btnSend
 id btnSend1
