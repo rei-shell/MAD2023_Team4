@@ -116,6 +116,10 @@
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-main-37:\\drawable\\outline_person_24.xml"
     },
     {
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-merged_res-35:\\layout_foodrecipeoptionitem.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-main-37:\\layout\\foodrecipeoptionitem.xml"
+    },
+    {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-merged_res-35:\\layout_about_us.xml.flat",
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-main-37:\\layout\\about_us.xml"
     },
@@ -332,12 +336,12 @@
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-main-37:\\mipmap-xhdpi\\facebook.png"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-merged_res-35:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-main-37:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "sg.edu.np.mad.mad_assg.app-merged_res-35:/layout_foodrecipeoptionitem.xml.flat",
+        "source": "sg.edu.np.mad.mad_assg.app-main-37:/layout/foodrecipeoptionitem.xml"
     },
     {
-        "merged": "sg.edu.np.mad.mad_assg.app-merged_res-35:/layout_foodrecipeoptionsview.xml.flat",
-        "source": "sg.edu.np.mad.mad_assg.app-main-37:/layout/foodrecipeoptionsview.xml"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-merged_res-35:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-main-37:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-merged_res-35:\\drawable_ic_launcher_background.xml.flat",
