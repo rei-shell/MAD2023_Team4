@@ -157,7 +157,7 @@ public class Setttings extends AppCompatActivity {
         history.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Setttings.this, HistoryViewHolder.class);
+                Intent intent = new Intent(Setttings.this, ViewHistoryViewHolder.class);
                 startActivity(intent);
             }
         });
