@@ -12,7 +12,6 @@ public class RecipeList {
     private int preparationTime;
     private int cookingTime;
     private int totalTime;
-
     public RecipeList(){}
     public RecipeList(String userid, String title, String description, String photoUrl, String category, int numberOfPersons, String ingredients, String recipeSteps, int preparationTime, int cookingTime, int totalTime) {
         this.userid = userid;

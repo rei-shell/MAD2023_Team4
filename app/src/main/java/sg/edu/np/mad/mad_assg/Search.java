@@ -1,16 +1,19 @@
 package sg.edu.np.mad.mad_assg;
 
+import static android.content.ContentValues.TAG;
+
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 
 
-import androidx.appcompat.widget.SearchView;
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -18,14 +21,244 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
+import android.widget.SearchView;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 import java.util.List;
 
+public class Search extends Fragment {
+    private FirebaseFirestore db;
+    private CategoryRecyclerViewAdapter adapter;
+    private MainRecipeRecyclerViewAdapter MainRecipeRecyclerViewAdapter;
+    RecyclerView recyclerView;
+    public Search() {
+        // Required empty public constructor
+    }
 
-public class Search extends Fragment{
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        final View view = inflater.inflate(R.layout.fragment_search, container, false);
 
+        ArrayList<CategoryData> categoryData = new ArrayList<>();
+        categoryData.add(new CategoryData("Korean"));
+        categoryData.add(new CategoryData("Chinese"));
+        categoryData.add(new CategoryData("Bakery"));
+        categoryData.add(new CategoryData("Western"));
+        categoryData.add(new CategoryData("Japanese"));
+        categoryData.add(new CategoryData("Indonesian"));
+        categoryData.add(new CategoryData("Thai"));
+        categoryData.add(new CategoryData("Drinks"));
+        categoryData.add(new CategoryData("Kids-Friendly"));
+        categoryData.add(new CategoryData("Sides"));
+
+        RecyclerView categoryView = view.findViewById(R.id.category);
+        categoryView.setLayoutManager(new GridLayoutManager(getContext(), 2));
+        adapter = new CategoryRecyclerViewAdapter(categoryData);
+        categoryView.setAdapter(adapter);
+        adapter.setOnItemClickListener((position, item) -> {
+            // Retrieve the selected category data and perform the action
+            String category = item.getCategory();
+            Intent intent = new Intent(getActivity(), Recipe.class);
+            intent.putExtra("category", category);
+            startActivity(intent);
+        });
+
+        // Get the reference to the SearchView from your layout
+        final SearchView searchView = view.findViewById(R.id.searchview);
+
+        // Set the OnQueryTextListener for the SearchView
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                SearchItem(query);
+                return true;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                SearchItem(newText);
+                return true;
+            }
+        });
+
+        // Initialize Firestore instance
+        db = FirebaseFirestore.getInstance();
+
+        return view;
+    }
+
+    private void SearchItem(String newText){
+
+        FirebaseRecyclerOptions<RecipeList> options =
+                new FirebaseRecyclerOptions.Builder<RecipeList>()
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("recipe").orderByChild("title").startAt(newText).endAt(newText, "\uf8ff"), RecipeList.class)
+                        .build();
+        MainRecipeRecyclerViewAdapter = new MainRecipeRecyclerViewAdapter(options.getSnapshots());
+        //MainRecipeRecyclerViewAdapter.startListening();
+        recyclerView.setAdapter(MainRecipeRecyclerViewAdapter);
+    }
+
+    private void displaySearchResults(ArrayList<RecipeList> searchResults) {
+        ArrayList<Object> combinedDataList = new ArrayList<>(searchResults);
+
+        // Check if the search results are empty
+        if (combinedDataList.isEmpty()) {
+            // No results found
+            // Clear the RecyclerView adapter's data when no results are found
+            adapter.clearData();
+        } else {
+            // Update the RecyclerView with the combined data
+            adapter.setData(combinedDataList);
+        }
+    }
+
+}
+    /*private void SearchItem(String newText) {
+        // Perform the search with the new text (convert to lowercase)
+        String searchString = newText.toLowerCase();
+
+        CollectionReference recipesRef = db.collection("recipes");
+        recipesRef
+                .whereEqualTo("title", searchString)
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful() && task.getResult().getDocuments().size() > 0) {
+                            // Iterate through the QuerySnapshot to access the documents
+                            ArrayList<RecipeList> searchResults = new ArrayList<>();
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                // Assuming your RecipeList class has a constructor to deserialize the snapshot properly
+                                RecipeList recipe = document.toObject(RecipeList.class);
+                                searchResults.add(recipe);
+                            }
+                            // Display the search results in the RecyclerView
+                            displaySearchResults(searchResults);
+                        } else {
+                            // No results found
+                            // Clear the RecyclerView adapter's data when no results are found
+                            adapter.clearData();
+                        }
+                    }
+                });
+    }*/
+
+/*public class Search extends Fragment {
+    private FirebaseFirestore db;
+    private CategoryRecyclerViewAdapter adapter;
+
+    public Search() {
+        // Required empty public constructor
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        final View view = inflater.inflate(R.layout.fragment_search, container, false);
+
+        ArrayList<CategoryData> categoryData = new ArrayList<>();
+        categoryData.add(new CategoryData("Korean"));
+        categoryData.add(new CategoryData("Chinese"));
+        categoryData.add(new CategoryData("Bakery"));
+        categoryData.add(new CategoryData("Western"));
+        categoryData.add(new CategoryData("Japanese"));
+        categoryData.add(new CategoryData("Indonesian"));
+        categoryData.add(new CategoryData("Thai"));
+        categoryData.add(new CategoryData("Drinks"));
+        categoryData.add(new CategoryData("Kids-Friendly"));
+        categoryData.add(new CategoryData("Sides"));
+
+        RecyclerView categoryView = view.findViewById(R.id.category);
+        categoryView.setLayoutManager(new GridLayoutManager(getContext(), 2));
+        adapter = new CategoryRecyclerViewAdapter(categoryData);
+        categoryView.setAdapter(adapter);
+        adapter.setOnItemClickListener((position, item) -> {
+            // Retrieve the selected category data and perform the action
+            String category = item.getCategory();
+            Intent intent = new Intent(getActivity(), Recipe.class);
+            intent.putExtra("category", category);
+            startActivity(intent);
+        });
+
+        // Get the reference to the SearchView from your layout
+        final SearchView searchView = view.findViewById(R.id.searchview);
+
+        // Set the OnQueryTextListener for the SearchView
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                SearchItem(query);
+                return true;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                SearchItem(newText);
+                return true;
+            }
+        });
+        return view;
+    }
+
+    private void SearchItem(String newText) {
+        // Perform the search with the new text (convert to lowercase)
+        String searchString = newText.toLowerCase();
+
+        CollectionReference recipesRef = db.collection("recipes");
+        recipesRef
+                .whereArrayContains("title", searchString.toLowerCase())
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful() && task.getResult().getDocuments().size() > 0) {
+                            // Iterate through the QuerySnapshot to access the documents
+                            ArrayList<RecipeList> searchResults = new ArrayList<>();
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                // Assuming your RecipeList class has a constructor to deserialize the snapshot properly
+                                RecipeList recipe = document.toObject(RecipeList.class);
+                                searchResults.add(recipe);
+                            }
+                            // Display the search results in the RecyclerView
+                            displaySearchResults(searchResults);
+                        }
+                    }
+                });
+    }
+
+    private void displaySearchResults(ArrayList<RecipeList> searchResults) {
+        ArrayList<Object> combinedDataList = new ArrayList<>(searchResults);
+
+        if (combinedDataList.isEmpty()) {
+            // No results found
+            Log.d(TAG, "No results found");
+
+            // Clear the RecyclerView adapter's data when no results are found
+            adapter.clearData();
+        } else {
+            // Update the RecyclerView with the combined data
+            adapter.setData(combinedDataList);
+        }
+    }
+}*/
+
+/*public class Search extends Fragment{
+    private FirebaseFirestore db;
     public Search() {
         // Required empty public constructor
     }
@@ -55,14 +288,199 @@ public class Search extends Fragment{
         adapter.setOnItemClickListener((position, item) -> {
             // Retrieve the selected category data and perform the action
             String category = item.getCategory();
-         //   String imageUrl = item.getImageUrl();
+            //   String imageUrl = item.getImageUrl();
             // Perform the action, such as starting a new activity
-            Intent intent = new Intent(getActivity(), RecipeView.class);
+            Intent intent = new Intent(getActivity(), Recipe.class);
             intent.putExtra("category", category);
-           // intent.putExtra("imageUrl", imageUrl);
+            // intent.putExtra("imageUrl", imageUrl);
             startActivity(intent);
         });
 
+            FirebaseRecyclerAdapter<data, RecyclerView.ViewHolder> firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<data, RecyclerView.ViewHolder>(data.class, R.layout.cardviewrows, ViewHolder.class, databaseReference) {
+                @Override
+                protected void populateViewHolder(RecyclerView.ViewHolder viewHolder, data model, int position) {
+                    viewHolder.Setdetails(context, model.getTitle(), model.getImage(), model.getDescription());
+                }
+            };
+            recyclerView.setAdapter(firebaseRecyclerAdapter);
+
+            // Get the reference to the SearchView from your layout
+            final SearchView searchView = findViewById(R.id.searchview);
+
+            // Set the OnQueryTextListener for the SearchView
+            searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+                @Override
+                public boolean onQueryTextSubmit(String query) {
+                    SearchItem(query);
+                    return false;
+                }
+
+                @Override
+                public boolean onQueryTextChange(String newText) {
+                    SearchItem(newText);
+                    return false;
+                }
+            });
+        }
+
+        private void SearchItem(String newText) {
+            // Perform the search with the new text (convert to lowercase)
+            String searchString = newText.toLowerCase();
+
+            CollectionReference recipesRef = db.collection("recipes");
+            recipesRef
+                    .whereArrayContains("title", searchString.toLowerCase())
+                    .get()
+                    .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                        @Override
+                        public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                            if (task.isSuccessful() && task.getResult().getDocuments().size() > 0) {
+                                // Iterate through the QuerySnapshot to access the documents
+                                ArrayList<RecipeList> searchResults = new ArrayList<>();
+                                for (QueryDocumentSnapshot document : task.getResult()) {
+                                    // Assuming your RecipeList class has a constructor to deserialize the snapshot properly
+                                    RecipeList recipe = document.toObject(RecipeList.class);
+                                    searchResults.add(recipe);
+                                }
+                                // Display the search results in the RecyclerView
+                                displaySearchResults(searchResults);
+                            } else {
+                                // No results found
+                            }
+                        }
+                    });
+        }
+
+        private void displaySearchResults(ArrayList<RecipeList> searchResults) {
+            // Combine the category and recipe data into a single list
+            // combinedDataList.addAll(categoryData);
+            ArrayList<Object> combinedDataList = new ArrayList<>(searchResults);
+
+            // Check if the search results are empty
+            if (combinedDataList.isEmpty()) {
+                // No results found
+                Log.d(TAG, "No results found");
+            } else {
+                // Update the RecyclerView with the combined data
+                adapter.setData(combinedDataList);
+            }
+        }
         return view;
     }
-}
+}*/
+
+        /*if (task.isSuccessful()) {
+                                    // Iterate through the QuerySnapshot to access the documents
+                                    ArrayList<RecipeList> searchResults = new ArrayList<>();
+                                    for (QueryDocumentSnapshot document : task.getResult()) {
+                                        // Assuming your RecipeList class has a constructor to deserialize the snapshot properly
+                                        RecipeList recipe = document.toObject(RecipeList.class);
+                                        searchResults.add(recipe);
+                                    }
+                                    // Display the search results in the RecyclerView
+                                    displaySearchResults(searchResults);
+                                } else {
+                                    Log.d(TAG, "Error getting documents: ", task.getException());
+                                }*/
+
+           /* private void displaySearchResults(ArrayList<RecipeList> searchResults) {
+                // Combine the category and recipe data into a single list
+                // combinedDataList.addAll(categoryData);
+                ArrayList<Object> combinedDataList = new ArrayList<>(searchResults);
+
+                // Update the RecyclerView with the combined data
+                adapter.setData(combinedDataList);
+            }*/
+
+// Perform the search query in Firestore
+                /*CollectionReference recipesRef = db.collection("recipes");
+                recipesRef
+                        .orderBy("title")
+                        .startAt(searchString)
+                        .endAt(searchString + "\uf8ff")
+                        .get()
+                        .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                            @Override
+                            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                                if (task.isSuccessful() && task.getResult().getDocuments().size() > 0) {
+                                    // Iterate through the QuerySnapshot to access the documents
+                                    ArrayList<RecipeList> searchResults = new ArrayList<>();
+                                    for (QueryDocumentSnapshot document : task.getResult()) {
+                                        // Assuming your RecipeList class has a constructor to deserialize the snapshot properly
+                                        RecipeList recipe = document.toObject(RecipeList.class);
+                                        searchResults.add(recipe);
+                                    }
+                                    // Display the search results in the RecyclerView
+                                    displaySearchResults(searchResults);
+                                } else {
+                                    // No results found
+                                }
+                            }
+                        });*/
+
+/* SearchView searchView = view.findViewById(R.id.searchview);
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                // Handle the query submission if needed
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                // Perform the search with the new text (convert to lowercase)
+                String searchString = newText.toLowerCase();
+
+                CollectionReference recipesRef = db.collection("recipes");
+                recipesRef
+                        .whereArrayContains("title", searchString.toLowerCase())
+                        .get()
+                        .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                            @Override
+                            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                                if (task.isSuccessful() && task.getResult().getDocuments().size() > 0) {
+                                    // Iterate through the QuerySnapshot to access the documents
+                                    ArrayList<RecipeList> searchResults = new ArrayList<>();
+                                    for (QueryDocumentSnapshot document : task.getResult()) {
+                                        // Assuming your RecipeList class has a constructor to deserialize the snapshot properly
+                                        RecipeList recipe = document.toObject(RecipeList.class);
+                                        searchResults.add(recipe);
+                                    }
+                                    // Display the search results in the RecyclerView
+                                    displaySearchResults(searchResults);
+                                } else {
+                                    // No results found
+                                }
+                            }
+                        });
+                return true;
+            }
+
+            private void displaySearchResults(ArrayList<RecipeList> searchResults) {
+                // Combine the category and recipe data into a single list
+                // combinedDataList.addAll(categoryData);
+                ArrayList<Object> combinedDataList = new ArrayList<>(searchResults);
+
+                // Check if the search results are empty
+                if (combinedDataList.isEmpty()) {
+                    // No results found
+                    Log.d(TAG, "No results found");
+                } else {
+                    // Update the RecyclerView with the combined data
+                    adapter.setData(combinedDataList);
+                }
+            }
+        });*/
+
+ /*private void displaySearchResults(ArrayList<RecipeList> searchResults) {
+        ArrayList<Object> combinedDataList = new ArrayList<>(searchResults);
+
+        // Check if the search results are empty
+        if (combinedDataList.isEmpty()) {
+            // No results found
+            Log.d(TAG, "No results found");
+        } else {
+            // Update the RecyclerView with the combined data
+            adapter.setData(combinedDataList);
+        }
+    }*/

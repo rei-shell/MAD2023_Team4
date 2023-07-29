@@ -64,7 +64,7 @@ public class Setttings extends AppCompatActivity {
         LinearLayout aboutus = findViewById(R.id.about);
         ImageView back = (ImageView) findViewById(R.id.backbtn);
         Button logout = (Button) findViewById(R.id.logoutbtn);
-        Switch toggle = findViewById(R.id.toggleswitch);
+        //Switch toggle = findViewById(R.id.toggleswitch);
         // Initialize SharedPreferences
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
 
@@ -93,7 +93,7 @@ public class Setttings extends AppCompatActivity {
         });
 
         //toggle notification system
-        toggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        /*toggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 // Handle the toggle event here
@@ -107,7 +107,7 @@ public class Setttings extends AppCompatActivity {
                     toggle.setChecked(false);
                 }
             }
-        });
+        });*/
 
         // Initialize the theme Spinner
         themeSpinner = findViewById(R.id.dropdown_mode);

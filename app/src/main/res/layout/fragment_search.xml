@@ -9,18 +9,13 @@
     android:id="@+id/linearlayout"
     style="@style/ScreenBackground">
 
-   <!-- <SearchView
-        android:id="@+id/searchview"
-        android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:inputType="text"
-        android:queryHint="Search Here"
-        android:iconifiedByDefault="false" />-->
     <SearchView
         android:id="@+id/searchview"
         android:layout_width="match_parent"
         android:layout_height="65dp"
         android:inputType="text"
+        android:focusable="true"
+        android:clickable="true"
         android:theme="@style/AppTheme.SearchViewStyle" />
 
     <androidx.recyclerview.widget.RecyclerView
@@ -32,113 +27,4 @@
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         android:orientation="vertical"
         app:spanCount="2" />
-    <!--<LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="15dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:id="@+id/Category"
-
-            android:text="Category"
-            android:textSize="30sp"
-            android:textColor="@color/white"
-            android:fontFamily="@font/kalam_bold"
-
-            />
-
-        <TextView
-            android:id="@+id/viewall3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="10dp"
-
-            android:fontFamily="@font/kalam_bold"
-            android:text="View All"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
-    </LinearLayout>-->
-
-
-   <!-- <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:id="@+id/Recipe_Name"
-
-            android:text="Recipe Name"
-            android:textSize="30sp"
-            android:textColor="@color/white"
-            android:fontFamily="@font/kalam_bold"
-
-            />
-
-        <TextView
-            android:id="@+id/viewall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="10dp"
-
-            android:fontFamily="@font/kalam_bold"
-            android:text="View All"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
-    </LinearLayout>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recipename"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        android:orientation="vertical" />
-
-   ><LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:id="@+id/Recipe_Creator"
-
-            android:text="Creator"
-            android:textSize="30sp"
-            android:textColor="@color/white"
-            android:fontFamily="@font/kalam_bold"
-            />
-
-        <TextView
-            android:id="@+id/viewall2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="10dp"
-
-            android:fontFamily="@font/kalam_bold"
-            android:text="View All"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
-    </LinearLayout>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/username"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        android:orientation="vertical" />-->
 </LinearLayout>
