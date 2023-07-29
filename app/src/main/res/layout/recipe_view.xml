@@ -64,19 +64,6 @@
             android:scaleType="fitCenter"
             />
 
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:layout_width="350dp"
-                android:layout_height="125dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginStart="40dp"
-                android:id="@id/descriptiontable"
-                android:src="@drawable/rectangle"/>
-
-
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -92,8 +79,6 @@
                 android:textSize="18sp"
                 android:textColor="@color/black"
                 android:fontFamily="@font/kalam_light"/>
-
-        </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -246,48 +231,22 @@
 
         </RelativeLayout>
 
-        <RelativeLayout
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/ingredientstxt"
+            android:layout_alignEnd="@+id/ingredientstxt"
+            android:layout_alignBottom="@+id/ingredientstxt"
+            android:layout_alignTop="@+id/ingredientstxt"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
 
-            <ImageView
-                android:layout_width="350dp"
-                android:layout_height="900dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginStart="40dp"
-                android:id="@+id/ingredientstxt"
-                android:src="@drawable/rectangle"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/ingredientstxt"
-                android:layout_alignEnd="@+id/ingredientstxt"
-                android:layout_alignBottom="@+id/ingredientstxt"
-                android:layout_alignTop="@+id/ingredientstxt"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"
-
-                android:id="@+id/ingredients"
-                android:text="Ingredients"
-                android:textAlignment="center"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:fontFamily="@font/kalam_light"/>
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:layout_width="350dp"
-                android:layout_height="1200dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginStart="40dp"
-                android:id="@+id/stepstxt"
-                android:src="@drawable/rectangle"/>
+            android:id="@+id/ingredients"
+            android:text="Ingredients"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/kalam_light"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -306,7 +265,6 @@
                 android:textColor="@color/black"
                 android:fontFamily="@font/kalam_light"/>
 
-        </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"

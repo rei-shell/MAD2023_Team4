@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="240dp"
-    android:layout_height="255dp"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_margin="10dp"
     android:clickable="true"
     app:cardCornerRadius="10dp"
-    android:id="@+id/cardview_id"
->
-
+    android:id="@+id/cardview_id">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -24,16 +22,6 @@
             android:scaleType="fitCenter"
             />
 
-        <RatingBar
-            android:id="@+id/rbStars"
-            android:layout_width="wrap_content"
-            android:layout_height="46dp"
-            android:backgroundTint="#FF9800"
-            android:numStars="5"
-            android:layout_marginTop="10dp"
-            android:progressBackgroundTint="#000000"
-            android:progressTint="#FF9800" />
-
         <TextView
             android:id="@+id/recipe_text"
             style="@style/BaseStyle"
@@ -46,5 +34,4 @@
             android:layout_marginTop="10dp"
             />
     </LinearLayout>
-
 </androidx.cardview.widget.CardView>

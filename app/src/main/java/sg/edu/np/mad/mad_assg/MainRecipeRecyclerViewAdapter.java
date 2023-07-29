@@ -14,32 +14,30 @@ import androidx.cardview.widget.CardView;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MainRecipeRecyclerViewAdapter extends RecyclerView.Adapter<MainRecipeRecyclerViewAdapter.ViewHolder> {
-    private ArrayList<RecipeList> recipeList;
+    private List<RecipeList> recipeList;
     private OnItemClickListener onItemClickListener;
 
     // Constructor
-    public MainRecipeRecyclerViewAdapter(ArrayList<RecipeList> recipeList) {
-        this.recipeList = recipeList;
-    }
-    public void setRecipeList(ArrayList<RecipeList> searchResults) {
+    public MainRecipeRecyclerViewAdapter(List<RecipeList> recipeList) {
         this.recipeList = recipeList;
     }
 
     // ViewHolder class
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-
         ImageView imageView;
-        TextView name;
+        TextView recipeName;
 
         public ViewHolder(View view) {
             super(view);
             imageView = view.findViewById(R.id.recipe_image_id);
-            name = view.findViewById(R.id.recipe_text);
+            recipeName = view.findViewById(R.id.recipe_text);
             view.setOnClickListener(this);
         }
 
@@ -66,18 +64,21 @@ public class MainRecipeRecyclerViewAdapter extends RecyclerView.Adapter<MainReci
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         RecipeList recipe = recipeList.get(position);
-       // Picasso.get().load(recipe.getImageUrl()).into(holder.imageView);
-        int whiteColor = ContextCompat.getColor(holder.name.getContext(), R.color.white);
-        holder.name.setTextColor(whiteColor);
-       // holder.name.setText(recipe.getRecipeName());
+        holder.recipeName.setText(recipe.getTitle());
+
+        Glide.with(holder.imageView.getContext())
+                .load(recipe.getPhotoUrl())
+                .into(holder.imageView);
+
     }
+
     // getItemCount
     @Override
     public int getItemCount() {
         return recipeList.size();
     }
 
-    // Set onItemClickListener
+    // Set the OnItemClickListener
     public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
         this.onItemClickListener = onItemClickListener;
     }
@@ -86,5 +87,4 @@ public class MainRecipeRecyclerViewAdapter extends RecyclerView.Adapter<MainReci
     public interface OnItemClickListener {
         void onItemClick(int position);
     }
-
 }
