@@ -57,7 +57,7 @@ public class Search extends Fragment{
             String category = item.getCategory();
          //   String imageUrl = item.getImageUrl();
             // Perform the action, such as starting a new activity
-            Intent intent = new Intent(getActivity(), RecipeView.class);
+            Intent intent = new Intent(getActivity(), Recipe.class);
             intent.putExtra("category", category);
            // intent.putExtra("imageUrl", imageUrl);
             startActivity(intent);
