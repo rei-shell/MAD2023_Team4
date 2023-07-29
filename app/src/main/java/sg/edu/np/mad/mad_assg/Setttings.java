@@ -81,6 +81,7 @@ public class Setttings extends AppCompatActivity {
             finish();
         }
 
+
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -157,8 +158,9 @@ public class Setttings extends AppCompatActivity {
         history.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Setttings.this, ViewHistoryViewHolder.class);
+                Intent intent = new Intent(Setttings.this, ViewedHistory.class);
                 startActivity(intent);
+                finish();
             }
         });
 
