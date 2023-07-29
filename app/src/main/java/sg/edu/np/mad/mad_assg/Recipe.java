@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -62,14 +63,13 @@ public class Recipe extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.foodrecipeoptionsview);
 
+        //ImageView backbutton = (ImageView) findViewById(R.id.backbutton);
         db = FirebaseFirestore.getInstance();
         recipes = new ArrayList<>();
         adapter = new MainRecipeRecyclerViewAdapter(recipes);
         adapter1 = new RecipeRecycleViewAdapter(recipes);
+
 }
-
-
-
 
 
 
@@ -82,40 +82,18 @@ public class Recipe extends AppCompatActivity {
         adapter = new MainRecipeRecyclerViewAdapter(recipes);
         adapter1 = new RecipeRecycleViewAdapter(recipes);
 
-//        RecyclerView updateview = view.findViewById(R.id.updateview);
-//        updateview.setAdapter(adapter);
-//        RecyclerView recoview = view.findViewById(R.id.recoview);
-//        recoview.setAdapter(adapter);
-//        RecyclerView exploreview = view.findViewById(R.id.exploreview);
-//        exploreview.setAdapter(adapter1);
 
-        // Set the onItemClickListener for the adapter
-//        adapter.setOnItemClickListener(new MainRecipeRecyclerViewAdapter.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(int position) {
-//                // Handle item click here
-//                RecipeList clickedRecipe = recipes.get(position);
-//                // Perform any action you want based on the clicked recipe.
-//                // For example, you can show a dialog, navigate to another fragment, etc.
-//                Toast.makeText(requireContext(), "Clicked Recipe: " + clickedRecipe.getTitle(), Toast.LENGTH_SHORT).show();
-//                Intent intent = new Intent(requireContext(), RecipeView.class);
-//                intent.putExtra("title", clickedRecipe.getTitle());
-//                startActivity(intent);
-//            }
-//        });
-
-        // Fetch user recipes from Firestore
+        // get recipes from Firestore
         fetchUserRecipes();
 
         return view;
     }
 
+
+
     private void fetchUserRecipes() {
         FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
         if (currentUser != null) {
-            // Get the current user's UID
-            //String userId = currentUser.getUid();
-
             // Get the reference to the "recipes" collection in Firestore
             CollectionReference recipesRef = db.collection("recipes");
 
