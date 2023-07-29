@@ -65,6 +65,7 @@ id author
 id backarrow
 id backbtn
 id backbtn1
+id backbutton
 id bottom_navigation
 id btnClosePollOverlay
 id btnLike
@@ -167,7 +168,6 @@ id rbPollYesOverlay
 id rbStars
 id recipeSteps
 id recipe_image_id
-id recipe_recyclerview
 id recipe_text
 id recipedescription
 id recipeimg
@@ -176,6 +176,7 @@ id recommendation
 id recoview
 id rectimage
 id recyclerView_id
+id recyclerview
 id report
 id request
 id review
@@ -238,6 +239,8 @@ layout edit_profile
 layout edit_profile_page
 layout feedback_result
 layout feedback_support
+layout foodrecipeoptionitem
+layout foodrecipeoptionsview
 layout forgot_password
 layout fragment_home_page
 layout fragment_search
@@ -248,7 +251,6 @@ layout item_history
 layout item_recipe
 layout layout_poll_overlay
 layout login
-layout recipe
 layout recipe_view
 layout settings
 layout signin
@@ -256,7 +258,8 @@ layout splashscreen
 layout startpage
 layout upload_recipe
 layout userpage_recipe_cardview
-layout viewed_history
+layout viewedhistory
+layout viewhistoryitem
 menu bottom_nav
 menu feedback_dropdown
 menu top_nav

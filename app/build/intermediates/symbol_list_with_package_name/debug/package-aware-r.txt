@@ -3196,6 +3196,7 @@ id autoCompleteToStart
 id backarrow
 id backbtn
 id backbtn1
+id backbutton
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -3559,7 +3560,6 @@ id rbPollYesOverlay
 id rbStars
 id recipeSteps
 id recipe_image_id
-id recipe_recyclerview
 id recipe_text
 id recipedescription
 id recipeimg
@@ -3569,6 +3569,7 @@ id recoview
 id rectangles
 id rectimage
 id recyclerView_id
+id recyclerview
 id report
 id request
 id reverseSawtooth
@@ -3914,6 +3915,8 @@ layout edit_profile
 layout edit_profile_page
 layout feedback_result
 layout feedback_support
+layout foodrecipeoptionitem
+layout foodrecipeoptionsview
 layout forgot_password
 layout fragment_home_page
 layout fragment_search
@@ -3981,7 +3984,6 @@ layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
-layout recipe
 layout recipe_view
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
@@ -3993,7 +3995,8 @@ layout startpage
 layout support_simple_spinner_dropdown_item
 layout upload_recipe
 layout userpage_recipe_cardview
-layout viewed_history
+layout viewedhistory
+layout viewhistoryitem
 menu bottom_nav
 menu feedback_dropdown
 menu top_nav

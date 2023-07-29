@@ -1,5 +1,6 @@
 package sg.edu.np.mad.mad_assg;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,29 +9,37 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class RecipeAdapter extends RecyclerView.Adapter<RecipeViewHolder> {
-    ArrayList<String>data;
+    Context context;
+    List<ViewHistoryItem> items;
 
-    public RecipeAdapter(ArrayList<String> input) {
-        data = input;
+    public RecipeAdapter(Context context, List<ViewHistoryItem> items) {
+        this.context = context;
+        this.items = items;
     }
 
-
-    public RecipeViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View item = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_recipe, parent, false);
-        return new RecipeViewHolder(item);
+    @NonNull
+    @Override
+    public RecipeViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        return new RecipeViewHolder(LayoutInflater.from(context).inflate(R.layout.viewhistoryitem,parent,false));
     }
 
-    public void onBindViewHolder(RecipeViewHolder holder, int position){
-        String s = data.get(position);
-        holder.txt.setText(s);
+    @Override
+    public void onBindViewHolder(@NonNull RecipeViewHolder holder, int position) {
+        holder.nameView.setText(items.get(position).getName());
+        holder.imageView.setImageResource(items.get(position).getImage());
     }
 
-    public int getItemCount(){
-        return data.size();
+    @Override
+    public int getItemCount() {
+        return items.size();
     }
-
 
 
 }
+
+
+
+
