@@ -17,6 +17,18 @@
         style="@style/TIntColor"
         android:src="@drawable/twotone_arrow_back_24"/>
 
+    <SearchView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recipeListsearchview"
+        android:iconifiedByDefault="false"
+        android:queryHint="Recipe Name"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recipeListview"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"

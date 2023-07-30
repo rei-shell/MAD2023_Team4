@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,6 +32,8 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
+
+import org.checkerframework.checker.units.qual.A;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -80,11 +83,35 @@ public class Recipe extends AppCompatActivity {
             }
         });
 
+
         // Fetch user recipes from Firestore
         fetchRecipes();
 
 
     }
+
+//    private void searchrecipe(){
+//        SearchView searchview = (SearchView) findViewById(R.id.recipeListsearchview);
+//        searchview.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+//            @Override
+//            public boolean onQueryTextSubmit(String r) {
+//                return false;
+//            }
+//
+//            @Override
+//            public boolean onQueryTextChange(String r) {
+//                ArrayList<Recipe> filteredRecipes = new ArrayList<Recipe>();
+//                for(Recipe recipe: RecipeList){
+//                    if(recipe.getTitle()){
+//                        filteredRecipes.add(Recipe);
+//                    }
+//                }
+//
+//                return false;
+//            }
+//        });
+//    }
+
 
     private void fetchRecipes() {
         Log.d("RecipeDebug", "Fetching recipes from Firestore...");
