@@ -39,8 +39,6 @@ This app will hopefully inspire you to make every meal a wonderful and memorable
     <li> User Profile (done)</li>
     <ul><li> This allows the user to view their profile and edit the profile information or add information to their profile.</li></ul><br>
     feature group: Eudora
-    <li> View History</li>
-    <ul><li> This allows user to view back their viewed recipe just in case they wanna try that recipe again but could not find in the wide variety of recipe options.</li></ul>
     <li> Food Recipe Options</li>
     <ul><li> This allows user to choose their desire recipe that they wanna eat or try cooking. Our options of cuisine has a wide variety that known around the world. </li></ul><br>
     feature group: Rachelle
