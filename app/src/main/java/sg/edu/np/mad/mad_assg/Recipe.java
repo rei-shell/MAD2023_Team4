@@ -82,9 +82,12 @@ public class Recipe extends AppCompatActivity {
 
         // Fetch user recipes from Firestore
         fetchRecipes();
+
+
     }
 
     private void fetchRecipes() {
+        Log.d("RecipeDebug", "Fetching recipes from Firestore...");
         FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
         if (currentUser != null) {
             // Get the reference to the "recipes" collection in Firestore
@@ -102,8 +105,10 @@ public class Recipe extends AppCompatActivity {
                             searchResults.add(recipe);
                             Log.d("RecipeDebug", "Recipe added: " + recipe.getTitle());
                         }
+
                         // Notify the adapter that data has changed
                         recipeAdapter.notifyDataSetChanged();
+                        Log.d("RecipeDebug", "Recipes fetched and adapter updated successfully.");
                     } else {
                         Log.d(TAG, "Error getting documents: ", task.getException());
                     }
