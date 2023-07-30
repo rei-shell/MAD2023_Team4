@@ -154,7 +154,7 @@ public class Search extends Fragment {
             searchRecyclerView.setVisibility(View.VISIBLE);
 
             // Perform the search and update the searchResults list
-            db.collection("recipe")
+            db.collection("recipes")
                     .orderBy("title")
                     .startAt(newText)
                     .endAt(newText + "\uf8ff")
@@ -170,6 +170,10 @@ public class Search extends Fragment {
 
                         // If there are no search results, show the "No search results found" TextView
                         noResultsTextView.setVisibility(searchResults.isEmpty() ? View.VISIBLE : View.GONE);
+
+                        Log.d("Search", "Search Query: " + newText);
+                        Log.d("Search", "Number of Results: " + searchResults.size());
+
                     })
                     .addOnFailureListener(e -> {
                         // Handle the failure to fetch search results if needed

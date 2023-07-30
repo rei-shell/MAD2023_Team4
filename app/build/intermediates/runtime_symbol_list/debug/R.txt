@@ -3677,7 +3677,6 @@ int id stepsTxt 0x7f0a023f
 int id stepstxt 0x7f0a0240
 int id stop 0x7f0a0241
 int id stretch 0x7f0a0242
-int id stuff 0x7f0a0243
 int id submenuarrow 0x7f0a0244
 int id submit_area 0x7f0a0245
 int id submitbtn 0x7f0a0246
@@ -3751,13 +3750,11 @@ int id useLogo 0x7f0a0289
 int id userName 0x7f0a028a
 int id userdetails 0x7f0a028b
 int id userid 0x7f0a028c
-int id userlike 0x7f0a028d
 int id username 0x7f0a028e
 int id usernameEditText 0x7f0a028f
 int id usernameLayout 0x7f0a0290
 int id username_header 0x7f0a0291
 int id userpic 0x7f0a0292
-int id userpost 0x7f0a0293
 int id verifyemail 0x7f0a0294
 int id vertical_only 0x7f0a0295
 int id view_history 0x7f0a0296

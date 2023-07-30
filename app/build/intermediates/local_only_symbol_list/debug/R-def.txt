@@ -196,7 +196,6 @@ id signinbtn
 id steps
 id stepsTxt
 id stepstxt
-id stuff
 id submitbtn
 id suggestion
 id textView
@@ -217,13 +216,11 @@ id upload_recipe
 id userName
 id userdetails
 id userid
-id userlike
 id username
 id usernameEditText
 id usernameLayout
 id username_header
 id userpic
-id userpost
 id verifyemail
 id view_history
 id viewall

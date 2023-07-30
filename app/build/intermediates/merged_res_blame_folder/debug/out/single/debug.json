@@ -1,9 +1,5 @@
 [
     {
-        "merged": "sg.edu.np.mad.mad_assg.app-merged_res-37:/layout_fragment_search.xml.flat",
-        "source": "sg.edu.np.mad.mad_assg.app-main-39:/layout/fragment_search.xml"
-    },
-    {
         "merged": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-merged_res-37:\\mipmap-xhdpi_world.png.flat",
         "source": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-main-39:\\mipmap-xhdpi\\world.png"
     },
@@ -110,6 +106,10 @@
     {
         "merged": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-merged_res-37:\\layout_forgot_password.xml.flat",
         "source": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-main-39:\\layout\\forgot_password.xml"
+    },
+    {
+        "merged": "sg.edu.np.mad.mad_assg.app-merged_res-37:/layout_fragment_userpage.xml.flat",
+        "source": "sg.edu.np.mad.mad_assg.app-main-39:/layout/fragment_userpage.xml"
     },
     {
         "merged": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-merged_res-37:\\mipmap-hdpi_ic_launcher_round.png.flat",

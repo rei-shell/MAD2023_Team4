@@ -26,12 +26,13 @@ public class SearchRecycleViewAdapter extends RecyclerView.Adapter<SearchRecycle
     // ViewHolder class
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         ImageView imageView;
-        TextView recipeName;
+        TextView recipeName, categoryName;
 
         public ViewHolder(View view) {
             super(view);
-            imageView = view.findViewById(R.id.recipe_image_id);
-            recipeName = view.findViewById(R.id.recipe_text);
+            imageView = view.findViewById(R.id.imageview);
+            recipeName = view.findViewById(R.id.name);
+            categoryName = view.findViewById(R.id.category);
             view.setOnClickListener(this); // Set the click listener to the view
         }
 
@@ -49,7 +50,7 @@ public class SearchRecycleViewAdapter extends RecyclerView.Adapter<SearchRecycle
     @NonNull
     @Override
     public SearchRecycleViewAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.category, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_recipe, parent, false);
         return new ViewHolder(view);
     }
 
@@ -57,7 +58,7 @@ public class SearchRecycleViewAdapter extends RecyclerView.Adapter<SearchRecycle
     public void onBindViewHolder(@NonNull SearchRecycleViewAdapter.ViewHolder holder, int position) {
         RecipeList recipe = recipeList.get(position);
         holder.recipeName.setText(recipe.getTitle());
-
+        holder.categoryName.setText(recipe.getCategory());
         Glide.with(holder.imageView.getContext())
                 .load(recipe.getPhotoUrl())
                 .into(holder.imageView);
