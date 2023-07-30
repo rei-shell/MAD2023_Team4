@@ -60,10 +60,6 @@
         "source": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-main-39:\\layout\\item_history.xml"
     },
     {
-        "merged": "sg.edu.np.mad.mad_assg.app-merged_res-37:/layout_foodrecipeoptionitem.xml.flat",
-        "source": "sg.edu.np.mad.mad_assg.app-main-39:/layout/foodrecipeoptionitem.xml"
-    },
-    {
         "merged": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-merged_res-37:\\xml_backup_rules.xml.flat",
         "source": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-main-39:\\xml\\backup_rules.xml"
     },
@@ -184,10 +180,6 @@
         "source": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-main-39:\\drawable\\outline_account_circle_24.xml"
     },
     {
-        "merged": "sg.edu.np.mad.mad_assg.app-merged_res-37:/layout_foodrecipeoptionsview.xml.flat",
-        "source": "sg.edu.np.mad.mad_assg.app-main-39:/layout/foodrecipeoptionsview.xml"
-    },
-    {
         "merged": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-merged_res-37:\\mipmap-xhdpi_home.png.flat",
         "source": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-main-39:\\mipmap-xhdpi\\home.png"
     },
@@ -246,6 +238,10 @@
     {
         "merged": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-merged_res-37:\\font_kalam_bold.ttf.flat",
         "source": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-main-39:\\font\\kalam_bold.ttf"
+    },
+    {
+        "merged": "sg.edu.np.mad.mad_assg.app-merged_res-37:/layout_recipe_view.xml.flat",
+        "source": "sg.edu.np.mad.mad_assg.app-main-39:/layout/recipe_view.xml"
     },
     {
         "merged": "C:\\Users\\nicky\\.gradle\\daemon\\8.0\\sg.edu.np.mad.mad_assg.app-merged_res-37:\\layout_viewhistoryitem.xml.flat",

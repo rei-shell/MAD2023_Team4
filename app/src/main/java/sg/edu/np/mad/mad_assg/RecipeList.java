@@ -1,6 +1,14 @@
 package sg.edu.np.mad.mad_assg;
 
-public class RecipeList {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+import androidx.annotation.NonNull;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+public class RecipeList{
     private String userid;
     private String title;
     private String description;
@@ -12,7 +20,8 @@ public class RecipeList {
     private int preparationTime;
     private int cookingTime;
     private int totalTime;
-    public RecipeList(){}
+    public RecipeList() {
+    }
     public RecipeList(String userid, String title, String description, String photoUrl, String category, int numberOfPersons, String ingredients, String recipeSteps, int preparationTime, int cookingTime, int totalTime) {
         this.userid = userid;
         this.title = title;
@@ -113,6 +122,27 @@ public class RecipeList {
 
     public void setTotalTime(int totalTime) {
         this.totalTime = totalTime;
+    }
+
+    private String convertRecipeToJsonString(RecipeList recipe) {
+        try {
+            JSONObject jsonObject = new JSONObject();
+            jsonObject.put("userid", recipe.getUserid());
+            jsonObject.put("title", recipe.getTitle());
+            jsonObject.put("description", recipe.getDescription());
+            jsonObject.put("photoUrl", recipe.getPhotoUrl());
+            jsonObject.put("category", recipe.getCategory());
+            jsonObject.put("numberOfPersons", recipe.getNumberOfPersons());
+            jsonObject.put("ingredients", recipe.getIngredients());
+            jsonObject.put("recipeSteps", recipe.getRecipeSteps());
+            jsonObject.put("preparationTime", recipe.getPreparationTime());
+            jsonObject.put("cookingTime", recipe.getCookingTime());
+            jsonObject.put("totalTime", recipe.getTotalTime());
+            return jsonObject.toString();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
 }

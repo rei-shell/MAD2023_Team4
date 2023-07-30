@@ -42,6 +42,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.google.gson.Gson;
 
 import org.w3c.dom.Text;
 
@@ -104,7 +105,7 @@ public class HomePage extends Fragment {
 
         // Set the onItemClickListener for the adapter
         adapter.setOnItemClickListener(new MainRecipeRecyclerViewAdapter.OnItemClickListener() {
-            @Override
+            /*@Override
             public void onItemClick(int position) {
                 // Handle item click here
                 RecipeList clickedRecipe = recipes.get(position);
@@ -113,14 +114,34 @@ public class HomePage extends Fragment {
                 Toast.makeText(requireContext(), "Clicked Recipe: " + clickedRecipe.getTitle(), Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(requireContext(), RecipeView.class);
                 intent.putExtra("title", clickedRecipe.getTitle());
+                intent.putExtra("photoUrl", clickedRecipe.getPhotoUrl());
+                intent.putExtra("userid", clickedRecipe.getUserid());
+                intent.putExtra("description", clickedRecipe.getDescription());
+                intent.putExtra("ingredients", clickedRecipe.getIngredients());
+                intent.putExtra("recipeSteps", clickedRecipe.getRecipeSteps());
+                startActivity(intent);
+            }*/
+            @Override
+            public void onItemClick(int position) {
+                RecipeList clickedRecipe = recipes.get(position);
+                String recipeJson = convertRecipeToJsonString(clickedRecipe);
+
+                Intent intent = new Intent(requireContext(), RecipeView.class);
+                intent.putExtra("recipeJson", recipeJson);
                 startActivity(intent);
             }
+
         });
 
         // Fetch user recipes from Firestore
         fetchRecipes();
 
         return view;
+    }
+
+    private String convertRecipeToJsonString(RecipeList recipe) {
+        Gson gson = new Gson();
+        return gson.toJson(recipe);
     }
 
     private void fetchRecipes() {

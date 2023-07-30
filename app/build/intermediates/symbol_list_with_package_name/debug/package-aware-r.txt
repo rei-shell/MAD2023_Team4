@@ -3293,6 +3293,7 @@ id deleteacct
 id deltaRelative
 id dependency_ordering
 id description
+id descriptionText
 id descriptiontable
 id design_bottom_sheet
 id design_menu_item_action_area
@@ -3397,6 +3398,7 @@ id included
 id indeterminate
 id info
 id ingredients
+id ingredientsTxt
 id ingredientstxt
 id invisible
 id inward
@@ -3583,6 +3585,7 @@ id report
 id request
 id reverseSawtooth
 id review
+id reviewTxt
 id reviewstuff
 id revioew
 id rexipe

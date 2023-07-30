@@ -47,7 +47,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-database:20.2.2' // Use the latest version available
     implementation 'com.google.firebase:firebase-firestore:24.7.0'
     implementation 'com.firebaseui:firebase-ui-database:8.0.0'
-
+    implementation 'com.google.code.gson:gson:2.9.0'
 
 
 

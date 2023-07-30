@@ -3292,6 +3292,7 @@ int id deleteacct 0x7f0a00c0
 int id deltaRelative 0x7f0a00c1
 int id dependency_ordering 0x7f0a00c2
 int id description 0x7f0a00c3
+int id descriptionText 0x7f0a02b0
 int id descriptiontable 0x7f0a00c4
 int id design_bottom_sheet 0x7f0a00c5
 int id design_menu_item_action_area 0x7f0a00c6
@@ -3396,6 +3397,7 @@ int id included 0x7f0a0128
 int id indeterminate 0x7f0a0129
 int id info 0x7f0a012a
 int id ingredients 0x7f0a012b
+int id ingredientsTxt 0x7f0a02b1
 int id ingredientstxt 0x7f0a012c
 int id invisible 0x7f0a012d
 int id inward 0x7f0a012e
@@ -3582,6 +3584,7 @@ int id report 0x7f0a01e1
 int id request 0x7f0a01e2
 int id reverseSawtooth 0x7f0a01e3
 int id review 0x7f0a01e4
+int id reviewTxt 0x7f0a02b2
 int id reviewstuff 0x7f0a01e5
 int id revioew 0x7f0a01e6
 int id rexipe 0x7f0a01e7
