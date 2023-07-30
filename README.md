@@ -4,6 +4,10 @@
 
 # App Name: Rexipe
 
+<p align="center">
+  <img src="app/src/main/res/drawable/icon.png" />
+</p>
+
 <p>Team Members:
 <ul>
   <li> Rachelle (S10247620)</li>
@@ -17,6 +21,9 @@
 # App Descriptions:
 
 This app will hopefully inspire you to make every meal a wonderful and memorable one. It contains various recipes ranging from chinese to western and many more, allowing you to decide from the huge array of recipes provided. Most recipes will only require 15 to 20 mins to create a scrumptious meal . Moreover, if you face difficulties deciding on which recipe to pick, our application provides you a random generator to pick your desired choice of cuisine. Definitely, not only will you be able to access the many amazing recipes shared by other users, you would also be able too share your amazing recipe, allowing others to learn and create a scrumptious meal too! This application is not only catered to those who have experience in cooking, but is also catered to those who just started having interest in cooking, as through our application you will be able to start from learning the basics like creating a simple dish to learning how to create a dish with higher difficulty.
+
+# Google Play Store
+[LINK](https://play.google.com/store/apps/details?id=sg.edu.np.mad.mad_assg) to our app
 
 # App Features:
 
@@ -67,3 +74,7 @@ This app will hopefully inspire you to make every meal a wonderful and memorable
   </ul>
 </p></li>
 </ul>
+
+# Tool used
+> ***Android Studio***<br>
+***FireBase***
