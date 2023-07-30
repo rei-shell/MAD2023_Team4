@@ -6,10 +6,10 @@
 
 <p>Team Members:
 <ul>
-  <li> Rachelle </li>
-  <li> Xin Yang </li>
-  <li> Eudora </li>
-  <li> Kelsie </li>
+  <li> Rachelle (S10247620)</li>
+  <li> Xin Yang (S10243674)</li>
+  <li> Eudora (S10242444)</li>
+  <li> Kelsie (S10227054)</li>
   </li>
 </ul>
 </p>
@@ -40,7 +40,6 @@ This app will hopefully inspire you to make every meal a wonderful and memorable
     <li> Interactive Search (done)</li> 
     <ul><li> This allows the user to search their desired food with a specific naming of the dish. </li></ul>
     <li> Filter Input</li>
-    <ul><li>This allows the user to fliter the desired food category and choose the dishes they want from the choosen category.</li>
     <ul>
     <li> This allows the user to filter the many different cuisine the app have, such as chinese, western, dessert and many more.</li>
     </ul>
@@ -59,8 +58,10 @@ This app will hopefully inspire you to make every meal a wonderful and memorable
   <ul>
     <li> Random Generator</li><br>
     feature: Kelsie
-    <li> Notifications System</li>
-    <li> Like Page</li><br>
+    <li> Notifications System</li><br>
+    featue: xinyang
+    <li>poll system</li>
+    <li>share recipe</li><br>
     feature: Rachelle
     <li> Settings (done)</li>
   </ul>
