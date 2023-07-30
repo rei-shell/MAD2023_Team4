@@ -31,6 +31,16 @@ public class RecipeView extends AppCompatActivity {
         animationDrawable.setEnterFadeDuration(1500);
         animationDrawable.setExitFadeDuration(3000);
         animationDrawable.start();
+
+        ImageView bckbtn = findViewById(R.id.backarrow);
+        bckbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RecipeView.this, MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 
     @SuppressLint("ResourceAsColor")

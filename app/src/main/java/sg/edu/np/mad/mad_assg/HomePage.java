@@ -74,6 +74,34 @@ public class HomePage extends Fragment {
         RecyclerView exploreview = view.findViewById(R.id.exploreview);
         exploreview.setAdapter(adapter1);
 
+        TextView viewall1 = view.findViewById(R.id.viewall1);
+        TextView viewall2 = view.findViewById(R.id.viewall2);
+        TextView viewall3 = view.findViewById(R.id.viewall);
+
+        viewall1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(requireContext(), Recipe.class);
+                startActivity(intent);
+            }
+        });
+
+        viewall2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(requireContext(), Recipe.class);
+                startActivity(intent);
+            }
+        });
+
+        viewall3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(requireContext(), Recipe.class);
+                startActivity(intent);
+            }
+        });
+
         // Set the onItemClickListener for the adapter
         adapter.setOnItemClickListener(new MainRecipeRecyclerViewAdapter.OnItemClickListener() {
             @Override
@@ -90,16 +118,16 @@ public class HomePage extends Fragment {
         });
 
         // Fetch user recipes from Firestore
-        fetchUserRecipes();
+        fetchRecipes();
 
         return view;
     }
 
-    private void fetchUserRecipes() {
+    private void fetchRecipes() {
         FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
         if (currentUser != null) {
             // Get the current user's UID
-            String userId = currentUser.getUid();
+            //String userId = currentUser.getUid();
 
             // Get the reference to the "recipes" collection in Firestore
             CollectionReference recipesRef = db.collection("recipes");
