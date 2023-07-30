@@ -4,12 +4,16 @@
 
 # App Name: Rexipe
 
+<p align="center">
+  <img src="app/src/main/res/drawable/icon.png" />
+</p>
+
 <p>Team Members:
 <ul>
-  <li> Rachelle </li>
-  <li> Xin Yang </li>
-  <li> Eudora </li>
-  <li> Kelsie </li>
+  <li> Rachelle (S10247620)</li>
+  <li> Xin Yang (S10243674)</li>
+  <li> Eudora (S10242444)</li>
+  <li> Kelsie (S10227054)</li>
   </li>
 </ul>
 </p>
@@ -17,6 +21,9 @@
 # App Descriptions:
 
 This app will hopefully inspire you to make every meal a wonderful and memorable one. It contains various recipes ranging from chinese to western and many more, allowing you to decide from the huge array of recipes provided. Most recipes will only require 15 to 20 mins to create a scrumptious meal . Moreover, if you face difficulties deciding on which recipe to pick, our application provides you a random generator to pick your desired choice of cuisine. Definitely, not only will you be able to access the many amazing recipes shared by other users, you would also be able too share your amazing recipe, allowing others to learn and create a scrumptious meal too! This application is not only catered to those who have experience in cooking, but is also catered to those who just started having interest in cooking, as through our application you will be able to start from learning the basics like creating a simple dish to learning how to create a dish with higher difficulty.
+
+# Google Play Store
+[LINK](https://play.google.com/store/apps/details?id=sg.edu.np.mad.mad_assg) to our app
 
 # App Features:
 
@@ -36,13 +43,9 @@ This app will hopefully inspire you to make every meal a wonderful and memorable
     <ul><li> This allows user to view back their viewed recipe just in case they wanna try that recipe again but could not find in the wide variety of recipe options.</li></ul>
     <li> Food Recipe Options</li>
     <ul><li> This allows user to choose their desire recipe that they wanna eat or try cooking. Our options of cuisine has a wide variety that known around the world. </li></ul><br>
-    feature group: Kelsie
-    <li> Interactive Search</li>
+    feature group: Rachelle
+    <li> Interactive Search (done)</li> 
     <ul><li> This allows the user to search their desired food with a specific naming of the dish. </li></ul>
-    <li> Filter Input</li>
-    <ul>
-    <li> This allows the user to filter the many different cuisine the app have, such as chinese, western, dessert and many more.</li>
-    </ul>
     <li> Upload Recipe (done)</li>
     <ul><li> This allows user to share their signature dish to the world and let others have a try on that dish.</li></ul><br>
     feature group: Xin Yang
@@ -56,12 +59,19 @@ This app will hopefully inspire you to make every meal a wonderful and memorable
 <li>
 <p> Stage 2:
   <ul>
-    <li> Random Generator</li><br>
+    feature: Eudora
+      <li> Filter Input</li><br>
     feature: Kelsie
-    <li> Notifications System</li>
-    <li> Like Page</li><br>
+    <li> Notifications System</li><br>
+    featue: xinyang
+    <li>poll system</li>
+    <li>share recipe</li><br>
     feature: Rachelle
     <li> Settings (done)</li>
   </ul>
 </p></li>
 </ul>
+
+# Tool used
+> ***Android Studio***<br>
+***FireBase***

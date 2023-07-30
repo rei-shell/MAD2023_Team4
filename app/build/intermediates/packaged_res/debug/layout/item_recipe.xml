@@ -6,8 +6,8 @@
 
     <ImageView
         android:id="@+id/imageview"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_marginRight="10dp" />
 
     <TextView
@@ -15,8 +15,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_toEndOf="@id/imageview"
-        android:textColor="@color/black"
-        android:textSize="20dp"
+        style="@style/TextColor"
+        android:fontFamily="@font/kalam_bold"
+        android:layout_marginTop="10dp"
+        android:textSize="30dp"
         tools:text="Name" />
 
     <TextView
@@ -25,7 +27,9 @@
         android:layout_height="wrap_content"
         android:layout_toEndOf="@id/imageview"
         android:layout_below="@id/name"
-        android:textColor="@color/black"
+        style="@style/TextColor"
+        android:fontFamily="@font/kalam_regular"
+        android:textSize="20dp"
         tools:text="Category" />
 
     <LinearLayout

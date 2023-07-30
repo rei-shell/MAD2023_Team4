@@ -3,6 +3,7 @@ package sg.edu.np.mad.mad_assg;
 import static java.security.AccessController.getContext;
 
 import android.annotation.SuppressLint;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,6 +29,7 @@ public class MainRecipeRecyclerViewAdapter extends RecyclerView.Adapter<MainReci
     public MainRecipeRecyclerViewAdapter(List<RecipeList> recipeList) {
         this.recipeList = recipeList;
     }
+
 
     // ViewHolder class
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {

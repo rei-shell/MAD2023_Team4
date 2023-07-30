@@ -4,19 +4,87 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class RecipeAdapter extends RecyclerView.Adapter<RecipeViewHolder> {
-    //creating variable for list and context
+
+public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder> {
+
+    private List<RecipeList> recipeList;
+    private OnItemClickListener onItemClickListener;
+
+    // Constructor
+    public RecipeAdapter(List<RecipeList> recipeList) {
+        this.recipeList = recipeList;
+    }
+
+    // ViewHolder class
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+        ImageView imageView;
+        TextView recipeName;
+
+        public ViewHolder(View view) {
+            super(view);
+            imageView = view.findViewById(R.id.imageview);
+            recipeName = view.findViewById(R.id.name);
+            view.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View v) {
+            if (onItemClickListener != null) {
+                int position = getAdapterPosition();
+                if (position != RecyclerView.NO_POSITION) {
+                    onItemClickListener.onItemClick(position);
+                }
+            }
+        }
+    }
+
+    @NonNull
+    @Override
+    public RecipeAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.foodrecipeoptionitem, parent, false);
+        return new ViewHolder(view);
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull RecipeAdapter.ViewHolder holder, int position) {
+        RecipeList recipe = recipeList.get(position);
+        holder.recipeName.setText(recipe.getTitle());
+        Glide.with(holder.imageView.getContext())
+                .load(recipe.getPhotoUrl())
+                .into(holder.imageView);
+    }
+
+    @Override
+    public int getItemCount() {
+        return recipeList.size();
+    }
+
+    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
+        this.onItemClickListener = onItemClickListener;
+    }
+
+    public interface OnItemClickListener {
+        void onItemClick(int position);
+    }
+}
+
+
+
+/*public class RecipeAdapter extends RecyclerView.Adapter<RecipeViewHolder> {
     Context context;
     List<ViewHistoryItem> items;
 
-    //constructor for adapter class
     public RecipeAdapter(Context context, List<ViewHistoryItem> items) {
         this.context = context;
         this.items = items;
@@ -25,7 +93,6 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeViewHolder> {
     @NonNull
     @Override
     public RecipeViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        //layout file to display item
         return new RecipeViewHolder(LayoutInflater.from(context).inflate(R.layout.viewhistoryitem,parent,false));
     }
 
@@ -37,14 +104,11 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeViewHolder> {
 
     @Override
     public int getItemCount() {
-        //returning the size of the list
         return items.size();
     }
 
 
-
-
-}
+}*/
 
 
 

@@ -77,6 +77,7 @@ id cancel
 id cardview_id
 id cat
 id category
+id categoryRecyclerView
 id categoryTxt
 id categoryitem_text
 id changepassword
@@ -93,6 +94,7 @@ id cookingTimeTxt
 id decriptiontxt
 id deleteacct
 id description
+id descriptionText
 id descriptiontable
 id dropdown
 id dropdown_layout
@@ -118,6 +120,7 @@ id icon
 id imageView
 id imageview
 id ingredients
+id ingredientsTxt
 id ingredientstxt
 id ivGoBack
 id language
@@ -137,9 +140,9 @@ id mode_edit
 id mottoheader
 id mottoinfo
 id name
-id notification
-id notificationbtn
+id noResultsTextView
 id numberOfPersons
+id numbers
 id ourcontact
 id ourfeature
 id ourmotto
@@ -180,6 +183,7 @@ id recyclerview
 id report
 id request
 id review
+id reviewTxt
 id reviewstuff
 id revioew
 id rexipe
@@ -187,6 +191,7 @@ id rexipename
 id savebtn
 id scrollview
 id search
+id searchRecyclerView
 id searchview
 id setting
 id settingbtn
@@ -195,7 +200,6 @@ id signinbtn
 id steps
 id stepsTxt
 id stepstxt
-id stuff
 id submitbtn
 id suggestion
 id textView
@@ -205,7 +209,6 @@ id textdescription
 id texttitle
 id theme
 id title
-id toggleswitch
 id top_nav
 id total
 id tvFeedback
@@ -217,13 +220,11 @@ id upload_recipe
 id userName
 id userdetails
 id userid
-id userlike
 id username
 id usernameEditText
 id usernameLayout
 id username_header
 id userpic
-id userpost
 id verifyemail
 id view_history
 id viewall

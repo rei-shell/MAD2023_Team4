@@ -16,39 +16,20 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 
 public class CategoryRecyclerViewAdapter extends RecyclerView.Adapter<CategoryRecyclerViewAdapter.ViewHolder> {
-    private ArrayList<CategoryData> categoryData;
-    private final ArrayList<CategoryData> categoryDataList;
-    private OnItemClickListener onItemClickListener;
+    private ArrayList<CategoryData> categoryDataList;
+    private OnItemClickListener onItemClickListener; // Define the interface for item click handling
 
     public CategoryRecyclerViewAdapter(ArrayList<CategoryData> categoryDataList) {
         this.categoryDataList = categoryDataList;
     }
 
-    public void setData(ArrayList<Object> combinedDataList) {
-        categoryDataList.clear();
-        for (Object item : combinedDataList) {
-            if (item instanceof CategoryData) {
-                categoryDataList.add((CategoryData) item);
-            }
-        }
-        notifyDataSetChanged();
-    }
-
-    // Method to clear the adapter's data
-    public void clearData() {
-        categoryData.clear();
-        notifyDataSetChanged();
-    }
-
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        //     ImageView imageView;
         TextView name;
-        private OnItemClickListener onItemClickListener;
 
         public ViewHolder(View view) {
             super(view);
             name = view.findViewById(R.id.categoryitem_text);
-            view.setOnClickListener(this);
+            view.setOnClickListener(this); // Set the click listener to the view
         }
 
         @Override
@@ -56,13 +37,9 @@ public class CategoryRecyclerViewAdapter extends RecyclerView.Adapter<CategoryRe
             if (onItemClickListener != null) {
                 int position = getAdapterPosition();
                 if (position != RecyclerView.NO_POSITION) {
-                    onItemClickListener.onItemClick(position, categoryDataList.get(position));
+                    onItemClickListener.onItemClick(position, categoryDataList.get(position)); // Call the item click callback
                 }
             }
-        }
-
-        public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
-            this.onItemClickListener = onItemClickListener;
         }
     }
 
@@ -70,15 +47,12 @@ public class CategoryRecyclerViewAdapter extends RecyclerView.Adapter<CategoryRe
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.category, parent, false);
-        ViewHolder viewHolder = new ViewHolder(view);
-        viewHolder.setOnItemClickListener(onItemClickListener);
-        return viewHolder;
+        return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         CategoryData categoryData = categoryDataList.get(position);
-        //   Picasso.get().load(categoryData.getImageUrl()).into(holder.imageView);
         holder.name.setText(categoryData.getCategory());
     }
 
@@ -87,14 +61,17 @@ public class CategoryRecyclerViewAdapter extends RecyclerView.Adapter<CategoryRe
         return categoryDataList.size();
     }
 
+    // Method to set the OnItemClickListener
     public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
         this.onItemClickListener = onItemClickListener;
     }
 
+    // Interface for item click handling
     public interface OnItemClickListener {
         void onItemClick(int position, CategoryData categoryData);
     }
 }
+
 
 
 /*public class CategoryRecyclerViewAdapter<T> extends RecyclerView.Adapter<CategoryRecyclerViewAdapter.CategoryViewHolder> {
