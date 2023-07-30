@@ -36,10 +36,11 @@ This app will hopefully inspire you to make every meal a wonderful and memorable
     <ul><li> This allows user to view back their viewed recipe just in case they wanna try that recipe again but could not find in the wide variety of recipe options.</li></ul>
     <li> Food Recipe Options</li>
     <ul><li> This allows user to choose their desire recipe that they wanna eat or try cooking. Our options of cuisine has a wide variety that known around the world. </li></ul><br>
-    feature group: Kelsie
-    <li> Interactive Search</li>
+    feature group: Rachelle
+    <li> Interactive Search (done)</li> 
     <ul><li> This allows the user to search their desired food with a specific naming of the dish. </li></ul>
     <li> Filter Input</li>
+    <ul><li>This allows the user to fliter the desired food category and choose the dishes they want from the choosen category.</li>
     <ul>
     <li> This allows the user to filter the many different cuisine the app have, such as chinese, western, dessert and many more.</li>
     </ul>
