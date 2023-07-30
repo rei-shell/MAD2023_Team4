@@ -103,6 +103,7 @@ public class Recipe extends AppCompatActivity {
                             // Convert each document to a RecipeList object
                             RecipeList recipe = document.toObject(RecipeList.class);
                             searchResults.add(recipe);
+                            //if (recipe.getCategory() == recipe.get)
                             Log.d("RecipeDebug", "Recipe added: " + recipe.getTitle());
                         }
 
