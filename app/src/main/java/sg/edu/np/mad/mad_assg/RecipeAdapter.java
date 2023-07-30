@@ -12,9 +12,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RecipeAdapter extends RecyclerView.Adapter<RecipeViewHolder> {
+    //creating variable for list and context
     Context context;
     List<ViewHistoryItem> items;
 
+    //constructor for adapter class
     public RecipeAdapter(Context context, List<ViewHistoryItem> items) {
         this.context = context;
         this.items = items;
@@ -23,6 +25,7 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeViewHolder> {
     @NonNull
     @Override
     public RecipeViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        //layout file to display item
         return new RecipeViewHolder(LayoutInflater.from(context).inflate(R.layout.viewhistoryitem,parent,false));
     }
 
@@ -34,8 +37,11 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeViewHolder> {
 
     @Override
     public int getItemCount() {
+        //returning the size of the list
         return items.size();
     }
+
+
 
 
 }
