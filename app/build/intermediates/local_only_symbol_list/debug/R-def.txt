@@ -142,6 +142,7 @@ id mottoinfo
 id name
 id noResultsTextView
 id numberOfPersons
+id numbers
 id ourcontact
 id ourfeature
 id ourmotto

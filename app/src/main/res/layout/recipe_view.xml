@@ -252,6 +252,36 @@
             android:layout_alignEnd="@+id/ingredientstxt"
             android:layout_alignBottom="@+id/ingredientstxt"
             android:layout_alignTop="@+id/ingredientstxt"
+
+            android:id="@+id/numberOfPersons"
+            android:text="Quantity"
+            android:textAlignment="center"
+            android:textSize="28sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/kalam_light"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/ingredientstxt"
+            android:layout_alignEnd="@+id/ingredientstxt"
+            android:layout_alignBottom="@+id/ingredientstxt"
+            android:layout_alignTop="@+id/ingredientstxt"
+
+            android:id="@+id/numbers"
+            android:text="12"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:fontFamily="@font/kalam_light"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/ingredientstxt"
+            android:layout_alignEnd="@+id/ingredientstxt"
+            android:layout_alignBottom="@+id/ingredientstxt"
+            android:layout_alignTop="@+id/ingredientstxt"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="15dp"
 
@@ -371,7 +401,7 @@
                 android:layout_alignStart="@+id/reviewstuff"
                 android:layout_alignEnd="@+id/reviewstuff"
                 android:layout_marginTop="20dp"
-
+                android:textColor="@color/black"
                 android:id="@+id/review"
                 android:text="Reviews"
                 android:textAlignment="center"
@@ -384,7 +414,7 @@
                 android:layout_alignStart="@+id/reviewstuff"
                 android:layout_alignEnd="@+id/reviewstuff"
                 android:layout_below="@+id/review"
-
+                android:textColor="@color/black"
                 android:id="@+id/reviewTxt"
                 android:text="Reviews"
                 android:textAlignment="center"

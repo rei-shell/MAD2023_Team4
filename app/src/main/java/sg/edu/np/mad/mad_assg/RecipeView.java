@@ -42,6 +42,7 @@ import android.graphics.drawable.AnimationDrawable;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -87,6 +88,7 @@ public class RecipeView extends AppCompatActivity {
             int prep = selectedRecipe.getPreparationTime();
             int cook = selectedRecipe.getCookingTime();
             int total = selectedRecipe.getTotalTime();
+            int ppl = selectedRecipe.getNumberOfPersons();
 
             TextView recipeNameTextView = findViewById(R.id.recipename);
             TextView authorTextView = findViewById(R.id.author);
@@ -97,6 +99,7 @@ public class RecipeView extends AppCompatActivity {
             TextView preping = findViewById(R.id.mins);
             TextView cooking = findViewById(R.id.mins2);
             TextView totaltime = findViewById(R.id.mins3);
+            TextView quanitity = findViewById(R.id.numbers);
 
             // Set recipe data to views
             recipeNameTextView.setText(recipeName);
@@ -109,10 +112,12 @@ public class RecipeView extends AppCompatActivity {
             String preparationTimeString = String.valueOf(prep);
             String cookingTimeString = String.valueOf(cook);
             String totalTimeString = String.valueOf(total);
+            String numberofppl = String.valueOf(ppl);
 
             preping.setText(preparationTimeString);
             cooking.setText(cookingTimeString);
             totaltime.setText(totalTimeString);
+            quanitity.setText(numberofppl);
 
             Button feedback = findViewById(R.id.feedback);
 
