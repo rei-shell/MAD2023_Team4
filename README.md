@@ -46,10 +46,6 @@ This app will hopefully inspire you to make every meal a wonderful and memorable
     feature group: Rachelle
     <li> Interactive Search (done)</li> 
     <ul><li> This allows the user to search their desired food with a specific naming of the dish. </li></ul>
-    <li> Filter Input</li>
-    <ul>
-    <li> This allows the user to filter the many different cuisine the app have, such as chinese, western, dessert and many more.</li>
-    </ul>
     <li> Upload Recipe (done)</li>
     <ul><li> This allows user to share their signature dish to the world and let others have a try on that dish.</li></ul><br>
     feature group: Xin Yang
@@ -63,7 +59,8 @@ This app will hopefully inspire you to make every meal a wonderful and memorable
 <li>
 <p> Stage 2:
   <ul>
-    <li> Random Generator</li><br>
+    feature: Eudora
+      <li> Filter Input</li><br>
     feature: Kelsie
     <li> Notifications System</li><br>
     featue: xinyang
