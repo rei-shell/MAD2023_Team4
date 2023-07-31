@@ -3569,6 +3569,8 @@ int id ratio 0x7f0a01d6
 int id rbPollNoOverlay 0x7f0a01d7
 int id rbPollYesOverlay 0x7f0a01d8
 int id rbStars 0x7f0a01d9
+int id recipeListsearchview 0x7f0a02b1
+int id recipeListview 0x7f0a02b2
 int id recipeSteps 0x7f0a01da
 int id recipe_image_id 0x7f0a01db
 int id recipe_text 0x7f0a01dc

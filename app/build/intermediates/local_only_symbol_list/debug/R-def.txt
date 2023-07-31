@@ -169,6 +169,8 @@ id ratingstuff
 id rbPollNoOverlay
 id rbPollYesOverlay
 id rbStars
+id recipeListsearchview
+id recipeListview
 id recipeSteps
 id recipe_image_id
 id recipe_text
