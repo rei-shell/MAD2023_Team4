@@ -38,6 +38,7 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,7 +46,6 @@ import java.util.List;
 public class Search extends Fragment {
     private FirebaseFirestore db;
     private CategoryRecyclerViewAdapter adapter;
-    RecyclerView recyclerView;
     private boolean isSearching = false;
     private SearchRecycleViewAdapter searchAdapter;
     private ArrayList<RecipeList> searchResults;
@@ -109,8 +109,9 @@ public class Search extends Fragment {
                 // Handle the item click here
                 // For example, you can open a new activity to display the details of the clicked recipe
                 RecipeList clickedRecipe = searchResults.get(position);
+                String recipeJson = convertRecipeToJsonString(clickedRecipe);
                 Intent intent = new Intent(getActivity(), RecipeView.class);
-                intent.putExtra("recipeId", clickedRecipe.getUserid());
+                intent.putExtra("recipeJson", recipeJson);
                 startActivity(intent);
             }
         });
@@ -138,6 +139,11 @@ public class Search extends Fragment {
         db = FirebaseFirestore.getInstance();
 
         return view;
+    }
+
+    private String convertRecipeToJsonString(RecipeList recipe) {
+        Gson gson = new Gson();
+        return gson.toJson(recipe);
     }
 
     private void SearchItem(String newText) {

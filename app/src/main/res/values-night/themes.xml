@@ -66,5 +66,14 @@
         <item name="android:iconifiedByDefault">false</item> <!-- Replace with your desired default iconified state -->
         <!-- Add other attributes specific to your SearchView style -->
     </style>
+    <style name="AlertDialogButtonStyle.Yes" parent="Widget.AppCompat.Button.Colored">
+        <!-- Customize the button text color for "Yes" -->
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="AlertDialogButtonStyle.No" parent="Widget.AppCompat.Button.Colored">
+        <!-- Customize the button text color for "No" -->
+        <item name="android:textColor">@color/white</item>
+    </style>
 
 </resources>

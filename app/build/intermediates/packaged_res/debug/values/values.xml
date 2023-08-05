@@ -46,6 +46,14 @@
     <string name="google_storage_bucket" translatable="false">asgteam4-ac141.appspot.com</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="project_id" translatable="false">asgteam4-ac141</string>
+    <style name="AlertDialogButtonStyle.No" parent="Widget.AppCompat.Button.Colored">
+        
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="AlertDialogButtonStyle.Yes" parent="Widget.AppCompat.Button.Colored">
+        
+        <item name="android:textColor">@color/black</item>
+    </style>
     <style name="AppTheme.Light" parent="Base.Theme.MAD_Assg">
         
         <item name="colorPrimary">@color/my_light_primary</item>

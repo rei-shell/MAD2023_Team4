@@ -278,8 +278,19 @@ public class EditUserProfile extends AppCompatActivity {
                 }
             });
 
-            builder.setCancelable(false);
             AlertDialog alert = builder.create();
+            alert.setOnShowListener(new DialogInterface.OnShowListener() {
+                @Override
+                public void onShow(DialogInterface dialog) {
+                    Button positiveButton = alert.getButton(AlertDialog.BUTTON_POSITIVE);
+                    Button negativeButton = alert.getButton(AlertDialog.BUTTON_NEGATIVE);
+
+                    positiveButton.setTextAppearance(EditUserProfile.this, R.style.AlertDialogButtonStyle_Yes);
+                    negativeButton.setTextAppearance(EditUserProfile.this, R.style.AlertDialogButtonStyle_No);
+                }
+            });
+
+            builder.setCancelable(false);
             alert.show();
         }
     }
@@ -364,8 +375,19 @@ public class EditUserProfile extends AppCompatActivity {
                 }
             });
 
-            builder.setCancelable(false);
             AlertDialog alert = builder.create();
+            alert.setOnShowListener(new DialogInterface.OnShowListener() {
+                @Override
+                public void onShow(DialogInterface dialog) {
+                    Button positiveButton = alert.getButton(AlertDialog.BUTTON_POSITIVE);
+                    Button negativeButton = alert.getButton(AlertDialog.BUTTON_NEGATIVE);
+
+                    positiveButton.setTextAppearance(EditUserProfile.this, R.style.AlertDialogButtonStyle_Yes);
+                    negativeButton.setTextAppearance(EditUserProfile.this, R.style.AlertDialogButtonStyle_No);
+                }
+            });
+
+            builder.setCancelable(false);
             alert.show();
         }
     }

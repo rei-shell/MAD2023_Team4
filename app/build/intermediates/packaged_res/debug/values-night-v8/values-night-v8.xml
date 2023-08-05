@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <style name="AlertDialogButtonStyle.No" parent="Widget.AppCompat.Button.Colored">
+        
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="AlertDialogButtonStyle.Yes" parent="Widget.AppCompat.Button.Colored">
+        
+        <item name="android:textColor">@color/white</item>
+    </style>
     <style name="AppTheme.SearchViewStyle" parent="Widget.AppCompat.SearchView">
         
         <item name="android:queryBackground">@color/black</item> 
